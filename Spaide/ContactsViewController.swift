@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactsViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let CELL_ID = "Cell"
     

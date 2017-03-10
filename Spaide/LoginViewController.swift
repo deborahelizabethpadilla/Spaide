@@ -23,12 +23,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     var isSignIn:Bool = true
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

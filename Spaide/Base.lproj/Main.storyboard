@@ -96,7 +96,7 @@
         <!--Item-->
         <scene sceneID="HdJ-PK-5ej">
             <objects>
-                <tableViewController id="OYU-g3-Qu8" sceneMemberID="viewController">
+                <tableViewController id="OYU-g3-Qu8" customClass="ContactsViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6aT-wc-Hdw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
