@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12106.1" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="n6w-jq-4Dr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--LoginViewController-->
         <scene sceneID="uvs-wA-WWT">
             <objects>
-                <viewController id="n6w-jq-4Dr" userLabel="LoginViewController" customClass="LoginViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="n6w-jq-4Dr" userLabel="LoginViewController" customClass="LoginViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="bBc-w4-kaB"/>
                         <viewControllerLayoutGuide type="bottom" id="xPE-fw-evQ"/>
@@ -22,37 +21,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bZx-pC-d1c">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackbackground.png" translatesAutoresizingMaskIntoConstraints="NO" id="bbY-CZ-K2d">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ft9-Rn-Y4U">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Ft9-Rn-Y4U">
                                 <rect key="frame" x="17" y="345" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="BdE-9Q-dI1"/>
-                                    <constraint firstAttribute="height" constant="50" id="ic3-lK-cdK"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HIy-e0-oC2">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="HIy-e0-oC2">
                                 <rect key="frame" x="16" y="287" width="343" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="6f2-ib-vnj"/>
-                                    <constraint firstAttribute="height" constant="50" id="Y7U-wR-8D3"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-fq-G0d">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="W2z-fq-G0d">
                                 <rect key="frame" x="127" y="403" width="121" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.91771097720000006" green="0.87567009149999997" blue="0.065523383889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="121" id="Ilx-LB-KEl"/>
-                                    <constraint firstAttribute="height" constant="28" id="WJw-Qg-jrX"/>
-                                </constraints>
                                 <segments>
                                     <segment title="Sign In"/>
                                     <segment title="Register"/>
@@ -61,22 +54,16 @@
                                     <action selector="signInSelector:" destination="n6w-jq-4Dr" eventType="valueChanged" id="Pbi-bT-Vzh"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-2P-81I">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXk-2P-81I">
                                 <rect key="frame" x="17" y="439" width="342" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="40" id="0CE-m2-SJv"/>
-                                    <constraint firstAttribute="width" constant="342" id="NFq-2h-MS1"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.97290740389999997" blue="0.97382185750000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-Tm-FUc">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6WJ-Tm-FUc">
                                 <rect key="frame" x="158" y="515" width="58" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="2dG-ER-EK7"/>
-                                    <constraint firstAttribute="width" constant="58" id="Yza-aQ-Nte"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign In">
                                     <color key="titleColor" red="0.91771097720000006" green="0.87567009149999997" blue="0.065523383889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -87,24 +74,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="6WJ-Tm-FUc" firstAttribute="top" secondItem="FXk-2P-81I" secondAttribute="bottom" constant="36" id="6DK-K4-tnP"/>
-                            <constraint firstItem="W2z-fq-G0d" firstAttribute="top" secondItem="Ft9-Rn-Y4U" secondAttribute="bottom" constant="8" id="9fs-Y2-fgN"/>
-                            <constraint firstItem="FXk-2P-81I" firstAttribute="centerX" secondItem="jJk-Bo-Nff" secondAttribute="centerX" id="Cdw-5F-rQI"/>
-                            <constraint firstItem="HIy-e0-oC2" firstAttribute="centerX" secondItem="jJk-Bo-Nff" secondAttribute="centerX" id="DEC-69-uM2"/>
-                            <constraint firstItem="FXk-2P-81I" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leadingMargin" constant="1" id="EcZ-L6-EWE"/>
-                            <constraint firstItem="FXk-2P-81I" firstAttribute="top" secondItem="W2z-fq-G0d" secondAttribute="bottom" constant="8" id="El1-uQ-qab"/>
-                            <constraint firstItem="FXk-2P-81I" firstAttribute="trailing" secondItem="jJk-Bo-Nff" secondAttribute="trailingMargin" id="FZO-9a-fLe"/>
-                            <constraint firstItem="W2z-fq-G0d" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leadingMargin" constant="111" id="FhZ-3V-cCM"/>
-                            <constraint firstItem="6WJ-Tm-FUc" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leadingMargin" constant="142" id="IJ2-h4-G65"/>
-                            <constraint firstItem="HIy-e0-oC2" firstAttribute="top" secondItem="bBc-w4-kaB" secondAttribute="bottom" constant="267" id="Lx4-hh-SSS"/>
-                            <constraint firstItem="Ft9-Rn-Y4U" firstAttribute="leading" secondItem="FXk-2P-81I" secondAttribute="leading" id="MfO-Aj-RBJ"/>
-                            <constraint firstItem="6WJ-Tm-FUc" firstAttribute="centerX" secondItem="jJk-Bo-Nff" secondAttribute="centerX" id="Yh9-bu-cnC"/>
-                            <constraint firstItem="HIy-e0-oC2" firstAttribute="trailing" secondItem="jJk-Bo-Nff" secondAttribute="trailingMargin" id="fWh-OE-tLz"/>
-                            <constraint firstItem="Ft9-Rn-Y4U" firstAttribute="top" secondItem="HIy-e0-oC2" secondAttribute="bottom" constant="8" id="h39-17-j52"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="6WJ-Tm-FUc" secondAttribute="trailing" constant="143" id="hl1-ij-7mx"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="W2z-fq-G0d" secondAttribute="trailing" constant="111" id="j0e-Ib-rtw"/>
-                            <constraint firstItem="HIy-e0-oC2" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leadingMargin" id="kGr-6Y-J9Q"/>
-                            <constraint firstItem="W2z-fq-G0d" firstAttribute="centerX" secondItem="jJk-Bo-Nff" secondAttribute="centerX" id="uyJ-c0-zfb"/>
+                            <constraint firstItem="xPE-fw-evQ" firstAttribute="top" secondItem="bZx-pC-d1c" secondAttribute="bottom" id="Nsl-LB-2dI"/>
+                            <constraint firstItem="bZx-pC-d1c" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leading" id="RiZ-YU-dNS"/>
+                            <constraint firstAttribute="trailing" secondItem="bZx-pC-d1c" secondAttribute="trailing" id="usq-HP-zAs"/>
+                            <constraint firstItem="bZx-pC-d1c" firstAttribute="top" secondItem="jJk-Bo-Nff" secondAttribute="top" id="vSD-ee-SFF"/>
                         </constraints>
                     </view>
                     <connections>
