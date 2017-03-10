@@ -34,6 +34,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func dataReceived(contacts: [Contact]) {
         
         self.contacts = contacts
+        myTable.reloadData()
         
     }
     
