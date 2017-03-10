@@ -9,7 +9,7 @@
 import UIKit
 import FirebaseAuth
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Log In Outlets
     
@@ -26,7 +26,46 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Dismiss Keyboard On Return Key
         
+        self.usernameField.delegate = self;
+        self.passwordField.delegate = self;
+    }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    //Text Field Functions
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //Dismiss Keyboard On Tap
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+        //Dismiss Keyboard On Return Key
+        
+        self.view.endEditing(true)
+        return false
+    }
+    
+    func dismissKeyboard() {
+        
+        //Dismiss Keyboard On Tap
+        
+        view.endEditing(true)
     }
     
     //Log In Actions
@@ -66,7 +105,8 @@ class LoginViewController: UIViewController {
                 FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
                     
                     //Check User Isn't Nil
-                    if let u = user {
+                    
+                    if user == user {
                         
                         //User Found, Go To Tab Bar
                         
@@ -75,6 +115,8 @@ class LoginViewController: UIViewController {
                     } else {
                         
                         //Check Error & Show Alert
+                        
+                        self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
                     }
                     
                 })
@@ -87,7 +129,7 @@ class LoginViewController: UIViewController {
                     
                     //Check User Isn't Nil
                     
-                    if let u = user {
+                    if user == user {
                         
                         //User Found, Go To Tab Bar
                         
@@ -96,6 +138,8 @@ class LoginViewController: UIViewController {
                     } else {
                         
                         //Check Error & Show Alert
+                        
+                        self.displayAlert(title: "Oh No!", message: "Try Again!")
                     }
                     
                 })
