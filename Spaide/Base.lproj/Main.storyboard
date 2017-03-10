@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="1039.2" y="-440.32983508245883"/>
         </scene>
-        <!--View Controller-->
+        <!--Chat View Controller-->
         <scene sceneID="Mrt-Ug-3ny">
             <objects>
-                <viewController id="XQd-cB-gw5" sceneMemberID="viewController">
+                <viewController id="XQd-cB-gw5" customClass="ChatViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="U1o-Sa-ls2"/>
                         <viewControllerLayoutGuide type="bottom" id="Z54-Nj-cMb"/>
@@ -141,7 +141,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="iuA-xL-d80"/>
+                    <navigationItem key="navigationItem" id="iuA-xL-d80">
+                        <barButtonItem key="leftBarButtonItem" title="BACK" id="ofA-H1-tEt">
+                            <connections>
+                                <action selector="backButton:" destination="XQd-cB-gw5" id="9U2-i3-9Sj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwK-I5-57K" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -208,7 +214,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FnZ-gX-eDP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="91n-qu-k9T">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="91n-qu-k9T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
