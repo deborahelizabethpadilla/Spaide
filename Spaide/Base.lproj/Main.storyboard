@@ -93,10 +93,10 @@
             </objects>
             <point key="canvasLocation" x="-1508" y="-68.815592203898049"/>
         </scene>
-        <!--Item-->
+        <!--ContactsViewController-->
         <scene sceneID="HdJ-PK-5ej">
             <objects>
-                <tableViewController id="OYU-g3-Qu8" customClass="ContactsViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="ContactsViewController" title="ContactsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OYU-g3-Qu8" customClass="ContactsViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6aT-wc-Hdw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -117,6 +117,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Item" id="nsW-p7-aq4"/>
+                    <connections>
+                        <outlet property="myTable" destination="6aT-wc-Hdw" id="sWR-Ut-ATH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4mb-C3-Zpo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

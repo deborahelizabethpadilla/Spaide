@@ -10,6 +10,10 @@ import UIKit
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
     
+    //Outlets
+    
+    @IBOutlet weak var myTable: UITableView!
+    
     //Variables
     
     private let CELL_ID = "Cell"

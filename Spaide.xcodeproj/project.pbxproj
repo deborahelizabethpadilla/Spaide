@@ -29,9 +29,9 @@
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		500C04F11E725C880096B987 /* DataBaseConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04F01E725C880096B987 /* DataBaseConstants.swift */; };
 		500C04F31E725D9B0096B987 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04F21E725D9B0096B987 /* DataBase.swift */; };
-		500C04F51E726D630096B987 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04F41E726D630096B987 /* ContactsViewController.swift */; };
 		500C04F71E7274970096B987 /* Authorization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04F61E7274970096B987 /* Authorization.swift */; };
 		500C04F91E727A370096B987 /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04F81E727A370096B987 /* Contact.swift */; };
+		500C04FB1E73321B0096B987 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04FA1E73321B0096B987 /* ContactsViewController.swift */; };
 		7D7B45D34D25D9AA6B5523D5 /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087521B621813EB8E9A7723 /* Pods_Spaide.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,9 +60,9 @@
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		500C04F01E725C880096B987 /* DataBaseConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseConstants.swift; sourceTree = "<group>"; };
 		500C04F21E725D9B0096B987 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
-		500C04F41E726D630096B987 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		500C04F61E7274970096B987 /* Authorization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorization.swift; sourceTree = "<group>"; };
 		500C04F81E727A370096B987 /* Contact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		500C04FA1E73321B0096B987 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
 		5087521B621813EB8E9A7723 /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		748D1A18FEE6F73CFC196BC8 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		933400EFC1FE44634F2F5CF1 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
@@ -150,8 +150,8 @@
 		500C04CE1E71D32F0096B987 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				500C04FA1E73321B0096B987 /* ContactsViewController.swift */,
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				500C04F41E726D630096B987 /* ContactsViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -312,11 +312,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
+				500C04FB1E73321B0096B987 /* ContactsViewController.swift in Sources */,
 				500C04F11E725C880096B987 /* DataBaseConstants.swift in Sources */,
 				500C04F31E725D9B0096B987 /* DataBase.swift in Sources */,
 				500C04F71E7274970096B987 /* Authorization.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				500C04F51E726D630096B987 /* ContactsViewController.swift in Sources */,
 				500C04F91E727A370096B987 /* Contact.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
