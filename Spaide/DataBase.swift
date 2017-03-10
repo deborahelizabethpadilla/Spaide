@@ -67,4 +67,29 @@ class DataBase {
         contactsRef.child(withID).setValue(data)
     }
     
+    func getContacts(contacts: [Contact]) {
+        
+        var con = [Contact]()
+        
+        contactsRef.observeSingleEvent(of: FIRDataEventType.value) {
+            (snapshot: FIRDataSnapshot) in
+            
+            //Going To Do With Values
+            
+            if let myContacts = snapshot.value as? NSDictionary {
+                for (key, value) in myContacts {
+                    if let contactData = value as? NSDictionary {
+                        if let email = contactData(Constants.EMAIL)
+                            as? String {
+                            
+                            let id = key
+                            let newContact = Contact(id: id, name: email)
+                            con.append(newContact)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }

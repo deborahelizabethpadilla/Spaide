@@ -8,9 +8,11 @@
 
 import UIKit
 
-class ContactsViewController: UITableViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     private let CELL_ID = "Cell"
+    
+    private let contacts = [Contact]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class ContactsViewController: UITableViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 1
+        return contacts.count
         
     }
     
