@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04B71E71D0A10096B987 /* AppDelegate.swift */; };
-		500C04BA1E71D0A10096B987 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04B91E71D0A10096B987 /* ProfileController.swift */; };
 		500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04BD1E71D0A30096B987 /* Main.storyboard */; };
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
@@ -34,7 +33,6 @@
 /* Begin PBXFileReference section */
 		500C04B41E71D0A10096B987 /* Spaide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C04B71E71D0A10096B987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		500C04B91E71D0A10096B987 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		500C04BE1E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		500C04C01E71D0A30096B987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500C04C31E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				500C04B91E71D0A10096B987 /* ProfileController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -301,7 +298,6 @@
 			files = (
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				500C04BA1E71D0A10096B987 /* ProfileController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
