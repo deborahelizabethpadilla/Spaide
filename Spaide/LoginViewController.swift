@@ -108,6 +108,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     if user == user {
                         
+                        //Store User To Data Base
+                        
+                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password)
+                        
                         //User Found, Go To Tab Bar
                         
                         self.performSegue(withIdentifier: "goToTabBar", sender: self)
@@ -130,6 +134,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     //Check User Isn't Nil
                     
                     if user == user {
+                        
+                        //Store User To Data Base
+                        
+                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password)
                         
                         //User Found, Go To Tab Bar
                         
