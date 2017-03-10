@@ -12,7 +12,6 @@
 		500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04BD1E71D0A30096B987 /* Main.storyboard */; };
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
-		500C04CC1E71D2A90096B987 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04CB1E71D2A90096B987 /* GoogleService-Info (1).plist */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04D31E71E03B0096B987 /* blackbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D21E71E03B0096B987 /* blackbackground.png */; };
 		500C04D51E71E0A20096B987 /* DESYREL_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D41E71E0A10096B987 /* DESYREL_.ttf */; };
@@ -23,6 +22,12 @@
 		500C04DF1E71EDEA0096B987 /* find-on-map.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04DE1E71EDEA0096B987 /* find-on-map.png */; };
 		500C04E11E71F26C0096B987 /* epilog.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 500C04E01E71F26C0096B987 /* epilog.ttf */; };
 		500C04E31E71F5340096B987 /* logout.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04E21E71F5340096B987 /* logout.png */; };
+		500C04E51E7208C60096B987 /* blackgreybg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 500C04E41E7208C60096B987 /* blackgreybg.jpg */; };
+		500C04E71E7212C50096B987 /* Slide3.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04E61E7212C50096B987 /* Slide3.png */; };
+		500C04E91E7213820096B987 /* Arvin Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 500C04E81E7213820096B987 /* Arvin Regular.ttf */; };
+		500C04EB1E7213F40096B987 /* Slide2.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EA1E7213F40096B987 /* Slide2.png */; };
+		500C04ED1E7213F90096B987 /* Slide1.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EC1E7213F90096B987 /* Slide1.png */; };
+		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		7D7B45D34D25D9AA6B5523D5 /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087521B621813EB8E9A7723 /* Pods_Spaide.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +39,6 @@
 		500C04C01E71D0A30096B987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500C04C31E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		500C04CB1E71D2A90096B987 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04D21E71E03B0096B987 /* blackbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbackground.png; sourceTree = "<group>"; };
 		500C04D41E71E0A10096B987 /* DESYREL_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DESYREL_.ttf; sourceTree = "<group>"; };
@@ -45,6 +49,12 @@
 		500C04DE1E71EDEA0096B987 /* find-on-map.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "find-on-map.png"; sourceTree = "<group>"; };
 		500C04E01E71F26C0096B987 /* epilog.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = epilog.ttf; sourceTree = "<group>"; };
 		500C04E21E71F5340096B987 /* logout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logout.png; sourceTree = "<group>"; };
+		500C04E41E7208C60096B987 /* blackgreybg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blackgreybg.jpg; sourceTree = "<group>"; };
+		500C04E61E7212C50096B987 /* Slide3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slide3.png; sourceTree = "<group>"; };
+		500C04E81E7213820096B987 /* Arvin Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Arvin Regular.ttf"; sourceTree = "<group>"; };
+		500C04EA1E7213F40096B987 /* Slide2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slide2.png; sourceTree = "<group>"; };
+		500C04EC1E7213F90096B987 /* Slide1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slide1.png; sourceTree = "<group>"; };
+		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5087521B621813EB8E9A7723 /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		748D1A18FEE6F73CFC196BC8 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		933400EFC1FE44634F2F5CF1 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +101,7 @@
 		500C04B61E71D0A10096B987 /* Spaide */ = {
 			isa = PBXGroup;
 			children = (
+				500C04EE1E7229930096B987 /* GoogleService-Info.plist */,
 				500C04B71E71D0A10096B987 /* AppDelegate.swift */,
 				500C04CF1E71D3390096B987 /* Network */,
 				500C04CE1E71D32F0096B987 /* Controllers */,
@@ -105,14 +116,18 @@
 				500C04BD1E71D0A30096B987 /* Main.storyboard */,
 				500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */,
 				500C04C01E71D0A30096B987 /* Assets.xcassets */,
-				500C04CB1E71D2A90096B987 /* GoogleService-Info (1).plist */,
 				500C04C51E71D0A30096B987 /* Info.plist */,
 				500C04D21E71E03B0096B987 /* blackbackground.png */,
+				500C04E61E7212C50096B987 /* Slide3.png */,
+				500C04EA1E7213F40096B987 /* Slide2.png */,
+				500C04E81E7213820096B987 /* Arvin Regular.ttf */,
 				500C04D61E71E0B70096B987 /* gapstown-r.ttf */,
 				500C04DA1E71ED0E0096B987 /* user (1).png */,
 				500C04D81E71ECE50096B987 /* chat (1).png */,
 				500C04E21E71F5340096B987 /* logout.png */,
+				500C04EC1E7213F90096B987 /* Slide1.png */,
 				500C04DC1E71ED2F0096B987 /* credit-card.png */,
+				500C04E41E7208C60096B987 /* blackgreybg.jpg */,
 				500C04E01E71F26C0096B987 /* epilog.ttf */,
 				500C04DE1E71EDEA0096B987 /* find-on-map.png */,
 				500C04D41E71E0A10096B987 /* DESYREL_.ttf */,
@@ -211,6 +226,8 @@
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
 				500C04D91E71ECE50096B987 /* chat (1).png in Resources */,
 				500C04DB1E71ED0E0096B987 /* user (1).png in Resources */,
+				500C04E51E7208C60096B987 /* blackgreybg.jpg in Resources */,
+				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
 				500C04D51E71E0A20096B987 /* DESYREL_.ttf in Resources */,
 				500C04D31E71E03B0096B987 /* blackbackground.png in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
@@ -218,9 +235,12 @@
 				500C04E11E71F26C0096B987 /* epilog.ttf in Resources */,
 				500C04D71E71E0B70096B987 /* gapstown-r.ttf in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,
+				500C04EB1E7213F40096B987 /* Slide2.png in Resources */,
 				500C04DF1E71EDEA0096B987 /* find-on-map.png in Resources */,
 				500C04DD1E71ED2F0096B987 /* credit-card.png in Resources */,
-				500C04CC1E71D2A90096B987 /* GoogleService-Info (1).plist in Resources */,
+				500C04E71E7212C50096B987 /* Slide3.png in Resources */,
+				500C04ED1E7213F90096B987 /* Slide1.png in Resources */,
+				500C04E91E7213820096B987 /* Arvin Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
