@@ -8,15 +8,32 @@
 
 import UIKit
 
-class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
+    
+    //Variables
     
     private let CELL_ID = "Cell"
     
-    private let contacts = [Contact]()
+    private var contacts = [Contact]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Call Data To View
+        
+        DataBase.Instance.delegate = self
+        DataBase.Instance.getContacts()
     }
+    
+    //Data Received Function
+    
+    func dataReceived(contacts: [Contact]) {
+        
+        self.contacts = contacts
+        
+    }
+    
+    //Table View Functions
     
     func numberOfSections(in tableView: UITableView) -> Int {
         
