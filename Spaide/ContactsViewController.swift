@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
     
@@ -17,6 +18,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     //Variables
     
     private let CELL_ID = "Cell"
+    private let CHAT_SEGUE = "chatSegue"
     
     private var contacts = [Contact]()
     
@@ -34,6 +36,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     func dataReceived(contacts: [Contact]) {
         
         self.contacts = contacts
+        
+        //Get Name Of Current User
+        
         myTable.reloadData()
         
     }
@@ -55,8 +60,13 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         let cell = tableView.dequeueReusableCell(withIdentifier: CELL_ID, for: indexPath)
         
-        cell.textLabel?.text = "This Works!"
+        cell.textLabel?.text = contacts[indexPath.row].name
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: CHAT_SEGUE, sender: nil)
     }
 }
