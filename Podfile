@@ -17,5 +17,6 @@ target 'Spaide' do
   pod 'Firebase/Messaging'
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
+  pod 'JSQMessagesViewController'
 
 end
