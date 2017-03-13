@@ -10,6 +10,8 @@ import Foundation
 import FirebaseDatabase
 import FirebaseStorage
 
+ //Protocol For Message Received
+
 protocol MessageReceivedDelegate: class {
     func messageReceived(senderID: String, senderName: String, text: String);
     func mediaReceived(senderID: String, senderName: String, url: String);

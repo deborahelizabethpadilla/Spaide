@@ -25,15 +25,21 @@ class DataBase {
     
     private init() {}
     
+    //Instance
+    
     static var Instance: DataBase {
         
         return _instance
     }
     
+    //Data Reference
+    
     var dataRef: FIRDatabaseReference {
         
         return FIRDatabase.database().reference()
     }
+    
+    //Contacts Reference
     
     var contactsRef: FIRDatabaseReference {
         
@@ -41,10 +47,14 @@ class DataBase {
         
     }
     
+    //Messages Reference
+    
     var messagesRef: FIRDatabaseReference {
         
         return dataRef.child(Constants.MESSAGES)
     }
+    
+    //Media References
     
     var mediaRef: FIRDatabaseReference {
         
@@ -52,20 +62,28 @@ class DataBase {
         
     }
     
+    //Storage References
+    
     var storageRef: FIRStorageReference {
         
         return FIRStorage.storage().reference(forURL: "gs://spaide-2cc40.appspot.com")
     }
+    
+    //Image Storage References
     
     var imageStorageRef: FIRStorageReference {
         
         return storageRef.child(Constants.IMAGE_STORAGE)
     }
     
+    //Video Storage References
+    
     var videoStorageRef: FIRStorageReference {
         
         return storageRef.child(Constants.VIDEO_STORAGE)
     }
+    
+    //Save User Info
     
     func saveUser(withID: String, email: String, password: String) {
         
@@ -73,6 +91,8 @@ class DataBase {
         
         contactsRef.child(withID).setValue(data)
     }
+    
+    //Get Contacts
     
     func getContacts() {
         
