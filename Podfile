@@ -18,5 +18,7 @@ target 'Spaide' do
   pod 'Firebase/RemoteConfig'
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
+  pod 'JSQSystemSoundPlayer'
+  pod 'SDWebImage'
 
 end
