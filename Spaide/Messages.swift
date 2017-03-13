@@ -29,6 +29,8 @@ class MessagesHandler {
         return _instance
     }
     
+    //Send Message
+    
     func sendMessage(senderID: String, senderName: String, text: String) {
         
         let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderID, Constants.SENDER_NAME: senderName, Constants.TEXT: text]
@@ -37,12 +39,16 @@ class MessagesHandler {
         
     }
     
+    //Send Media Message
+    
     func sendMediaMessage(senderID: String, senderName: String, url: String) {
         
         let data: Dictionary<String, Any> = [Constants.SENDER_ID: senderID, Constants.SENDER_NAME: senderName, Constants.URL: url]
         
         DataBase.Instance.mediaMessagesRef.childByAutoId().setValue(data)
     }
+    
+    //Send Media
     
     func sendMedia(image: Data?, video: URL?, senderID: String, senderName: String) {
         
@@ -53,6 +59,8 @@ class MessagesHandler {
                 if err != nil {
                     
                     //Let User Know Uploading Image Has Failed
+                    
+                    displayAlert(title: "Oh No!", message: "Upload Of Image Failed!")
                     
                 } else {
                     
@@ -69,6 +77,8 @@ class MessagesHandler {
                     
                     //Let User Know Uploading Video Has Failed
                     
+                    displayAlert(title: "Oh No!", message: "Upload Of Video Failed!")
+                    
                 } else {
                     
                     self.sendMediaMessage(senderID: senderID, senderName: senderName, url: String(describing: metadata!.downloadURL()!))
@@ -78,6 +88,8 @@ class MessagesHandler {
         }
         
     }
+    
+    //Observe Messages
     
     func observeMessages() {
         
@@ -100,6 +112,8 @@ class MessagesHandler {
         }
     }
     
+    //Observe Media Messages
+    
     func observeMediaMessages() {
         
         DataBase.Instance.mediaMessagesRef.observe(FIRDataEventType.childAdded) { (snapshot: FIRDataSnapshot) in
@@ -121,5 +135,16 @@ class MessagesHandler {
         }
     }
     
+    //Display Alert
     
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            
+            self.dismiss(animated: true, completion: nil)
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+    }
 }
