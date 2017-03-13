@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAnalytics
 
 class ContactsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, FetchData {
     
