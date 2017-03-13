@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -21,119 +21,59 @@
 #import "JSQMessageData.h"
 
 /**
- *  The `JSQMessage` class is a concrete class for message model objects that represents a single user message.
- *  The message can be a text message or media message, depending on how it is initialized.
- *  It implements the `JSQMessageData` protocol and it contains the senderId, senderDisplayName,
- *  and the date that the message was sent. If initialized as a media message it also contains a media attachment,
- *  otherwise it contains the message text.
+ *  A `JSQMessage` model object represents a single user message. 
+ *  This is a concrete class that implements the `JSQMessageData` protocol. 
+ *  It contains the message text, its sender, and the date that the message was sent.
  */
 @interface JSQMessage : NSObject <JSQMessageData, NSCoding, NSCopying>
 
 /**
- *  Returns the string identifier that uniquely identifies the user who sent the message. 
+ *  The body text of the message. This value must not be `nil`.
  */
-@property (copy, nonatomic, readonly) NSString *senderId;
+@property (copy, nonatomic) NSString *text;
 
 /**
- *  Returns the display name for the user who sent the message. This value does not have to be unique.
+ *  The name of user who sent the message. This value must not be `nil`.
  */
-@property (copy, nonatomic, readonly) NSString *senderDisplayName;
+@property (copy, nonatomic) NSString *sender;
 
 /**
- *  Returns the date that the message was sent.
+ *  The date that the message was sent. This value must not be `nil`.
  */
-@property (copy, nonatomic, readonly) NSDate *date;
-
-/**
- *  Returns a boolean value specifying whether or not the message contains media.
- *  If `NO`, the message contains text. If `YES`, the message contains media.
- *  The value of this property depends on how the object was initialized.
- */
-@property (assign, nonatomic, readonly) BOOL isMediaMessage;
-
-/**
- *  Returns the body text of the message, or `nil` if the message is a media message.
- *  That is, if `isMediaMessage` is equal to `YES` then this value will be `nil`.
- */
-@property (copy, nonatomic, readonly) NSString *text;
-
-/**
- *  Returns the media item attachment of the message, or `nil` if the message is not a media message.
- *  That is, if `isMediaMessage` is equal to `NO` then this value will be `nil`.
- */
-@property (copy, nonatomic, readonly) id<JSQMessageMediaData> media;
-
+@property (copy, nonatomic) NSDate *date;
 
 #pragma mark - Initialization
 
 /**
- *  Initializes and returns a message object having the given senderId, displayName, text,
- *  and current system date.
+ *  Initializes and returns a message object having the given text, sender, and current system date.
  *
- *  @param senderId    The unique identifier for the user who sent the message. This value must not be `nil`.
- *  @param displayName The display name for the user who sent the message. This value must not be `nil`.
- *  @param text        The body text of the message. This value must not be `nil`.
+ *  @param text   The body text of the message.
+ *  @param sender The name of the user who sent the message.
  *
- *  @discussion Initializing a `JSQMessage` with this method will set `isMediaMessage` to `NO`.
- *
- *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
+ *  @return An initialized `JSQMessage` object or `nil` if the object could not be successfully initialized.
  */
-+ (instancetype)messageWithSenderId:(NSString *)senderId
-                        displayName:(NSString *)displayName
-                               text:(NSString *)text;
++ (instancetype)messageWithText:(NSString *)text sender:(NSString *)sender;
 
 /**
- *  Initializes and returns a message object having the given senderId, senderDisplayName, date, and text.
+ *  Initializes and returns a message object having the given text, sender, and date.
  *
- *  @param senderId          The unique identifier for the user who sent the message. This value must not be `nil`.
- *  @param senderDisplayName The display name for the user who sent the message. This value must not be `nil`.
- *  @param date              The date that the message was sent. This value must not be `nil`.
- *  @param text              The body text of the message. This value must not be `nil`.
+ *  @param text   The body text of the message.
+ *  @param sender The name of the user who sent the message.
+ *  @param date   The date that the message was sent.
  *
- *  @discussion Initializing a `JSQMessage` with this method will set `isMediaMessage` to `NO`.
- *
- *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
+ *  @return An initialized `JSQMessage` object or `nil` if the object could not be successfully initialized.
  */
-- (instancetype)initWithSenderId:(NSString *)senderId
-               senderDisplayName:(NSString *)senderDisplayName
-                            date:(NSDate *)date
-                            text:(NSString *)text;
-/**
- *  Initializes and returns a message object having the given senderId, displayName, media,
- *  and current system date.
- *
- *  @param senderId    The unique identifier for the user who sent the message. This value must not be `nil`.
- *  @param displayName The display name for the user who sent the message. This value must not be `nil`.
- *  @param media       The media data for the message. This value must not be `nil`.
- *
- *  @discussion Initializing a `JSQMessage` with this method will set `isMediaMessage` to `YES`.
- *
- *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
- */
-+ (instancetype)messageWithSenderId:(NSString *)senderId
-                        displayName:(NSString *)displayName
-                              media:(id<JSQMessageMediaData>)media;
+- (instancetype)initWithText:(NSString *)text
+                      sender:(NSString *)sender
+                        date:(NSDate *)date;
 
 /**
- *  Initializes and returns a message object having the given senderId, displayName, date, and media.
+ *  Returns a boolean value that indicates whether a given message is equal to the receiver.
  *
- *  @param senderId          The unique identifier for the user who sent the message. This value must not be `nil`.
- *  @param senderDisplayName The display name for the user who sent the message. This value must not be `nil`.
- *  @param date              The date that the message was sent. This value must not be `nil`.
- *  @param media             The media data for the message. This value must not be `nil`.
+ *  @param aMessage The message with which to compare the receiver.
  *
- *  @discussion Initializing a `JSQMessage` with this method will set `isMediaMessage` to `YES`.
- *
- *  @return An initialized `JSQMessage` object if successful, `nil` otherwise.
+ *  @return `YES` if aMessage is equivalent to the receiver, otherwise `NO`.
  */
-- (instancetype)initWithSenderId:(NSString *)senderId
-               senderDisplayName:(NSString *)senderDisplayName
-                            date:(NSDate *)date
-                           media:(id<JSQMessageMediaData>)media;
-
-/**
- *  Not a valid initializer.
- */
-- (id)init NS_UNAVAILABLE;
+- (BOOL)isEqualToMessage:(JSQMessage *)aMessage;
 
 @end

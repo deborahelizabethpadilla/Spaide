@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -26,12 +26,6 @@
  *
  */
 @interface JSQMessagesCollectionViewFlowLayoutInvalidationContext : UICollectionViewFlowLayoutInvalidationContext
-
-/**
- *  A boolean indicating whether to empty the messages layout information cache for items and views in the layout.
- *  The default value is `NO`.
- */
-@property (nonatomic, assign) BOOL invalidateFlowLayoutMessagesCache;
 
 /**
  *  Creates and returns a new `JSQMessagesCollectionViewFlowLayoutInvalidationContext` object.

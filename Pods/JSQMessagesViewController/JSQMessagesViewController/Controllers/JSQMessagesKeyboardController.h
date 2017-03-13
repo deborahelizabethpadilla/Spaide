@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -111,11 +111,6 @@ FOUNDATION_EXPORT NSString * const JSQMessagesKeyboardControllerUserInfoKeyKeybo
 @property (assign, nonatomic, readonly) CGRect currentKeyboardFrame;
 
 /**
- *  Not a valid initializer.
- */
-- (id)init NS_UNAVAILABLE;
-
-/**
  *  Creates a new keyboard controller object with the specified textView, contextView, panGestureRecognizer, and delegate.
  *
  *  @param textView             The text view in which the user is editing with the system keyboard. This value must not be `nil`.
@@ -128,7 +123,7 @@ FOUNDATION_EXPORT NSString * const JSQMessagesKeyboardControllerUserInfoKeyKeybo
 - (instancetype)initWithTextView:(UITextView *)textView
                      contextView:(UIView *)contextView
             panGestureRecognizer:(UIPanGestureRecognizer *)panGestureRecognizer
-                        delegate:(id<JSQMessagesKeyboardControllerDelegate>)delegate NS_DESIGNATED_INITIALIZER;
+                        delegate:(id<JSQMessagesKeyboardControllerDelegate>)delegate;
 
 /**
  *  Tells the keyboard controller that it should begin listening for system keyboard notifications.

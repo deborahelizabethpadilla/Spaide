@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -17,6 +17,14 @@
 //
 
 #import "JSQMessagesLabel.h"
+
+
+@interface JSQMessagesLabel ()
+
+- (void)jsq_configureLabel;
+
+@end
+
 
 @implementation JSQMessagesLabel
 
@@ -47,10 +55,6 @@
 
 - (void)setTextInsets:(UIEdgeInsets)textInsets
 {
-    if (UIEdgeInsetsEqualToEdgeInsets(_textInsets, textInsets)) {
-        return;
-    }
-    
     _textInsets = textInsets;
     [self setNeedsDisplay];
 }

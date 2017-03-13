@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -64,6 +64,13 @@
                                  NSParagraphStyleAttributeName : paragraphStyle };
     }
     return self;
+}
+
+- (void)dealloc
+{
+    _dateFormatter = nil;
+    _dateTextAttributes = nil;
+    _timeTextAttributes = nil;
 }
 
 #pragma mark - Formatter

@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -18,58 +18,34 @@
 
 #import "JSQSystemSoundPlayer+JSQMessages.h"
 
-#import "NSBundle+JSQMessages.h"
-
-
 static NSString * const kJSQMessageReceivedSoundName = @"message_received";
 static NSString * const kJSQMessageSentSoundName = @"message_sent";
 
 
 @implementation JSQSystemSoundPlayer (JSQMessages)
 
-#pragma mark - Public
-
 + (void)jsq_playMessageReceivedSound
 {
-    [self jsq_playSoundFromJSQMessagesBundleWithName:kJSQMessageReceivedSoundName asAlert:NO];
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:kJSQMessageReceivedSoundName
+                                                 extension:kJSQSystemSoundTypeAIFF];
 }
 
 + (void)jsq_playMessageReceivedAlert
 {
-    [self jsq_playSoundFromJSQMessagesBundleWithName:kJSQMessageReceivedSoundName asAlert:YES];
+    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:kJSQMessageReceivedSoundName
+                                                      extension:kJSQSystemSoundTypeAIFF];
 }
 
 + (void)jsq_playMessageSentSound
 {
-    [self jsq_playSoundFromJSQMessagesBundleWithName:kJSQMessageSentSoundName asAlert:NO];
+    [[JSQSystemSoundPlayer sharedPlayer] playSoundWithName:kJSQMessageSentSoundName
+                                                 extension:kJSQSystemSoundTypeAIFF];
 }
 
 + (void)jsq_playMessageSentAlert
 {
-    [self jsq_playSoundFromJSQMessagesBundleWithName:kJSQMessageSentSoundName asAlert:YES];
-}
-
-#pragma mark - Private
-
-+ (void)jsq_playSoundFromJSQMessagesBundleWithName:(NSString *)soundName asAlert:(BOOL)asAlert
-{
-    //  save sound player original bundle
-    NSString *originalPlayerBundleIdentifier = [JSQSystemSoundPlayer sharedPlayer].bundle.bundleIdentifier;
-    
-    //  search for sounds in this library's bundle
-    [JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle jsq_messagesBundle];
-    
-    NSString *fileName = [NSString stringWithFormat:@"JSQMessagesAssets.bundle/Sounds/%@", soundName];
-    
-    if (asAlert) {
-        [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithFilename:fileName fileExtension:kJSQSystemSoundTypeAIFF];
-    }
-    else {
-        [[JSQSystemSoundPlayer sharedPlayer] playSoundWithFilename:fileName fileExtension:kJSQSystemSoundTypeAIFF];
-    }
-    
-    //  restore original bundle
-    [JSQSystemSoundPlayer sharedPlayer].bundle = [NSBundle bundleWithIdentifier:originalPlayerBundleIdentifier];
+    [[JSQSystemSoundPlayer sharedPlayer] playAlertSoundWithName:kJSQMessageSentSoundName
+                                                      extension:kJSQSystemSoundTypeAIFF];
 }
 
 @end

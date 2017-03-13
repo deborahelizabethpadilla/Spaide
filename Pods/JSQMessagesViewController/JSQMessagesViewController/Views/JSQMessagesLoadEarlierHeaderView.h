@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.jessesquires.com
+//  http://www.hexedbits.com
 //
 //
 //  Documentation
@@ -15,6 +15,7 @@
 //  Copyright (c) 2014 Jesse Squires
 //  Released under an MIT license: http://opensource.org/licenses/MIT
 //
+
 
 #import <UIKit/UIKit.h>
 
