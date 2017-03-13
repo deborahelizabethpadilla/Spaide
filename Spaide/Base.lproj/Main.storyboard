@@ -106,7 +106,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5LG-C2-nZo" id="4Kf-VV-kbm">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -144,7 +144,7 @@
                     <navigationItem key="navigationItem" id="iuA-xL-d80">
                         <barButtonItem key="leftBarButtonItem" title="BACK" id="ofA-H1-tEt">
                             <connections>
-                                <action selector="backButton:" destination="XQd-cB-gw5" id="9U2-i3-9Sj"/>
+                                <action selector="backButtonAction:" destination="XQd-cB-gw5" id="HGr-xL-doW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
