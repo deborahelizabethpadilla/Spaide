@@ -129,6 +129,7 @@ PODS:
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Firebase/AdMob
@@ -146,6 +147,7 @@ DEPENDENCIES:
   - JSQMessagesViewController
   - JSQSystemSoundPlayer
   - SDWebImage
+  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
@@ -171,7 +173,8 @@ SPEC CHECKSUMS:
   JSQSystemSoundPlayer: 126ccc4a08db8fc3036bd07d33b0f8eda1559476
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: b16550ccde8fa2c6ade0a5d885210d661d8d7520
+PODFILE CHECKSUM: 177344f4b9d11a4e27a5d862f35b3cb1b3489611
 
 COCOAPODS: 1.0.1

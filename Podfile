@@ -20,5 +20,6 @@ target 'Spaide' do
   pod 'JSQMessagesViewController'
   pod 'JSQSystemSoundPlayer'
   pod 'SDWebImage'
+  pod "youtube-ios-player-helper", "~> 0.1.4"
 
 end
