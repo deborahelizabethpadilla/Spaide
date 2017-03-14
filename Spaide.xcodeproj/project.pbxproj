@@ -37,6 +37,7 @@
 		50B4CB521E77592300330A84 /* backgroundimage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B4CB511E77592300330A84 /* backgroundimage3.png */; };
 		50B4CB561E77743100330A84 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB551E77743100330A84 /* Profile.swift */; };
 		50B4CB581E784BF900330A84 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B4CB571E784BF900330A84 /* background5.png */; };
+		50B4CB781E7866BA00330A84 /* VideoProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB771E7866BA00330A84 /* VideoProfile.swift */; };
 		7D7B45D34D25D9AA6B5523D5 /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5087521B621813EB8E9A7723 /* Pods_Spaide.framework */; };
 /* End PBXBuildFile section */
 
@@ -74,6 +75,7 @@
 		50B4CB511E77592300330A84 /* backgroundimage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundimage3.png; sourceTree = "<group>"; };
 		50B4CB551E77743100330A84 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		50B4CB571E784BF900330A84 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
+		50B4CB771E7866BA00330A84 /* VideoProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoProfile.swift; sourceTree = "<group>"; };
 		748D1A18FEE6F73CFC196BC8 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		933400EFC1FE44634F2F5CF1 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -126,6 +128,7 @@
 				500C04F61E7274970096B987 /* Authorization.swift */,
 				500C04F81E727A370096B987 /* Contact.swift */,
 				50B4CB311E7723E300330A84 /* Messages.swift */,
+				50B4CB771E7866BA00330A84 /* VideoProfile.swift */,
 				500C04CF1E71D3390096B987 /* Network */,
 				500C04CE1E71D32F0096B987 /* Controllers */,
 				500C04CD1E71D3280096B987 /* Assets */,
@@ -328,6 +331,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B4CB781E7866BA00330A84 /* VideoProfile.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				50B4CB561E77743100330A84 /* Profile.swift in Sources */,
 				50B4CB321E7723E300330A84 /* Messages.swift in Sources */,

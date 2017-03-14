@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVKit
 
 class Profile: UIViewController {
     
