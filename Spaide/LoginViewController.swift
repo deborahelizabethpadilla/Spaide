@@ -16,6 +16,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var signInSelector: UISegmentedControl!
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var passwordField: UITextField!
+    @IBOutlet var firstnameField: UITextField!
     @IBOutlet var signInLabel: UILabel!
     @IBOutlet var signInButton: UIButton!
     
