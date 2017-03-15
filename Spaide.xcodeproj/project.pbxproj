@@ -102,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				500C04B61E71D0A10096B987 /* Spaide */,
+				500C04CD1E71D3280096B987 /* Assets */,
 				500C04B51E71D0A10096B987 /* Products */,
 				9B4C0AE742E7FC594BF1537B /* Pods */,
 				2E5F887B5E8D8CF907B1179B /* Frameworks */,
@@ -127,7 +128,6 @@
 				500C04F81E727A370096B987 /* Contact.swift */,
 				50B4CB311E7723E300330A84 /* Messages.swift */,
 				500C04CE1E71D32F0096B987 /* Controllers */,
-				500C04CD1E71D3280096B987 /* Assets */,
 			);
 			path = Spaide;
 			sourceTree = "<group>";
@@ -157,6 +157,7 @@
 				500C04D41E71E0A10096B987 /* DESYREL_.ttf */,
 			);
 			name = Assets;
+			path = Spaide;
 			sourceTree = "<group>";
 		};
 		500C04CE1E71D32F0096B987 /* Controllers */ = {
