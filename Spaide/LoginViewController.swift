@@ -102,7 +102,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 //Sign In User To Firebase
                 
-                FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
+                FIRAuth.auth()?.signIn(withEmail: email, password: password, name: name, completion: { (user, error) in
                     
                     //Check User Isn't Nil
                     
@@ -110,7 +110,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         //Store User To Data Base
                         
-                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password)
+                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password, name: name)
                         
                         //User Found, Go To Tab Bar
                         
@@ -129,7 +129,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 //Register User With Firebase
                 
-                FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user, error) in
+                FIRAuth.auth()?.createUser(withEmail: email, password: password, name: name, completion: { (user, error) in
                     
                     //Check User Isn't Nil
                     
@@ -137,7 +137,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                         
                         //Store User To Data Base
                         
-                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password)
+                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password, name: name)
                         
                         //User Found, Go To Tab Bar
                         
