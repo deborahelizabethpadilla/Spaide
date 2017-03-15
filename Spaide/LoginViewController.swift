@@ -31,6 +31,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.usernameField.delegate = self;
         self.passwordField.delegate = self;
+        self.firstnameField.delegate = self;
     }
     
     //Display Alert
@@ -97,7 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Validate If E-mail And Password Are Correct
         
-        if let email = usernameField.text, let password = passwordField.text {
+        if let email = usernameField.text, let password = passwordField.text, let name = firstnameField.text {
             
             if isSignIn {
                 
