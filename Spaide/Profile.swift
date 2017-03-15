@@ -85,6 +85,7 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             
             newImageView.addGestureRecognizer(tap)
             self.view.addSubview(newImageView)
+            
         }
         
         //Photo Gallery
@@ -110,6 +111,11 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
             
             self.present(self.imagePicker, animated: true, completion: nil)
         }
+        
+        
+        
+        }
+
     }
     
     func dismissFullScreenImage(sender: UITapGestureRecognizer) {
@@ -119,6 +125,5 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         sender.view?.removeFromSuperview()
         
     }
-    
-}
+
 

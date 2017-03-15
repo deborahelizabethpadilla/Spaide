@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //
 //  Documentation
@@ -28,6 +28,7 @@
     if (self) {
         self.invalidateFlowLayoutDelegateMetrics = NO;
         self.invalidateFlowLayoutAttributes = NO;
+        _invalidateFlowLayoutMessagesCache = NO;
     }
     return self;
 }
@@ -44,11 +45,8 @@
 
 - (NSString *)description
 {
-    return [NSString stringWithFormat:@"<%@: invalidateFlowLayoutDelegateMetrics=%d, invalidateFlowLayoutAttributes=%d, invalidateDataSourceCounts=%d>",
-            [self class],
-            self.invalidateFlowLayoutDelegateMetrics,
-            self.invalidateFlowLayoutAttributes,
-            self.invalidateDataSourceCounts];
+    return [NSString stringWithFormat:@"<%@: invalidateFlowLayoutDelegateMetrics=%@, invalidateFlowLayoutAttributes=%@, invalidateDataSourceCounts=%@, invalidateFlowLayoutMessagesCache=%@>",
+            [self class], @(self.invalidateFlowLayoutDelegateMetrics), @(self.invalidateFlowLayoutAttributes), @(self.invalidateDataSourceCounts), @(self.invalidateFlowLayoutMessagesCache)];
 }
 
 @end

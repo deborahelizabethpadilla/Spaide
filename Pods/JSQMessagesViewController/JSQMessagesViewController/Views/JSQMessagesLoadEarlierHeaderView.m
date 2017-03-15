@@ -1,6 +1,6 @@
 //
 //  Created by Jesse Squires
-//  http://www.hexedbits.com
+//  http://www.jessesquires.com
 //
 //
 //  Documentation
@@ -19,14 +19,15 @@
 
 #import "JSQMessagesLoadEarlierHeaderView.h"
 
+#import "NSBundle+JSQMessages.h"
+
+
 const CGFloat kJSQMessagesLoadEarlierHeaderViewHeight = 32.0f;
 
 
 @interface JSQMessagesLoadEarlierHeaderView ()
 
 @property (weak, nonatomic) IBOutlet UIButton *loadButton;
-
-- (IBAction)loadButtonPressed:(UIButton *)sender;
 
 @end
 
@@ -39,7 +40,7 @@ const CGFloat kJSQMessagesLoadEarlierHeaderViewHeight = 32.0f;
 + (UINib *)nib
 {
     return [UINib nibWithNibName:NSStringFromClass([JSQMessagesLoadEarlierHeaderView class])
-                          bundle:[NSBundle mainBundle]];
+                          bundle:[NSBundle bundleForClass:[JSQMessagesLoadEarlierHeaderView class]]];
 }
 
 + (NSString *)headerReuseIdentifier
@@ -53,9 +54,11 @@ const CGFloat kJSQMessagesLoadEarlierHeaderViewHeight = 32.0f;
 {
     [super awakeFromNib];
     [self setTranslatesAutoresizingMaskIntoConstraints:NO];
+
     self.backgroundColor = [UIColor clearColor];
-    [self.loadButton setTitle:NSLocalizedString(@"Load Earlier Messages", @"Text for button to load previously sent messages")
-                     forState:UIControlStateNormal];
+
+    [self.loadButton setTitle:[NSBundle jsq_localizedStringForKey:@"load_earlier_messages"] forState:UIControlStateNormal];
+    self.loadButton.titleLabel.font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
 }
 
 - (void)dealloc

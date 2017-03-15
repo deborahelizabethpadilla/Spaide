@@ -84,10 +84,10 @@ PODS:
     - FirebaseAnalytics (~> 3.7)
     - GTMSessionFetcher/Core (~> 1.1)
   - Google-Mobile-Ads-SDK (7.18.0)
-  - GoogleAPIClientForREST (1.2.0):
-    - GoogleAPIClientForREST/Core (= 1.2.0)
+  - GoogleAPIClientForREST (1.2.1):
+    - GoogleAPIClientForREST/Core (= 1.2.1)
     - GTMSessionFetcher (>= 1.1.7)
-  - GoogleAPIClientForREST/Core (1.2.0):
+  - GoogleAPIClientForREST/Core (1.2.1):
     - GTMSessionFetcher (>= 1.1.7)
   - GoogleSignIn (4.0.2):
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
@@ -122,14 +122,13 @@ PODS:
   - GTMSessionFetcher/Core (1.1.9)
   - GTMSessionFetcher/Full (1.1.9):
     - GTMSessionFetcher/Core (= 1.1.9)
-  - JSQMessagesViewController (5.3.2):
-    - JSQSystemSoundPlayer
-  - JSQSystemSoundPlayer (4.4.0)
+  - JSQMessagesViewController (7.3.4):
+    - JSQSystemSoundPlayer (~> 2.0.1)
+  - JSQSystemSoundPlayer (2.0.1)
   - Protobuf (3.2.0)
   - SDWebImage (4.0.0):
     - SDWebImage/Core (= 4.0.0)
   - SDWebImage/Core (4.0.0)
-  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Firebase/AdMob
@@ -145,9 +144,7 @@ DEPENDENCIES:
   - Firebase/RemoteConfig
   - Firebase/Storage
   - JSQMessagesViewController
-  - JSQSystemSoundPlayer
   - SDWebImage
-  - youtube-ios-player-helper (~> 0.1.4)
 
 SPEC CHECKSUMS:
   Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
@@ -164,17 +161,16 @@ SPEC CHECKSUMS:
   FirebaseRemoteConfig: af3003f4e8daa2bd1d5cf90d3cccc1fe224f8ed9
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
   Google-Mobile-Ads-SDK: 658065b4cb5a299bea254c4d24bf7786b6d3e75d
-  GoogleAPIClientForREST: 9e5fd600a06c38abf92b5db337c5df2cfb95ee12
+  GoogleAPIClientForREST: a8b95a252014ce2e618df6b75dc72eca2c00b4af
   GoogleSignIn: d7ad83f13480e1f30453471d00d19b5293ac46af
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMOAuth2: 7fc9c10f5c745f4d9850419ea88889fe3baa6b7d
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
-  JSQMessagesViewController: dc7194ed0ff8f32a7c972504ee3839e95505d91e
-  JSQSystemSoundPlayer: 126ccc4a08db8fc3036bd07d33b0f8eda1559476
+  JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
+  JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
   SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
-  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: 177344f4b9d11a4e27a5d862f35b3cb1b3489611
+PODFILE CHECKSUM: 40c7c981b1812bb463669ef1799daee83b3ae6be
 
 COCOAPODS: 1.0.1
