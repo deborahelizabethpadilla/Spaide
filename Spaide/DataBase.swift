@@ -85,9 +85,9 @@ class DataBase {
     
     //Save User Info
     
-    func saveUser(withID: String, email: String, password: String) {
+    func saveUser(withID: String, email: String, password: String, name: String) {
         
-        let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.PASSWORD: password]
+        let data: Dictionary<String, Any> = [Constants.EMAIL: email, Constants.PASSWORD: password, Constants.NAME: name]
         
         contactsRef.child(withID).setValue(data)
     }
