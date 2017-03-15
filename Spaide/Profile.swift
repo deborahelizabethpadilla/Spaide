@@ -137,16 +137,32 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
     }
     
-    //Pick Image For View
+    //Pick Image For View & Save
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             setProfilePicture(profileView: self.profileView, imageToSet: image)
+            
+            if let imageData: NSData = UIImagePNGRepresentation(self.profileView.image!!) {
+                
+                let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
+                
+                let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil) { metadata, error in
+                    
+                    if (error == nil) {
+                        
+                        let downloadURL = metadata.downloadURL()
+                        
+                        self.databaseRef.child("user_profile")
+                    }
+            }
         }
         
         picker.dismiss(animated: true, completion: nil);
         
+        }
     }
+
 }
