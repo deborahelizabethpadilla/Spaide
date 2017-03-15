@@ -57,7 +57,7 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     //Set Profile Picture
     
-    internal func setProfilePicture(profileView: UIImage, imageToGet: UIImage) {
+    internal func setProfilePicture(profileView: UIImage, imageToSet: UIImage) {
         
         self.profileView.layer.masksToBounds = true
         profileView.layer.cornerRadius = 10.0
@@ -106,19 +106,29 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         
         let camera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { (action) in
             
+            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
+            
             self.imagePicker.delegate = self
             self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
             self.imagePicker.allowsEditing = true
             
             self.present(self.imagePicker, animated: true, completion: nil)
-        }
-        
-        
+            }
         
         }
+        
+        //Get Images
+    
+        myActionSheet.addAction(viewPicture)
+        myActionSheet.addAction(photoGallery)
+        myActionSheet.addAction(camera)
+        
+        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
+        
+        self.present(myActionSheet, animated: true, completion: nil)
 
     }
-    
+
     func dismissFullScreenImage(sender: UITapGestureRecognizer) {
         
         //Remove Larger Image From View
@@ -126,5 +136,17 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         sender.view?.removeFromSuperview()
         
     }
-
-
+    
+    //Pick Image For View
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            setProfilePicture(profileView: self.profileView, imageToSet: image)
+        }
+        
+        picker.dismiss(animated: true, completion: nil);
+        
+    }
+}
