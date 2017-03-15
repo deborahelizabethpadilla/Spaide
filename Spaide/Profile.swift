@@ -62,13 +62,14 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         self.profileView.layer.masksToBounds = true
         profileView.layer.cornerRadius = 10.0
         profileView.layer.borderColor = UIColor.white.cgColor
-        profileView.image = imageToSet
+        profileView.image = imageToGet
     }
+    
     @IBAction func tapProfilePicture(_ sender: UITapGestureRecognizer) {
         
         //Create Action Sheet For Gallery & Camera
         
-        let myActionSheet = UIAlertController(title: "Profile Picture", message: "Select", preferedStyle: UIAlertControllerStyle.actionSheet)
+        let myActionSheet = UIAlertController(title: "Profile Picture", message: "Select", preferredStyle: UIAlertControllerStyle.actionSheet)
         
         let viewPicture = UIAlertAction(title: "View Picture", style: UIAlertActionStyle.default) { (action) in
             

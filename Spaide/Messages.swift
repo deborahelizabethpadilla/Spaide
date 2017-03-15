@@ -64,7 +64,7 @@ class MessagesHandler {
                     
                     //Let User Know Uploading Image Has Failed
                     
-                    displayAlert(title: "Oh No!", message: "Upload Of Image Failed!")
+                    self.displayAlert(title: "Oh No!", message: "Upload Of Image Failed!")
                     
                 } else {
                     
@@ -81,7 +81,7 @@ class MessagesHandler {
                     
                     //Let User Know Uploading Video Has Failed
                     
-                    displayAlert(title: "Oh No!", message: "Upload Of Video Failed!")
+                    self.displayAlert(title: "Oh No!", message: "Upload Of Video Failed!")
                     
                 } else {
                     
