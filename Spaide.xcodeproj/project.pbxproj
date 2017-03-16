@@ -10,49 +10,6 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>177654C4922815771641EE7F</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>FF00B504D0A39A7EBF3081C3</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2DD50CC2D69398295CD2537D</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Check Pods Manifest.lock</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
-if [[ $? != 0 ]] ; then
-    cat &lt;&lt; EOM
-error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
-EOM
-    exit 1
-fi
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
 		<key>500C04AB1E71D0A00096B987</key>
 		<dict>
 			<key>children</key>
@@ -60,8 +17,6 @@ fi
 				<string>500C04B61E71D0A10096B987</string>
 				<string>500C04CD1E71D3280096B987</string>
 				<string>500C04B51E71D0A10096B987</string>
-				<string>99BC786F6AF34A15C2028CC4</string>
-				<string>177654C4922815771641EE7F</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -163,9 +118,7 @@ fi
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array>
-				<string>FBD668B46BE6803B3EEC8B40</string>
-			</array>
+			<array/>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -203,12 +156,9 @@ fi
 			<string>500C04C81E71D0A30096B987</string>
 			<key>buildPhases</key>
 			<array>
-				<string>2DD50CC2D69398295CD2537D</string>
 				<string>500C04B01E71D0A10096B987</string>
 				<string>500C04B11E71D0A10096B987</string>
 				<string>500C04B21E71D0A10096B987</string>
-				<string>C79BA4C06FE669908D674536</string>
-				<string>7BB89FFEAB312E3FB9347CBC</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -579,8 +529,6 @@ fi
 		</dict>
 		<key>500C04C91E71D0A30096B987</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>938243347AF24A01E4344084</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -638,8 +586,6 @@ fi
 		</dict>
 		<key>500C04CA1E71D0A30096B987</key>
 		<dict>
-			<key>baseConfigurationReference</key>
-			<string>BA3E97A6D03432C54911D67A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1158,118 +1104,6 @@ fi
 			<string>50B4CB7C1E7A0FAF00330A84</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-		</dict>
-		<key>7BB89FFEAB312E3FB9347CBC</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-resources.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>938243347AF24A01E4344084</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Spaide.debug.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>99BC786F6AF34A15C2028CC4</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>938243347AF24A01E4344084</string>
-				<string>BA3E97A6D03432C54911D67A</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>BA3E97A6D03432C54911D67A</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods-Spaide.release.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>C79BA4C06FE669908D674536</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>[CP] Embed Pods Frameworks</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-frameworks.sh"
-</string>
-			<key>showEnvVarsInLog</key>
-			<string>0</string>
-		</dict>
-		<key>FBD668B46BE6803B3EEC8B40</key>
-		<dict>
-			<key>fileRef</key>
-			<string>FF00B504D0A39A7EBF3081C3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>FF00B504D0A39A7EBF3081C3</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.framework</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>Pods_Spaide.framework</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
