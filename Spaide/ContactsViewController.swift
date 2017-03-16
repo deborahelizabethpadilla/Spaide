@@ -13,11 +13,9 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
     
     //Outlets
     
-    @IBOutlet weak var myTable: UITableView!
-    
     //Variables
     
-    private let CELL_ID = "Cell"
+    private let CELL_ID = "customCell"
     private let CHAT_SEGUE = "chatSegue"
     
     private var contacts = [Contact]()
@@ -39,7 +37,8 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Get Name Of Current User
         
-        myTable.reloadData()
+        firstName.reloadInputViews()
+        cityState.reloadInputViews()
         
     }
     

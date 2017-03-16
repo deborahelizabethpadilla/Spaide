@@ -21,7 +21,7 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
     
     //Variables
     
-    var loggedInUser = Any?()
+    var loggedInUser = FIRAuth.auth()?.currentUser
     var databaseRef = FIRDatabase.database().reference()
     var storageRef = FIRStorage.storage().reference()
     
@@ -155,12 +155,12 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
                         
                         let downloadURL = metadata.downloadURL()
                         
-                        self.databaseRef.child("user_profile")
+                        self.databaseRef.child("user_profile").child(self.loggedInUser)
                     }
             }
         }
         
-        picker.dismiss(animated: true, completion: nil);
+        picker.dismiss(animated: true, completion: nil)
         
         }
     }
