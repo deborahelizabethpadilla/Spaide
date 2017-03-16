@@ -276,7 +276,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lWm-KO-a8x" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Messages" image="chat (1).png" id="nsW-p7-aq4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="imt-yG-FG5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="imt-yG-FG5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -294,7 +294,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="FnZ-gX-eDP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="91n-qu-k9T">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="91n-qu-k9T">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
