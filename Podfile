@@ -11,6 +11,5 @@ target 'Spaide' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
-  pod 'SDWebImage'
 
 end
