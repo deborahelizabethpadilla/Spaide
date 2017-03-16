@@ -26,7 +26,7 @@ static NSString * const kJSQMessageSentSoundName = @"message_sent";
 
 
 @implementation JSQSystemSoundPlayer (JSQMessages)
-    
+
 #pragma mark - Public
 
 + (void)jsq_playMessageReceivedSound
