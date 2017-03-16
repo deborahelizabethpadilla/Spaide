@@ -1,17 +1,17 @@
 PODS:
-  - Firebase/Auth (3.14.0):
+  - Firebase/Auth (3.15.0):
     - Firebase/Core
     - FirebaseAuth (= 3.1.1)
-  - Firebase/Core (3.14.0):
+  - Firebase/Core (3.15.0):
     - FirebaseAnalytics (= 3.7.0)
-    - FirebaseCore (= 3.5.1)
-  - Firebase/Database (3.14.0):
+    - FirebaseCore (= 3.5.2)
+  - Firebase/Database (3.15.0):
     - Firebase/Core
     - FirebaseDatabase (= 3.1.2)
-  - Firebase/Messaging (3.14.0):
+  - Firebase/Messaging (3.15.0):
     - Firebase/Core
     - FirebaseMessaging (= 1.2.2)
-  - Firebase/Storage (3.14.0):
+  - Firebase/Storage (3.15.0):
     - Firebase/Core
     - FirebaseStorage (= 1.1.0)
   - FirebaseAnalytics (3.7.0):
@@ -22,7 +22,7 @@ PODS:
     - FirebaseAnalytics (~> 3.7)
     - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FirebaseCore (3.5.1):
+  - FirebaseCore (3.5.2):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
   - FirebaseDatabase (3.1.2):
     - FirebaseAnalytics (~> 3.7)
@@ -52,6 +52,7 @@ PODS:
     - JSQSystemSoundPlayer (~> 2.0.1)
   - JSQSystemSoundPlayer (2.0.1)
   - Protobuf (3.2.0)
+  - youtube-ios-player-helper (0.1.6)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -60,12 +61,13 @@ DEPENDENCIES:
   - Firebase/Messaging
   - Firebase/Storage
   - JSQMessagesViewController
+  - youtube-ios-player-helper
 
 SPEC CHECKSUMS:
-  Firebase: 85a581fb04e44f63ae9f4fbc8d6dabf4a4c18653
+  Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
   FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
   FirebaseAuth: cc8a1824170adbd351edb7f994490a3fb5c18be6
-  FirebaseCore: 225d40532489835a034b8f4e2c9c87fbf4f615a2
+  FirebaseCore: a024587e43778508700af8c6b1209f7c4516ba02
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FirebaseMessaging: df8267f378580a24174ce7861233aa11d5c90109
@@ -75,7 +77,8 @@ SPEC CHECKSUMS:
   JSQMessagesViewController: 39fed975e3c9f8eba7292071e29eeb541d105e66
   JSQSystemSoundPlayer: c5850e77a4363ffd374cd851154b9af93264ed8d
   Protobuf: 745f59e122e5de98d4d7ef291e264a0eef80f58e
+  youtube-ios-player-helper: 21ab92db027c7ff86cb17a3843a3f6eafc8158d2
 
-PODFILE CHECKSUM: d94d111565d3075072ca67f3c058beb527f29972
+PODFILE CHECKSUM: 613c33ff54c4b7a2df26a42e140deee288723fd6
 
 COCOAPODS: 1.0.1
