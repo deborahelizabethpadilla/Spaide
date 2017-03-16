@@ -4,14 +4,12 @@
 target 'Spaide' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
-  
+
   pod 'Firebase/Core'
-  pod 'Firebase/AdMob'
-  pod 'Firebase/Auth'
-  pod 'Firebase/Database'
   pod 'Firebase/Messaging'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'JSQMessagesViewController'
-  pod 'SDWebImage'
 
 end
