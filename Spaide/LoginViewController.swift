@@ -13,92 +13,19 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Log In Outlets
     
-    @IBOutlet var signInSelector: UISegmentedControl!
-    @IBOutlet var usernameField: UITextField!
-    @IBOutlet var passwordField: UITextField!
-    @IBOutlet var firstnameField: UITextField!
-    @IBOutlet var signInLabel: UILabel!
-    @IBOutlet var signInButton: UIButton!
+
     
     //Variables
     
-    var isSignIn:Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Dismiss Keyboard On Return Key
         
-        self.usernameField.delegate = self;
-        self.passwordField.delegate = self;
-        self.firstnameField.delegate = self;
+
+  
     }
     
-    //Display Alert
-    
-    func displayAlert(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            
-            self.dismiss(animated: true, completion: nil)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-    }
-    
-    //Text Field Functions
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        
-        //Dismiss Keyboard On Tap
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-        
-        //Dismiss Keyboard On Return Key
-        
-        self.view.endEditing(true)
-        return false
-    }
-    
-    func dismissKeyboard() {
-        
-        //Dismiss Keyboard On Tap
-        
-        view.endEditing(true)
-    }
-    
-    //Log In Actions
-    
-    
-    @IBAction func signInSelector(_ sender: Any) {
-        
-        //Flip The Boolean
-        
-        isSignIn = !isSignIn
-        
-        //Check Bool & Set Button/Labels
-        
-        if isSignIn {
-            
-            signInLabel.text = "Sign In"
-            signInButton.setTitle("Sign In", for: .normal)
-            
-        } else {
-            
-            signInLabel.text = "Register"
-            signInButton.setTitle("Register", for: .normal)
-        }
-        
-    }
-    
-    @IBAction func signInAction(_ sender: Any) {
-        
-        //Validate If E-mail And Password Are Correct
-        
-        //Sign In
-        
-    }
+
 }
