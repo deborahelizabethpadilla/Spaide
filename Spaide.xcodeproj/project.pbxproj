@@ -32,12 +32,9 @@
 		50B4CB561E77743100330A84 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB551E77743100330A84 /* Profile.swift */; };
 		50B4CB581E784BF900330A84 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B4CB571E784BF900330A84 /* background5.png */; };
 		50B4CB7D1E7A0FAF00330A84 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB7C1E7A0FAF00330A84 /* CustomCellTableViewCell.swift */; };
-		5B1C95105D08E03D74DC858C /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 315D4F904C07409A884F03EF /* Pods_Spaide.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0ADC773A1573215087430D28 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
-		315D4F904C07409A884F03EF /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C04B41E71D0A10096B987 /* Spaide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C04B71E71D0A10096B987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C04BE1E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +62,6 @@
 		50B4CB551E77743100330A84 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		50B4CB571E784BF900330A84 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
 		50B4CB7C1E7A0FAF00330A84 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
-		8D3D45725FA7824B99F3AA17 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,38 +69,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B1C95105D08E03D74DC858C /* Pods_Spaide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10A0D163DB57EAD4DDB5AB1B /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				315D4F904C07409A884F03EF /* Pods_Spaide.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		1909D86A15EBBA309E0ACC7C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0ADC773A1573215087430D28 /* Pods-Spaide.debug.xcconfig */,
-				8D3D45725FA7824B99F3AA17 /* Pods-Spaide.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 		500C04AB1E71D0A00096B987 = {
 			isa = PBXGroup;
 			children = (
 				500C04B61E71D0A10096B987 /* Spaide */,
 				500C04CD1E71D3280096B987 /* Assets */,
 				500C04B51E71D0A10096B987 /* Products */,
-				1909D86A15EBBA309E0ACC7C /* Pods */,
-				10A0D163DB57EAD4DDB5AB1B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,12 +156,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 500C04C81E71D0A30096B987 /* Build configuration list for PBXNativeTarget "Spaide" */;
 			buildPhases = (
-				AA7F083C91C40666D76D9AD8 /* [CP] Check Pods Manifest.lock */,
 				500C04B01E71D0A10096B987 /* Sources */,
 				500C04B11E71D0A10096B987 /* Frameworks */,
 				500C04B21E71D0A10096B987 /* Resources */,
-				73EB04384B97223252C21D18 /* [CP] Embed Pods Frameworks */,
-				5531EDFAB4F441AD0A7DA804 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -254,54 +227,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		5531EDFAB4F441AD0A7DA804 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		73EB04384B97223252C21D18 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		AA7F083C91C40666D76D9AD8 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		500C04B01E71D0A10096B987 /* Sources */ = {
@@ -441,7 +366,6 @@
 		};
 		500C04C91E71D0A30096B987 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0ADC773A1573215087430D28 /* Pods-Spaide.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -485,7 +409,6 @@
 		};
 		500C04CA1E71D0A30096B987 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D3D45725FA7824B99F3AA17 /* Pods-Spaide.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
