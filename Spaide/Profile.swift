@@ -31,138 +31,18 @@ class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationCo
         super.viewDidLoad()
         
         //Auth Current User & Profile Data
-        
-        loggedInUser = FIRAuth.auth()?.currentUser
-        
-        self.databaseRef.child("user_profiles").child(self.loggedInUser!.uid).observeSingleEvent(of: .Value) { (snapshot: FIRDataSnapshot) in
-            
-        self.nameText.text = snapshot.value! = ["name"] as? String
-            
-        }
-       
-        //Make Profile View A Circle
-        
-        profileView.layer.cornerRadius = profileView.frame.size.width / 2
-        profileView.clipsToBounds = true
-        
-        //Initially User Will Not Have Profile Data
-        
-        let databaseProfilePic = snapshot.value!["profile_pic"] as! String
-        
-        let data = NSData(contentsOf: URL(string: databaseProfilePic)!)
-        
-        self.setProfilePicture(self.profilePicture, imageToSet: UIImage(data: data!)!)
+
+    
         
     }
     
     //Set Profile Picture
     
-    internal func setProfilePicture(profileView: UIImage, imageToSet: UIImage) {
-        
-        self.profileView.layer.masksToBounds = true
-        profileView.layer.cornerRadius = 10.0
-        profileView.layer.borderColor = UIColor.white.cgColor
-        profileView.image = imageToGet
-    }
     
     @IBAction func tapProfilePicture(_ sender: UITapGestureRecognizer) {
         
         //Create Action Sheet For Gallery & Camera
         
-        let myActionSheet = UIAlertController(title: "Profile Picture", message: "Select", preferredStyle: UIAlertControllerStyle.actionSheet)
-        
-        let viewPicture = UIAlertAction(title: "View Picture", style: UIAlertActionStyle.default) { (action) in
-            
-            let imageView = sender.view as! UIImageView
-            
-            let newImageView = UIImageView(image: imageView.image)
-            
-            newImageView.frame = self.view.frame
-            newImageView.backgroundColor = UIColor.black
-            newImageView.contentMode = .scaleAspectFit
-            newImageView.isUserInteractionEnabled = true
-            
-            let tap = UITapGestureRecognizer(target: self, action: #selector(self.dismissFullScreenImage))
-            
-            newImageView.addGestureRecognizer(tap)
-            self.view.addSubview(newImageView)
-            
-        }
-        
-        //Photo Gallery
-        
-        let photoGallery = UIAlertAction(title: "Photos", style: UIAlertActionStyle.default) { (action) in
-            
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.savedPhotosAlbum) {
-                
-                self.imagePicker.delegate = self
-                self.imagePicker.sourceType = UIImagePickerControllerSourceType.savedPhotosAlbum
-                self.imagePicker.allowsEditing = true
-                self.present(self, animated: true, completion: nil)
-            }
-        }
-        
-        //Camera
-        
-        let camera = UIAlertAction(title: "Camera", style: UIAlertActionStyle.default) { (action) in
-            
-            if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
-            
-            self.imagePicker.delegate = self
-            self.imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            self.imagePicker.allowsEditing = true
-            
-            self.present(self.imagePicker, animated: true, completion: nil)
-            }
-        
-        }
-        
-        //Get Images
-    
-        myActionSheet.addAction(viewPicture)
-        myActionSheet.addAction(photoGallery)
-        myActionSheet.addAction(camera)
-        
-        myActionSheet.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-        
-        self.present(myActionSheet, animated: true, completion: nil)
-
-    }
-
-    func dismissFullScreenImage(sender: UITapGestureRecognizer) {
-        
-        //Remove Larger Image From View
-        
-        sender.view?.removeFromSuperview()
-        
-    }
-    
-    //Pick Image For View & Save
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            
-            setProfilePicture(profileView: self.profileView, imageToSet: image)
-            
-            if let imageData: NSData = UIImagePNGRepresentation(self.profileView.image!!) {
-                
-                let profilePicStorageRef = storageRef.child("user_profiles/\(self.loggedInUser!.uid)/profile_pic")
-                
-                let uploadTask = profilePicStorageRef.putData(imageData, metadata: nil) { metadata, error in
-                    
-                    if (error == nil) {
-                        
-                        let downloadURL = metadata.downloadURL()
-                        
-                        self.databaseRef.child("user_profile").child(self.loggedInUser)
-                    }
-            }
-        }
-        
-        picker.dismiss(animated: true, completion: nil)
-        
-        }
-    }
+}
 
 }

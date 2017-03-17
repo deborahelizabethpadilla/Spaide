@@ -98,65 +98,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Validate If E-mail And Password Are Correct
         
-        if let email = usernameField.text, let password = passwordField.text, let name = firstnameField.text {
-            
-            if isSignIn {
-                
-                //Sign In User To Firebase
-                
-                FIRAuth.auth()?.signIn(withEmail: email, password: password, name: name, completion: { (user, error) in
-                    
-                    //Check User Isn't Nil
-                    
-                    if user == user {
-                        
-                        //Store User To Data Base
-                        
-                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password, name: name)
-                        
-                        //User Found, Go To Tab Bar
-                        
-                        self.performSegue(withIdentifier: "goToTabBar", sender: self)
-                        
-                    } else {
-                        
-                        //Check Error & Show Alert
-                        
-                        self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
-                    }
-                    
-                })
-                
-            } else {
-                
-                //Register User With Firebase
-                
-                FIRAuth.auth()?.createUser(withEmail: email, password: password, name: name, completion: { (user, error) in
-                    
-                    //Check User Isn't Nil
-                    
-                    if user == user {
-                        
-                        //Store User To Data Base
-                        
-                        DataBase.Instance.saveUser(withID: user!.uid, email: email, password: password, name: name)
-                        
-                        //User Found, Go To Tab Bar
-                        
-                        self.performSegue(withIdentifier: "goToTabBar", sender: self)
-                        
-                    } else {
-                        
-                        //Check Error & Show Alert
-                        
-                        self.displayAlert(title: "Oh No!", message: "Try Again!")
-                    }
-                    
-                })
-            }
-
-        }
-        
+        //Sign In
         
     }
 }

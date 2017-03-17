@@ -37,8 +37,7 @@ class ContactsViewController: UIViewController, UITableViewDelegate, UITableView
         
         //Get Name Of Current User
         
-        firstName.reloadInputViews()
-        cityState.reloadInputViews()
+  
         
     }
     
