@@ -10,6 +10,61 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0ADC773A1573215087430D28</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Spaide.debug.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>10A0D163DB57EAD4DDB5AB1B</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>315D4F904C07409A884F03EF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>1909D86A15EBBA309E0ACC7C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>0ADC773A1573215087430D28</string>
+				<string>8D3D45725FA7824B99F3AA17</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>315D4F904C07409A884F03EF</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>wrapper.framework</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>Pods_Spaide.framework</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
 		<key>500C04AB1E71D0A00096B987</key>
 		<dict>
 			<key>children</key>
@@ -17,6 +72,8 @@
 				<string>500C04B61E71D0A10096B987</string>
 				<string>500C04CD1E71D3280096B987</string>
 				<string>500C04B51E71D0A10096B987</string>
+				<string>1909D86A15EBBA309E0ACC7C</string>
+				<string>10A0D163DB57EAD4DDB5AB1B</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -118,7 +175,9 @@
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
-			<array/>
+			<array>
+				<string>5B1C95105D08E03D74DC858C</string>
+			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
@@ -156,9 +215,12 @@
 			<string>500C04C81E71D0A30096B987</string>
 			<key>buildPhases</key>
 			<array>
+				<string>AA7F083C91C40666D76D9AD8</string>
 				<string>500C04B01E71D0A10096B987</string>
 				<string>500C04B11E71D0A10096B987</string>
 				<string>500C04B21E71D0A10096B987</string>
+				<string>73EB04384B97223252C21D18</string>
+				<string>5531EDFAB4F441AD0A7DA804</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -529,6 +591,8 @@
 		</dict>
 		<key>500C04C91E71D0A30096B987</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>0ADC773A1573215087430D28</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -586,6 +650,8 @@
 		</dict>
 		<key>500C04CA1E71D0A30096B987</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>8D3D45725FA7824B99F3AA17</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -1104,6 +1170,106 @@
 			<string>50B4CB7C1E7A0FAF00330A84</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
+		</dict>
+		<key>5531EDFAB4F441AD0A7DA804</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>5B1C95105D08E03D74DC858C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>315D4F904C07409A884F03EF</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>73EB04384B97223252C21D18</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Embed Pods Frameworks</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-frameworks.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
+		</dict>
+		<key>8D3D45725FA7824B99F3AA17</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-Spaide.release.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>AA7F083C91C40666D76D9AD8</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>[CP] Check Pods Manifest.lock</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>diff "${PODS_ROOT}/../Podfile.lock" "${PODS_ROOT}/Manifest.lock" &gt; /dev/null
+if [[ $? != 0 ]] ; then
+    cat &lt;&lt; EOM
+error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.
+EOM
+    exit 1
+fi
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>0</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
