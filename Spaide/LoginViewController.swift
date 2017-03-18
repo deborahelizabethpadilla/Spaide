@@ -8,12 +8,11 @@
 
 import UIKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UITableViewController,UITextFieldDelegate {
     
-    //Log In Outlets
+    //Outlets
     
-    @IBOutlet var imageView: UIImageView!
-
+    @IBOutlet var playerView: YTPlayerView!
     
     //Variables
     
@@ -22,13 +21,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Set Image View To Circle
-        
-        imageView.layer.borderWidth = 1
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.black.cgColor
-        imageView.layer.cornerRadius = imageView.frame.height / 2
-        imageView.clipsToBounds = true
+       
 
   
     }

@@ -95,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Protobuf/Protobuf.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/youtube-ios-player-helper/youtube_ios_player_helper.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/GTMSessionFetcher/GTMSessionFetcher.framework"
@@ -103,6 +104,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Protobuf/Protobuf.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SDWebImage/SDWebImage.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/youtube-ios-player-helper/youtube_ios_player_helper.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

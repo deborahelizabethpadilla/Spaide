@@ -12,5 +12,6 @@ target 'Spaide' do
   pod 'Firebase/Messaging'
   pod 'JSQMessagesViewController'
   pod 'SDWebImage'
+  pod ‘youtube-ios-player-helper'
 
 end
