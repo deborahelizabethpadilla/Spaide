@@ -18,6 +18,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //Variables
     
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
