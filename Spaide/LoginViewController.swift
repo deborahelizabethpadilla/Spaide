@@ -7,12 +7,12 @@
 //
 
 import UIKit
-import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Log In Outlets
     
+    @IBOutlet var imageView: UIImageView!
 
     
     //Variables
@@ -22,8 +22,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Dismiss Keyboard On Return Key
+        //Set Image View To Circle
         
+        imageView.layer.borderWidth = 1
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.clipsToBounds = true
 
   
     }

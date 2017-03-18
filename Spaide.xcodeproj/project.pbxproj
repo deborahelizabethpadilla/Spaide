@@ -12,7 +12,6 @@
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
-		500C04D31E71E03B0096B987 /* blackbackground.png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D21E71E03B0096B987 /* blackbackground.png */; };
 		500C04D51E71E0A20096B987 /* DESYREL_.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D41E71E0A10096B987 /* DESYREL_.ttf */; };
 		500C04D71E71E0B70096B987 /* gapstown-r.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D61E71E0B70096B987 /* gapstown-r.ttf */; };
 		500C04D91E71ECE50096B987 /* chat (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 500C04D81E71ECE50096B987 /* chat (1).png */; };
@@ -30,7 +29,6 @@
 		50B4CB321E7723E300330A84 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB311E7723E300330A84 /* Messages.swift */; };
 		50B4CB521E77592300330A84 /* backgroundimage3.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B4CB511E77592300330A84 /* backgroundimage3.png */; };
 		50B4CB561E77743100330A84 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB551E77743100330A84 /* Profile.swift */; };
-		50B4CB581E784BF900330A84 /* background5.png in Resources */ = {isa = PBXBuildFile; fileRef = 50B4CB571E784BF900330A84 /* background5.png */; };
 		50B4CB7D1E7A0FAF00330A84 /* CustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4CB7C1E7A0FAF00330A84 /* CustomCellTableViewCell.swift */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; };
 /* End PBXBuildFile section */
@@ -43,7 +41,6 @@
 		500C04C31E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		500C04D21E71E03B0096B987 /* blackbackground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackbackground.png; sourceTree = "<group>"; };
 		500C04D41E71E0A10096B987 /* DESYREL_.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = DESYREL_.ttf; sourceTree = "<group>"; };
 		500C04D61E71E0B70096B987 /* gapstown-r.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gapstown-r.ttf"; sourceTree = "<group>"; };
 		500C04D81E71ECE50096B987 /* chat (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "chat (1).png"; sourceTree = "<group>"; };
@@ -61,7 +58,6 @@
 		50B4CB311E7723E300330A84 /* Messages.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		50B4CB511E77592300330A84 /* backgroundimage3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = backgroundimage3.png; sourceTree = "<group>"; };
 		50B4CB551E77743100330A84 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		50B4CB571E784BF900330A84 /* background5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background5.png; sourceTree = "<group>"; };
 		50B4CB7C1E7A0FAF00330A84 /* CustomCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCellTableViewCell.swift; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -125,9 +121,7 @@
 				500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */,
 				500C04C01E71D0A30096B987 /* Assets.xcassets */,
 				500C04C51E71D0A30096B987 /* Info.plist */,
-				50B4CB571E784BF900330A84 /* background5.png */,
 				50B4CB511E77592300330A84 /* backgroundimage3.png */,
-				500C04D21E71E03B0096B987 /* blackbackground.png */,
 				500C04D61E71E0B70096B987 /* gapstown-r.ttf */,
 				500C04DA1E71ED0E0096B987 /* user (1).png */,
 				500C04D81E71ECE50096B987 /* chat (1).png */,
@@ -242,14 +236,12 @@
 				50B4CB521E77592300330A84 /* backgroundimage3.png in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
 				500C04D51E71E0A20096B987 /* DESYREL_.ttf in Resources */,
-				500C04D31E71E03B0096B987 /* blackbackground.png in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
 				500C04E31E71F5340096B987 /* logout.png in Resources */,
 				500C04D71E71E0B70096B987 /* gapstown-r.ttf in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,
 				500C04DD1E71ED2F0096B987 /* credit-card.png in Resources */,
 				500C04ED1E7213F90096B987 /* Slide1.png in Resources */,
-				50B4CB581E784BF900330A84 /* background5.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
