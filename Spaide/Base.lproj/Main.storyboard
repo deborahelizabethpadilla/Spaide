@@ -293,6 +293,9 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Profile" image="user (1).png" id="VfM-7C-7dp"/>
+                    <connections>
+                        <outlet property="imageView" destination="m9I-Xs-qS3" id="U1o-Rw-vxF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RW-SJ-YG3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,7 +305,7 @@
         <scene sceneID="lY1-t2-wD5">
             <objects>
                 <collectionViewController id="mgH-QS-I8U" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Vpk-Bb-lfu">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Vpk-Bb-lfu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
