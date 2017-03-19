@@ -36,5 +36,7 @@
 	<string>1:1056430532140:ios:ad59c82f014e6d63</string>
 	<key>DATABASE_URL</key>
 	<string>https://spaide-2cc40.firebaseio.com</string>
+	<key>FIREBASE_ANALYTICS_COLLECTION_ENABLED</key>
+	<false/>
 </dict>
 </plist>
