@@ -7,42 +7,32 @@
 //
 
 import UIKit
-import FirebaseAuth
-import FirebaseDatabase
-import FirebaseStorage
 
-
-class Profile: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class Profile: UITableViewController, UIViewController {
     
     //Outlets
     
-    @IBOutlet var profileView: UIImageView!
-    @IBOutlet var nameText: UILabel!
-    
+    @IBOutlet weak var imageView: UIImageView!
+       
     //Variables
     
-    var loggedInUser = FIRAuth.auth()?.currentUser
-    var databaseRef = FIRDatabase.database().reference()
-    var storageRef = FIRStorage.storage().reference()
     
     var imagePicker = UIImagePickerController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Auth Current User & Profile Data
+        //Profile Photo Circular
+        
+        imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+        imageView.layer.borderWidth = 1
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.black.cgColor
+        imageView.layer.cornerRadius = imageView.frame.height / 2
+        imageView.clipsToBounds = true
 
     
         
     }
-    
-    //Set Profile Picture
-    
-    
-    @IBAction func tapProfilePicture(_ sender: UITapGestureRecognizer) {
         
-        //Create Action Sheet For Gallery & Camera
-        
-}
-
 }
