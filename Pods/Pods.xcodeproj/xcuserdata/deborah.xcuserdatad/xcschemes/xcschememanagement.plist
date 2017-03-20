@@ -4,6 +4,16 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>ChameleonFramework.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FontBlaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -14,27 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>JSQMessagesViewController.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>JSQSystemSoundPlayer.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-Spaide.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Protobuf.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SDWebImage.xcscheme</key>
+		<key>TextFieldEffects.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -42,37 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>5166FF536809D9C9585DB144514476CB</key>
+		<key>107A9565F9DF88517DFD3E28C05B2B96</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>57DA137C0C7ABD62896E92575309D779</key>
+		<key>2225F6DB233C94157C36C28163CDF5EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6D5CEDECD3D8DC52EA507E0431BDA8A0</key>
+		<key>455A14995E5E433D6D4087E5461DEAA4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>78F59696B81CD046C55767C4C55367F9</key>
+		<key>46969064B703F30B7D381739A4B8C40D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>76BD4592010354D6C23D6ECCA20D83A8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C052BEBFBD0AB5218CC64BA3450F6547</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C7DCF2B547F7871B9BFD74DE93B0E173</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>D0581AF7BF4A6DA140D280B19ECC7BFF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
