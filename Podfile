@@ -2,7 +2,6 @@
 # platform :ios, '9.0'
 
 target 'Spaide' do
-  # Comment this line if you're not using Swift and don't want to use dynamic frameworks
 
   use_frameworks!
 
@@ -12,6 +11,7 @@ target 'Spaide' do
   pod 'Firebase/Database'
   pod 'FontBlaster'
   pod 'ChameleonFramework/Swift'
+  pod 'TextFieldEffects'
   
 
 end
