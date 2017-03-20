@@ -13,6 +13,7 @@ class LoginViewController: UITableViewController, UITextFieldDelegate, HoshiText
     
     //Outlets
     
+    
    
     
     override func viewDidLoad() {
