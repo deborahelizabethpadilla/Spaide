@@ -8,31 +8,36 @@
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>1</integer>
 		</dict>
 		<key>FontBlaster.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>2</integer>
 		</dict>
 		<key>GTMSessionFetcher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>4</integer>
 		</dict>
 		<key>GoogleToolboxForMac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
+			<key>orderHint</key>
+			<integer>3</integer>
 		</dict>
 		<key>Pods-Spaide.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
-		</dict>
-		<key>TextFieldEffects.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
+			<key>orderHint</key>
+			<integer>5</integer>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
@@ -47,12 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>455A14995E5E433D6D4087E5461DEAA4</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>46969064B703F30B7D381739A4B8C40D</key>
+		<key>4E98062F035ED212FC36B6D5AEF64216</key>
 		<dict>
 			<key>primary</key>
 			<true/>

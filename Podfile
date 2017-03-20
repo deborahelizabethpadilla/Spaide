@@ -10,7 +10,6 @@ target 'Spaide' do
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'TextFieldEffects'
   pod 'FontBlaster'
   pod 'ChameleonFramework/Swift'
   

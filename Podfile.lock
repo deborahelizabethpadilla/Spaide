@@ -42,7 +42,6 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
   - GTMSessionFetcher/Core (1.1.9)
-  - TextFieldEffects (1.3.1)
 
 DEPENDENCIES:
   - ChameleonFramework/Swift
@@ -51,7 +50,6 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Storage
   - FontBlaster
-  - TextFieldEffects
 
 SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
@@ -65,8 +63,7 @@ SPEC CHECKSUMS:
   FontBlaster: 6a34102ab08e18368683a99c2cee6247341121e0
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
-  TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
 
-PODFILE CHECKSUM: 41dd6545d6d1cc91517cc25e96512f58bc8a8203
+PODFILE CHECKSUM: dc8550273bbaeccbb31f51bed796fec5036d9aff
 
 COCOAPODS: 1.2.0

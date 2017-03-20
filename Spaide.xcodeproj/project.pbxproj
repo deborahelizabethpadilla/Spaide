@@ -18,8 +18,57 @@
 		50BDEE4E1E8042A400D77020 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		50BDEE501E8042A900D77020 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		50BDEE521E8042AE00D77020 /* FontBlaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE511E8042AE00D77020 /* FontBlaster.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		50BDEE831E80482400D77020 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE591E80482300D77020 /* .gitignore */; };
+		50BDEE841E80482400D77020 /* .swift-version in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE5A1E80482300D77020 /* .swift-version */; };
+		50BDEE851E80482400D77020 /* CHANGELOG.md in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE5B1E80482300D77020 /* CHANGELOG.md */; };
+		50BDEE861E80482400D77020 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE5C1E80482300D77020 /* LICENSE */; };
+		50BDEE871E80482400D77020 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE5D1E80482300D77020 /* README.md */; };
+		50BDEE881E80482400D77020 /* Akira.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE5F1E80482300D77020 /* Akira.gif */; };
+		50BDEE891E80482400D77020 /* Hoshi.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE601E80482300D77020 /* Hoshi.gif */; };
+		50BDEE8A1E80482400D77020 /* Isao.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE611E80482300D77020 /* Isao.gif */; };
+		50BDEE8B1E80482400D77020 /* Jiro.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE621E80482300D77020 /* Jiro.gif */; };
+		50BDEE8C1E80482400D77020 /* Kaede.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE631E80482300D77020 /* Kaede.gif */; };
+		50BDEE8D1E80482400D77020 /* Madoka.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE641E80482300D77020 /* Madoka.gif */; };
+		50BDEE8E1E80482400D77020 /* Minoru.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE651E80482300D77020 /* Minoru.gif */; };
+		50BDEE8F1E80482400D77020 /* Yoko.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE661E80482300D77020 /* Yoko.gif */; };
+		50BDEE901E80482400D77020 /* Yoshiko.gif in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE671E80482300D77020 /* Yoshiko.gif */; };
+		50BDEE911E80482400D77020 /* AkiraTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE6A1E80482300D77020 /* AkiraTextField.swift */; };
+		50BDEE921E80482400D77020 /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE6B1E80482300D77020 /* HoshiTextField.swift */; };
+		50BDEE931E80482400D77020 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE6C1E80482300D77020 /* Info.plist */; };
+		50BDEE941E80482400D77020 /* IsaoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE6D1E80482300D77020 /* IsaoTextField.swift */; };
+		50BDEE951E80482400D77020 /* JiroTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE6E1E80482300D77020 /* JiroTextField.swift */; };
+		50BDEE961E80482400D77020 /* KaedeTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE6F1E80482300D77020 /* KaedeTextField.swift */; };
+		50BDEE971E80482400D77020 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE701E80482300D77020 /* MadokaTextField.swift */; };
+		50BDEE981E80482400D77020 /* MinoruTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE711E80482300D77020 /* MinoruTextField.swift */; };
+		50BDEE991E80482400D77020 /* TextFieldEffects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE731E80482300D77020 /* TextFieldEffects.swift */; };
+		50BDEE9A1E80482400D77020 /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE741E80482300D77020 /* YokoTextField.swift */; };
+		50BDEE9B1E80482400D77020 /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE751E80482300D77020 /* YoshikoTextField.swift */; };
+		50BDEE9C1E80482400D77020 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE7A1E80482400D77020 /* AppDelegate.swift */; };
+		50BDEE9D1E80482400D77020 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE7B1E80482400D77020 /* LaunchScreen.xib */; };
+		50BDEE9E1E80482400D77020 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE7D1E80482400D77020 /* Main.storyboard */; };
+		50BDEE9F1E80482400D77020 /* ExampleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEE7F1E80482400D77020 /* ExampleTableViewController.swift */; };
+		50BDEEA01E80482400D77020 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE801E80482400D77020 /* Images.xcassets */; };
+		50BDEEA11E80482400D77020 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE811E80482400D77020 /* Info.plist */; };
+		50BDEEA21E80482400D77020 /* TextFieldEffects.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEE821E80482400D77020 /* TextFieldEffects.podspec */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		50BDEEA51E80482400D77020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50BDEE761E80482300D77020 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CBF766D1A71AF7700073B6A;
+			remoteInfo = TextFieldsDemo;
+		};
+		50BDEEA71E80482400D77020 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 50BDEE761E80482300D77020 /* TextFieldEffects.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CB3B6CE1AA8DEA7000AFA56;
+			remoteInfo = TextFieldEffects;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		500C04B41E71D0A10096B987 /* Spaide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +84,40 @@
 		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 		50BDEE511E8042AE00D77020 /* FontBlaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontBlaster.framework; path = "Pods/../build/Release-iphoneos/FontBlaster/FontBlaster.framework"; sourceTree = "<group>"; };
+		50BDEE591E80482300D77020 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		50BDEE5A1E80482300D77020 /* .swift-version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ".swift-version"; sourceTree = "<group>"; };
+		50BDEE5B1E80482300D77020 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
+		50BDEE5C1E80482300D77020 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		50BDEE5D1E80482300D77020 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		50BDEE5F1E80482300D77020 /* Akira.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Akira.gif; sourceTree = "<group>"; };
+		50BDEE601E80482300D77020 /* Hoshi.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Hoshi.gif; sourceTree = "<group>"; };
+		50BDEE611E80482300D77020 /* Isao.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Isao.gif; sourceTree = "<group>"; };
+		50BDEE621E80482300D77020 /* Jiro.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Jiro.gif; sourceTree = "<group>"; };
+		50BDEE631E80482300D77020 /* Kaede.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Kaede.gif; sourceTree = "<group>"; };
+		50BDEE641E80482300D77020 /* Madoka.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Madoka.gif; sourceTree = "<group>"; };
+		50BDEE651E80482300D77020 /* Minoru.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Minoru.gif; sourceTree = "<group>"; };
+		50BDEE661E80482300D77020 /* Yoko.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Yoko.gif; sourceTree = "<group>"; };
+		50BDEE671E80482300D77020 /* Yoshiko.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Yoshiko.gif; sourceTree = "<group>"; };
+		50BDEE6A1E80482300D77020 /* AkiraTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AkiraTextField.swift; sourceTree = "<group>"; };
+		50BDEE6B1E80482300D77020 /* HoshiTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoshiTextField.swift; sourceTree = "<group>"; };
+		50BDEE6C1E80482300D77020 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BDEE6D1E80482300D77020 /* IsaoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsaoTextField.swift; sourceTree = "<group>"; };
+		50BDEE6E1E80482300D77020 /* JiroTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JiroTextField.swift; sourceTree = "<group>"; };
+		50BDEE6F1E80482300D77020 /* KaedeTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KaedeTextField.swift; sourceTree = "<group>"; };
+		50BDEE701E80482300D77020 /* MadokaTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MadokaTextField.swift; sourceTree = "<group>"; };
+		50BDEE711E80482300D77020 /* MinoruTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MinoruTextField.swift; sourceTree = "<group>"; };
+		50BDEE721E80482300D77020 /* TextFieldEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextFieldEffects.h; sourceTree = "<group>"; };
+		50BDEE731E80482300D77020 /* TextFieldEffects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldEffects.swift; sourceTree = "<group>"; };
+		50BDEE741E80482300D77020 /* YokoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YokoTextField.swift; sourceTree = "<group>"; };
+		50BDEE751E80482300D77020 /* YoshikoTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YoshikoTextField.swift; sourceTree = "<group>"; };
+		50BDEE761E80482300D77020 /* TextFieldEffects.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = TextFieldEffects.xcodeproj; sourceTree = "<group>"; };
+		50BDEE7A1E80482400D77020 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		50BDEE7C1E80482400D77020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		50BDEE7E1E80482400D77020 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		50BDEE7F1E80482400D77020 /* ExampleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleTableViewController.swift; sourceTree = "<group>"; };
+		50BDEE801E80482400D77020 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		50BDEE811E80482400D77020 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		50BDEE821E80482400D77020 /* TextFieldEffects.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TextFieldEffects.podspec; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -60,6 +143,7 @@
 		494FF86C0FD52EC122433375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50BDEE581E80482300D77020 /* TextFieldEffects-master */,
 				50BDEE511E8042AE00D77020 /* FontBlaster.framework */,
 				50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */,
 				50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */,
@@ -127,6 +211,88 @@
 			name = Extras;
 			sourceTree = "<group>";
 		};
+		50BDEE581E80482300D77020 /* TextFieldEffects-master */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEE591E80482300D77020 /* .gitignore */,
+				50BDEE5A1E80482300D77020 /* .swift-version */,
+				50BDEE5B1E80482300D77020 /* CHANGELOG.md */,
+				50BDEE5C1E80482300D77020 /* LICENSE */,
+				50BDEE5D1E80482300D77020 /* README.md */,
+				50BDEE5E1E80482300D77020 /* Screenshots */,
+				50BDEE681E80482300D77020 /* TextFieldEffects */,
+				50BDEE821E80482400D77020 /* TextFieldEffects.podspec */,
+			);
+			path = "TextFieldEffects-master";
+			sourceTree = "<group>";
+		};
+		50BDEE5E1E80482300D77020 /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEE5F1E80482300D77020 /* Akira.gif */,
+				50BDEE601E80482300D77020 /* Hoshi.gif */,
+				50BDEE611E80482300D77020 /* Isao.gif */,
+				50BDEE621E80482300D77020 /* Jiro.gif */,
+				50BDEE631E80482300D77020 /* Kaede.gif */,
+				50BDEE641E80482300D77020 /* Madoka.gif */,
+				50BDEE651E80482300D77020 /* Minoru.gif */,
+				50BDEE661E80482300D77020 /* Yoko.gif */,
+				50BDEE671E80482300D77020 /* Yoshiko.gif */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
+		50BDEE681E80482300D77020 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEE691E80482300D77020 /* TextFieldEffects */,
+				50BDEE761E80482300D77020 /* TextFieldEffects.xcodeproj */,
+				50BDEE791E80482400D77020 /* TextFieldsDemo */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		50BDEE691E80482300D77020 /* TextFieldEffects */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEE6A1E80482300D77020 /* AkiraTextField.swift */,
+				50BDEE6B1E80482300D77020 /* HoshiTextField.swift */,
+				50BDEE6C1E80482300D77020 /* Info.plist */,
+				50BDEE6D1E80482300D77020 /* IsaoTextField.swift */,
+				50BDEE6E1E80482300D77020 /* JiroTextField.swift */,
+				50BDEE6F1E80482300D77020 /* KaedeTextField.swift */,
+				50BDEE701E80482300D77020 /* MadokaTextField.swift */,
+				50BDEE711E80482300D77020 /* MinoruTextField.swift */,
+				50BDEE721E80482300D77020 /* TextFieldEffects.h */,
+				50BDEE731E80482300D77020 /* TextFieldEffects.swift */,
+				50BDEE741E80482300D77020 /* YokoTextField.swift */,
+				50BDEE751E80482300D77020 /* YoshikoTextField.swift */,
+			);
+			path = TextFieldEffects;
+			sourceTree = "<group>";
+		};
+		50BDEE771E80482300D77020 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEEA61E80482400D77020 /* TextFieldsDemo.app */,
+				50BDEEA81E80482400D77020 /* TextFieldEffects.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		50BDEE791E80482400D77020 /* TextFieldsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				50BDEE7A1E80482400D77020 /* AppDelegate.swift */,
+				50BDEE7B1E80482400D77020 /* LaunchScreen.xib */,
+				50BDEE7D1E80482400D77020 /* Main.storyboard */,
+				50BDEE7F1E80482400D77020 /* ExampleTableViewController.swift */,
+				50BDEE801E80482400D77020 /* Images.xcassets */,
+				50BDEE811E80482400D77020 /* Info.plist */,
+			);
+			path = TextFieldsDemo;
+			sourceTree = "<group>";
+		};
 		70835E9EFE2027800FC7E730 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +353,12 @@
 			mainGroup = 500C04AB1E71D0A00096B987;
 			productRefGroup = 500C04B51E71D0A10096B987 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 50BDEE771E80482300D77020 /* Products */;
+					ProjectRef = 50BDEE761E80482300D77020 /* TextFieldEffects.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				500C04B31E71D0A10096B987 /* Spaide */,
@@ -194,15 +366,50 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		50BDEEA61E80482400D77020 /* TextFieldsDemo.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TextFieldsDemo.app;
+			remoteRef = 50BDEEA51E80482400D77020 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		50BDEEA81E80482400D77020 /* TextFieldEffects.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = TextFieldEffects.framework;
+			remoteRef = 50BDEEA71E80482400D77020 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		500C04B21E71D0A10096B987 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BDEE831E80482400D77020 /* .gitignore in Resources */,
+				50BDEEA01E80482400D77020 /* Images.xcassets in Resources */,
+				50BDEE8D1E80482400D77020 /* Madoka.gif in Resources */,
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
+				50BDEE8E1E80482400D77020 /* Minoru.gif in Resources */,
+				50BDEE901E80482400D77020 /* Yoshiko.gif in Resources */,
+				50BDEEA21E80482400D77020 /* TextFieldEffects.podspec in Resources */,
+				50BDEE861E80482400D77020 /* LICENSE in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
+				50BDEE881E80482400D77020 /* Akira.gif in Resources */,
+				50BDEE8F1E80482400D77020 /* Yoko.gif in Resources */,
+				50BDEE931E80482400D77020 /* Info.plist in Resources */,
+				50BDEE841E80482400D77020 /* .swift-version in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,
+				50BDEE8A1E80482400D77020 /* Isao.gif in Resources */,
+				50BDEE8B1E80482400D77020 /* Jiro.gif in Resources */,
+				50BDEE891E80482400D77020 /* Hoshi.gif in Resources */,
+				50BDEE9D1E80482400D77020 /* LaunchScreen.xib in Resources */,
+				50BDEE9E1E80482400D77020 /* Main.storyboard in Resources */,
+				50BDEE8C1E80482400D77020 /* Kaede.gif in Resources */,
+				50BDEEA11E80482400D77020 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,8 +468,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BDEE9B1E80482400D77020 /* YoshikoTextField.swift in Sources */,
+				50BDEE971E80482400D77020 /* MadokaTextField.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
+				50BDEE9C1E80482400D77020 /* AppDelegate.swift in Sources */,
+				50BDEE991E80482400D77020 /* TextFieldEffects.swift in Sources */,
+				50BDEE851E80482400D77020 /* CHANGELOG.md in Sources */,
+				50BDEE871E80482400D77020 /* README.md in Sources */,
+				50BDEE981E80482400D77020 /* MinoruTextField.swift in Sources */,
+				50BDEE951E80482400D77020 /* JiroTextField.swift in Sources */,
+				50BDEE921E80482400D77020 /* HoshiTextField.swift in Sources */,
+				50BDEE9A1E80482400D77020 /* YokoTextField.swift in Sources */,
+				50BDEE941E80482400D77020 /* IsaoTextField.swift in Sources */,
+				50BDEE9F1E80482400D77020 /* ExampleTableViewController.swift in Sources */,
+				50BDEE961E80482400D77020 /* KaedeTextField.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
+				50BDEE911E80482400D77020 /* AkiraTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +504,22 @@
 				500C04C31E71D0A30096B987 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		50BDEE7B1E80482400D77020 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50BDEE7C1E80482400D77020 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+		50BDEE7D1E80482400D77020 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				50BDEE7E1E80482400D77020 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
