@@ -13,7 +13,12 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; };
+		50BDEE4A1E80429700D77020 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE491E80429700D77020 /* TextFieldEffects.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		50BDEE4C1E80429D00D77020 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		50BDEE4E1E8042A400D77020 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		50BDEE501E8042A900D77020 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		50BDEE521E8042AE00D77020 /* FontBlaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE511E8042AE00D77020 /* FontBlaster.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +30,11 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
+		50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
+		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
+		50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
+		50BDEE511E8042AE00D77020 /* FontBlaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontBlaster.framework; path = "Pods/../build/Release-iphoneos/FontBlaster/FontBlaster.framework"; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -35,6 +45,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BDEE521E8042AE00D77020 /* FontBlaster.framework in Frameworks */,
+				50BDEE501E8042A900D77020 /* GTMSessionFetcher.framework in Frameworks */,
+				50BDEE4E1E8042A400D77020 /* GoogleToolboxForMac.framework in Frameworks */,
+				50BDEE4C1E80429D00D77020 /* ChameleonFramework.framework in Frameworks */,
+				50BDEE4A1E80429700D77020 /* TextFieldEffects.framework in Frameworks */,
 				9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -45,6 +60,11 @@
 		494FF86C0FD52EC122433375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50BDEE511E8042AE00D77020 /* FontBlaster.framework */,
+				50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */,
+				50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */,
+				50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */,
+				50BDEE491E80429700D77020 /* TextFieldEffects.framework */,
 				8550F48AD1EE1094E254858E /* Pods_Spaide.framework */,
 			);
 			name = Frameworks;
@@ -295,7 +315,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -346,7 +366,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/**";
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -397,6 +417,11 @@
 					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
 					"\"${PODS_ROOT}/GoogleUtilities/Frameworks/frameworks\"",
+					"$(PROJECT_DIR)/build/Release-iphoneos/TextFieldEffects",
+					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
+					"$(PROJECT_DIR)/build/Release-iphoneos/GoogleToolboxForMac",
+					"$(PROJECT_DIR)/build/Release-iphoneos/GTMSessionFetcher",
+					"$(PROJECT_DIR)/build/Release-iphoneos/FontBlaster",
 				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -441,6 +466,11 @@
 					"\"${PODS_ROOT}/GoogleSignIn/Frameworks\"",
 					"\"${PODS_ROOT}/GoogleSymbolUtilities/Frameworks/frameworks\"",
 					"\"${PODS_ROOT}/GoogleUtilities/Frameworks/frameworks\"",
+					"$(PROJECT_DIR)/build/Release-iphoneos/TextFieldEffects",
+					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
+					"$(PROJECT_DIR)/build/Release-iphoneos/GoogleToolboxForMac",
+					"$(PROJECT_DIR)/build/Release-iphoneos/GTMSessionFetcher",
+					"$(PROJECT_DIR)/build/Release-iphoneos/FontBlaster",
 				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
