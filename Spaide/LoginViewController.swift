@@ -7,16 +7,13 @@
 //
 
 import UIKit
+import TextFieldEffects
 
-class LoginViewController: UITableViewController,UITextFieldDelegate {
+class LoginViewController: UITableViewController, UITextFieldDelegate, HoshiTextField {
     
     //Outlets
     
    
-    
-    //Variables
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
