@@ -9,7 +9,7 @@ use_frameworks!
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'ChameleonFramework/Swift'
+  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'TextFieldEffects'
   
 

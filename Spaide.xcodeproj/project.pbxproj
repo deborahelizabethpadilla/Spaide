@@ -16,6 +16,7 @@
 		50BDEEB51E819E7B00D77020 /* Fresca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB41E819E7B00D77020 /* Fresca-Regular.ttf */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
+		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -36,6 +37,7 @@
 		50BDEEB41E819E7B00D77020 /* Fresca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fresca-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Decalotype-Regular.ttf"; path = "../Decalotype-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
+		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
+				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 			);

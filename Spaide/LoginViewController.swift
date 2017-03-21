@@ -35,24 +35,28 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Set Background Color
         
-        view.backgroundColor = FlatPlum()
+        let colors:[UIColor] = [
+            UIColor.flatGreenDark,
+            UIColor.flatWhite
+        ]
+        view.backgroundColor = GradientColor(.topToBottom, frame: view.frame, colors: colors)
         
         //Button Colors
         
-        loginButton.backgroundColor = .white
+        loginButton.backgroundColor = .flatGreenDark
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.white.cgColor
+        loginButton.layer.borderColor = UIColor.flatGreenDark.cgColor
         
-        seekingButton.backgroundColor = .white
+        seekingButton.backgroundColor = .flatGreenDark
         seekingButton.layer.cornerRadius = 5
         seekingButton.layer.borderWidth = 1
-        seekingButton.layer.borderColor = UIColor.white.cgColor
+        seekingButton.layer.borderColor = UIColor.flatGreenDark.cgColor
         
-        provideButton.backgroundColor = .white
+        provideButton.backgroundColor = .flatGreenDark
         provideButton.layer.cornerRadius = 5
         provideButton.layer.borderWidth = 1
-        provideButton.layer.borderColor = UIColor.white.cgColor
+        provideButton.layer.borderColor = UIColor.flatGreenDark.cgColor
     }
     
     //Close Keyboard With Tap
