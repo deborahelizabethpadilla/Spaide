@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '2225F6DB233C94157C36C28163CDF5EF'
-               BlueprintName = 'FontBlaster'
+               BlueprintIdentifier = '3C4BE33E3CED630BA541DEBB0DAAF19F'
+               BlueprintName = 'FlatUIColors'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FontBlaster.framework'>
+               BuildableName = 'FlatUIColors.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

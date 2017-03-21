@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import TextFieldEffects
 import ChameleonFramework
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -21,11 +20,40 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Close Keyboard With Return Key
+        
+        self.emailField.delegate = self
+        self.passwordField.delegate = self
+        
+        //Close Keyboard With Tap
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
         //Set Background Color
         
-        view.backgroundColor = flat
+        view.backgroundColor = FlatBlack()
+        
   
     }
     
-
+    //Close Keyboard With Tap
+    
+    func dismissKeyboard() {
+       
+        //Close On Tap
+        
+        view.endEditing(true)
+    }
+    
+    //Close Keyboard With Return Key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //Close On Return
+        
+        self.view.endEditing(true)
+        return false
+    }
 }
