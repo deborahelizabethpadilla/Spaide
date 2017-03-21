@@ -13,11 +13,6 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		50BDEE4A1E80429700D77020 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE491E80429700D77020 /* TextFieldEffects.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		50BDEE4C1E80429D00D77020 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		50BDEE4E1E8042A400D77020 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		50BDEE501E8042A900D77020 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */; settings = {ATTRIBUTES = (Required, ); }; };
-		50BDEE521E8042AE00D77020 /* FontBlaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50BDEE511E8042AE00D77020 /* FontBlaster.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,11 +40,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BDEE521E8042AE00D77020 /* FontBlaster.framework in Frameworks */,
-				50BDEE501E8042A900D77020 /* GTMSessionFetcher.framework in Frameworks */,
-				50BDEE4E1E8042A400D77020 /* GoogleToolboxForMac.framework in Frameworks */,
-				50BDEE4C1E80429D00D77020 /* ChameleonFramework.framework in Frameworks */,
-				50BDEE4A1E80429700D77020 /* TextFieldEffects.framework in Frameworks */,
 				9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

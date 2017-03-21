@@ -31,11 +31,6 @@
 		4DE9FCE80D6DF29AA3F06D06A1AE7731 /* MadokaTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444D5A9A5FB08243E96709AFD7628325 /* MadokaTextField.swift */; };
 		4F2AB5BFF7D9DE66B8B242ACE69AE0D9 /* GTMDebugThreadValidation.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CABE1965096B2EA1D13D2B2F9997307 /* GTMDebugThreadValidation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4F90AC3E4EF65CFB26E49AE87A26748E /* YoshikoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61CC5AB3444D52AED062979BDC39281F /* YoshikoTextField.swift */; };
-		50BDEEAD1E80526C00D77020 /* TextFieldEffects.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 972886C40A75D76C5C567DDD79A4A484 /* TextFieldEffects.framework */; };
-		50BDEEAE1E80527000D77020 /* ChameleonFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9A82E2BF258747DC5B89E7BA800F15F /* ChameleonFramework.framework */; };
-		50BDEEAF1E80527300D77020 /* FontBlaster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FD06CF6B9542F4F592D2AF4B8A19C3 /* FontBlaster.framework */; };
-		50BDEEB01E80527700D77020 /* GoogleToolboxForMac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 642CF19ACF6D3C5984790AC862782DC6 /* GoogleToolboxForMac.framework */; };
-		50BDEEB11E80527A00D77020 /* GTMSessionFetcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 536A8E0C52E59A70FC40D1F7CF4FB3FA /* GTMSessionFetcher.framework */; };
 		510AE8A676FB02D462B70FF29646F36A /* HoshiTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD63480DC65DBDD8DEDEF8A9A6093A71 /* HoshiTextField.swift */; };
 		588DDBBEC156B53E7990A8D9BC8B18BF /* YokoTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2A9D137FC92F4031D7D9FFFEB2E10E /* YokoTextField.swift */; };
 		5B92D1D5ECFEBA99F4C67864E1397A6D /* GTMNSString+URLArguments.m in Sources */ = {isa = PBXBuildFile; fileRef = 6072913FC572335101ABDEBA91E7639E /* GTMNSString+URLArguments.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -263,11 +258,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50BDEEB11E80527A00D77020 /* GTMSessionFetcher.framework in Frameworks */,
-				50BDEEB01E80527700D77020 /* GoogleToolboxForMac.framework in Frameworks */,
-				50BDEEAF1E80527300D77020 /* FontBlaster.framework in Frameworks */,
-				50BDEEAE1E80527000D77020 /* ChameleonFramework.framework in Frameworks */,
-				50BDEEAD1E80526C00D77020 /* TextFieldEffects.framework in Frameworks */,
 				2C4354C63667308D26B899A9F2CF1C0B /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
