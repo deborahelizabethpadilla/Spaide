@@ -13,6 +13,7 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
+		50BDEEB31E81928000D77020 /* Chameleon.dmg in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB21E81928000D77020 /* Chameleon.dmg */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -30,6 +31,7 @@
 		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 		50BDEE511E8042AE00D77020 /* FontBlaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontBlaster.framework; path = "Pods/../build/Release-iphoneos/FontBlaster/FontBlaster.framework"; sourceTree = "<group>"; };
+		50BDEEB21E81928000D77020 /* Chameleon.dmg */ = {isa = PBXFileReference; lastKnownFileType = file; path = Chameleon.dmg; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		494FF86C0FD52EC122433375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				50BDEEB21E81928000D77020 /* Chameleon.dmg */,
 				50BDEE511E8042AE00D77020 /* FontBlaster.framework */,
 				50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */,
 				50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */,
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
+				50BDEEB31E81928000D77020 /* Chameleon.dmg in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,

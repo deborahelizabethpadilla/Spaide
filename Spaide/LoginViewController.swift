@@ -8,6 +8,7 @@
 
 import UIKit
 import TextFieldEffects
+import ChameleonFramework
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -20,6 +21,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Set Background Color
+        
+        view.backgroundColor = flat
   
     }
     
