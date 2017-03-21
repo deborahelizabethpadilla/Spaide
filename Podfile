@@ -9,7 +9,6 @@ use_frameworks!
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'FlatUIColors'
   pod 'ChameleonFramework/Swift'
   pod 'TextFieldEffects'
   

@@ -15,7 +15,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
-    
+    @IBOutlet var loginButton: UIButton!
+    @IBOutlet var seekingButton: UIButton!
+    @IBOutlet var provideButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,9 +35,24 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Set Background Color
         
-        view.backgroundColor = FlatBlack()
+        view.backgroundColor = FlatPlum()
         
-  
+        //Button Colors
+        
+        loginButton.backgroundColor = .white
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.white.cgColor
+        
+        seekingButton.backgroundColor = .white
+        seekingButton.layer.cornerRadius = 5
+        seekingButton.layer.borderWidth = 1
+        seekingButton.layer.borderColor = UIColor.white.cgColor
+        
+        provideButton.backgroundColor = .white
+        provideButton.layer.cornerRadius = 5
+        provideButton.layer.borderWidth = 1
+        provideButton.layer.borderColor = UIColor.white.cgColor
     }
     
     //Close Keyboard With Tap

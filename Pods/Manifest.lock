@@ -30,7 +30,6 @@ PODS:
   - FirebaseStorage (1.1.0):
     - FirebaseAnalytics (~> 3.7)
     - GTMSessionFetcher/Core (~> 1.1)
-  - FlatUIColors (0.3.0)
   - GoogleToolboxForMac/DebugUtils (2.1.1):
     - GoogleToolboxForMac/Defines (= 2.1.1)
   - GoogleToolboxForMac/Defines (2.1.1)
@@ -50,7 +49,6 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
-  - FlatUIColors
   - TextFieldEffects
 
 SPEC CHECKSUMS:
@@ -62,11 +60,10 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 05c96d7b43a7368dc91c07791adb49683e1738d1
   FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FirebaseStorage: a5c55b23741a49a72af8f30f95b3bb5ddbeda12d
-  FlatUIColors: d4a5a0a8c1b61da6383946a1208cc27e440e3922
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
   TextFieldEffects: faa47d428ee8eafb781a8413ac4345420d2328c4
 
-PODFILE CHECKSUM: cb3ccc64de7a19a85b50b9c1587a82fce80c7939
+PODFILE CHECKSUM: d61a61578a4959cc61f6559963d62337f77e4877
 
 COCOAPODS: 1.2.0
