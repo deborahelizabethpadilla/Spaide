@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import TextFieldEffects
 
-class LoginViewController: UITableViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate, HoshiTextField {
     
     //Outlets
     
