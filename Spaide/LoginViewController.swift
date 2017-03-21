@@ -9,12 +9,13 @@
 import UIKit
 import TextFieldEffects
 
-class LoginViewController: UIViewController, UITextFieldDelegate, HoshiTextField {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Outlets
     
+    @IBOutlet var emailField: UITextField!
+    @IBOutlet var passwordField: UITextField!
     
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
