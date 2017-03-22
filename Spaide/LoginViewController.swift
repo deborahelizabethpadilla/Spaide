@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -16,8 +17,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var loginButton: UIButton!
-    @IBOutlet var seekingButton: UIButton!
-    @IBOutlet var provideButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,15 +43,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor.flatWatermelonDark.cgColor
         
-        seekingButton.backgroundColor = .flatWatermelonDark
-        seekingButton.layer.cornerRadius = 5
-        seekingButton.layer.borderWidth = 1
-        seekingButton.layer.borderColor = UIColor.flatWatermelonDark.cgColor
-        
-        provideButton.backgroundColor = .flatWatermelonDark
-        provideButton.layer.cornerRadius = 5
-        provideButton.layer.borderWidth = 1
-        provideButton.layer.borderColor = UIColor.flatWatermelonDark.cgColor
     }
     
     //Close Keyboard With Tap
@@ -72,5 +62,44 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.view.endEditing(true)
         return false
+    }
+    
+    //Actions
+    
+    @IBAction func loginButton(_ sender: Any) {
+        
+        FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: {
+            user, error in
+            
+            if error != nil {
+                
+                self.login()
+                
+            } else {
+                
+                print("User Created")
+                self.login()
+            }
+        })
+        
+    }
+    
+    //Create/Login Function
+    
+    func login() {
+        
+        FIRAuth.auth()?.signIn(withEmail: emailField.text!, password: passwordField.text!, completion: {
+            user, error in
+            
+            if error != nil {
+                
+                print("Wrong!")
+                
+            } else {
+                
+                print("Logged In!")
+            }
+            
+        })
     }
 }

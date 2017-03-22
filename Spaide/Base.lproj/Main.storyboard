@@ -34,7 +34,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
                                         <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -65,14 +65,14 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Registered? Enter Information Above &amp; Click Below" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NK-DK-bb8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Not Registered? Enter Information Above &amp; Click Login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NK-DK-bb8">
                                 <rect key="frame" x="16" y="449" width="343" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find special aides to help with your needs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find or get help instantly." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
                                 <rect key="frame" x="16" y="195" width="343" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
@@ -86,14 +86,6 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aan-nU-shG">
-                                <rect key="frame" x="16" y="499" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
-                                <state key="normal" title="Seeking Assistance">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-hA-N5N">
                                 <rect key="frame" x="16" y="392" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -101,20 +93,15 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="izQ-Kt-n42">
-                                <rect key="frame" x="16" y="556" width="343" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
-                                <state key="normal" title="Provide Assistance">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="loginButton:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="f87-62-mQt"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irc-m3-TjA">
-                                <rect key="frame" x="96" y="617" width="182" height="30"/>
+                                <rect key="frame" x="16" y="617" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="22"/>
-                                <state key="normal" title="Terms Of Service">
+                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="17"/>
+                                <state key="normal" title="By using the app, you agree to the terms of service">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -128,13 +115,67 @@
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
                         <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
-                        <outlet property="provideButton" destination="izQ-Kt-n42" id="SuP-8A-48y"/>
-                        <outlet property="seekingButton" destination="Aan-nU-shG" id="5uk-Ow-lku"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-F8-MK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1519.2" y="-71.514242878560722"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="kqC-dV-d58">
+            <objects>
+                <viewController id="zKZ-Dy-7ev" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e9T-Yd-SlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="yx5-Cs-iyH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="o7B-8c-Aw9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="det-9d-Lo4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jIi-MK-zQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="255"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="Pri-0H-bQu">
+            <objects>
+                <viewController id="ieE-tr-VXE" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DCu-ep-yAK"/>
+                        <viewControllerLayoutGuide type="bottom" id="ur1-K0-xtS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ywv-IA-XgA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="e6G-Bp-97z"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-CV-vsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="-399"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="9oQ-qq-PdU">
+            <objects>
+                <tabBarController storyboardIdentifier="tabBarController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Rqs-pG-GBP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="gr3-lR-KQm">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="ieE-tr-VXE" kind="relationship" relationship="viewControllers" id="v4D-I3-rqb"/>
+                        <segue destination="zKZ-Dy-7ev" kind="relationship" relationship="viewControllers" id="qlr-1S-qKK"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f3P-qV-Q2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-831" y="-73"/>
         </scene>
         <!--Terms Of Service Controller-->
         <scene sceneID="lc4-W5-6fl">
@@ -149,20 +190,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFM-TQ-Sqe">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="UEA-RK-JoU"/>
+                                </constraints>
                                 <items>
                                     <navigationItem title="Terms Of Service" id="WgD-m3-VHh">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" id="eYw-FV-h7G"/>
+                                        <barButtonItem key="leftBarButtonItem" image="leftarrow.png" id="eYw-FV-h7G">
+                                            <connections>
+                                                <segue destination="n6w-jq-4Dr" kind="show" id="H2t-BE-lZd"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="top" secondItem="O8Y-xt-fUZ" secondAttribute="top" id="TRW-5x-SQ0"/>
-                            <constraint firstAttribute="trailing" secondItem="oFM-TQ-Sqe" secondAttribute="trailing" id="Wir-Nv-iOy"/>
-                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="centerX" secondItem="O8Y-xt-fUZ" secondAttribute="centerX" id="bQ6-TX-eXt"/>
-                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="leading" secondItem="O8Y-xt-fUZ" secondAttribute="leading" id="iAS-LK-v7k"/>
+                            <constraint firstAttribute="trailing" secondItem="oFM-TQ-Sqe" secondAttribute="trailing" id="Fvf-Ox-49a"/>
+                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="top" secondItem="VJX-WS-CTh" secondAttribute="bottom" constant="8" id="VRr-Iy-V3z"/>
+                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="leading" secondItem="O8Y-xt-fUZ" secondAttribute="leading" id="vag-Ja-w7a"/>
                         </constraints>
                     </view>
                     <connections>
@@ -173,24 +220,9 @@
             </objects>
             <point key="canvasLocation" x="-1519" y="590"/>
         </scene>
-        <!--TermsOfServiceController-->
-        <scene sceneID="ieX-Zm-pZX">
-            <objects>
-                <viewController id="aHo-t8-0sn" userLabel="TermsOfServiceController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="t6Q-6k-fIW"/>
-                        <viewControllerLayoutGuide type="bottom" id="pCV-Y1-iJW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="fwc-Yq-e2h">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cDZ-GT-U7v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-846" y="-72"/>
-        </scene>
     </scenes>
+    <resources>
+        <image name="leftarrow.png" width="24" height="24"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
