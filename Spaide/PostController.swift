@@ -23,7 +23,7 @@ class PostController: UITableViewController {
     
     //Let Posts Be In Array
     
-    let posts = [postStruct]
+    let posts = [postStruct]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,11 +64,11 @@ class PostController: UITableViewController {
         let message = "Message"
         let uLocation = "Location"
         let needs = "Needs"
-        let uImage = UIImage
+        let uImage = UIImage()
         
         //Key For What Were Uploading
         
-        let post : [String : AnyObject] = ["title" : title, "message" : message, "uLocation" : uLocation, "needs" : needs, "uImage" :uImage]
+        let post : [String : AnyObject] = ["title" : title as AnyObject, "message" : message as AnyObject, "uLocation" : uLocation as AnyObject, "needs" : needs as AnyObject, "uImage" :uImage]
         
         //Store In Database
         
@@ -107,7 +107,7 @@ class PostController: UITableViewController {
         let label4 = cell?.viewWithTag(2) as! UILabel
         label4.text = posts[indexPath.row].needs
         
-        let UIImage = cell?.viewWithTag(2) as! UIImage
+        var UIImage = cell?.viewWithTag(2) as! UIImage
         UIImage = posts[indexPath.row].uImage
         
         
