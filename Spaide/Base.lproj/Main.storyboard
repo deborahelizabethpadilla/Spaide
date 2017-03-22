@@ -122,24 +122,6 @@
             </objects>
             <point key="canvasLocation" x="-1519.2" y="-71.514242878560722"/>
         </scene>
-        <!--PostController-->
-        <scene sceneID="OAl-Ii-IbM">
-            <objects>
-                <viewController title="PostController" id="Mqp-DC-ohI" customClass="PostController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="w4f-YJ-dDV"/>
-                        <viewControllerLayoutGuide type="bottom" id="Rav-Ue-MnL"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="LJO-cE-BRc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l8w-3r-N0X" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="121" y="255"/>
-        </scene>
         <!--Find-->
         <scene sceneID="kqC-dV-d58">
             <objects>
@@ -190,11 +172,41 @@
                     <connections>
                         <segue destination="ieE-tr-VXE" kind="relationship" relationship="viewControllers" id="v4D-I3-rqb"/>
                         <segue destination="zKZ-Dy-7ev" kind="relationship" relationship="viewControllers" id="qlr-1S-qKK"/>
+                        <segue destination="Bek-rg-fO3" kind="relationship" relationship="viewControllers" id="cr3-xd-IKr"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3P-qV-Q2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-831" y="-73"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="Xcr-ME-cXM">
+            <objects>
+                <tableViewController id="Bek-rg-fO3" customClass="PostController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="n4P-ab-8Ib">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="l48-77-iwG">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l48-77-iwG" id="W6U-vR-3IA">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Bek-rg-fO3" id="LNZ-1U-p8J"/>
+                            <outlet property="delegate" destination="Bek-rg-fO3" id="3dB-it-gbv"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Post" id="9Po-gf-TaI"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FOL-lQ-MLz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="121" y="270"/>
         </scene>
         <!--Terms Of Service Controller-->
         <scene sceneID="lc4-W5-6fl">

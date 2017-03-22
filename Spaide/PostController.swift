@@ -9,7 +9,7 @@
 import UIKit
 import Eureka
 
-class PostController: FormViewController {
+class PostController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,15 +17,18 @@ class PostController: FormViewController {
         addLoginForm(toForm: form)
     }
     
-    private func addLoginForm(toForm form: Form) {
-        form +++ Section("Login Form")
-            <<< TextRow() { $0.placeholder = "Username" }
-            <<< PasswordRow() { $0.placeholder = "Password" }
-            <<< ButtonRow() {
-                $0.title = "Login"
-                $0.onCellSelection { cell, row in
-                    self.presentAlert(message: "Will login")
-                }
-        }
+    let section = Section("Login Form")
+    
+    section.append(TextRow() { $0.placeholder = "Username" })
+    section.append(PasswordRow() { $0.placeholder = "Password" })
+    section.append(
+    ButtonRow() {
+    $0.title = "Login"
+    $0.onCellSelection { cell, row in
+    self.presentAlert(message: "Will login")
     }
+    }
+    )
+    
+    form.append(section)
 }
