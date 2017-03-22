@@ -13,7 +13,6 @@ class InputController: UIViewController {
     
     //Outlets
     
-    
     @IBOutlet var postLabel: UIButton!
     
     
@@ -24,7 +23,7 @@ class InputController: UIViewController {
         
         view.backgroundColor = FlatGreenDark()
         
-        //Button Colors
+        //Button Colors & Size
         
         postLabel.backgroundColor = .flatWatermelonDark
         postLabel.layer.cornerRadius = 5

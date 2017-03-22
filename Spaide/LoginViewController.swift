@@ -36,7 +36,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         view.backgroundColor = FlatGreenDark()
         
-        //Button Colors
+        //Button Colors & Size
         
         loginButton.backgroundColor = .flatWatermelonDark
         loginButton.layer.cornerRadius = 5
