@@ -45,6 +45,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
     //Close Keyboard With Tap
     
     func dismissKeyboard() {
@@ -93,7 +94,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             if error != nil {
                 
-                self.displayAlert(title: "Oh No!", message: "Try Again!")
+                self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
                 
             } else {
                 

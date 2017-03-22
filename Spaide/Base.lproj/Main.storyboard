@@ -122,7 +122,7 @@
             </objects>
             <point key="canvasLocation" x="-1519.2" y="-71.514242878560722"/>
         </scene>
-        <!--Item 2-->
+        <!--Find-->
         <scene sceneID="kqC-dV-d58">
             <objects>
                 <viewController id="zKZ-Dy-7ev" sceneMemberID="viewController">
@@ -133,15 +133,38 @@
                     <view key="view" contentMode="scaleToFill" id="o7B-8c-Aw9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-9o-Cbb">
+                                <rect key="frame" x="0.0" y="92" width="375" height="526"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FinderTableViewCell" rowHeight="126" id="vkF-uX-HZs">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="126"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vkF-uX-HZs" id="s6P-N9-o2k">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="125.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rbp-MJ-0Zu">
+                                                    <rect key="frame" x="8" y="8" width="122" height="110"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="det-9d-Lo4"/>
+                    <tabBarItem key="tabBarItem" title="Find" image="search.png" id="det-9d-Lo4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIi-MK-zQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="255"/>
+            <point key="canvasLocation" x="120.8" y="254.12293853073464"/>
         </scene>
-        <!--Item 1-->
+        <!--Home-->
         <scene sceneID="Pri-0H-bQu">
             <objects>
                 <viewController id="ieE-tr-VXE" sceneMemberID="viewController">
@@ -154,7 +177,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="e6G-Bp-97z"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="e6G-Bp-97z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-CV-vsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +246,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home.png" width="24" height="24"/>
         <image name="leftarrow.png" width="24" height="24"/>
+        <image name="search.png" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
