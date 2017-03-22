@@ -21,5 +21,9 @@ class TermsOfServiceController: UIViewController {
         //Navigation Bar
         
         navigationBar.backgroundColor = FlatGreenDark()
+        
+        //Background
+        
+        view.backgroundColor = FlatGreenDark()
     }
 }

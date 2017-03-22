@@ -13,7 +13,6 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		50BDEEB51E819E7B00D77020 /* Fresca-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB41E819E7B00D77020 /* Fresca-Regular.ttf */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
@@ -34,7 +33,6 @@
 		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
 		50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GTMSessionFetcher.framework; path = "Pods/../build/Release-iphoneos/GTMSessionFetcher/GTMSessionFetcher.framework"; sourceTree = "<group>"; };
 		50BDEE511E8042AE00D77020 /* FontBlaster.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FontBlaster.framework; path = "Pods/../build/Release-iphoneos/FontBlaster/FontBlaster.framework"; sourceTree = "<group>"; };
-		50BDEEB41E819E7B00D77020 /* Fresca-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Fresca-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Decalotype-Regular.ttf"; path = "../Decalotype-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */,
 				500C04C01E71D0A30096B987 /* Assets.xcassets */,
 				500C04C51E71D0A30096B987 /* Info.plist */,
-				50BDEEB41E819E7B00D77020 /* Fresca-Regular.ttf */,
 				50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */,
 				50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */,
 			);
@@ -198,7 +195,6 @@
 				50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
-				50BDEEB51E819E7B00D77020 /* Fresca-Regular.ttf in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
