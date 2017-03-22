@@ -11,5 +11,11 @@ import ChameleonFramework
 
 class FinderTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var finderTableViewCell: UITableViewCell!
+    
+    //Custom Border Color
+    
+    cell.layer.borderWidth = 2.0
+    cell.layer.borderColor = UIColor.FlatGreenDark.cgColor
     
 }

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double FlatUIColorsVersionNumber;
-FOUNDATION_EXPORT const unsigned char FlatUIColorsVersionString[];
+FOUNDATION_EXPORT double EurekaVersionNumber;
+FOUNDATION_EXPORT const unsigned char EurekaVersionString[];
 
