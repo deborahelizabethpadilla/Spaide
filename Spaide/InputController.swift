@@ -11,7 +11,10 @@ import ChameleonFramework
 
 class InputController: UIViewController {
     
+    //Outlets
     
+    
+    @IBOutlet var postLabel: UIButton!
     
     
     override func viewDidLoad() {
@@ -20,5 +23,14 @@ class InputController: UIViewController {
         //Set Background
         
         view.backgroundColor = FlatGreenDark()
+        
+        //Button Colors
+        
+        postLabel.backgroundColor = .flatWatermelonDark
+        postLabel.layer.cornerRadius = 5
+        postLabel.layer.borderWidth = 1
+        postLabel.layer.borderColor = UIColor.flatWatermelonDark.cgColor
+        
+        
     }
 }

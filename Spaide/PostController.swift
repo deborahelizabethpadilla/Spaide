@@ -37,8 +37,11 @@ class PostController: UITableViewController {
             
             let title = snapshot.value!["title"] as! String
             let message = snapshot.value!["message"] as! String
+            let uLocation = snapshot.value!["uLocation"] as! String
+            let needs = snapshot.value!["needs"] as! String
+            let uImage = snapshot.value!["uImage"] as! UIImage
             
-            posts.insert(postStruct(title: title, message: message) ,at: 0)
+            posts.insert(postStruct(title: title, message: message, uLocation: uLocation, needs: needs, uImage: uImage) ,at: 0)
             self.tableView.reloadData()
             
     })
@@ -65,7 +68,7 @@ class PostController: UITableViewController {
         
         //Key For What Were Uploading
         
-        let post : [String : AnyObject] = ["title" : title, "message" : message]
+        let post : [String : AnyObject] = ["title" : title, "message" : message, "uLocation" : uLocation, "needs" : needs, "uImage" :uImage]
         
         //Store In Database
         
