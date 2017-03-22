@@ -115,6 +115,7 @@
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
                         <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
+                        <segue destination="Rqs-pG-GBP" kind="show" identifier="tabBarSegue" id="HzU-NJ-uyy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-F8-MK2" userLabel="First Responder" sceneMemberID="firstResponder"/>

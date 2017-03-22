@@ -84,7 +84,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    //Create/Login Function
+    //Create & Login Function
     
     func login() {
         
@@ -93,13 +93,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             if error != nil {
                 
-                print("Wrong!")
+                self.displayAlert(title: "Oh No!", message: "Try Again!")
                 
             } else {
+                
+                self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
                 
                 print("Logged In!")
             }
             
         })
+    }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
 }
