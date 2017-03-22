@@ -126,7 +126,7 @@
         <scene sceneID="kqC-dV-d58">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIi-MK-zQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="zKZ-Dy-7ev" sceneMemberID="viewController">
+                <viewController id="zKZ-Dy-7ev" customClass="InputController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="e9T-Yd-SlY"/>
                         <viewControllerLayoutGuide type="bottom" id="yx5-Cs-iyH"/>
