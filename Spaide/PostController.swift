@@ -7,28 +7,97 @@
 //
 
 import UIKit
-import Eureka
+import ChameleonFramework
+import Firebase
+import FirebaseDatabase
+
+//Exactly What Post Will Read
+
+struct postStruct {
+    
+    let title: String!
+    let message: String!
+}
 
 class PostController: UITableViewController {
+    
+    //Let Posts Be In Array
+    
+    let posts = [postStruct]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        addLoginForm(toForm: form)
+        //Grab From Database
+        
+        let databaseRef = FIRDatabase.database().reference()
+        
+        databaseRef.child("Posts").queryOrderedByKey().observe(.childAdded, with:  {
+            snapshot in
+            
+            let title = snapshot.value!["title"] as! String
+            let message = snapshot.value!["message"] as! String
+            
+            posts.insert(postStruct(title: title, message: message) ,at: 0)
+            self.tableView.reloadData()
+            
+    })
+        
+        //Post
+        
+        post()
+        
+        //Set Background Color
+        
+        view.backgroundColor = FlatGreenDark()
+        
     }
     
-    let section = Section("Login Form")
+    func post() {
+        
+        //Store In Database
+        
+        let title = "Title"
+        let message = "Message"
+        
+        //Key For What Were Uploading
+        
+        let post : [String : AnyObject] = ["title" : title, "message" : message]
+        
+        //Store In Database
+        
+        let databaseRef = FIRDatabase.database().reference()
+        
+        //Reference Part Of Database
+        
+        databaseRef.child("Posts").childByAutoId().setValue(post)
     
-    section.append(TextRow() { $0.placeholder = "Username" })
-    section.append(PasswordRow() { $0.placeholder = "Password" })
-    section.append(
-    ButtonRow() {
-    $0.title = "Login"
-    $0.onCellSelection { cell, row in
-    self.presentAlert(message: "Will login")
     }
-    }
-    )
     
-    form.append(section)
+    //Table View Functions
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        //Count How Many Things Inside Array
+        
+        return posts.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //Post In Cell
+        
+        var cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
+        
+        let label1 = cell?.viewWithTag(1) as! UILabel
+        label1.text = posts[indexPath.row].title
+        
+        
+        let label2 = cell?.viewWithTag(2) as! UILabel
+        label2.text = posts[indexPath.row].message
+        
+        
+        return cell!
+    }
+
 }

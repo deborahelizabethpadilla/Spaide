@@ -20,6 +20,7 @@
 		50BDEEC11E82419A00D77020 /* search.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEC01E82419A00D77020 /* search.png */; };
 		50BDEEC31E82421000D77020 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEC21E82421000D77020 /* home.png */; };
 		50BDEEC81E82CBA900D77020 /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEC71E82CBA900D77020 /* PostController.swift */; };
+		50BDEECA1E82D0B700D77020 /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEC91E82D0B700D77020 /* pin.png */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,7 @@
 		50BDEEC01E82419A00D77020 /* search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = search.png; sourceTree = "<group>"; };
 		50BDEEC21E82421000D77020 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		50BDEEC71E82CBA900D77020 /* PostController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		50BDEEC91E82D0B700D77020 /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				50BDEEC01E82419A00D77020 /* search.png */,
 				50BDEEBC1E822CA400D77020 /* leftarrow.png */,
 				50BDEEC21E82421000D77020 /* home.png */,
+				50BDEEC91E82D0B700D77020 /* pin.png */,
 			);
 			name = Images;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
 				50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */,
 				50BDEEC31E82421000D77020 /* home.png in Resources */,
+				50BDEECA1E82D0B700D77020 /* pin.png in Resources */,
 				50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */,
 				50BDEEC11E82419A00D77020 /* search.png in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
