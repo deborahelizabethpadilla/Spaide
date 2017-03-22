@@ -59,6 +59,9 @@ class PostController: UITableViewController {
         
         let title = "Title"
         let message = "Message"
+        let uLocation = "Location"
+        let needs = "Needs"
+        let uImage = UIImage
         
         //Key For What Were Uploading
         
@@ -92,9 +95,17 @@ class PostController: UITableViewController {
         let label1 = cell?.viewWithTag(1) as! UILabel
         label1.text = posts[indexPath.row].title
         
-        
         let label2 = cell?.viewWithTag(2) as! UILabel
         label2.text = posts[indexPath.row].message
+        
+        let label3 = cell?.viewWithTag(2) as! UILabel
+        label3.text = posts[indexPath.row].uLocation
+        
+        let label4 = cell?.viewWithTag(2) as! UILabel
+        label4.text = posts[indexPath.row].needs
+        
+        let UIImage = cell?.viewWithTag(2) as! UIImage
+        UIImage = posts[indexPath.row].uImage
         
         
         return cell!
