@@ -15,7 +15,7 @@ extension Cell {
     
     //Fetch Cell
     
-    @nonobjc public class func fetchRequest() -> NSFetchRequest<Pin> {
+    @nonobjc public class func fetchRequest() -> NSFetchRequest<Cell> {
         return NSFetchRequest<Cell>(entityName: "Cell");
     }
     

@@ -179,10 +179,10 @@
             </objects>
             <point key="canvasLocation" x="-831" y="-73"/>
         </scene>
-        <!--Find-->
+        <!--PostController-->
         <scene sceneID="kXl-hk-AXc">
             <objects>
-                <tableViewController id="NQr-LO-fTq" customClass="PostController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="NQr-LO-fTq" userLabel="PostController" customClass="PostController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="211" sectionHeaderHeight="28" sectionFooterHeight="28" id="7oX-FT-Ayx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="211"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Px-TZ-0x8" id="Zoh-6M-CMj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9P8-aj-cHV">
@@ -265,10 +265,10 @@
             </objects>
             <point key="canvasLocation" x="-1519" y="590"/>
         </scene>
-        <!--Post-->
+        <!--InputController1-->
         <scene sceneID="C9R-yy-NyV">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Af2-Gm-drY">

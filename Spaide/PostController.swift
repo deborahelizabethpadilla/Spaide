@@ -12,22 +12,34 @@ import CoreData
 
 class PostController: UITableViewController {
     
-    //Outlets
     
+    //Variables
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var coordinateSelected:CLLocationCoordinate2D!
+    let spacingBetweenItems:CGFloat = 5
+    let totalCellCount:Int = 25
+    
+    var stack:CoreDataStack!
+    var coreDataCell:Cell!
+    var savedImages:[Photo] = []
+    var selectedToDelete:[Int] = [] {
         
-        //Set Background Color
-        
-        view.backgroundColor = FlatGreenDark()
-        
+        didSet {
+            
+            if selectedToDelete.count > 0 {
+                
+                newCollectionButton.setTitle("Remove Selected Pictures", for: .normal)
+                
+            } else {
+                
+                newCollectionButton.setTitle("New Collection", for: .normal)
+            }
+        }
     }
     
-    //Core Data
+    //Core Data Stack
     
     func getCoreDataStack() -> CoreDataStack {
-        
         let delegate = UIApplication.shared.delegate as! AppDelegate
         return delegate.stack
     }
@@ -38,60 +50,83 @@ class PostController: UITableViewController {
         
         let stack = getCoreDataStack()
         
-        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Cell")
+        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Photo")
         fr.sortDescriptors = []
+        fr.predicate = NSPredicate(format: "cell = %@", argumentArray: [coreDataCell!])
         
         return NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: nil, cacheName: nil)
-    }
-}
-
-    //Get Photos
-    
-    func initWithPhoto(_ photo: Photo) {
         
-        if photo.imageData != nil {
+        
+    }
+    
+    //Saved Photo
+    
+    func preloadSavedPhoto() -> [Photo]? {
+        
+        do {
             
-            DispatchQueue.main.async {
+            var photoArray:[Photo] = []
+            let fetchedResultsController = getFetchedResultsController()
+            try fetchedResultsController.performFetch()
+            let photoCount = try fetchedResultsController.managedObjectContext.count(for: fetchedResultsController.fetchRequest)
+            
+            for index in 0..<photoCount {
                 
-                self.imageView.image = UIImage(data: photo.imageData! as Data)
-                self.activityIndicator.stopAnimating()
+                photoArray.append(fetchedResultsController.object(at: IndexPath(row: index, section: 0)) as! Photo)
             }
+            
+            return photoArray.sorted(by: {$0.index < $1.index})
+            
+        } catch {
+            
+            return nil
+        }
+    }
+    
+    //View Did Load
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Background
+        
+        view.backgroundColor = FlatGreenDark()
+        
+        //Flow Layout
+        
+        let space: CGFloat = 3.0
+        let dimension = (self.view.frame.size.width - (2 * space)) / 3.0
+        
+        flowLayout.minimumInteritemSpacing = spacingBetweenItems
+        flowLayout.minimumLineSpacing = spacingBetweenItems
+        flowLayout.itemSize = CGSize(width: dimension, height: dimension)
+        
+        //Collection View
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
+        //Button & Label
+        
+        newCollectionButton.isHidden = false
+        noPhotos.isHidden = true
+        
+        //Add To Map
+        
+        collectionView.allowsMultipleSelection = true
+        addAnnotationToMap()
+        
+        //Fetch Photos
+        
+        let savedPhoto = preloadSavedPhoto()
+        if savedPhoto != nil && savedPhoto?.count != 0 {
+            savedImages = savedPhoto!
+            showSavedResult()
             
         } else {
             
-            downloadImage(photo)
+            showNewResult()
         }
     }
-    
-    //Download Images
-    
-    func downloadImage(_ photo: Photo) {
-        
-        URLSession.shared.dataTask(with: URL(string: photo.imageURL!)!) { (data, response, error) in
-            if error == nil {
-                
-                DispatchQueue.main.async {
-                    
-                    self.imageView.image = UIImage(data: data! as Data)
-                    self.activityIndicator.stopAnimating()
-                    self.saveImageDataToCoreData(photo: photo, imageData: data! as NSData)
-                }
-            }
-            
-            }
-            
-            .resume()
-    }
-    
-    //Save Images
-    
-    func saveImageDataToCoreData(photo: Photo, imageData: NSData) {
-        do {
-            photo.imageData = imageData
-            let delegate = UIApplication.shared.delegate as! AppDelegate
-            let stack = delegate.stack
-            try stack.saveContext()
-        } catch {
-            print("Saving Photo imageData Failed")
-        }
-    }
+
+}
