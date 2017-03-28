@@ -199,6 +199,10 @@
                                             <rect key="frame" x="8" y="8" width="96" height="88"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="LSq-sU-zdw">
+                                            <rect key="frame" x="46" y="42" width="20" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -209,6 +213,10 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="DD1-am-w6T"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="LSq-sU-zdw" id="nG2-G8-xSo"/>
+                        <outlet property="imageView" destination="9P8-aj-cHV" id="3h2-Ro-UCU"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud5-WU-0QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
