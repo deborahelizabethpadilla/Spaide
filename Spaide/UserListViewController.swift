@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class UserListViewController: UICollectionViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
@@ -38,6 +39,12 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        //Set Background
+        
+        //Background
+        
+        view.backgroundColor = FlatGreenDark()
         
     }
     

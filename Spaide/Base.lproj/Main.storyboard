@@ -166,7 +166,7 @@
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -255,6 +255,7 @@
                             <outlet property="delegate" destination="UBZ-ag-jM2" id="hma-ai-vof"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
                         <outlet property="collectionView" destination="Xb0-bq-w7g" id="ftk-nl-YJC"/>
                     </connections>
@@ -275,6 +276,7 @@
                     <connections>
                         <segue destination="ieE-tr-VXE" kind="relationship" relationship="viewControllers" id="v4D-I3-rqb"/>
                         <segue destination="VeG-4s-4e8" kind="relationship" relationship="viewControllers" id="qlr-1S-qKK"/>
+                        <segue destination="UBZ-ag-jM2" kind="relationship" relationship="viewControllers" id="J3H-Ea-myP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3P-qV-Q2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -330,7 +332,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af2-Gm-drY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Af2-Gm-drY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -348,6 +350,7 @@
         <image name="home.png" width="24" height="24"/>
         <image name="leftarrow.png" width="24" height="24"/>
         <image name="pin.png" width="24" height="24"/>
+        <image name="search.png" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
