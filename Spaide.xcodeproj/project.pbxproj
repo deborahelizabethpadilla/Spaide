@@ -19,6 +19,7 @@
 		50B5B0711E8A16A500681097 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0701E8A16A500681097 /* Photo.swift */; };
 		50B5B0751E8A172A00681097 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0741E8A172A00681097 /* Cell.swift */; };
 		50B5B0771E8A18E500681097 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0761E8A18E500681097 /* TableViewCell.swift */; };
+		50B5B0791E8A1B2F00681097 /* PhotoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
@@ -47,6 +48,7 @@
 		50B5B0701E8A16A500681097 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		50B5B0741E8A172A00681097 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
 		50B5B0761E8A18E500681097 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProperties.swift; sourceTree = "<group>"; };
 		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
 		50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
 		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				50BDEECC1E82F24700D77020 /* InputController.swift */,
 				50D90AA71E840BF000F0EA02 /* TabBarController.swift */,
 				50B5B0701E8A16A500681097 /* Photo.swift */,
+				50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */,
 				50B5B0741E8A172A00681097 /* Cell.swift */,
 				50B5B0761E8A18E500681097 /* TableViewCell.swift */,
 			);
@@ -325,6 +328,7 @@
 				50B5B0751E8A172A00681097 /* Cell.swift in Sources */,
 				50B5B06F1E8A14BE00681097 /* CoreDataModel.xcdatamodeld in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
+				50B5B0791E8A1B2F00681097 /* PhotoProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

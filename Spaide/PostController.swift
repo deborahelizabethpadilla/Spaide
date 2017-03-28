@@ -18,6 +18,17 @@ class PostController: UITableViewController {
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //Set Background Color
+        
+        view.backgroundColor = FlatGreenDark()
+        
+    }
+    
+    
+}
     
     //Get Photos
     
@@ -70,15 +81,4 @@ class PostController: UITableViewController {
         }
     }
     
-}
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    
-        //Set Background Color
-        
-        view.backgroundColor = FlatGreenDark()
-        
-    }
-    
-
 }
