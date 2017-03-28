@@ -192,7 +192,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="211"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1Px-TZ-0x8" id="Zoh-6M-CMj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="210.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9P8-aj-cHV">
@@ -205,6 +205,10 @@
                                         </activityIndicatorView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="activityIndicator" destination="LSq-sU-zdw" id="1OI-Uw-yUk"/>
+                                    <outlet property="imageView" destination="9P8-aj-cHV" id="F7H-Rh-eJM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -213,10 +217,6 @@
                         </connections>
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="DD1-am-w6T"/>
-                    <connections>
-                        <outlet property="activityIndicator" destination="LSq-sU-zdw" id="nG2-G8-xSo"/>
-                        <outlet property="imageView" destination="9P8-aj-cHV" id="3h2-Ro-UCU"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ud5-WU-0QZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

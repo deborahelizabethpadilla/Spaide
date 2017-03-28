@@ -14,8 +14,6 @@ class PostController: UITableViewController {
     
     //Outlets
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()

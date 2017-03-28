@@ -10,6 +10,12 @@ import UIKit
 
 class TableViewCell: UITableViewCell {
     
+    //Outlets
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
+    
     //Get Photos
     
     func initWithPhoto(_ photo: Photo) {
