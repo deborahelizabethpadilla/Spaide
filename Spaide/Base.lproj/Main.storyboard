@@ -166,7 +166,7 @@
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,7 +177,7 @@
                             <inset key="sectionInset" minX="0.0" minY="30" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="RrV-5c-Dw9" customClass="CustomCollectionViewCell" customModule="Spaide" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="userCell" id="RrV-5c-Dw9" customClass="CustomCollectionViewCell" customModule="Spaide" customModuleProvider="target">
                                 <rect key="frame" x="15" y="30" width="345" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -330,7 +330,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Af2-Gm-drY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af2-Gm-drY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
