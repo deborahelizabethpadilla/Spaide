@@ -33,6 +33,12 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         //Append By Passing Through Info To Array
         
         
+        
+        //Collection View Delegate
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        
     }
     
     //Collection View Functions
@@ -50,6 +56,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         cell.imageView.image = userArray[indexPath.item].profilePicture
         cell.userInfo.text = userArray[indexPath.item].description
         
+        return cell
     }
 }
 
