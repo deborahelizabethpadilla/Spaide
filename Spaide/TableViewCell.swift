@@ -57,12 +57,16 @@ class TableViewCell: UITableViewCell {
     //Save Images
     
     func saveImageDataToCoreData(photo: Photo, imageData: NSData) {
+        
         do {
+            
             photo.imageData = imageData
             let delegate = UIApplication.shared.delegate as! AppDelegate
             let stack = delegate.stack
             try stack.saveContext()
+            
         } catch {
+            
             print("Saving Photo imageData Failed")
         }
     }

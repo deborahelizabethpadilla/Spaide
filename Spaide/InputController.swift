@@ -9,7 +9,7 @@
 import UIKit
 import ChameleonFramework
 
-class InputController: UIViewController, FormViewController {
+class InputController: UIViewController {
     
     //Outlets & Actions
 
@@ -19,7 +19,6 @@ class InputController: UIViewController, FormViewController {
       //Set Background
         
       view.backgroundColor = FlatGreenDark()
-        
     
     }
     

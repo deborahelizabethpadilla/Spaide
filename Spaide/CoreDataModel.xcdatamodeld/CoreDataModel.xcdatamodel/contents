@@ -12,7 +12,7 @@
         <relationship name="cell" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cell" inverseName="photo" inverseEntity="Cell" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Photo" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="Cell" positionX="-54" positionY="0" width="128" height="90"/>
+        <element name="Photo" positionX="-63" positionY="-18" width="128" height="105"/>
     </elements>
 </model>

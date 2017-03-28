@@ -13,8 +13,6 @@ import CoreData
 
 struct CoreDataStack {
     
-    //Core Data Setup
-    
     private let model: NSManagedObjectModel
     internal let coordinator: NSPersistentStoreCoordinator
     private let modelURL: URL
@@ -75,12 +73,18 @@ internal extension CoreDataStack  {
     
     func dropAllData() throws {
         
-        try coordinator.destroyPersistentStore(at: dbURL, ofType:NSSQLiteStoreType , options: nil)
+        if #available(iOS 9.0, *) {
+            
+            try coordinator.destroyPersistentStore(at: dbURL, ofType:NSSQLiteStoreType , options: nil)
+            
+        } else {
+            
+            // Fallback on earlier versions
+        }
+        
         try addStoreCoordinator(NSSQLiteStoreType, configuration: nil, storeURL: dbURL, options: nil)
     }
 }
-
-//Save Content
 
 extension CoreDataStack {
     
@@ -91,8 +95,6 @@ extension CoreDataStack {
             try context.save()
         }
     }
-    
-    //Save Automatically
     
     func autoSave(_ delayInSeconds : Int) {
         
@@ -117,5 +119,4 @@ extension CoreDataStack {
             }
         }
     }
-    
 }

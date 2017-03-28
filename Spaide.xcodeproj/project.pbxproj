@@ -160,8 +160,8 @@
 				50B5B0701E8A16A500681097 /* Photo.swift */,
 				50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */,
 				50B5B0741E8A172A00681097 /* Cell.swift */,
-				50B5B0761E8A18E500681097 /* TableViewCell.swift */,
 				50B5B07E1E8AC0C400681097 /* CellProperties.swift */,
+				50B5B0761E8A18E500681097 /* TableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
