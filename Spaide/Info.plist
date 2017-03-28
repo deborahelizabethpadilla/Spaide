@@ -40,7 +40,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>Spaide Would Like To Access Your Photos So You Can Send Them Through Chat</string>
+	<string>Spaide Would Like To Access Your Photos</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Spaide Would Like To Access Your Camera</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
