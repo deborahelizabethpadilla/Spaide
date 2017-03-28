@@ -27,9 +27,27 @@ class PostController: UITableViewController {
         
     }
     
+    //Core Data
     
+    func getCoreDataStack() -> CoreDataStack {
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate.stack
+    }
+    
+    //Fetch Results
+    
+    func getFetchedResultsController() -> NSFetchedResultsController<NSFetchRequestResult> {
+        
+        let stack = getCoreDataStack()
+        
+        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
+        fr.sortDescriptors = []
+        
+        return NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: nil, cacheName: nil)
+    }
 }
-    
+
     //Get Photos
     
     func initWithPhoto(_ photo: Photo) {
@@ -80,5 +98,3 @@ class PostController: UITableViewController {
             print("Saving Photo imageData Failed")
         }
     }
-    
-}
