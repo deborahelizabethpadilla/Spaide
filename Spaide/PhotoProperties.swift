@@ -9,7 +9,11 @@
 import Foundation
 import CoreData
 
+//Photo Extension
+
 extension Photo {
+    
+    //Photo Setup
     
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Photo> {
         

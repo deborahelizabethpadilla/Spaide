@@ -8,8 +8,7 @@
 
 import UIKit
 import ChameleonFramework
-import Firebase
-import FirebaseDatabase
+import CoreData
 
 class PostController: UITableViewController {
     
@@ -41,7 +40,7 @@ class PostController: UITableViewController {
         
         let stack = getCoreDataStack()
         
-        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
+        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Cell")
         fr.sortDescriptors = []
         
         return NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: nil, cacheName: nil)

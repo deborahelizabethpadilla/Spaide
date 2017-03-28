@@ -13,6 +13,8 @@ import CoreData
 
 public class Photo: NSManagedObject {
     
+    //Photo Setup
+    
     convenience init(index:Int, imageURL: String, imageData: NSData?, context: NSManagedObjectContext) {
         
         if let ent = NSEntityDescription.entity(forEntityName: "Photo", in: context) {

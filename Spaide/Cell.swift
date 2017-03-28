@@ -9,9 +9,11 @@
 import Foundation
 import CoreData
 
-//Pin Class
+//Cell Class
 
 public class Cell: NSManagedObject {
+    
+    //Cell Setup
     
     convenience init(latitude: Double, longitude: Double, context: NSManagedObjectContext) {
         
