@@ -16,6 +16,7 @@
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */; };
 		50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0821E8B0E7C00681097 /* UserListViewController.swift */; };
+		50B5B0851E8B3D8100681097 /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0841E8B3D8100681097 /* FormController.swift */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
@@ -39,6 +40,7 @@
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		50B5B0821E8B0E7C00681097 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
+		50B5B0841E8B3D8100681097 /* FormController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
 		50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
 		50BDEE4D1E8042A400D77020 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleToolboxForMac.framework; path = "Pods/../build/Release-iphoneos/GoogleToolboxForMac/GoogleToolboxForMac.framework"; sourceTree = "<group>"; };
@@ -135,6 +137,7 @@
 				50D90AA71E840BF000F0EA02 /* TabBarController.swift */,
 				50B5B0821E8B0E7C00681097 /* UserListViewController.swift */,
 				50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */,
+				50B5B0841E8B3D8100681097 /* FormController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -300,6 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */,
+				50B5B0851E8B3D8100681097 /* FormController.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
