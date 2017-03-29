@@ -14,10 +14,6 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
-		50B5B0711E8A16A500681097 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0701E8A16A500681097 /* Photo.swift */; };
-		50B5B0751E8A172A00681097 /* Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0741E8A172A00681097 /* Cell.swift */; };
-		50B5B0791E8A1B2F00681097 /* PhotoProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */; };
-		50B5B07F1E8AC0C400681097 /* CellProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B07E1E8AC0C400681097 /* CellProperties.swift */; };
 		50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */; };
 		50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0821E8B0E7C00681097 /* UserListViewController.swift */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
@@ -41,10 +37,6 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		50B5B0701E8A16A500681097 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
-		50B5B0741E8A172A00681097 /* Cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cell.swift; sourceTree = "<group>"; };
-		50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoProperties.swift; sourceTree = "<group>"; };
-		50B5B07E1E8AC0C400681097 /* CellProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellProperties.swift; sourceTree = "<group>"; };
 		50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 		50B5B0821E8B0E7C00681097 /* UserListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserListViewController.swift; sourceTree = "<group>"; };
 		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
@@ -140,12 +132,8 @@
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
-				50B5B0821E8B0E7C00681097 /* UserListViewController.swift */,
 				50D90AA71E840BF000F0EA02 /* TabBarController.swift */,
-				50B5B0701E8A16A500681097 /* Photo.swift */,
-				50B5B0781E8A1B2F00681097 /* PhotoProperties.swift */,
-				50B5B0741E8A172A00681097 /* Cell.swift */,
-				50B5B07E1E8AC0C400681097 /* CellProperties.swift */,
+				50B5B0821E8B0E7C00681097 /* UserListViewController.swift */,
 				50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */,
 			);
 			name = Controllers;
@@ -313,14 +301,10 @@
 			files = (
 				50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
-				50B5B0711E8A16A500681097 /* Photo.swift in Sources */,
 				50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				50D90AA81E840BF100F0EA02 /* TabBarController.swift in Sources */,
-				50B5B07F1E8AC0C400681097 /* CellProperties.swift in Sources */,
-				50B5B0751E8A172A00681097 /* Cell.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				50B5B0791E8A1B2F00681097 /* PhotoProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

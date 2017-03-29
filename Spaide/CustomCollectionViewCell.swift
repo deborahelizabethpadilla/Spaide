@@ -17,5 +17,4 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet var userInfo: UILabel!
     @IBOutlet var chatButton: UIButton!
     
-    
 }

@@ -40,9 +40,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         collectionView.delegate = self
         collectionView.dataSource = self
         
-        //Set Background
-        
-        //Background
+        //Set Background Color
         
         view.backgroundColor = FlatGreenDark()
         
