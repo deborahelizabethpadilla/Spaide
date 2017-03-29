@@ -8,8 +8,13 @@
 
 import UIKit
 import ChameleonFramework
+import FirebaseDatabase
 
 class FormController: UIViewController {
+    
+    //Variables
+    
+    var ref:FirebaseDatabaseReference?
     
     //Outlets
     
@@ -18,6 +23,9 @@ class FormController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Database Reference 
+        
         
         //Set Background To View Near Profile Pic
         
