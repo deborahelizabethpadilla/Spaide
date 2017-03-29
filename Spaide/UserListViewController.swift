@@ -9,7 +9,7 @@
 import UIKit
 import ChameleonFramework
 
-class UserListViewController: UICollectionViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class UserListViewController: UICollectionViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
     //User Info
     

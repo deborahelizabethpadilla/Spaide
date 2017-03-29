@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -136,7 +135,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City/State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMW-aN-oGD" customClass="AkiraTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="City/State" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMW-aN-oGD" customClass="AkiraTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="318" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -150,7 +149,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username/Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-j1-xdI" customClass="AkiraTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username/Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-j1-xdI" customClass="AkiraTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="265" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -187,7 +186,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-6c-SEp" customClass="AkiraTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="What Are You Seeking?" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-6c-SEp" customClass="AkiraTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="393" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -230,7 +229,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-CV-vsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="-399"/>
+            <point key="canvasLocation" x="122" y="-524"/>
         </scene>
         <!--User List-->
         <scene sceneID="x96-xm-fgm">
@@ -257,12 +256,14 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtL-lx-WBh">
                                             <rect key="frame" x="20" y="20" width="123" height="116"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="123" id="id9-Yb-DAi"/>
-                                                <constraint firstAttribute="width" secondItem="NtL-lx-WBh" secondAttribute="height" multiplier="123:116" id="xQe-Ee-3DU"/>
+                                                <constraint firstAttribute="width" constant="123" id="6mU-xp-bPo"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0F-ba-Ko8">
                                             <rect key="frame" x="151" y="20" width="49" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="suD-t4-iYk"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -274,6 +275,9 @@
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-2Y-2Xe">
                                             <rect key="frame" x="151" y="61" width="174" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="7HC-lO-MDR"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -299,17 +303,18 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="p60-fR-We3" firstAttribute="top" secondItem="NtL-lx-WBh" secondAttribute="bottom" constant="20" id="24S-pM-ChD"/>
-                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="leading" secondItem="RrV-5c-Dw9" secondAttribute="leadingMargin" constant="12" id="Atr-2J-18r"/>
-                                    <constraint firstItem="Qjg-2Y-2Xe" firstAttribute="leading" secondItem="N0F-ba-Ko8" secondAttribute="leading" id="Gan-8N-3na"/>
-                                    <constraint firstItem="N0F-ba-Ko8" firstAttribute="top" secondItem="RrV-5c-Dw9" secondAttribute="topMargin" constant="12" id="Jjw-N6-P37"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="Qjg-2Y-2Xe" secondAttribute="trailing" constant="12" id="Mlo-qF-rgv"/>
-                                    <constraint firstItem="p60-fR-We3" firstAttribute="leading" secondItem="RrV-5c-Dw9" secondAttribute="leadingMargin" constant="12" id="NcW-l1-Xcf"/>
-                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="top" secondItem="RrV-5c-Dw9" secondAttribute="topMargin" constant="12" id="Ngp-Sk-S2N"/>
-                                    <constraint firstItem="N0F-ba-Ko8" firstAttribute="leading" secondItem="NtL-lx-WBh" secondAttribute="trailing" constant="8" id="X7H-yd-3gb"/>
-                                    <constraint firstAttribute="trailingMargin" secondItem="p60-fR-We3" secondAttribute="trailing" constant="12" id="X9I-Pi-DUI"/>
-                                    <constraint firstItem="Qjg-2Y-2Xe" firstAttribute="top" secondItem="N0F-ba-Ko8" secondAttribute="bottom" constant="17" id="vuc-Cw-fmO"/>
-                                    <constraint firstAttribute="bottomMargin" secondItem="p60-fR-We3" secondAttribute="bottom" constant="12" id="zFH-Dw-uns"/>
+                                    <constraint firstItem="p60-fR-We3" firstAttribute="top" secondItem="NtL-lx-WBh" secondAttribute="bottom" constant="20" id="Amn-dp-WoR"/>
+                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="leading" secondItem="RrV-5c-Dw9" secondAttribute="leadingMargin" constant="12" id="CKz-WA-t2N"/>
+                                    <constraint firstItem="N0F-ba-Ko8" firstAttribute="leading" secondItem="NtL-lx-WBh" secondAttribute="trailing" constant="8" symbolic="YES" id="L6K-CR-XC0"/>
+                                    <constraint firstItem="Qjg-2Y-2Xe" firstAttribute="trailing" secondItem="p60-fR-We3" secondAttribute="trailing" id="PqI-Gs-6ya"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="p60-fR-We3" secondAttribute="bottom" constant="12" id="cDs-lg-rl4"/>
+                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="top" secondItem="N0F-ba-Ko8" secondAttribute="top" id="eqm-G1-imn"/>
+                                    <constraint firstItem="p60-fR-We3" firstAttribute="centerX" secondItem="RrV-5c-Dw9" secondAttribute="centerX" id="fn3-Lk-dwM"/>
+                                    <constraint firstItem="N0F-ba-Ko8" firstAttribute="leading" secondItem="Qjg-2Y-2Xe" secondAttribute="leading" id="hKa-32-Hpy"/>
+                                    <constraint firstItem="Qjg-2Y-2Xe" firstAttribute="top" secondItem="N0F-ba-Ko8" secondAttribute="bottom" constant="17" id="mef-C0-BTb"/>
+                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="leading" secondItem="p60-fR-We3" secondAttribute="leading" id="tWi-Iq-Cft"/>
+                                    <constraint firstItem="p60-fR-We3" firstAttribute="top" secondItem="Qjg-2Y-2Xe" secondAttribute="bottom" constant="74" id="uWN-qc-kik"/>
+                                    <constraint firstItem="NtL-lx-WBh" firstAttribute="top" secondItem="RrV-5c-Dw9" secondAttribute="topMargin" constant="12" id="vYp-ML-jpP"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="chatButton" destination="p60-fR-We3" id="r08-cS-nHV"/>
