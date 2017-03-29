@@ -27,6 +27,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     //Outlets
     
     @IBOutlet var collectionView: UICollectionView!
+    @IBOutlet var chatButtonOutlet: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,10 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         //Set Background Color
         
         view.backgroundColor = FlatGreenDark()
+        
+        //Chat Button Color
+        
+        chatButtonOutlet.backgroundColor = FlatWatermelonDark()
         
     }
     

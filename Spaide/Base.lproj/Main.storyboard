@@ -295,10 +295,9 @@
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p60-fR-We3">
                                             <rect key="frame" x="20" y="156" width="305" height="30"/>
-                                            <color key="backgroundColor" red="0.065733299719999999" green="0.70130145340000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                             <state key="normal" title="Chat Now">
-                                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -338,6 +337,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
+                        <outlet property="chatButtonOutlet" destination="p60-fR-We3" id="IOK-Gj-wVC"/>
                         <outlet property="collectionView" destination="Xb0-bq-w7g" id="ftk-nl-YJC"/>
                     </connections>
                 </collectionViewController>
