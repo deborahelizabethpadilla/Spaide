@@ -23,11 +23,12 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         var profilePicture: UIImage
         var name: String
         var description: String
+        var cityState: String
     }
     
     //Fill Objects
     
-    var userArray: [userObject] = []
+    var userArray: [userObject] = ["profilePicture", "name", "description", "cityState"]
     
     //Outlets
     
