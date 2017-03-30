@@ -8,6 +8,7 @@
 
 import UIKit
 import ChameleonFramework
+import FirebaseDatabase
 
 class UserListViewController: UICollectionViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
@@ -30,8 +31,12 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     
     //Outlets
     
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var citystateLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
     @IBOutlet var chatButtonOutlet: UIButton!
+    @IBOutlet var networkActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,7 +64,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     
     func getData() {
         
-        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        UIApplication.sharedApplication().networkActivityIndicator = true
         
         Firebase.observeEventType(.Value, withBlock: { snapshot in
             var tempItems = [NSDictionary]()
@@ -72,8 +77,8 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
             }
             
             self.items = tempItems
-            self.tableView.reloadData()
-            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+            self.collectionView.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicator = false
         })
     }
     
