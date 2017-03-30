@@ -24,7 +24,7 @@ class FormController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Database Reference 
+        //Database Reference
         
         
         //Set Background To View Near Profile Pic

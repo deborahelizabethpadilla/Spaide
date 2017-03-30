@@ -17,6 +17,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var loginButton: UIButton!
+    @IBOutlet var registerButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +44,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         loginButton.layer.borderWidth = 1
         loginButton.layer.borderColor = UIColor.flatWatermelonDark.cgColor
         
+        registerButton.backgroundColor = .flatWatermelonDark
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.flatWatermelonDark.cgColor
+        
     }
     
     
@@ -67,6 +73,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Actions
     
+    @IBAction func registerButtonAction(_ sender: Any) {
+    }
+    
     @IBAction func loginButton(_ sender: Any) {
         
         FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: {
@@ -78,6 +87,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
             } else {
                 
+                //Create User
+                
                 print("User Created")
                 self.login()
             }
@@ -85,9 +96,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
-    //Create & Login Function
+    //Create Login Function
     
     func login() {
+        
+        //Sign In User With Firebase
         
         FIRAuth.auth()?.signIn(withEmail: emailField.text!, password: passwordField.text!, completion: {
             user, error in

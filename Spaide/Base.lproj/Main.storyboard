@@ -109,6 +109,17 @@
                                     <segue destination="qE3-7s-obc" kind="show" id="la0-TH-O5r"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08I-Rn-phm">
+                                <rect key="frame" x="16" y="449" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerButtonAction:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="HAI-ql-YAr"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -116,6 +127,7 @@
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
                         <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
+                        <outlet property="registerButton" destination="08I-Rn-phm" id="36g-MS-0Hx"/>
                         <segue destination="Rqs-pG-GBP" kind="show" identifier="tabBarSegue" id="HzU-NJ-uyy"/>
                     </connections>
                 </viewController>
