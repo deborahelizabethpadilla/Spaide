@@ -32,12 +32,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     
     //Outlets
     
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var citystateLabel: UILabel!
-    @IBOutlet var nameLabel: UILabel!
     @IBOutlet var collectionView: UICollectionView!
-    @IBOutlet var chatButtonOutlet: UIButton!
-    @IBOutlet var networkActivityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -75,6 +70,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
                 let child = item as! FDataSnapshot
                 let dict = child.value as! NSDictionary
                 tempItems.append(dict)
+                
             }
             
             self.items = tempItems

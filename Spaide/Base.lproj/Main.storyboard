@@ -334,7 +334,9 @@
                                     <constraint firstItem="NtL-lx-WBh" firstAttribute="top" secondItem="RrV-5c-Dw9" secondAttribute="topMargin" constant="12" id="vYp-ML-jpP"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="activityIndicator" destination="bTL-eT-YN8" id="zfK-FM-0z5"/>
                                     <outlet property="chatButton" destination="p60-fR-We3" id="r08-cS-nHV"/>
+                                    <outlet property="descriptionLabel" destination="ToP-pC-R8e" id="UTv-7w-PTa"/>
                                     <outlet property="imageView" destination="NtL-lx-WBh" id="Yol-Mm-NfM"/>
                                     <outlet property="locationLabel" destination="Qjg-2Y-2Xe" id="anT-rU-7nP"/>
                                     <outlet property="nameLabel" destination="N0F-ba-Ko8" id="khR-EU-QWV"/>
@@ -349,12 +351,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
-                        <outlet property="chatButtonOutlet" destination="p60-fR-We3" id="IOK-Gj-wVC"/>
-                        <outlet property="citystateLabel" destination="Qjg-2Y-2Xe" id="h4a-Ll-rwN"/>
                         <outlet property="collectionView" destination="Xb0-bq-w7g" id="ftk-nl-YJC"/>
-                        <outlet property="descriptionLabel" destination="ToP-pC-R8e" id="DzJ-ry-Oxx"/>
-                        <outlet property="nameLabel" destination="N0F-ba-Ko8" id="tIQ-UH-gFQ"/>
-                        <outlet property="networkActivityIndicator" destination="bTL-eT-YN8" id="Tsv-Uq-uZN"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXY-3z-vsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
