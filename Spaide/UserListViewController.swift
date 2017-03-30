@@ -11,6 +11,10 @@ import ChameleonFramework
 
 class UserListViewController: UICollectionViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
+    //Database Reference
+    
+    let firebase = Firebase(url:"https://spaide-2cc40.firebaseio.com/profiles")
+    
     //User Info
     
     struct userObject {
@@ -32,11 +36,9 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Append By Passing Through Info To Array
+        //Load User Info
         
-        
-        
-        
+        getData()
         
         //Collection View Delegate
         
@@ -51,6 +53,28 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         
         chatButtonOutlet.backgroundColor = FlatWatermelonDark()
         
+    }
+    
+    //Functions
+    
+    func getData() {
+        
+        UIApplication.sharedApplication().networkActivityIndicatorVisible = true
+        
+        Firebase.observeEventType(.Value, withBlock: { snapshot in
+            var tempItems = [NSDictionary]()
+            
+            for item in snapshot.children {
+                
+                let child = item as! FDataSnapshot
+                let dict = child.value as! NSDictionary
+                tempItems.append(dict)
+            }
+            
+            self.items = tempItems
+            self.tableView.reloadData()
+            UIApplication.sharedApplication().networkActivityIndicatorVisible = false
+        })
     }
     
     //Collection View Functions
