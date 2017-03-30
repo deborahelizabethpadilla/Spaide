@@ -59,7 +59,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //Close Keyboard With Tap
     
     func dismissKeyboard() {
-       
+        
         //Close On Tap
         
         view.endEditing(true)
@@ -96,25 +96,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Sign In User With Firebase
         
         if isSignIn {
-        
-        FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: {
-            user, error in
             
-            if error != nil {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: {
+                user, error in
                 
-                //Something Is Wrong
-                
-                self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
-                
-            } else {
-                
-                //User Found, Go To Tab Bar Controller
-                
-                self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
-                
-                print("Logged In!")
-            }
-        })
+                if error != nil {
+                    
+                    //Something Is Wrong
+                    
+                    self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
+                    
+                } else {
+                    
+                    //User Found, Go To Tab Bar Controller
+                    
+                    self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
+                    
+                    print("Logged In!")
+                }
+            })
             
         }
     }
@@ -129,49 +129,49 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             databaseRef.child("Users").observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
                 
-                if snapshot.hasChild(self.emailField.text!){
+                if snapshot.hasChild(self.emailField.text!) {
+                    
+                    //Not Available
                     
                     displayAlert(title: "Oh No!", message: "That Email Exists! Try Again!")
                     
                 } else {
                     
-                    print("Doesn't Exist!")
+                    //Create User
+                    
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+                        
+                        if let e = email {
+                            
+                            //User Found Go To Tab Bar Controller
+                            
+                            self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
+                            
+                            print("Logged In!")
+                            
+                        }
+                    })
                 }
                 
-                
             })
-        
-        FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
             
-            if let e = email {
+            
+        }
+        
+        //Display Alert
+        
+        func displayAlert(title: String, message: String) {
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+            
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+                self.dismiss(animated: true, completion: nil)
                 
-                //User Found Go To Tab Bar Controller
-                
-                self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
-                
-                print("Logged In!")
-                
-            } else {
-                
-                //Check Error
-                
-                displayAlert(title: "Oh No!", message: "You Can't Use This! Try Something Else!")
-            }
-        })
+            }))
+            
+            self.present(alert, animated: true, completion: nil)
+            
+        }
     }
     
-    //Display Alert
-    
-    func displayAlert(title: String, message: String) {
-        
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.dismiss(animated: true, completion: nil)
-            
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
-        
-    }
 }
