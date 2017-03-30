@@ -36,6 +36,8 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         
         
         
+        
+        
         //Collection View Delegate
         
         collectionView.delegate = self

@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 import FirebaseDatabase
 
-class FormController: UIViewController {
+class FormController: UIViewController, FIRDatabaseQuery {
     
     //Variables
     
@@ -41,6 +41,12 @@ class FormController: UIViewController {
     @IBAction func saveButtonAction(_ sender: Any) {
         
         
+        
+    }
+    
+    func saveData() {
+        
+        FIRDatabase.database().app
     }
     
 }
