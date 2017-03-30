@@ -12,6 +12,10 @@ import Firebase
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
+    //Variables
+    
+    var isSignIn:Bool = true
+    
     //Outlets
     
     @IBOutlet var emailField: UITextField!
@@ -78,44 +82,60 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func loginButton(_ sender: Any) {
         
-        FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!, completion: {
-            user, error in
-            
-            if error != nil {
-                
-                self.login()
-                
-            } else {
-                
-                //Create User
-                
-                print("User Created")
-                self.login()
-            }
-        })
+        login()
         
     }
     
-    //Create Login Function
+    //Create Login And Register Function
     
     func login() {
         
+        //Validate Email And Password
+        
         //Sign In User With Firebase
         
-        FIRAuth.auth()?.signIn(withEmail: emailField.text!, password: passwordField.text!, completion: {
+        if isSignIn {
+        
+        FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: {
             user, error in
             
             if error != nil {
+                
+                //Something Is Wrong
                 
                 self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
                 
             } else {
                 
+                //User Found, Go To Tab Bar Controller
+                
                 self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
                 
                 print("Logged In!")
             }
+        })
             
+        }
+    }
+    
+    func registerUser() {
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+            
+            if let e = email {
+                
+                //User Found Go To Tab Bar Controller
+                
+                self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
+                
+                print("Logged In!")
+                
+            } else {
+                
+                //Check Error
+                
+                displayAlert(title: "Oh No!", message: "You Can't Use This! Try Something Else!")
+            }
         })
     }
     
