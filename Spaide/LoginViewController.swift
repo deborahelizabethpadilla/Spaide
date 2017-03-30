@@ -91,7 +91,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func login() {
         
-        //Validate Email And Password
+        //Validate Email and Password
         
         //Sign In User With Firebase
         
@@ -120,6 +120,26 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func registerUser() {
+        
+        //Check If Email And Password Exists
+        
+        if (emailField.text?.isEmpty == false){
+            
+            let databaseRef = FIRDatabase.database().reference()
+            
+            databaseRef.child("Users").observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+                
+                if snapshot.hasChild(self.emailField.text!){
+                    
+                    displayAlert(title: "Oh No!", message: "That Email Exists! Try Again!")
+                    
+                } else {
+                    
+                    print("Doesn't Exist!")
+                }
+                
+                
+            })
         
         FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
             
