@@ -78,12 +78,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     //Actions
     
     @IBAction func registerButtonAction(_ sender: Any) {
+        
+        registerUser()
     }
     
     @IBAction func loginButton(_ sender: Any) {
         
         login()
-        
     }
     
     //Create Login And Register Function
