@@ -50,10 +50,6 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
         
         view.backgroundColor = FlatGreenDark()
         
-        //Chat Button Color
-        
-        chatButtonOutlet.backgroundColor = FlatWatermelonDark()
-        
     }
     
     //Functions
