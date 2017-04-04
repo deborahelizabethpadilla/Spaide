@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'BC1CA05664B0F18B709808880840F8B8'
+               BlueprintIdentifier = '64E360B6B8D40C1210CE7D6EED4BB906'
                BlueprintName = 'Pods-Spaide'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods-Spaide.framework'>

@@ -11,7 +11,7 @@ use_frameworks!
   pod 'Firebase/Database'
   pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'TextFieldEffects'
-  pod 'GeoFire'
+  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
   
 
 end
