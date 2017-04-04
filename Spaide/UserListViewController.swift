@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import FirebaseDatabase
+import Firebase
 
 class UserListViewController: UICollectionViewController, UICollectionViewDelegate,UICollectionViewDataSource {
     
