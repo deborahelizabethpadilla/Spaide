@@ -10,15 +10,18 @@ import UIKit
 import ChameleonFramework
 import FirebaseDatabase
 import Firebase
-import GeoFire
 
-class UserListViewController: UICollectionViewController,UICollectionViewDelegate, UICollectionViewDataSource {
+class UserListViewController: UICollectionViewController {
+    
+    //Outlets
+    
+    @IBOutlet var collectionView: UICollectionView!
     
     //Database Reference
     
-    let firebase = Firebase(url:"https://spaide-2cc40.firebaseio.com/profiles")
+    var ref: FIRDatabaseReference!
     
-    //User Info
+    //User Profile Info
     
     struct userObject {
         
@@ -32,12 +35,12 @@ class UserListViewController: UICollectionViewController,UICollectionViewDelegat
     
     var userArray: [userObject] = ["profilePicture", "name", "description", "cityState"]
     
-    //Outlets
-    
-    @IBOutlet var collectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Database
+        
+        configureDatabase()
         
         //Load User Info
         
@@ -54,11 +57,11 @@ class UserListViewController: UICollectionViewController,UICollectionViewDelegat
         
     }
     
-    //Functions
+    //Get Data Function
     
     func getData() {
         
-        UIApplication.sharedApplication.networkActivityIndicator = true
+        UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
         Firebase.observeEventType(.Value, withBlock: { snapshot in
             var tempItems = [NSDictionary]()
@@ -77,6 +80,7 @@ class UserListViewController: UICollectionViewController,UICollectionViewDelegat
         })
     }
     
+    
     //Collection View Functions
  
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -93,6 +97,15 @@ class UserListViewController: UICollectionViewController,UICollectionViewDelegat
         cell.userInfo.text = userArray[indexPath.item].description
         
         return cell
+    }
+    
+    //Database Reference
+    
+    func configureDatabase() {
+        
+        //Get FIRDatabaseReference
+        
+        ref = FIRDatabase.database().reference()
     }
 }
 

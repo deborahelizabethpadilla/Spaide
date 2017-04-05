@@ -9,8 +9,9 @@
 import UIKit
 import ChameleonFramework
 import FirebaseDatabase
+import Firebase
 
-class FormController: UIViewController, FIRDatabaseQuery {
+class FormController: UIViewController {
     
     //Variables
     
@@ -29,7 +30,6 @@ class FormController: UIViewController, FIRDatabaseQuery {
         
         //Database Reference
         
-        let firebase = Firebase(url:"https://spaide-2cc40.firebaseio.com/profiles")
         
         //Set Background To View Near Profile Pic
         
@@ -62,7 +62,7 @@ class FormController: UIViewController, FIRDatabaseQuery {
             data = UIImageJPEGRepresentation(image,0.1)! as NSData
         }
         
-        let base64String = data.base64EncodedStringWithOptions(NSData.Base64EncodingOptions.Encoding64CharacterLineLength)
+        let base64String = data.base64EncodedString(options: [])
         
         let user: NSDictionary = ["name":name!,"description":description!, "photoBase64":base64String]
         

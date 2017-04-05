@@ -351,7 +351,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
-                        <outlet property="collectionView" destination="Xb0-bq-w7g" id="ftk-nl-YJC"/>
+                        <outlet property="collectionView" destination="Xb0-bq-w7g" id="vEc-r2-Ys9"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXY-3z-vsm" userLabel="First Responder" sceneMemberID="firstResponder"/>
