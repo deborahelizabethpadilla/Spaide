@@ -13,10 +13,6 @@ import Firebase
 
 class UserListViewController: UICollectionViewController {
     
-    //Outlets
-    
-    @IBOutlet var collectionView: UICollectionView!
-    
     //Database Reference
     
     var ref: FIRDatabaseReference!
@@ -50,8 +46,8 @@ class UserListViewController: UICollectionViewController {
         
         //Collection View Delegate
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        collectionView?.delegate = self
+        collectionView?.dataSource = self
         
         //Set Background Color
         
@@ -77,7 +73,7 @@ class UserListViewController: UICollectionViewController {
                 
             }
             
-            self.collectionView.reloadData()
+            self.collectionView?.reloadData()
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
         })
     }
@@ -104,7 +100,7 @@ class UserListViewController: UICollectionViewController {
     
     func configureDatabase() {
         
-        //Get FIRDatabaseReference
+        //Get Database Reference
         
         ref = FIRDatabase.database().reference()
     }
