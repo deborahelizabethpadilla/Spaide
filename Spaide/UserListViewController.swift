@@ -10,8 +10,9 @@ import UIKit
 import ChameleonFramework
 import FirebaseDatabase
 import Firebase
+import GeoFire
 
-class UserListViewController: UICollectionViewController, UICollectionViewDelegate,UICollectionViewDataSource {
+class UserListViewController: UICollectionViewController,UICollectionViewDelegate, UICollectionViewDataSource {
     
     //Database Reference
     
@@ -57,7 +58,7 @@ class UserListViewController: UICollectionViewController, UICollectionViewDelega
     
     func getData() {
         
-        UIApplication.sharedApplication().networkActivityIndicator = true
+        UIApplication.sharedApplication.networkActivityIndicator = true
         
         Firebase.observeEventType(.Value, withBlock: { snapshot in
             var tempItems = [NSDictionary]()

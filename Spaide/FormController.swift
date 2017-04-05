@@ -59,16 +59,16 @@ class FormController: UIViewController, FIRDatabaseQuery {
         var data2: NSData = NSData()
         
         if let image = imageView.image {
-            data = UIImageJPEGRepresentation(image,0.1)!
+            data = UIImageJPEGRepresentation(image,0.1)! as NSData
         }
         
-        let base64String = data.base64EncodedStringWithOptions(NSDataBase64EncodingOptions.Encoding64CharacterLineLength)
+        let base64String = data.base64EncodedStringWithOptions(NSData.Base64EncodingOptions.Encoding64CharacterLineLength)
         
         let user: NSDictionary = ["name":name!,"description":description!, "photoBase64":base64String]
         
         //Add Firebase Child Node
         
-        let profile = firebase.ref.childByAppendingPath(name!, description!)
+        let profile = Firebase.ref.childByAppendingPath(name!, description!)
         
         //Write Data To Firebase
         
