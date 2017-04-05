@@ -9,6 +9,7 @@
 import UIKit
 import ChameleonFramework
 import Firebase
+import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -91,69 +92,65 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     func login() {
         
-        //Validate Email and Password
-        
-        //Sign In User With Firebase
-        
-        if isSignIn {
+        if self.emailField.text == "" || self.passwordField.text == "" {
             
-            FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: {
-                user, error in
+            //Let User Know There Is An Error
+            
+            displayAlert(title: "Oh No!", message: "Please Enter Your Info!")
+            
+        } else {
+            
+            FIRAuth.auth()?.signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
                 
-                if error != nil {
+                if error == nil {
                     
-                    //Something Is Wrong
+                    //Print If Successfully Logged In
                     
-                    self.displayAlert(title: "Oh No!", message: "Something Went Wrong. Try Again!")
+                    print("Successful Log In!")
+                    
+                    //Go To Tab Bar Controller If Successful
+                    
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
+                    self.present(vc!, animated: true, completion: nil)
                     
                 } else {
                     
-                    //User Found, Go To Tab Bar Controller
+                    //Let User Know There Is An Error
                     
-                    self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
+                    let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
-                    print("Logged In!")
+                    let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(defaultAction)
+                    
+                    self.present(alertController, animated: true, completion: nil)
                 }
-            })
-            
+            }
         }
     }
     
     func registerUser() {
         
-        //Check If Email And Password Exists
-        
-        if (emailField.text?.isEmpty == false){
+        if emailField.text == "" {
             
-            let databaseRef = FIRDatabase.database().reference()
+            displayAlert(title: "Oh No!", message: "Please Enter Your Info!")
             
-            databaseRef.child("Users").observeSingleEventOfType(FIRDataEventType.Value, withBlock: { (snapshot) in
+        } else {
+            
+            FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
                 
-                if snapshot.hasChild(self.emailField.text!) {
+                if error == nil {
                     
-                    //Not Available
+                    print("You have successfully signed up")
                     
-                    displayAlert(title: "Oh No!", message: "That Email Exists! Try Again!")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
+                    self.present(vc!, animated: true, completion: nil)
                     
                 } else {
-                    
-                    //Create User
-                    
-                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
-                        
-                        if let e = email {
-                            
-                            //User Found Go To Tab Bar Controller
-                            
-                            self.performSegue(withIdentifier: "tabBarSegue", sender: nil)
-                            
-                            print("Logged In!")
-                            
-                        }
-                    })
+                   
+                    self.displayAlert(title: "Oh No!", message: "Try Again! Something Happened!")
                 }
-                
-            })
+            }
+        }
             
             
         }
@@ -173,5 +170,3 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         }
     }
-    
-}
