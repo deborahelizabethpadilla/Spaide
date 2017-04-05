@@ -33,12 +33,14 @@ class UserListViewController: UICollectionViewController {
     
     //Fill Objects
     
-    var userArray: [userObject] = ["profilePicture", "name", "description", "cityState"]
+    var userArray: NSArray = ["profilePicture", "name", "description", "cityState"]
+    
+    //View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Database
+        //Configure Database
         
         configureDatabase()
         
@@ -63,20 +65,20 @@ class UserListViewController: UICollectionViewController {
         
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         
-        Firebase.observeEventType(.Value, withBlock: { snapshot in
+        ref.observe(.value, with: { snapshot in
+            
             var tempItems = [NSDictionary]()
             
             for item in snapshot.children {
                 
-                let child = item as! FDataSnapshot
+                let child = item as! FIRDataSnapshot
                 let dict = child.value as! NSDictionary
                 tempItems.append(dict)
                 
             }
             
-            self.items = tempItems
             self.collectionView.reloadData()
-            UIApplication.sharedApplication().networkActivityIndicator = false
+            UIApplication.shared.isNetworkActivityIndicatorVisible = false
         })
     }
     
@@ -92,9 +94,8 @@ class UserListViewController: UICollectionViewController {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as! CustomCollectionViewCell
         
-        cell.nameLabel.text = userArray[indexPath.item].name
-        cell.imageView.image = userArray[indexPath.item].profilePicture
-        cell.userInfo.text = userArray[indexPath.item].description
+        cell.nameLabel.text = (userArray[indexPath.item] as AnyObject).name
+        cell.userInfo.text = (userArray[indexPath.item] as AnyObject).description
         
         return cell
     }

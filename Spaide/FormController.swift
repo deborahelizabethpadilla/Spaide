@@ -13,10 +13,7 @@ import Firebase
 
 class FormController: UIViewController {
     
-    //Variables
-    
-    var ref:FirebaseDatabaseReference?
-    
+
     //Outlets
     
     @IBOutlet var profilebackgroundView: UIView!
@@ -30,6 +27,11 @@ class FormController: UIViewController {
         
         //Database Reference
         
+        
+        
+        //Show Saved Data
+        
+        saveData()
         
         //Set Background To View Near Profile Pic
         
@@ -45,7 +47,6 @@ class FormController: UIViewController {
     @IBAction func saveButtonAction(_ sender: Any) {
         
         saveData()
-        
     }
     
     func saveData() {

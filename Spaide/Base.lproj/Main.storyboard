@@ -242,7 +242,7 @@
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -346,7 +346,7 @@
                         </cells>
                         <connections>
                             <outlet property="dataSource" destination="UBZ-ag-jM2" id="I4X-9g-8UB"/>
-                            <outlet property="delegate" destination="UBZ-ag-jM2" id="hma-ai-vof"/>
+                            <outlet property="delegate" destination="UBZ-ag-jM2" id="WMG-OL-zsk"/>
                         </connections>
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
@@ -426,7 +426,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Af2-Gm-drY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af2-Gm-drY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
