@@ -24,6 +24,6 @@ class TermsOfServiceController: UIViewController {
         
         //Background
         
-        view.backgroundColor = FlatGreenDark()
+        view.backgroundColor = FlatWhite()
     }
 }

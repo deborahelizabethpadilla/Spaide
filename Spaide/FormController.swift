@@ -34,8 +34,6 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
             print("Picked")
             
-            imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum
             imagePicker.sourceType = .camera
             imagePicker.allowsEditing = false
             
@@ -45,6 +43,16 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Profile Photo Circle
+        
+        self.imageView.layer.cornerRadius = imageView.frame.size.width / 2
+        self.imageView.clipsToBounds = true
+        self.imageView.contentMode = .scaleAspectFill
+        
+        //Image Picker Delegate
+        
+        imagePicker.delegate = self
         
         //User Tap To Close Keyboard
         
@@ -58,13 +66,26 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         self.usernameField.delegate = self
         self.descriptionField.delegate = self
         
-        //Set Background To View Near Profile Pic
+        //Background Of Controller
         
-        profilebackgroundView.backgroundColor = FlatWatermelonDark()
+        view.backgroundColor = FlatWhite()
+        
+        //Set Background View Near Profile Pic
+        
+        profilebackgroundView.backgroundColor = FlatGreenDark()
         
         //Set Save Button 
         
-        saveButton.backgroundColor = FlatWatermelonDark()
+        saveButton.backgroundColor = FlatGreenDark()
+    }
+    
+    //Profile Photo Subviews
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        imageView.layer.cornerRadius = imageView.frame.width / 2
+        imageView.clipsToBounds = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -78,13 +99,13 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
     
     //Image Picker Function
     
-    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
-        self.dismiss(animated: true, completion: { () -> Void in
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
-        })
+            imageView.image = pickedImage
+        }
         
-        imageView.image = image
-        
+        dismiss(animated: true, completion: nil)
     }
 
     //Close Keyboard Functions

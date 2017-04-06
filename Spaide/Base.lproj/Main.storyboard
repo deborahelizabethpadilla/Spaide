@@ -33,15 +33,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-8f-kFR" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="340" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -51,15 +50,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzN-2E-3zT" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="288" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -73,18 +71,16 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find or get help instantly." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seek or get help instantly." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
                                 <rect key="frame" x="16" y="195" width="343" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-Om-stZ">
                                 <rect key="frame" x="16" y="107" width="343" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="60"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-hA-N5N">
@@ -103,7 +99,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="17"/>
                                 <state key="normal" title="By using the app, you agree to the terms of service">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="qE3-7s-obc" kind="show" id="la0-TH-O5r"/>
@@ -147,16 +143,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username/Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-j1-xdI" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="378" width="343" height="40"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fU8-j1-xdI" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="388" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="9gP-vO-fLX"/>
+                                    <constraint firstAttribute="height" constant="30" id="Ncm-7F-Ypx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                         <real key="value" value="0.0"/>
@@ -165,6 +165,10 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Iz-9Ha">
                                 <rect key="frame" x="16" y="550" width="343" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="OBb-h6-QnS"/>
+                                    <constraint firstAttribute="width" constant="343" id="dGc-eO-s1x"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -173,34 +177,71 @@
                                     <segue destination="UBZ-ag-jM2" kind="show" id="GUY-Jd-rdW"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe What You're Looking For Or Offering" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-6c-SEp" customClass="AkiraTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe What You're Looking For Or Offering" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-6c-SEp" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="450" width="343" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="HC4-ii-DCb"/>
+                                    <constraint firstAttribute="width" constant="343" id="IkB-RW-8Dn"/>
+                                    <constraint firstAttribute="height" constant="70" id="ez1-iw-s0r"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
                                         <real key="value" value="0.0"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title Of Service" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-MS-3v2" userLabel="Title Field" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="323" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="9im-mW-Us9"/>
+                                    <constraint firstAttribute="width" constant="343" id="y6O-kK-8VU"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwb-XD-8s4">
-                                <rect key="frame" x="0.0" y="26" width="375" height="229"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TwE-Pr-p6P">
-                                        <rect key="frame" x="109" y="50" width="157" height="128"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-Um-eGm">
+                                        <rect key="frame" x="136" y="75" width="102" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="157" id="Ub8-80-gPy"/>
-                                            <constraint firstAttribute="height" constant="128" id="c7l-cc-fs8"/>
+                                            <constraint firstAttribute="height" constant="30" id="Ykv-IA-F4n"/>
+                                            <constraint firstAttribute="width" constant="102" id="fL7-OF-eg6"/>
                                         </constraints>
+                                        <state key="normal" title="Upload Photo">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="uploadPhoto:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="GKL-iZ-yyf"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TwE-Pr-p6P">
+                                        <rect key="frame" x="123" y="167" width="128" height="128"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -208,63 +249,38 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-Um-eGm">
-                                        <rect key="frame" x="136" y="186" width="102" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Upload Photo">
-                                            <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="uploadPhoto:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="GKL-iZ-yyf"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="TwE-Pr-p6P" secondAttribute="trailing" constant="109" id="Ec9-Du-NHc"/>
-                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="top" constant="50" id="HxZ-MK-5Ss"/>
-                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="109" id="M9u-jN-q7V"/>
-                                    <constraint firstAttribute="height" constant="229" id="Wky-oU-koh"/>
-                                    <constraint firstAttribute="bottom" secondItem="TwE-Pr-p6P" secondAttribute="bottom" constant="51" id="XW8-l0-5fM"/>
-                                    <constraint firstAttribute="width" constant="375" id="hjR-9X-IDx"/>
+                                    <constraint firstAttribute="trailing" secondItem="TwE-Pr-p6P" secondAttribute="trailing" constant="124" id="01j-NB-8j3"/>
+                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="123" id="1bm-W1-UIY"/>
+                                    <constraint firstAttribute="bottom" secondItem="TwE-Pr-p6P" secondAttribute="bottom" constant="-54" id="Kmb-9J-nEJ"/>
+                                    <constraint firstAttribute="width" constant="375" id="LeZ-B8-IHc"/>
+                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="top" secondItem="Pih-Um-eGm" secondAttribute="bottom" constant="62" id="QRo-XL-evt"/>
+                                    <constraint firstItem="Pih-Um-eGm" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="top" constant="75" id="Stc-NA-1ke"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pih-Um-eGm" secondAttribute="trailing" constant="137" id="Vxa-QO-abE"/>
+                                    <constraint firstAttribute="height" constant="241" id="lFs-F0-oOx"/>
+                                    <constraint firstItem="Pih-Um-eGm" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="136" id="osU-eG-KVn"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-MS-3v2" userLabel="Title Field" customClass="AkiraTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="313" width="343" height="30"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
-                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderFontScale">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="leading" secondItem="VuG-6c-SEp" secondAttribute="leading" id="82z-DJ-6tb"/>
-                            <constraint firstAttribute="trailing" secondItem="Jwb-XD-8s4" secondAttribute="trailing" id="CjE-Is-4q4"/>
-                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leading" id="Cjp-Cu-mhb"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="Ju6-Od-8Gb"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="centerX" secondItem="Jwb-XD-8s4" secondAttribute="centerX" id="MWg-ap-H8x"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="leading" secondItem="XGb-Iz-9Ha" secondAttribute="leading" id="NaB-w0-111"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="trailing" secondItem="fU8-j1-xdI" secondAttribute="trailing" id="OOx-aV-XmB"/>
-                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="top" secondItem="VuG-6c-SEp" secondAttribute="bottom" constant="30" id="Osq-ed-NPV"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="leading" secondItem="fU8-j1-xdI" secondAttribute="leading" id="XC1-NU-rcB"/>
-                            <constraint firstItem="fU8-j1-xdI" firstAttribute="top" secondItem="Nz3-MS-3v2" secondAttribute="bottom" constant="35" id="XSM-Ak-2ua"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="trailing" secondItem="VuG-6c-SEp" secondAttribute="trailing" id="YKZ-ee-upe"/>
-                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="top" secondItem="e9T-Yd-SlY" secondAttribute="bottom" constant="6" id="bgC-Fi-W3w"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="trailing" secondItem="XGb-Iz-9Ha" secondAttribute="trailing" id="hsC-Uk-PQi"/>
-                            <constraint firstItem="VuG-6c-SEp" firstAttribute="top" secondItem="fU8-j1-xdI" secondAttribute="bottom" constant="32" id="uBk-h7-I6o"/>
-                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="bottom" constant="58" id="vWz-Gv-e9D"/>
-                            <constraint firstAttribute="bottom" secondItem="VuG-6c-SEp" secondAttribute="bottom" constant="147" id="w80-wE-zh4"/>
+                            <constraint firstItem="fU8-j1-xdI" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="28U-8h-ZUy"/>
+                            <constraint firstItem="fU8-j1-xdI" firstAttribute="top" secondItem="Nz3-MS-3v2" secondAttribute="bottom" constant="35" id="BJ0-hC-5w0"/>
+                            <constraint firstItem="VuG-6c-SEp" firstAttribute="top" secondItem="fU8-j1-xdI" secondAttribute="bottom" constant="32" id="GOK-zK-tJP"/>
+                            <constraint firstItem="fU8-j1-xdI" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="ONh-A6-hqk"/>
+                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="top" secondItem="o7B-8c-Aw9" secondAttribute="top" id="TEl-hr-nit"/>
+                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="bottom" constant="82" id="V1l-dH-m5e"/>
+                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="WCd-7d-az6"/>
+                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="WV7-Qr-FCQ"/>
+                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leading" id="d1L-hN-cLZ"/>
+                            <constraint firstItem="VuG-6c-SEp" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="eMq-bQ-c5n"/>
+                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="omY-RS-Sbg"/>
+                            <constraint firstItem="Nz3-MS-3v2" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="psc-4E-K07"/>
+                            <constraint firstItem="VuG-6c-SEp" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="thk-ZD-rQH"/>
+                            <constraint firstAttribute="trailing" secondItem="Jwb-XD-8s4" secondAttribute="trailing" id="v6s-N3-cLg"/>
+                            <constraint firstItem="yx5-Cs-iyH" firstAttribute="top" secondItem="XGb-Iz-9Ha" secondAttribute="bottom" constant="32" id="wo6-FF-DSe"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="igK-kE-2QV"/>
