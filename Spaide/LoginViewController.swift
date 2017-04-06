@@ -13,10 +13,6 @@ import FirebaseAuth
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
-    //Variables
-    
-    var isSignIn:Bool = true
-    
     //Outlets
     
     @IBOutlet var emailField: UITextField!
@@ -140,7 +136,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 
                 if error == nil {
                     
-                    print("You have successfully signed up")
+                    print("You Have Successfully Signed Up")
                     
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
                     self.present(vc!, animated: true, completion: nil)

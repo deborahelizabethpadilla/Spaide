@@ -52,7 +52,7 @@
                                 <rect key="frame" x="16" y="288" width="343" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
@@ -208,11 +208,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="bOG-fX-1kX"/>
                     <connections>
-                        <outlet property="descriptionField" destination="VuG-6c-SEp" id="DLh-g8-TVn"/>
+                        <outlet property="descriptionField" destination="VuG-6c-SEp" id="Q8Z-uo-cFj"/>
                         <outlet property="imageView" destination="TwE-Pr-p6P" id="Gfw-9c-dtt"/>
                         <outlet property="profilebackgroundView" destination="Jwb-XD-8s4" id="Ot7-2R-97P"/>
                         <outlet property="saveButton" destination="XGb-Iz-9Ha" id="fT0-Ox-iUx"/>
-                        <outlet property="usernameField" destination="fU8-j1-xdI" id="v7J-dE-k9T"/>
+                        <outlet property="usernameField" destination="fU8-j1-xdI" id="YFS-Pz-vVB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIi-MK-zQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -242,7 +242,7 @@
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -426,7 +426,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="Af2-Gm-drY">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af2-Gm-drY">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

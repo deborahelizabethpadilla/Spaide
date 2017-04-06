@@ -8,11 +8,15 @@
 
 import UIKit
 import ChameleonFramework
+import TextFieldEffects
 import FirebaseDatabase
 import Firebase
 
 class FormController: UIViewController {
     
+    //Firebase Database Reference
+    
+    var ref: FIRDatabaseReference!
 
     //Outlets
     
@@ -27,7 +31,7 @@ class FormController: UIViewController {
         
         //Database Reference
         
-        
+        configureDatabase()
         
         //Show Saved Data
         
@@ -57,7 +61,7 @@ class FormController: UIViewController {
         var data: NSData = NSData()
         
         let description = descriptionField.text
-        var data2: NSData = NSData()
+        var _: NSData = NSData()
         
         if let image = imageView.image {
             data = UIImageJPEGRepresentation(image,0.1)! as NSData
@@ -69,12 +73,21 @@ class FormController: UIViewController {
         
         //Add Firebase Child Node
         
-        let profile = Firebase.ref.childByAppendingPath(name!, description!)
+        let profile = ref.child(byAppendingPath: name!)
         
         //Write Data To Firebase
         
         profile.setValue(user)
         
+    }
+    
+    //Firebase Database Reference
+    
+    func configureDatabase() {
+        
+        //Get Firebase Database Reference
+        
+        ref = FIRDatabase.database().reference()
     }
     
 }
