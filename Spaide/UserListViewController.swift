@@ -17,22 +17,11 @@ class UserListViewController: UICollectionViewController {
     
     var receivedString:String = ""
     
-    //Database Reference
-    
-    var ref: FIRDatabaseReference!
-    
     
     //View Did Load
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //Configure Database
-        
-        configureDatabase()
-        
-        
-     
         
         //Collection View Delegate
         
@@ -58,13 +47,6 @@ class UserListViewController: UICollectionViewController {
         return cell
     }
     
-    //Database Reference
     
-    func configureDatabase() {
-        
-        //Get Database Reference
-        
-        ref = FIRDatabase.database().reference()
-    }
 }
 

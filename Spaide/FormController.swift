@@ -12,11 +12,7 @@ import TextFieldEffects
 import FirebaseDatabase
 import Firebase
 
-class FormController: UIViewController {
-    
-    //Firebase Database Reference
-    
-    var ref: FIRDatabaseReference!
+class FormController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     //Outlets
     
@@ -27,12 +23,40 @@ class FormController: UIViewController {
     @IBOutlet var descriptionField: AkiraTextField!
     @IBOutlet var imageView: UIImageView!
     
+    //Variables
+    
+    var imagePicker = UIImagePickerController()
+    
+    //Actions
+    
+    @IBAction func uploadPhoto(_ sender: Any) {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Picked")
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = false
+            
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Database Reference
+        //User Tap To Close Keyboard
         
-        configureDatabase()
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(FormController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+        //Close Keyboard With Return Key
+        
+        self.titleField.delegate = self
+        self.usernameField.delegate = self
+        self.descriptionField.delegate = self
         
         //Set Background To View Near Profile Pic
         
@@ -43,16 +67,6 @@ class FormController: UIViewController {
         saveButton.backgroundColor = FlatWatermelonDark()
     }
     
-    
-    //Firebase Database Reference
-    
-    func configureDatabase() {
-        
-        //Get Firebase Database Reference
-        
-        ref = FIRDatabase.database().reference()
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let userlistVC: UserListViewController = segue.destination as! UserListViewController
@@ -60,5 +74,29 @@ class FormController: UIViewController {
         userlistVC.receivedString = usernameField.text!
         userlistVC.receivedString = titleField.text!
         userlistVC.receivedString = descriptionField.text!
+    }
+    
+    //Image Picker Function
+    
+    func imagePickerController(picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!) {
+        self.dismiss(animated: true, completion: { () -> Void in
+            
+        })
+        
+        imageView.image = image
+        
+    }
+
+    //Close Keyboard Functions
+    
+    func dismissKeyboard() {
+       
+        view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        
+        return false
     }
 }
