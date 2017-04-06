@@ -14,9 +14,10 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var userInfo: UILabel!
+    @IBOutlet var titleLabel: UILabel!
     @IBOutlet var chatButton: UIButton!
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     
 }

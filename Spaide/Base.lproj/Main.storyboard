@@ -169,7 +169,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveButtonAction:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="8HZ-68-UnY"/>
+                                    <segue destination="UBZ-ag-jM2" kind="show" id="GUY-Jd-rdW"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Describe What You're Looking For Or Offering" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VuG-6c-SEp" customClass="AkiraTextField" customModule="TextFieldEffects">
@@ -203,21 +203,38 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nz3-MS-3v2" userLabel="Title Field" customClass="AkiraTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="286" width="343" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="igK-kE-2QV"/>
                     <navigationItem key="navigationItem" id="bOG-fX-1kX"/>
                     <connections>
                         <outlet property="descriptionField" destination="VuG-6c-SEp" id="Q8Z-uo-cFj"/>
                         <outlet property="imageView" destination="TwE-Pr-p6P" id="Gfw-9c-dtt"/>
                         <outlet property="profilebackgroundView" destination="Jwb-XD-8s4" id="Ot7-2R-97P"/>
                         <outlet property="saveButton" destination="XGb-Iz-9Ha" id="fT0-Ox-iUx"/>
+                        <outlet property="titleField" destination="Nz3-MS-3v2" id="0CK-dQ-mly"/>
                         <outlet property="usernameField" destination="fU8-j1-xdI" id="YFS-Pz-vVB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jIi-MK-zQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.79999999999995" y="1036.7316341829087"/>
+            <point key="canvasLocation" x="121" y="997"/>
         </scene>
         <!--Home-->
         <scene sceneID="Pri-0H-bQu">
@@ -242,7 +259,7 @@
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,8 +283,8 @@
                                                 <constraint firstAttribute="width" constant="123" id="6mU-xp-bPo"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0F-ba-Ko8">
-                                            <rect key="frame" x="151" y="20" width="49" height="24"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0F-ba-Ko8">
+                                            <rect key="frame" x="151" y="20" width="174" height="24"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="24" id="suD-t4-iYk"/>
                                             </constraints>
@@ -280,7 +297,7 @@
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-2Y-2Xe">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qjg-2Y-2Xe" userLabel="Title Label">
                                             <rect key="frame" x="151" y="61" width="174" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="7HC-lO-MDR"/>
@@ -340,6 +357,7 @@
                                     <outlet property="imageView" destination="NtL-lx-WBh" id="Yol-Mm-NfM"/>
                                     <outlet property="locationLabel" destination="Qjg-2Y-2Xe" id="anT-rU-7nP"/>
                                     <outlet property="nameLabel" destination="N0F-ba-Ko8" id="khR-EU-QWV"/>
+                                    <outlet property="titleLabel" destination="Qjg-2Y-2Xe" id="SpF-Yb-RTo"/>
                                     <outlet property="userInfo" destination="Qjg-2Y-2Xe" id="6Cr-0U-chg"/>
                                 </connections>
                             </collectionViewCell>
@@ -369,8 +387,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="ieE-tr-VXE" kind="relationship" relationship="viewControllers" id="v4D-I3-rqb"/>
-                        <segue destination="VeG-4s-4e8" kind="relationship" relationship="viewControllers" id="qlr-1S-qKK"/>
                         <segue destination="UBZ-ag-jM2" kind="relationship" relationship="viewControllers" id="J3H-Ea-myP"/>
+                        <segue destination="zKZ-Dy-7ev" kind="relationship" relationship="viewControllers" id="c7J-Ya-iiJ"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f3P-qV-Q2Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -420,25 +438,6 @@
             </objects>
             <point key="canvasLocation" x="-1519" y="590"/>
         </scene>
-        <!--InputController1-->
-        <scene sceneID="C9R-yy-NyV">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VeG-4s-4e8" userLabel="InputController1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="det-9d-Lo4"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Af2-Gm-drY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="zKZ-Dy-7ev" kind="relationship" relationship="rootViewController" id="AXP-gi-En6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xcq-29-ywX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="122" y="1037"/>
-        </scene>
     </scenes>
     <resources>
         <image name="home.png" width="24" height="24"/>
@@ -446,5 +445,8 @@
         <image name="pin.png" width="24" height="24"/>
         <image name="search.png" width="24" height="24"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="GUY-Jd-rdW"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

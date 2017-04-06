@@ -22,6 +22,7 @@ class FormController: UIViewController {
     
     @IBOutlet var profilebackgroundView: UIView!
     @IBOutlet var saveButton: UIButton!
+    @IBOutlet var titleField: AkiraTextField!
     @IBOutlet var usernameField: AkiraTextField!
     @IBOutlet var descriptionField: AkiraTextField!
     @IBOutlet var imageView: UIImageView!
@@ -33,10 +34,6 @@ class FormController: UIViewController {
         
         configureDatabase()
         
-        //Show Saved Data
-        
-        saveData()
-        
         //Set Background To View Near Profile Pic
         
         profilebackgroundView.backgroundColor = FlatWatermelonDark()
@@ -46,40 +43,6 @@ class FormController: UIViewController {
         saveButton.backgroundColor = FlatWatermelonDark()
     }
     
-    //Actions
-    
-    @IBAction func saveButtonAction(_ sender: Any) {
-        
-        saveData()
-    }
-    
-    func saveData() {
-        
-        //Data To Save
-        
-        let name = usernameField.text
-        var data: NSData = NSData()
-        
-        let description = descriptionField.text
-        var _: NSData = NSData()
-        
-        if let image = imageView.image {
-            data = UIImageJPEGRepresentation(image,0.1)! as NSData
-        }
-        
-        let base64String = data.base64EncodedString(options: [])
-        
-        let user: NSDictionary = ["name":name!,"description":description!, "photoBase64":base64String]
-        
-        //Add Firebase Child Node
-        
-        let profile = ref.child(byAppendingPath: name!)
-        
-        //Write Data To Firebase
-        
-        profile.setValue(user)
-        
-    }
     
     //Firebase Database Reference
     
@@ -90,4 +53,12 @@ class FormController: UIViewController {
         ref = FIRDatabase.database().reference()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let userlistVC: UserListViewController = segue.destination as! UserListViewController
+        
+        userlistVC.receivedString = usernameField.text!
+        userlistVC.receivedString = titleField.text!
+        userlistVC.receivedString = descriptionField.text!
+    }
 }

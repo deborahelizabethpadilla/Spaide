@@ -13,23 +13,14 @@ import Firebase
 
 class UserListViewController: UICollectionViewController {
     
+    //Variables
+    
+    var receivedString:String = ""
+    
     //Database Reference
     
     var ref: FIRDatabaseReference!
     
-    //User Profile Info
-    
-    struct userObject {
-        
-        var profilePicture: UIImage
-        var name: String
-        var description: String
-        var cityState: String
-    }
-    
-    //Fill Objects
-    
-    var userArray: NSArray = ["profilePicture", "name", "description", "cityState"]
     
     //View Did Load
     
@@ -40,9 +31,8 @@ class UserListViewController: UICollectionViewController {
         
         configureDatabase()
         
-        //Load User Info
         
-        getData()
+     
         
         //Collection View Delegate
         
@@ -55,43 +45,15 @@ class UserListViewController: UICollectionViewController {
         
     }
     
-    //Get Data Function
-    
-    func getData() {
-        
-        UIApplication.shared.isNetworkActivityIndicatorVisible = true
-        
-        ref.observe(.value, with: { snapshot in
-            
-            var tempItems = [NSDictionary]()
-            
-            for item in snapshot.children {
-                
-                let child = item as! FIRDataSnapshot
-                let dict = child.value as! NSDictionary
-                tempItems.append(dict)
-                
-            }
-            
-            self.collectionView?.reloadData()
-            UIApplication.shared.isNetworkActivityIndicatorVisible = false
-        })
-    }
-    
-    
     //Collection View Functions
  
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        
-        return userArray.count
-    }
-    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as! CustomCollectionViewCell
         
-        cell.nameLabel.text = (userArray[indexPath.item] as AnyObject).name
-        cell.userInfo.text = (userArray[indexPath.item] as AnyObject).description
+        cell.nameLabel.text = receivedString
+        cell.titleLabel.text = receivedString
+        cell.descriptionLabel.text = receivedString
         
         return cell
     }
