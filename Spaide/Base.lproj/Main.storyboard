@@ -301,7 +301,7 @@
         <!--Home-->
         <scene sceneID="Pri-0H-bQu">
             <objects>
-                <viewController id="ieE-tr-VXE" sceneMemberID="viewController">
+                <viewController id="ieE-tr-VXE" customClass="HomeController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="DCu-ep-yAK"/>
                         <viewControllerLayoutGuide type="bottom" id="ur1-K0-xtS"/>
@@ -309,19 +309,38 @@
                     <view key="view" contentMode="scaleToFill" id="Ywv-IA-XgA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eeo-3W-X8V">
+                                <rect key="frame" x="16" y="20" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RaQ-y3-PuC"/>
+                                    <constraint firstAttribute="width" constant="90" id="xGj-ak-sid"/>
+                                </constraints>
+                                <state key="normal" title="LOGOUT">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="logoutButton:" destination="ieE-tr-VXE" eventType="touchUpInside" id="0AD-Rt-Hmu"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eeo-3W-X8V" firstAttribute="leading" secondItem="Ywv-IA-XgA" secondAttribute="leadingMargin" id="PZW-YE-CUb"/>
+                            <constraint firstItem="eeo-3W-X8V" firstAttribute="top" secondItem="DCu-ep-yAK" secondAttribute="bottom" id="XiD-h0-dAp"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" image="home.png" id="e6G-Bp-97z"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xXk-CV-vsY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="122" y="-524"/>
+            <point key="canvasLocation" x="120.8" y="-524.8875562218891"/>
         </scene>
         <!--User List-->
         <scene sceneID="x96-xm-fgm">
             <objects>
                 <collectionViewController title="User List" id="UBZ-ag-jM2" customClass="UserListViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Xb0-bq-w7g">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" id="Xb0-bq-w7g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

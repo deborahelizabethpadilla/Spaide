@@ -43,6 +43,9 @@ class UserListViewController: UICollectionViewController {
         cell.nameLabel.text = receivedString
         cell.titleLabel.text = receivedString
         cell.descriptionLabel.text = receivedString
+        
+        let databaseRef = FIRDatabase.database().reference()
+        databaseRef.child("Posts").childByAutoId()
     
         return cell
     }
