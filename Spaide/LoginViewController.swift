@@ -92,7 +92,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             //Let User Know There Is An Error
             
-            displayAlert(title: "Oh No!", message: "Please Enter Your Info!")
+            displayAlert(title: "Oh Snap!", message: "Please Enter Your Info!")
             
         } else {
             
@@ -128,7 +128,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if emailField.text == "" {
             
-            displayAlert(title: "Oh No!", message: "Please Enter Your Info!")
+            displayAlert(title: "Oh Snap!", message: "Please Enter Your Info!")
             
         } else {
             
@@ -143,7 +143,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                 } else {
                    
-                    self.displayAlert(title: "Oh No!", message: "Try Again! Something Happened!")
+                    self.displayAlert(title: "Oh Snap!", message: "Try Again! Something Happened!")
                 }
             }
         }

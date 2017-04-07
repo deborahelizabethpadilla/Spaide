@@ -9,8 +9,8 @@
 import UIKit
 import ChameleonFramework
 import TextFieldEffects
-import FirebaseDatabase
 import Firebase
+import FirebaseDatabase
 
 class FormController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 

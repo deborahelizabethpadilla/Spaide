@@ -16,7 +16,7 @@ class UserListViewController: UICollectionViewController {
     //Variables
     
     var receivedString:String = ""
-    
+
     //View Did Load
     
     override func viewDidLoad() {
@@ -31,7 +31,6 @@ class UserListViewController: UICollectionViewController {
         
         view.backgroundColor = FlatWhite()
         collectionView?.backgroundColor = FlatGreenDark()
-        
         
     }
     
