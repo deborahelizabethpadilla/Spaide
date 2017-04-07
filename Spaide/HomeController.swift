@@ -26,16 +26,12 @@ class HomeController: UIViewController {
     
     @IBAction func logoutButton(_ sender: Any) {
         
-        signOut()
-    }
-    
-    
-    func signOut() {
-        
-        try! FIRAuth.auth()!.signOut()
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! UINavigationController
-            self.present(vc, animated: false, completion: nil)
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
     }
+    
 }

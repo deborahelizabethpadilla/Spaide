@@ -8,7 +8,6 @@
 
 import UIKit
 import ChameleonFramework
-import TextFieldEffects
 import Firebase
 import FirebaseDatabase
 
@@ -18,9 +17,9 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
     
     @IBOutlet var profilebackgroundView: UIView!
     @IBOutlet var saveButton: UIButton!
-    @IBOutlet var titleField: AkiraTextField!
-    @IBOutlet var usernameField: AkiraTextField!
-    @IBOutlet var descriptionField: AkiraTextField!
+    @IBOutlet var titleField: UITextField!
+    @IBOutlet var usernameField: UITextField!
+    @IBOutlet var descriptionField: UITextField!
     @IBOutlet var imageView: UIImageView!
     
     //Variables
