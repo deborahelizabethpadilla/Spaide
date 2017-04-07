@@ -17,7 +17,6 @@ class UserListViewController: UICollectionViewController {
     
     var receivedString:String = ""
     
-    
     //View Did Load
     
     override func viewDidLoad() {
@@ -28,9 +27,11 @@ class UserListViewController: UICollectionViewController {
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
-        //Set Background Color
+        //Set Background Colors
         
-        view.backgroundColor = FlatGreenDark()
+        view.backgroundColor = FlatWhite()
+        collectionView?.backgroundColor = FlatGreenDark()
+        
         
     }
     
@@ -43,10 +44,9 @@ class UserListViewController: UICollectionViewController {
         cell.nameLabel.text = receivedString
         cell.titleLabel.text = receivedString
         cell.descriptionLabel.text = receivedString
-        
+    
         return cell
     }
-    
     
 }
 
