@@ -7,17 +7,17 @@
 //
 
 import UIKit
+import ChameleonFramework
 
 class TabBarController: UITabBarController {
     
-    //Tab Bar Controller Functions
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
-        //Logout Button Navigation
+        //Tab Bar Background Color
         
+        self.tabBar.barTintColor = FlatGreenDark()
         
     }
     

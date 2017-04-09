@@ -27,10 +27,9 @@ class UserListViewController: UICollectionViewController {
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
-        //Set Background Colors
+        //Set Background Color
         
         view.backgroundColor = FlatWhite()
-        collectionView?.backgroundColor = FlatGreenDark()
         
     }
     
@@ -44,10 +43,21 @@ class UserListViewController: UICollectionViewController {
         cell.titleLabel.text = receivedString
         cell.descriptionLabel.text = receivedString
         
+        //Custom Background Of Cell
+            
+        cell.backgroundColor = FlatGreenDark()
+        
+        //Save Data To Firebase
+        
         let databaseRef = FIRDatabase.database().reference()
         databaseRef.child("Posts").childByAutoId()
     
         return cell
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return 
     }
     
 }

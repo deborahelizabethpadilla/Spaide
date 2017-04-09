@@ -69,10 +69,6 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         
         view.backgroundColor = FlatWhite()
         
-        //Set Background View Near Profile Pic
-        
-        profilebackgroundView.backgroundColor = FlatGreenDark()
-        
         //Set Save Button 
         
         saveButton.backgroundColor = FlatGreenDark()
