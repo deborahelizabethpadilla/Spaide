@@ -14,6 +14,10 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		5072DA621E9BFAB300E0EA7C /* FacebookProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA611E9BFAB300E0EA7C /* FacebookProfile.swift */; };
+		5072DA651E9C01A000E0EA7C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA641E9C01A000E0EA7C /* Bolts.framework */; };
+		5072DA671E9C01AE00E0EA7C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */; };
+		5072DA691E9C01B400E0EA7C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */; };
+		5072DA6B1E9C01BB00E0EA7C /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA6A1E9C01BB00E0EA7C /* FBSDKShareKit.framework */; };
 		509D44C31E980CC40049EBD2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D44C21E980CC40049EBD2 /* HomeController.swift */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */; };
@@ -40,6 +44,10 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5072DA611E9BFAB300E0EA7C /* FacebookProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookProfile.swift; sourceTree = "<group>"; };
+		5072DA641E9C01A000E0EA7C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5072DA6A1E9C01BB00E0EA7C /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		509D44C21E980CC40049EBD2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -68,6 +76,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5072DA651E9C01A000E0EA7C /* Bolts.framework in Frameworks */,
+				5072DA671E9C01AE00E0EA7C /* FBSDKCoreKit.framework in Frameworks */,
+				5072DA6B1E9C01BB00E0EA7C /* FBSDKShareKit.framework in Frameworks */,
+				5072DA691E9C01B400E0EA7C /* FBSDKLoginKit.framework in Frameworks */,
 				50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */,
 				9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */,
 			);
@@ -79,6 +91,10 @@
 		494FF86C0FD52EC122433375 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5072DA6A1E9C01BB00E0EA7C /* FBSDKShareKit.framework */,
+				5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */,
+				5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */,
+				5072DA641E9C01A000E0EA7C /* Bolts.framework */,
 				50B5B0691E8A141B00681097 /* CoreData.framework */,
 				50BDEE511E8042AE00D77020 /* FontBlaster.framework */,
 				50BDEE4F1E8042A900D77020 /* GTMSessionFetcher.framework */,
@@ -459,7 +475,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4J6N8TR2LN;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -476,7 +495,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 4J6N8TR2LN;
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
