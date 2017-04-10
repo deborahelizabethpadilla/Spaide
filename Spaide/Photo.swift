@@ -19,7 +19,6 @@ public class Photo: NSManagedObject {
             
             self.init(entity: ent, insertInto: context)
             self.index = Int16(index)
-            self.imageURL = imageURL
             self.imageData = imageData
             
         } else {
