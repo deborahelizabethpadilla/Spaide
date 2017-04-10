@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class CustomCollectionViewCell: UICollectionViewCell {
     
@@ -19,5 +20,11 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    //Get Data
     
-}
+    //Download Images
+    
+    //Save Images
+    
+    
+    }
