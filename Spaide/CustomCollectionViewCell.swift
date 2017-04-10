@@ -20,11 +20,44 @@ class CustomCollectionViewCell: UICollectionViewCell {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
+    //Get Image
+    
+    func getPhoto() {
+        
+    }
+    
+    //Download Image
+    
+    func downloadImage() {
+        
+        
+    }
+    
+    //Save Image To Firebase
+    
+    func saveImageToFirebase() {
+        
+        
+    }
+    
     //Get Data
     
-    //Download Images
-    
-    //Save Images
-    
-    
+    func getData() {
+        
+        
     }
+    
+    //Download Data
+    
+    func downloadData() {
+        
+    }
+    
+    //Save Data To Firebase
+    
+    func saveDataToFirebase() {
+        
+        
+    }
+    
+}

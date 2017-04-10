@@ -143,38 +143,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Iz-9Ha">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Iz-9Ha">
                                 <rect key="frame" x="16" y="550" width="343" height="36"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="OBb-h6-QnS"/>
-                                    <constraint firstAttribute="width" constant="343" id="dGc-eO-s1x"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="UBZ-ag-jM2" kind="show" id="GUY-Jd-rdW"/>
+                                    <segue destination="UBZ-ag-jM2" kind="show" identifier="userList" id="GUY-Jd-rdW"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jwb-XD-8s4">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="241"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="230"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-Um-eGm">
-                                        <rect key="frame" x="136" y="75" width="102" height="30"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="30" id="Ykv-IA-F4n"/>
-                                            <constraint firstAttribute="width" constant="102" id="fL7-OF-eg6"/>
-                                        </constraints>
-                                        <state key="normal" title="Upload Photo">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="uploadPhoto:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="GKL-iZ-yyf"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TwE-Pr-p6P">
-                                        <rect key="frame" x="123" y="167" width="128" height="128"/>
+                                        <rect key="frame" x="123" y="132" width="128" height="128"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -185,23 +169,16 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="TwE-Pr-p6P" secondAttribute="trailing" constant="124" id="01j-NB-8j3"/>
-                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="123" id="1bm-W1-UIY"/>
-                                    <constraint firstAttribute="bottom" secondItem="TwE-Pr-p6P" secondAttribute="bottom" constant="-54" id="Kmb-9J-nEJ"/>
-                                    <constraint firstAttribute="width" constant="375" id="LeZ-B8-IHc"/>
-                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="top" secondItem="Pih-Um-eGm" secondAttribute="bottom" constant="62" id="QRo-XL-evt"/>
-                                    <constraint firstItem="Pih-Um-eGm" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="top" constant="75" id="Stc-NA-1ke"/>
-                                    <constraint firstAttribute="trailing" secondItem="Pih-Um-eGm" secondAttribute="trailing" constant="137" id="Vxa-QO-abE"/>
-                                    <constraint firstAttribute="height" constant="241" id="lFs-F0-oOx"/>
-                                    <constraint firstItem="Pih-Um-eGm" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="136" id="osU-eG-KVn"/>
+                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="leading" secondItem="Jwb-XD-8s4" secondAttribute="leading" constant="123" id="6t7-7s-FXG"/>
+                                    <constraint firstAttribute="bottom" secondItem="TwE-Pr-p6P" secondAttribute="bottom" constant="-30" id="81S-Fg-J78"/>
+                                    <constraint firstItem="TwE-Pr-p6P" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="top" constant="132" id="MVu-nv-mpZ"/>
+                                    <constraint firstAttribute="width" constant="375" id="aZT-0m-rKD"/>
+                                    <constraint firstAttribute="height" constant="230" id="abo-5Q-iU9"/>
+                                    <constraint firstAttribute="trailing" secondItem="TwE-Pr-p6P" secondAttribute="trailing" constant="124" id="oEL-Wp-K6b"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-fL-kcd" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="384" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="1OA-wv-o41"/>
-                                    <constraint firstAttribute="width" constant="343" id="cNo-T5-4gJ"/>
-                                </constraints>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-fL-kcd" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="384" width="343" height="26"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -217,12 +194,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-bO-bTC" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-bO-bTC" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="433" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="OlD-I2-gYU"/>
-                                    <constraint firstAttribute="height" constant="30" id="dxP-zC-ZIf"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -238,12 +212,9 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-lt-Tyf" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-lt-Tyf" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="482" width="343" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="Zut-rG-rVj"/>
-                                    <constraint firstAttribute="height" constant="30" id="iF7-uY-Ef8"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -259,24 +230,28 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pih-Um-eGm">
+                                <rect key="frame" x="140" y="227" width="94" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="vkW-5Y-hhV"/>
+                                </constraints>
+                                <state key="normal" title="Upload Photo">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="uploadPhoto:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="GKL-iZ-yyf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tdw-bO-bTC" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="2Pr-wN-umd"/>
-                            <constraint firstItem="Ptk-lt-Tyf" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="A18-5H-sI2"/>
-                            <constraint firstItem="ufI-fL-kcd" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="bottom" constant="143" id="C8e-td-7Ao"/>
-                            <constraint firstItem="ufI-fL-kcd" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="EzD-b4-0CE"/>
-                            <constraint firstItem="Ptk-lt-Tyf" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="QpL-Bk-eFw"/>
-                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="top" secondItem="o7B-8c-Aw9" secondAttribute="top" id="TEl-hr-nit"/>
-                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="WCd-7d-az6"/>
-                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="WV7-Qr-FCQ"/>
-                            <constraint firstItem="ufI-fL-kcd" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="afQ-oZ-ZoM"/>
-                            <constraint firstItem="tdw-bO-bTC" firstAttribute="top" secondItem="ufI-fL-kcd" secondAttribute="bottom" constant="19" id="bQL-qy-q9u"/>
-                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leading" id="d1L-hN-cLZ"/>
-                            <constraint firstItem="Ptk-lt-Tyf" firstAttribute="top" secondItem="tdw-bO-bTC" secondAttribute="bottom" constant="19" id="hJY-Hv-ih0"/>
-                            <constraint firstItem="tdw-bO-bTC" firstAttribute="trailing" secondItem="o7B-8c-Aw9" secondAttribute="trailingMargin" id="jK8-nz-I46"/>
-                            <constraint firstAttribute="trailing" secondItem="Jwb-XD-8s4" secondAttribute="trailing" id="v6s-N3-cLg"/>
-                            <constraint firstItem="yx5-Cs-iyH" firstAttribute="top" secondItem="XGb-Iz-9Ha" secondAttribute="bottom" constant="32" id="wo6-FF-DSe"/>
+                            <constraint firstAttribute="trailing" secondItem="Jwb-XD-8s4" secondAttribute="trailing" id="Jdh-sY-Bpi"/>
+                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="top" secondItem="o7B-8c-Aw9" secondAttribute="top" id="KcW-xH-WLb"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="top" secondItem="Pih-Um-eGm" secondAttribute="bottom" constant="127" id="U7J-jP-RAG"/>
+                            <constraint firstItem="Pih-Um-eGm" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" constant="124" id="X9l-Vg-akS"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="bottom" constant="154" id="erc-O0-TLP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Pih-Um-eGm" secondAttribute="trailing" constant="125" id="f4I-QE-KVc"/>
+                            <constraint firstItem="Jwb-XD-8s4" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leading" id="qWX-ZZ-Qu2"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="igK-kE-2QV"/>
@@ -442,7 +417,12 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
+                        <outlet property="activityIndicator" destination="bTL-eT-YN8" id="BpN-K4-Ihw"/>
                         <outlet property="collectionView" destination="Xb0-bq-w7g" id="vEc-r2-Ys9"/>
+                        <outlet property="descriptionLabel" destination="ToP-pC-R8e" id="rdZ-5U-YK7"/>
+                        <outlet property="imageView" destination="NtL-lx-WBh" id="vbc-jb-tg8"/>
+                        <outlet property="nameLabel" destination="N0F-ba-Ko8" id="Fh1-B6-YKh"/>
+                        <outlet property="titleLabel" destination="Qjg-2Y-2Xe" id="W4U-xi-7MR"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXY-3z-vsm" userLabel="First Responder" sceneMemberID="firstResponder"/>

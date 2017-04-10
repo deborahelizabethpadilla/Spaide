@@ -13,9 +13,13 @@ import Firebase
 
 class UserListViewController: UICollectionViewController {
     
-    //Variables
+    //Outlets
     
-    var receivedString:String = ""
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var titleLabel: UILabel!
+    @IBOutlet var descriptionLabel: UILabel!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
 
     //View Did Load
     
@@ -27,6 +31,12 @@ class UserListViewController: UICollectionViewController {
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
+        //Add Labels
+        
+        
+        //Fetch Photos
+        
+        
         //Set Background Color
         
         view.backgroundColor = FlatWhite()
@@ -34,30 +44,20 @@ class UserListViewController: UICollectionViewController {
     }
     
     //Collection View Functions
- 
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "userCell", for: indexPath) as! CustomCollectionViewCell
-        
-        cell.nameLabel.text = receivedString
-        cell.titleLabel.text = receivedString
-        cell.descriptionLabel.text = receivedString
-        
-        //Custom Background Of Cell
-            
-        cell.backgroundColor = FlatGreenDark()
-        
-        //Save Data To Firebase
-        
-        let databaseRef = FIRDatabase.database().reference()
-        databaseRef.child("Posts").childByAutoId()
-    
-        return cell
     }
-    
+ 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 
+    }
+    
+    //Functions
+    
+    func addLabels() {
+        
+        
     }
     
 }

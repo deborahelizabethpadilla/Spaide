@@ -10,6 +10,7 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseDatabase
+import CoreLocation
 
 class FormController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -83,13 +84,12 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         imageView.clipsToBounds = true
     }
     
+    //Segue To User List View Controller
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        let userlistVC: UserListViewController = segue.destination as! UserListViewController
         
-        userlistVC.receivedString = usernameField.text!
-        userlistVC.receivedString = titleField.text!
-        userlistVC.receivedString = descriptionField.text!
+        
     }
     
     //Image Picker Function

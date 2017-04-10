@@ -137,10 +137,10 @@
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 				50D90AA71E840BF000F0EA02 /* TabBarController.swift */,
+				509D44C21E980CC40049EBD2 /* HomeController.swift */,
+				50B5B0841E8B3D8100681097 /* FormController.swift */,
 				50B5B0821E8B0E7C00681097 /* UserListViewController.swift */,
 				50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */,
-				50B5B0841E8B3D8100681097 /* FormController.swift */,
-				509D44C21E980CC40049EBD2 /* HomeController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
