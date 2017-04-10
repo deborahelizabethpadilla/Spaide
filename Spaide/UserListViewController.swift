@@ -31,7 +31,7 @@ class UserListViewController: UICollectionViewController {
         collectionView?.delegate = self
         collectionView?.dataSource = self
         
-        //Add Labels
+        //Add Data To Labels
         
         
         //Fetch Photos
@@ -55,7 +55,7 @@ class UserListViewController: UICollectionViewController {
     
     //Functions
     
-    func addLabels() {
+    func addDataToLabels() {
         
         
     }

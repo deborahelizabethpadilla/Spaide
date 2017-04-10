@@ -150,6 +150,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="saveButton:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="a6x-Bm-QL5"/>
                                     <segue destination="UBZ-ag-jM2" kind="show" identifier="userList" id="GUY-Jd-rdW"/>
                                 </connections>
                             </button>
@@ -268,7 +269,7 @@
                         <outlet property="descriptionField" destination="Ptk-lt-Tyf" id="FwL-Uo-sj0"/>
                         <outlet property="imageView" destination="TwE-Pr-p6P" id="Gfw-9c-dtt"/>
                         <outlet property="profilebackgroundView" destination="Jwb-XD-8s4" id="Ot7-2R-97P"/>
-                        <outlet property="saveButton" destination="XGb-Iz-9Ha" id="fT0-Ox-iUx"/>
+                        <outlet property="saveButton" destination="XGb-Iz-9Ha" id="W04-nH-Xa5"/>
                         <outlet property="titleField" destination="ufI-fL-kcd" id="pqQ-kz-6rB"/>
                         <outlet property="usernameField" destination="tdw-bO-bTC" id="O6b-7b-a3z"/>
                     </connections>

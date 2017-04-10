@@ -25,11 +25,11 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
     //Outlets
     
     @IBOutlet var profilebackgroundView: UIView!
-    @IBOutlet var saveButton: UIButton!
     @IBOutlet var titleField: UITextField!
     @IBOutlet var usernameField: UITextField!
     @IBOutlet var descriptionField: UITextField!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var saveButton: UIButton!
     
     //Variables
     
@@ -47,6 +47,22 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
             
             self.present(imagePicker, animated: true, completion: nil)
         }
+    }
+    
+    @IBAction func saveButton(_ sender: Any) {
+        
+        if self.titleField.text == "" || self.descriptionField.text == "" || self.usernameField.text == "" {
+            
+            //Alert User
+            
+            displayAlert(title: "Oh No!", message: "Please Enter Your Information!")
+            
+        } else {
+            
+            performSegue(withIdentifier: "userList", sender: self)
+        }
+        
+        
     }
     
     override func viewDidLoad() {
@@ -94,14 +110,6 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         imageView.clipsToBounds = true
     }
     
-    //Segue To User List View Controller
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        
-        
-    }
-    
     //Image Picker Function
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
@@ -123,7 +131,7 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
             let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\("imageView")"
             let metaData = FIRStorageMetadata()
             metaData.contentType = "image/jpg"
-            self.storageRef.child(filePath).putData(data as Data, metadata: metaData) {
+            self.storageRef.child(filePath).put(data as Data, metadata: metaData) {
                 
                 (metaData, error) in
                 
@@ -154,18 +162,18 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
             
             //Check If User Has Photo
             
-            if snapshot.hasChild("userPhoto") {
+            if snapshot.hasChild("imageView") {
                 
                 //Set Image Location
                 
-                let filePath = "\(userID!)/\("userPhoto")"
+                let filePath = "\(userID!)/\("imageView")"
                 
                 //Assuming Size Of Photo, Otherwise Change
                 
                 self.storageRef.child(filePath).dataWithMaxSize(10*1024*1024, completion: { (data, error) in
                     
-                    let userPhoto = UIImage(data: data!)
-                    self.userPhoto.image = userPhoto
+                    let imageView = UIImage(data: data!)
+                    self.imageView.image = imageView
                 })
             }
         })
@@ -185,4 +193,20 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         
         return false
     }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
 }
