@@ -10,9 +10,17 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseDatabase
-import CoreLocation
+import FirebaseStorage
 
 class FormController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+    
+    //Firebase Storage Reference
+    
+    let storageRef = FIRStorage.storage().reference()
+    
+    //Firebase Database Reference
+    
+    let databaseRef = FIRDatabase.database().reference()
 
     //Outlets
     
@@ -49,6 +57,8 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
         self.imageView.layer.cornerRadius = imageView.frame.size.width / 2
         self.imageView.clipsToBounds = true
         self.imageView.contentMode = .scaleAspectFill
+        self.imageView.layer.borderWidth = 4.0
+        self.imageView.layer.borderColor = (FlatBlack() as! CGColor)
         
         //Image Picker Delegate
         
@@ -95,12 +105,72 @@ class FormController: UIViewController, UITextFieldDelegate, UINavigationControl
     //Image Picker Function
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
+            //Pick Image
+            
             imageView.image = pickedImage
+            
+            dismiss(animated: true, completion: nil)
+            
+            var data = NSData()
+            
+            data = UIImageJPEGRepresentation(imageView.image!, 0.8)! as NSData
+            
+            //Set Upload Path
+            
+            let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\("imageView")"
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpg"
+            self.storageRef.child(filePath).putData(data as Data, metadata: metaData) {
+                
+                (metaData, error) in
+                
+                if let error = error {
+                    
+                    print(error.localizedDescription)
+                    
+                    return
+                    
+                } else {
+                    
+                    //Store Download URL
+                    
+                    let downloadURL = metaData!.downloadURL()!.absoluteString
+                    
+                    //Store At Database
+                    
+                    self.databaseRef.child("users").child(FIRAuth.auth()!.currentUser!.uid).updateChildValues(["imageView": downloadURL])
+                }
+                
+            }
+        
         }
         
-        dismiss(animated: true, completion: nil)
+        //Get Photo Back
+        
+        databaseRef.child("users").child(userID!).observeSingleEventOfType(.Value, withBlock: { (snapshot) in
+            
+            //Check If User Has Photo
+            
+            if snapshot.hasChild("userPhoto") {
+                
+                //Set Image Location
+                
+                let filePath = "\(userID!)/\("userPhoto")"
+                
+                //Assuming Size Of Photo, Otherwise Change
+                
+                self.storageRef.child(filePath).dataWithMaxSize(10*1024*1024, completion: { (data, error) in
+                    
+                    let userPhoto = UIImage(data: data!)
+                    self.userPhoto.image = userPhoto
+                })
+            }
+        })
+        
+        
     }
 
     //Close Keyboard Functions

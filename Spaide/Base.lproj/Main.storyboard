@@ -143,9 +143,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Iz-9Ha">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGb-Iz-9Ha">
                                 <rect key="frame" x="16" y="550" width="343" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -177,7 +176,7 @@
                                     <constraint firstAttribute="trailing" secondItem="TwE-Pr-p6P" secondAttribute="trailing" constant="124" id="oEL-Wp-K6b"/>
                                 </constraints>
                             </view>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-fL-kcd" customClass="HoshiTextField" customModule="TextFieldEffects">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ufI-fL-kcd" customClass="HoshiTextField" customModule="TextFieldEffects">
                                 <rect key="frame" x="16" y="384" width="343" height="26"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
@@ -194,9 +193,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-bO-bTC" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="433" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Display Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tdw-bO-bTC" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="433" width="343" height="26"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -212,9 +210,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-lt-Tyf" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="16" y="482" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Description" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ptk-lt-Tyf" customClass="HoshiTextField" customModule="TextFieldEffects">
+                                <rect key="frame" x="16" y="486" width="343" height="26"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -245,13 +242,24 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="trailing" secondItem="XGb-Iz-9Ha" secondAttribute="trailing" id="1Zu-IH-G6Y"/>
+                            <constraint firstItem="yx5-Cs-iyH" firstAttribute="top" secondItem="XGb-Iz-9Ha" secondAttribute="bottom" constant="32" id="Eyj-yD-rDA"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="leading" secondItem="Ptk-lt-Tyf" secondAttribute="leading" id="H8t-Aw-lVa"/>
                             <constraint firstAttribute="trailing" secondItem="Jwb-XD-8s4" secondAttribute="trailing" id="Jdh-sY-Bpi"/>
                             <constraint firstItem="Jwb-XD-8s4" firstAttribute="top" secondItem="o7B-8c-Aw9" secondAttribute="top" id="KcW-xH-WLb"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="leading" secondItem="XGb-Iz-9Ha" secondAttribute="leading" id="LD1-0b-IVO"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" id="OaB-cG-84Y"/>
                             <constraint firstItem="ufI-fL-kcd" firstAttribute="top" secondItem="Pih-Um-eGm" secondAttribute="bottom" constant="127" id="U7J-jP-RAG"/>
                             <constraint firstItem="Pih-Um-eGm" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leadingMargin" constant="124" id="X9l-Vg-akS"/>
+                            <constraint firstItem="tdw-bO-bTC" firstAttribute="top" secondItem="ufI-fL-kcd" secondAttribute="bottom" constant="23" id="crP-Ig-xMU"/>
                             <constraint firstItem="ufI-fL-kcd" firstAttribute="top" secondItem="Jwb-XD-8s4" secondAttribute="bottom" constant="154" id="erc-O0-TLP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Pih-Um-eGm" secondAttribute="trailing" constant="125" id="f4I-QE-KVc"/>
+                            <constraint firstItem="XGb-Iz-9Ha" firstAttribute="top" secondItem="Ptk-lt-Tyf" secondAttribute="bottom" constant="38" id="iJa-he-bbY"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="trailing" secondItem="Ptk-lt-Tyf" secondAttribute="trailing" id="lMh-3n-dyl"/>
                             <constraint firstItem="Jwb-XD-8s4" firstAttribute="leading" secondItem="o7B-8c-Aw9" secondAttribute="leading" id="qWX-ZZ-Qu2"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="centerX" secondItem="Pih-Um-eGm" secondAttribute="centerX" id="unz-Z8-T8N"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="trailing" secondItem="tdw-bO-bTC" secondAttribute="trailing" id="upL-l9-1mR"/>
+                            <constraint firstItem="ufI-fL-kcd" firstAttribute="leading" secondItem="tdw-bO-bTC" secondAttribute="leading" id="vPz-kv-fhP"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="pin.png" id="igK-kE-2QV"/>
