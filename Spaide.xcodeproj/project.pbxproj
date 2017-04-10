@@ -13,9 +13,6 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		5075E93D1E9BC753000814E5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075E93C1E9BC752000814E5 /* CoreDataStack.swift */; };
-		5075E9401E9BC7B6000814E5 /* CoreDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5075E93E1E9BC7B6000814E5 /* CoreDataModel.xcdatamodeld */; };
-		5075E9421E9BC9AE000814E5 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5075E9411E9BC9AE000814E5 /* Photo.swift */; };
 		509D44C31E980CC40049EBD2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D44C21E980CC40049EBD2 /* HomeController.swift */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */; };
@@ -41,9 +38,6 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		5075E93C1E9BC752000814E5 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		5075E93F1E9BC7B6000814E5 /* CoreDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataModel.xcdatamodel; sourceTree = "<group>"; };
-		5075E9411E9BC9AE000814E5 /* Photo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		509D44C21E980CC40049EBD2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -117,8 +111,6 @@
 			isa = PBXGroup;
 			children = (
 				500C04B71E71D0A10096B987 /* AppDelegate.swift */,
-				5075E93E1E9BC7B6000814E5 /* CoreDataModel.xcdatamodeld */,
-				5075E93C1E9BC752000814E5 /* CoreDataStack.swift */,
 				500C04CE1E71D32F0096B987 /* Controllers */,
 			);
 			path = Spaide;
@@ -149,7 +141,6 @@
 				50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */,
 				50B5B0841E8B3D8100681097 /* FormController.swift */,
 				509D44C21E980CC40049EBD2 /* HomeController.swift */,
-				5075E9411E9BC9AE000814E5 /* Photo.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -317,11 +308,8 @@
 				50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */,
 				50B5B0851E8B3D8100681097 /* FormController.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
-				5075E93D1E9BC753000814E5 /* CoreDataStack.swift in Sources */,
-				5075E9401E9BC7B6000814E5 /* CoreDataModel.xcdatamodeld in Sources */,
 				50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */,
 				509D44C31E980CC40049EBD2 /* HomeController.swift in Sources */,
-				5075E9421E9BC9AE000814E5 /* Photo.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				50D90AA81E840BF100F0EA02 /* TabBarController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
@@ -507,19 +495,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		5075E93E1E9BC7B6000814E5 /* CoreDataModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				5075E93F1E9BC7B6000814E5 /* CoreDataModel.xcdatamodel */,
-			);
-			currentVersion = 5075E93F1E9BC7B6000814E5 /* CoreDataModel.xcdatamodel */;
-			path = CoreDataModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 500C04AC1E71D0A00096B987 /* Project object */;
 }
