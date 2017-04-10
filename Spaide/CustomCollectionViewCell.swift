@@ -24,6 +24,16 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     func getPhoto() {
         
+        DispatchQueue.main.async {
+            
+            self.imageView.image =
+            self.activityIndicator.stopAnimating()
+            
+        } else {
+            
+            downloadImage()
+        }
+        
     }
     
     //Download Image
@@ -31,13 +41,15 @@ class CustomCollectionViewCell: UICollectionViewCell {
     func downloadImage() {
         
         
+    
     }
     
     //Save Image To Firebase
     
     func saveImageToFirebase() {
         
-        
+   
+
     }
     
     //Get Data

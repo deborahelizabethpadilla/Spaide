@@ -236,9 +236,6 @@
                                 <state key="normal" title="Upload Photo">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <action selector="uploadPhoto:" destination="zKZ-Dy-7ev" eventType="touchUpInside" id="GKL-iZ-yyf"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -338,7 +335,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="344" height="206"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NtL-lx-WBh">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="imageCell" translatesAutoresizingMaskIntoConstraints="NO" id="NtL-lx-WBh">
                                             <rect key="frame" x="20" y="20" width="123" height="116"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N0F-ba-Ko8">
@@ -426,12 +423,7 @@
                     </collectionView>
                     <tabBarItem key="tabBarItem" title="Find" image="search.png" id="boC-Gl-nfP"/>
                     <connections>
-                        <outlet property="activityIndicator" destination="bTL-eT-YN8" id="BpN-K4-Ihw"/>
                         <outlet property="collectionView" destination="Xb0-bq-w7g" id="vEc-r2-Ys9"/>
-                        <outlet property="descriptionLabel" destination="ToP-pC-R8e" id="rdZ-5U-YK7"/>
-                        <outlet property="imageView" destination="NtL-lx-WBh" id="vbc-jb-tg8"/>
-                        <outlet property="nameLabel" destination="N0F-ba-Ko8" id="Fh1-B6-YKh"/>
-                        <outlet property="titleLabel" destination="Qjg-2Y-2Xe" id="W4U-xi-7MR"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LXY-3z-vsm" userLabel="First Responder" sceneMemberID="firstResponder"/>

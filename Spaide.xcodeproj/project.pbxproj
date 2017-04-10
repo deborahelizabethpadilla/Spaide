@@ -13,6 +13,7 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
+		5072DA621E9BFAB300E0EA7C /* FacebookProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA611E9BFAB300E0EA7C /* FacebookProfile.swift */; };
 		509D44C31E980CC40049EBD2 /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509D44C21E980CC40049EBD2 /* HomeController.swift */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */; };
@@ -38,6 +39,7 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5072DA611E9BFAB300E0EA7C /* FacebookProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookProfile.swift; sourceTree = "<group>"; };
 		509D44C21E980CC40049EBD2 /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				500C04B61E71D0A10096B987 /* Spaide */,
+				5072DA631E9BFABB00E0EA7C /* Facebook */,
 				500C04CD1E71D3280096B987 /* Assets */,
 				500C04B51E71D0A10096B987 /* Products */,
 				70835E9EFE2027800FC7E730 /* Pods */,
@@ -143,6 +146,15 @@
 				50B5B0801E8B0D7700681097 /* CustomCollectionViewCell.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		5072DA631E9BFABB00E0EA7C /* Facebook */ = {
+			isa = PBXGroup;
+			children = (
+				5072DA611E9BFAB300E0EA7C /* FacebookProfile.swift */,
+			);
+			name = Facebook;
+			path = Spaide;
 			sourceTree = "<group>";
 		};
 		50BDEEBE1E822CAA00D77020 /* Fonts */ = {
@@ -308,6 +320,7 @@
 				50B5B0811E8B0D7700681097 /* CustomCollectionViewCell.swift in Sources */,
 				50B5B0851E8B3D8100681097 /* FormController.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
+				5072DA621E9BFAB300E0EA7C /* FacebookProfile.swift in Sources */,
 				50B5B0831E8B0E7C00681097 /* UserListViewController.swift in Sources */,
 				509D44C31E980CC40049EBD2 /* HomeController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,

@@ -13,13 +13,9 @@ import Firebase
 
 class UserListViewController: UICollectionViewController {
     
-    //Outlets
+    //Variables
     
-    @IBOutlet var imageView: UIImageView!
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var titleLabel: UILabel!
-    @IBOutlet var descriptionLabel: UILabel!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    var savedImage:[FacebookPhoto] = []
 
     //View Did Load
     
@@ -47,6 +43,11 @@ class UserListViewController: UICollectionViewController {
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "imageCell", for: indexPath) as! CustomCollectionViewCell
+        
+        cell.activityIndicator.startAnimating()
+        cell.getPhoto(savedImage[indexPath.row])
+        return cell
     }
  
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
