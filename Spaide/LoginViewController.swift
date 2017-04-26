@@ -106,7 +106,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     //Go To Tab Bar Controller If Successful
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
@@ -123,6 +123,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
+    
+    //Register New User 
     
     func registerUser() {
         
