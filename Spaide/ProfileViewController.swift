@@ -44,7 +44,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
     }
     
-    //Picker View Function
+    //Picker View Functions
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         

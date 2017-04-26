@@ -137,25 +137,6 @@
             </objects>
             <point key="canvasLocation" x="-1519.2" y="-71.514242878560722"/>
         </scene>
-        <!--Users-->
-        <scene sceneID="n69-DR-TiL">
-            <objects>
-                <viewController id="sPK-Nn-cCj" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Wui-xa-Al2"/>
-                        <viewControllerLayoutGuide type="bottom" id="b48-I6-fX4"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="5uQ-Vo-D3f">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Users" id="MIG-BA-8U2"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nFT-5u-4TU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="143" y="260"/>
-        </scene>
         <!--Profile-->
         <scene sceneID="P21-AP-vrT">
             <objects>
@@ -237,7 +218,7 @@
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="OVJ-CD-eq5" secondAttribute="bottom" constant="406" id="znW-A8-6ej"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="cZv-Z2-9uJ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="avatar.png" id="cZv-Z2-9uJ"/>
                     <connections>
                         <outlet property="imageView" destination="LJx-Vi-rbr" id="nIi-TD-g1m"/>
                         <outlet property="pickerView" destination="4Fa-4S-yWv" id="e8c-Vh-kqJ"/>
@@ -261,7 +242,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="hsQ-9m-mbi"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home.png" id="hsQ-9m-mbi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-ZR-mlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,13 +259,42 @@
                     </tabBar>
                     <connections>
                         <segue destination="GB7-LU-UIf" kind="relationship" relationship="viewControllers" id="q0a-ry-hTU"/>
-                        <segue destination="sPK-Nn-cCj" kind="relationship" relationship="viewControllers" id="VZw-y8-D45"/>
                         <segue destination="iEE-iK-Chq" kind="relationship" relationship="viewControllers" id="k3B-Yx-faW"/>
+                        <segue destination="I5T-tC-9tt" kind="relationship" relationship="viewControllers" id="DB4-Gn-Dec"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t36-tz-Mc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-810" y="-68"/>
+        </scene>
+        <!--Users-->
+        <scene sceneID="nJY-vg-ZSx">
+            <objects>
+                <tableViewController id="I5T-tC-9tt" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1v-uz-mPV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="u3V-vU-jRa">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="I5T-tC-9tt" id="p2d-Yf-hie"/>
+                            <outlet property="delegate" destination="I5T-tC-9tt" id="BeB-9N-Etx"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Users" image="list.png" id="rpV-GJ-OQu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wjU-up-bH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="142" y="269"/>
         </scene>
         <!--Terms Of Service Controller-->
         <scene sceneID="lc4-W5-6fl">
@@ -332,7 +342,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="avatar.png" width="24" height="24"/>
+        <image name="home.png" width="24" height="24"/>
         <image name="leftarrow.png" width="24" height="24"/>
+        <image name="list.png" width="24" height="24"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
