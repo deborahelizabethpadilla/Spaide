@@ -16,10 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //Configure Firebase API's
+        //Configure Firebase API
         
         FIRApp.configure()
-        
         
         return true
     }
