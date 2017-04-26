@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -70,7 +71,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Seek or get help instantly." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with others who can relate." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
                                 <rect key="frame" x="16" y="195" width="343" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
@@ -104,10 +105,10 @@
                                     <segue destination="qE3-7s-obc" kind="show" id="la0-TH-O5r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- OR -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFy-2Z-zQX">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- OR -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFy-2Z-zQX">
                                 <rect key="frame" x="162" y="519" width="50" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -136,7 +137,7 @@
             </objects>
             <point key="canvasLocation" x="-1519.2" y="-71.514242878560722"/>
         </scene>
-        <!--Item 2-->
+        <!--Users-->
         <scene sceneID="n69-DR-TiL">
             <objects>
                 <viewController id="sPK-Nn-cCj" sceneMemberID="viewController">
@@ -149,13 +150,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="MIG-BA-8U2"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="MIG-BA-8U2"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nFT-5u-4TU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="143" y="260"/>
         </scene>
-        <!--Item 1-->
+        <!--Profile-->
+        <scene sceneID="P21-AP-vrT">
+            <objects>
+                <viewController id="iEE-iK-Chq" customClass="ProfileViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZK4-OE-Rg1"/>
+                        <viewControllerLayoutGuide type="bottom" id="mLi-aw-DMx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zZX-S8-tym">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVJ-CD-eq5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
+                                <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LJx-Vi-rbr">
+                                <rect key="frame" x="118" y="148" width="139" height="128"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yve-gm-v3Y" customClass="HoshiTextField">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Limitations" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99v-Dh-C9Z" customClass="HoshiTextField">
+                                <rect key="frame" x="16" y="382" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
+                                        <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderActiveColor">
+                                        <color key="value" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4Fa-4S-yWv">
+                                <rect key="frame" x="0.0" y="420" width="375" height="133"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="iEE-iK-Chq" id="qLC-Vz-WfW"/>
+                                </connections>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52X-qo-US4">
+                                <rect key="frame" x="16" y="561" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="30"/>
+                                <state key="normal" title="SAVE"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LJx-Vi-rbr" secondAttribute="trailing" constant="102" id="DDA-8g-fsm"/>
+                            <constraint firstItem="LJx-Vi-rbr" firstAttribute="top" secondItem="ZK4-OE-Rg1" secondAttribute="bottom" constant="128" id="GMe-ri-rCc"/>
+                            <constraint firstItem="OVJ-CD-eq5" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leading" id="dFC-EP-kh2"/>
+                            <constraint firstItem="LJx-Vi-rbr" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" constant="102" id="eZG-tw-9mt"/>
+                            <constraint firstAttribute="trailing" secondItem="OVJ-CD-eq5" secondAttribute="trailing" id="eda-nq-Kr6"/>
+                            <constraint firstItem="OVJ-CD-eq5" firstAttribute="top" secondItem="zZX-S8-tym" secondAttribute="top" id="rZL-dz-vLQ"/>
+                            <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="LJx-Vi-rbr" secondAttribute="bottom" constant="342" id="tW1-15-yU9"/>
+                            <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="OVJ-CD-eq5" secondAttribute="bottom" constant="406" id="znW-A8-6ej"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="cZv-Z2-9uJ"/>
+                    <connections>
+                        <outlet property="imageView" destination="LJx-Vi-rbr" id="nIi-TD-g1m"/>
+                        <outlet property="pickerView" destination="4Fa-4S-yWv" id="e8c-Vh-kqJ"/>
+                        <outlet property="saveButton" destination="52X-qo-US4" id="zoF-6i-pZN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zf0-g3-Rwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="141.59999999999999" y="962.96851574212906"/>
+        </scene>
+        <!--Home-->
         <scene sceneID="uCT-JH-TGG">
             <objects>
                 <viewController id="GB7-LU-UIf" sceneMemberID="viewController">
@@ -168,7 +261,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="hsQ-9m-mbi"/>
+                    <tabBarItem key="tabBarItem" title="Home" id="hsQ-9m-mbi"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-ZR-mlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,11 +274,12 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="3y8-LM-Df9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="GB7-LU-UIf" kind="relationship" relationship="viewControllers" id="q0a-ry-hTU"/>
                         <segue destination="sPK-Nn-cCj" kind="relationship" relationship="viewControllers" id="VZw-y8-D45"/>
+                        <segue destination="iEE-iK-Chq" kind="relationship" relationship="viewControllers" id="k3B-Yx-faW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t36-tz-Mc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
