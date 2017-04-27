@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
@@ -55,13 +57,31 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerView.delegate = self
         pickerView.dataSource = self
         
+        
+    }
+    
+    //Post
+    
+    func post() {
+        
+        let firstName = firstNameField
+        let limitations = limitationsField
+        let profilePic = imageView
+        let pickerChoice = UIPickerViewDataSource.self
+        
+        let post : [String : AnyObject] = [firstName: "", limitations: "", profilePic: UIImage, pickerChoice: ""]
+        
+        let databaseRef = FIRDatabase.database().reference()
+        
+        databaseRef.child("User Posts").childByAutoId().setValue(post)
+        
     }
     
     //Actions
     
     @IBAction func saveButtonAction(_ sender: Any) {
         
-        
+        post()
     }
     
     

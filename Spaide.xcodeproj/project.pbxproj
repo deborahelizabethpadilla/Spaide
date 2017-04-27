@@ -23,7 +23,6 @@
 		5081CA211EB13070007929CB /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA201EB13070007929CB /* list.png */; };
 		5081CA231EB130BF007929CB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA221EB130BF007929CB /* home.png */; };
 		5081CA251EB13307007929CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA241EB13307007929CB /* settings.png */; };
-		5081CA271EB25D6F007929CB /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA261EB25D6F007929CB /* UserTableViewCell.swift */; };
 		5081CA291EB263DB007929CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA281EB263DB007929CB /* User.swift */; };
 		5081CA2C1EB26469007929CB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Connection.swift */; };
 		5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2D1EB264A2007929CB /* Indicator.swift */; };
@@ -55,7 +54,6 @@
 		5081CA201EB13070007929CB /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		5081CA221EB130BF007929CB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		5081CA241EB13307007929CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		5081CA261EB25D6F007929CB /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		5081CA281EB263DB007929CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5081CA2B1EB26469007929CB /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		5081CA2D1EB264A2007929CB /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 				5081CA141EB11528007929CB /* UserTableViewController.swift */,
-				5081CA261EB25D6F007929CB /* UserTableViewCell.swift */,
 				5081CA1A1EB11D01007929CB /* ProfileViewController.swift */,
 			);
 			name = Controllers;
@@ -330,7 +327,6 @@
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
 				5081CA2C1EB26469007929CB /* Connection.swift in Sources */,
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
-				5081CA271EB25D6F007929CB /* UserTableViewCell.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 				5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */,
 				5081CA301EB265E8007929CB /* UserData.swift in Sources */,
