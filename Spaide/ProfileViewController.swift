@@ -8,20 +8,33 @@
 
 import UIKit
 
-class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     //Outlets
 
     @IBOutlet var imageView: UIImageView!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var firstNameField: UITextField!
+    @IBOutlet var limitationsField: UITextField!
     
     //Variables
     
-    var Array = ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+    var Array = ["New York", "Chicago", "Los Angeles", "Miami", "Atlanta", "Philadelphia", "Stamford", "Dallas", "Las Vegas", "Seattle", "Austin", "Nashville"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Close Keyboard With Return Key
+        
+        self.firstNameField.delegate = self
+        self.limitationsField.delegate = self
+        
+        //Close Keyboard With Tap
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
 
         //Image View Design
         
@@ -42,6 +55,33 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerView.delegate = self
         pickerView.dataSource = self
         
+    }
+    
+    //Actions
+    
+    @IBAction func saveButtonAction(_ sender: Any) {
+        
+        
+    }
+    
+    
+    //Close Keyboard With Tap
+    
+    func dismissKeyboard() {
+        
+        //Close On Tap
+        
+        view.endEditing(true)
+    }
+    
+    //Close Keyboard With Return Key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //Close On Return
+        
+        self.view.endEditing(true)
+        return false
     }
     
     //Picker View Functions
