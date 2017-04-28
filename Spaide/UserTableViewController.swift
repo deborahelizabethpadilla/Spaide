@@ -45,21 +45,7 @@ class UserTableViewController: UITableViewController {
             
         })
 
-       post()
-    }
-    
-    //Posts
-    
-    func post() -> {
-        
-        let firstName =
-        let limitations =
-        
-        let post : [String : AnyObject] = []
-        
-        let databaseRef = FIRDatabase.database().reference()
-        
-        databaseRef.child("Profile Posts").childByAutoId().setValue(post)
+       
         
     }
 

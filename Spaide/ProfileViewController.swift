@@ -57,12 +57,11 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         pickerView.delegate = self
         pickerView.dataSource = self
         
-        
     }
     
-    //Post
+    //Actions
     
-    func post() {
+    @IBAction func saveButtonAction(_ sender: Any) {
         
         let firstName = firstNameField
         let limitations = limitationsField
@@ -75,13 +74,6 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         databaseRef.child("User Posts").childByAutoId().setValue(post)
         
-    }
-    
-    //Actions
-    
-    @IBAction func saveButtonAction(_ sender: Any) {
-        
-        post()
     }
     
     
