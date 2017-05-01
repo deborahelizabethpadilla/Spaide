@@ -11,11 +11,7 @@ import Firebase
 import FirebaseDatabase
 
 class UserTableViewController: UITableViewController {
-    
-    //Outlets
-    
-    
-    
+
     //Variables
     
     var ref: FIRDatabaseReference!
@@ -57,6 +53,11 @@ class UserTableViewController: UITableViewController {
         
         cell?.layer.borderWidth = 4.0
         cell?.layer.borderColor = UIColor.flatGreen.cgColor
+        
+        //Circular Image View
+
+        cell?.imageView?.layer.cornerRadius = (cell?.imageView?.frame.width)! / 2
+        cell?.imageView?.clipsToBounds = true
         
         return cell!
     }
