@@ -10,34 +10,22 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-struct postStruct {
-    
-    let firstName = String()
-    let limitations = String()
-    let location = String()
-}
-
 class UserTableViewController: UITableViewController {
     
     //Variables
-
-    var users:User = userData
     
-    let posts = [postStruct]()
+    var ref: FIRDatabaseReference!
+    var userInfo = [UserInfo]()
+    var refHandle: UInt!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let databaseRef = FIRDatabase.database().reference()
+      //Load Saved Info
         
-        databaseRef.child("User Posts").queryOrderedByKey().observe(.childAdded, with: {
-            snapshot in
-            
-            
-            
-        
-        }
+      ref = FIRDatabase.database().reference()
+      fetchUsersInfo()
         
     }
 
@@ -45,7 +33,7 @@ class UserTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return userInfo.count
     }
     
     //Fill Cell
@@ -54,21 +42,36 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
         
-        let firstNameLabel = cell?.viewWithTag(1) as! UILabel
-        firstNameLabel.text = posts[indexPath.row].firstName
-        
-        let locationLabel = cell?.viewWithTag(2) as! UILabel
-        locationLabel.text = posts[indexPath.row].location
-        
-        let limitationsLabel = cell?.viewWithTag(3) as! UILabel
-        limitationsLabel.text = posts[indexPath.row].limitations
+        cell?.textLabel?.text = userInfo[indexPath.row].firstName
+        cell?.textLabel?.text = userInfo[indexPath.row].pickedLocation
+        cell?.textLabel?.text = userInfo[indexPath.row].limits
+        cell?.imageView?.image = userInfo[indexPath.row].profilePhoto
         
         
         return cell!
     }
     
-    func fetchUsers() {
+    func fetchUsersInfo() {
         
+        refHandle = ref.child("User Profile").observe(.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                
+                print(dictionary)
+                
+                let user = UserInfo()
+                
+                user.setValuesForKeys(dictionary)
+                
+                self.userInfo.append(user)
+                
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        })
     }
 
 }

@@ -23,10 +23,9 @@
 		5081CA211EB13070007929CB /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA201EB13070007929CB /* list.png */; };
 		5081CA231EB130BF007929CB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA221EB130BF007929CB /* home.png */; };
 		5081CA251EB13307007929CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA241EB13307007929CB /* settings.png */; };
-		5081CA291EB263DB007929CB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA281EB263DB007929CB /* User.swift */; };
 		5081CA2C1EB26469007929CB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Connection.swift */; };
 		5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2D1EB264A2007929CB /* Indicator.swift */; };
-		5081CA301EB265E8007929CB /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2F1EB265E8007929CB /* UserData.swift */; };
+		5081CA321EB7D4F4007929CB /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA311EB7D4F3007929CB /* UserInfo.swift */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
@@ -54,10 +53,9 @@
 		5081CA201EB13070007929CB /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
 		5081CA221EB130BF007929CB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		5081CA241EB13307007929CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		5081CA281EB263DB007929CB /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5081CA2B1EB26469007929CB /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		5081CA2D1EB264A2007929CB /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
-		5081CA2F1EB265E8007929CB /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		5081CA311EB7D4F3007929CB /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
 		50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
@@ -172,8 +170,7 @@
 		5081CA2A1EB2642F007929CB /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				5081CA281EB263DB007929CB /* User.swift */,
-				5081CA2F1EB265E8007929CB /* UserData.swift */,
+				5081CA311EB7D4F3007929CB /* UserInfo.swift */,
 				5081CA2B1EB26469007929CB /* Connection.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
 			);
@@ -329,8 +326,7 @@
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 				5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */,
-				5081CA301EB265E8007929CB /* UserData.swift in Sources */,
-				5081CA291EB263DB007929CB /* User.swift in Sources */,
+				5081CA321EB7D4F4007929CB /* UserInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
