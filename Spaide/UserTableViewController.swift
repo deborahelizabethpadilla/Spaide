@@ -12,10 +12,9 @@ import FirebaseDatabase
 
 struct postStruct {
     
-    let firstName : String!
-    let limitations : String!
-    let pickerView = String!
-    
+    let firstName = String()
+    let limitations = String()
+    let location = String()
 }
 
 class UserTableViewController: UITableViewController {
@@ -35,40 +34,41 @@ class UserTableViewController: UITableViewController {
         databaseRef.child("User Posts").queryOrderedByKey().observe(.childAdded, with: {
             snapshot in
             
-            let firstName = snapshot.value![""] as! String
-            let limitations = snapshot.value![""] as! String
-            let pickerChoice = snapshot.value![] as! String
-            let profilePic = snapshot.value![] as! UIImage
             
-            self.posts.insert(postStruct(firstName: , limitations: , pickerChoice: , profilePic: ), at: 0)
-            self.tableView.reloadData()
             
-        })
-
-       
+        
+        }
         
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return
+        
+        return 0
     }
     
     //Fill Cell
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
         
         let firstNameLabel = cell?.viewWithTag(1) as! UILabel
         firstNameLabel.text = posts[indexPath.row].firstName
         
-        let limitationsLabel = cell?.viewWithTag(2) as! UILabel
+        let locationLabel = cell?.viewWithTag(2) as! UILabel
+        locationLabel.text = posts[indexPath.row].location
+        
+        let limitationsLabel = cell?.viewWithTag(3) as! UILabel
         limitationsLabel.text = posts[indexPath.row].limitations
         
         
         return cell!
+    }
+    
+    func fetchUsers() {
+        
     }
 
 }

@@ -64,28 +64,47 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func saveButtonAction(_ sender: Any) {
         
+        let choice : [String : AnyObject] = [:]
+        
         if (pickedArray == 0) {
+            
+            let databaseRef = FIRDatabase.database().reference()
+            databaseRef.child("User Posts").childByAutoId().setValue(choice)
             
         } else {
             
             if (pickedArray == 1) {
                 
+                let databaseRef = FIRDatabase.database().reference()
+                databaseRef.child("User Posts").childByAutoId().setValue(choice)
+                
             } else {
                 
                 if (pickedArray == 2) {
+                    
+                    let databaseRef = FIRDatabase.database().reference()
+                    databaseRef.child("User Posts").childByAutoId().setValue(choice)
                     
                 } else {
                     
                     if (pickedArray == 3) {
                         
+                        let databaseRef = FIRDatabase.database().reference()
+                        databaseRef.child("User Posts").childByAutoId().setValue(choice)
+                        
                     } else {
                         
                         if (pickedArray == 4) {
+                            
+                            let databaseRef = FIRDatabase.database().reference()
+                            databaseRef.child("User Posts").childByAutoId().setValue(choice)
                             
                         } else {
                             
                             if (pickedArray == 5) {
                                 
+                                let databaseRef = FIRDatabase.database().reference()
+                                databaseRef.child("User Posts").childByAutoId().setValue(choice)
                                 
                             }
                         }
@@ -134,8 +153,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        var picked = Array[row]
-        
+        pickedArray = row
     }
 
 }
