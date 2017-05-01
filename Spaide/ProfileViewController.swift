@@ -22,7 +22,8 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     //Variables
     
-    var Array = ["New York", "Chicago", "Los Angeles", "Miami", "Atlanta", "Philadelphia", "Stamford", "Dallas", "Las Vegas", "Seattle", "Austin", "Nashville"]
+    var Array = ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"]
+    var pickedArray = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,17 +64,35 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func saveButtonAction(_ sender: Any) {
         
-        let firstName = firstNameField
-        let limitations = limitationsField
-        let profilePic = imageView
-        let pickerChoice = UIPickerViewDataSource.self
-        
-        let post : [String : AnyObject] = [firstName: "", limitations: "", profilePic: UIImage, pickerChoice: ""]
-        
-        let databaseRef = FIRDatabase.database().reference()
-        
-        databaseRef.child("User Posts").childByAutoId().setValue(post)
-        
+        if (pickedArray == 0) {
+            
+        } else {
+            
+            if (pickedArray == 1) {
+                
+            } else {
+                
+                if (pickedArray == 2) {
+                    
+                } else {
+                    
+                    if (pickedArray == 3) {
+                        
+                    } else {
+                        
+                        if (pickedArray == 4) {
+                            
+                        } else {
+                            
+                            if (pickedArray == 5) {
+                                
+                                
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     
@@ -111,6 +130,12 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         
         return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        var picked = Array[row]
+        
     }
 
 }
