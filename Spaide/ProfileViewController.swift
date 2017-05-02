@@ -64,6 +64,8 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     @IBAction func saveButtonAction(_ sender: Any) {
         
+        //Picker Choices
+        
         let choice : [String : AnyObject] = [:]
         
         if (pickedArray == 0) {
@@ -106,6 +108,14 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                                 let databaseRef = FIRDatabase.database().reference()
                                 databaseRef.child("User Posts").childByAutoId().setValue(choice)
                                 
+                            } else {
+                                
+                                if (pickedArray == 0) {
+                                    
+                                    //Error If Location Isn't Picked
+                                    
+                                    displayAlert(title: "Oh Snap!", message: "Pick Your Location!")
+                                }
                             }
                         }
                     }
@@ -125,6 +135,8 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             displayAlert(title: "Oh Snap!", message: "You Need To Enter Your Information!")
             
         } else {
+            
+            //Save To Firebase
             
             let choice : [String : AnyObject] = [:]
             
