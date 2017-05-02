@@ -17,6 +17,7 @@ class UserTableViewController: UITableViewController {
     var ref: FIRDatabaseReference!
     var userInfo = [UserInfo]()
     var refHandle: UInt!
+    var indicator = Indicator()
     
 
     override func viewDidLoad() {
@@ -27,6 +28,11 @@ class UserTableViewController: UITableViewController {
       ref = FIRDatabase.database().reference()
       fetchUsersInfo()
         
+      //Activity Indicator
+        
+      indicator.center = self.view.center
+      self.view.addSubview(indicator)
+        
     }
     
     //Will Appear
@@ -36,16 +42,32 @@ class UserTableViewController: UITableViewController {
         
         //Will Appear In Table View
         
-        let filteredArray = userInfo.filter() {$0.city ==  "New York"}
+        indicator.loadingView(true)
+        loadTableView()
+        print(tableView(tableView, numberOfRowsInSection: 100))
         
-        let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
+    }
+    
+    func loadTableView() {
         
-        let filtdArray = userInfo.filter() {$0.city == "Chicago"}
-        
-        let fArray = userInfo.filter() {$0.city == "Houston"}
-        
-        let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
-        
+        if success {
+            
+            DispatchQueue.main.async {
+                
+                self.tableView.reloadData()
+                self.indicator.loadingView(false)
+            }
+            
+        } else {
+            
+            self.indicator.stopAnimating()
+            let filteredArray = userInfo.filter() {$0.city ==  "New York"}
+            let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
+            let filtdArray = userInfo.filter() {$0.city == "Chicago"}
+            let fArray = userInfo.filter() {$0.city == "Houston"}
+            let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
+            
+        }
     }
 
     // MARK: - Table view data source
