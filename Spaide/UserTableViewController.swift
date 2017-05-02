@@ -44,7 +44,7 @@ class UserTableViewController: UITableViewController {
         
         indicator.loadingView(true)
         loadTableView()
-        print(tableView(tableView, numberOfRowsInSection: 100))
+        print(tableView(tableView, numberOfRowsInSection: userInfo.count))
         
     }
     
@@ -54,18 +54,32 @@ class UserTableViewController: UITableViewController {
             
             DispatchQueue.main.async {
                 
+                //Load Table View & Filter
+                
                 self.tableView.reloadData()
                 self.indicator.loadingView(false)
+                let filteredArray = userInfo.filter() {$0.city ==  "New York"}
+                let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
+                let filtdArray = userInfo.filter() {$0.city == "Chicago"}
+                let fArray = userInfo.filter() {$0.city == "Houston"}
+                let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
             }
             
         } else {
             
+            //Error & Stop
+            
             self.indicator.stopAnimating()
-            let filteredArray = userInfo.filter() {$0.city ==  "New York"}
-            let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
-            let filtdArray = userInfo.filter() {$0.city == "Chicago"}
-            let fArray = userInfo.filter() {$0.city == "Houston"}
-            let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
+            
+            displayAlert(title: "Oh Snap!", message: "Something Went Wrong & Cannot Load Data!")
+            
+            if Reachability.isConnectedToNetwork() == true {
+                print("Internet Connection OK!")
+            } else {
+                print("Internet Connection Failed!")
+                var alert = UIAlertView(title: "No Internet Connection!", message: "Make Sure Your Device Is Connected To The Internet!", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
             
         }
     }
@@ -107,6 +121,21 @@ class UserTableViewController: UITableViewController {
         cell?.imageView?.clipsToBounds = true
         
         return cell!
+    }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     func fetchUsersInfo() {

@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     let Array = NSArray(array: ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"])
     var pickedArray = 0
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

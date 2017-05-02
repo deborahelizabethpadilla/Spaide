@@ -22,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+      
         
         //Close Keyboard With Return Key
         
@@ -94,6 +95,16 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             displayAlert(title: "Oh Snap!", message: "Please Enter Your Info!")
             
+            //Check Internet Connection
+            
+            if Reachability.isConnectedToNetwork() == true {
+                print("Internet Connection OK!")
+            } else {
+                print("Internet Connection Failed!")
+                var alert = UIAlertView(title: "No Internet Connection!", message: "Make Sure Your Device Is Connected To The Internet!", delegate: nil, cancelButtonTitle: "OK")
+                alert.show()
+            }
+            
         } else {
             
             FIRAuth.auth()?.signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
@@ -119,12 +130,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     alertController.addAction(defaultAction)
                     
                     self.present(alertController, animated: true, completion: nil)
+                    
+                        }
+                
+                    }
+                
                 }
             }
-        }
-    }
     
-    //Register New User 
+    //Register New User
     
     func registerUser() {
         
