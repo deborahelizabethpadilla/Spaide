@@ -22,7 +22,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     //Variables
     
-    var Array = ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"]
+    let Array = NSArray(array: ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"])
     var pickedArray = 0
     
     override func viewDidLoad() {
@@ -178,7 +178,7 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
-        return Array[row]
+        return Array[row] as! String
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
