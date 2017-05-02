@@ -28,6 +28,16 @@ class UserTableViewController: UITableViewController {
       fetchUsersInfo()
         
     }
+    
+    //Will Appear
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        //Will Appear
+        
+        let filteredArray = userInfo.filter() { $0.city == "New York" }
+    }
 
     // MARK: - Table view data source
 
@@ -48,7 +58,7 @@ class UserTableViewController: UITableViewController {
         label1.text = userInfo[indexPath.row].firstName
         
         let label2 = cell?.viewWithTag(2) as! UILabel
-        label2.text = userInfo[indexPath.row].pickedLocation
+        label2.text = userInfo[indexPath.row].city
         
         let label3 = cell?.viewWithTag(3) as! UILabel
         label3.text = userInfo[indexPath.row].limits
