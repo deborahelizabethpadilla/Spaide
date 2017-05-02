@@ -44,9 +44,15 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
         
-        cell?.textLabel?.text = userInfo[indexPath.row].firstName
-        cell?.textLabel?.text = userInfo[indexPath.row].pickedLocation
-        cell?.textLabel?.text = userInfo[indexPath.row].limits
+        let label1 = cell?.viewWithTag(1) as! UILabel
+        label1.text = userInfo[indexPath.row].firstName
+        
+        let label2 = cell?.viewWithTag(2) as! UILabel
+        label2.text = userInfo[indexPath.row].pickedLocation
+        
+        let label3 = cell?.viewWithTag(3) as! UILabel
+        label3.text = userInfo[indexPath.row].limits
+        
         cell?.imageView?.image = userInfo[indexPath.row].profilePhoto
         
         //Boder Cell Color

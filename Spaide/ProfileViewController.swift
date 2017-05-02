@@ -112,6 +112,25 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
                 }
             }
         }
+        
+        infoFields()
+    }
+    
+    func infoFields() {
+        
+        if self.firstNameField.text == "" || self.limitationsField.text == "" {
+            
+            //Error
+            
+            displayAlert(title: "Oh Snap!", message: "You Need To Enter Your Information!")
+            
+        } else {
+            
+            let choice : [String : AnyObject] = [:]
+            
+            let databaseRef = FIRDatabase.database().reference()
+            databaseRef.child("User Posts").childByAutoId().setValue(choice)
+        }
     }
     
     
@@ -154,6 +173,21 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         pickedArray = row
+    }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
 
 }
