@@ -10,7 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 
-class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
+class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate {
     
     //Outlets
 
@@ -124,6 +124,15 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         }
         
         infoFields()
+    }
+    @IBAction func cameraAction(_ sender: Any) {
+        
+       
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        
+        
     }
     
     func infoFields() {

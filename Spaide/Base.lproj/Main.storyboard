@@ -215,6 +215,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-NL-TbE" userLabel="Camera Button">
+                                <rect key="frame" x="118" y="148" width="139" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="cameraAction:" destination="iEE-iK-Chq" eventType="touchUpInside" id="Feg-p1-Rtb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
