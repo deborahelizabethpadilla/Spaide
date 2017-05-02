@@ -138,10 +138,10 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
             
             //Save To Firebase
             
-            let choice : [String : AnyObject] = [:]
+            let fields : [String : AnyObject] = [:]
             
             let databaseRef = FIRDatabase.database().reference()
-            databaseRef.child("User Posts").childByAutoId().setValue(choice)
+            databaseRef.child("User Posts").childByAutoId().setValue(fields)
         }
     }
     
