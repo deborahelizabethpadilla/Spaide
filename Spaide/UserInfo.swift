@@ -11,7 +11,7 @@ import UIKit
 class UserInfo: NSObject {
     
     var firstName: String?
-    var pickedLocation: String?
+    var city: String?
     var limits: String?
     var profilePhoto: UIImage?
 }

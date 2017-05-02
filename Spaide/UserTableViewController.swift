@@ -34,9 +34,18 @@ class UserTableViewController: UITableViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        //Will Appear
+        //Will Appear In Table View
         
-        let filteredArray = userInfo.filter() { $0.city == "New York" }
+        let filteredArray = userInfo.filter() {$0.city ==  "New York"}
+        
+        let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
+        
+        let filtdArray = userInfo.filter() {$0.city == "Chicago"}
+        
+        let fArray = userInfo.filter() {$0.city == "Houston"}
+        
+        let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
+        
     }
 
     // MARK: - Table view data source
