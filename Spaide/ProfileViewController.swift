@@ -25,6 +25,8 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     
     let Array = NSArray(array: ["New York", "Los Angeles", "Chicago", "Houston", "Philadelphia"])
     var pickedArray = 0
+    let databaseRef = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference()
     
     
     override func viewDidLoad() {
@@ -71,43 +73,37 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         let choice : [String : AnyObject] = [:]
         
         if (pickedArray == 0) {
-            
-            let databaseRef = FIRDatabase.database().reference()
+
             databaseRef.child("User Posts").childByAutoId().setValue(choice)
             
         } else {
             
             if (pickedArray == 1) {
-                
-                let databaseRef = FIRDatabase.database().reference()
+        
                 databaseRef.child("User Posts").childByAutoId().setValue(choice)
                 
             } else {
                 
                 if (pickedArray == 2) {
-                    
-                    let databaseRef = FIRDatabase.database().reference()
+   
                     databaseRef.child("User Posts").childByAutoId().setValue(choice)
                     
                 } else {
                     
                     if (pickedArray == 3) {
-                        
-                        let databaseRef = FIRDatabase.database().reference()
+
                         databaseRef.child("User Posts").childByAutoId().setValue(choice)
                         
                     } else {
                         
                         if (pickedArray == 4) {
-                            
-                            let databaseRef = FIRDatabase.database().reference()
+            
                             databaseRef.child("User Posts").childByAutoId().setValue(choice)
                             
                         } else {
                             
                             if (pickedArray == 5) {
-                                
-                                let databaseRef = FIRDatabase.database().reference()
+         
                                 databaseRef.child("User Posts").childByAutoId().setValue(choice)
                                 
                             } else {
@@ -142,8 +138,39 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
             
             imageView.image = image
-            let databaseRef = FIRDatabase.database().reference()
-            databaseRef.child("User Posts").childByAutoId().setValue(choice)
+            
+            var data = NSData()
+            data = UIImageJPEGRepresentation(imageView.image!, 0.8)!
+            
+            //Set Upload Path
+            
+            let filePath = "\(FIRAuth.auth()!.currentUser!.uid)/\("imageView")"
+            let metaData = FIRStorageMetadata()
+            metaData.contentType = "image/jpg"
+            
+            self.storageRef.child(filePath).put(data, metadata: metaData, completion: { (metaData, error) in
+                
+                //Error
+                
+                if let error = error {
+                    
+                    print(error.localizedDescription)
+                    
+                    return
+                    
+                } else {
+                    
+                    //Store Download URL
+                    
+                    let downloadURL = metaData!.downloadURL()!.absoluteString
+                    
+                    //Store URL At Database
+                    
+                    self.databaseRef.child("User Posts").child(FIRAuth.auth()?.currentUser!.uid).updateChildValues(["imageView": downloadURL])
+                }
+                
+            })
+                
             
         } else {
             
