@@ -109,7 +109,8 @@ class UserTableViewController: UITableViewController {
         let label3 = cell?.viewWithTag(3) as! UILabel
         label3.text = userInfo[indexPath.row].limits
         
-        cell?.imageView?.image = userInfo[indexPath.row].profilePhoto
+        let profilePic = cell?.imageView as! UIImageView
+        profilePic.image = userInfo[indexPath.row].profilePhoto
         
         //Boder Cell Color
         
