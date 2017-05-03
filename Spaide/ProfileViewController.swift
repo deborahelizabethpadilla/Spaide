@@ -11,7 +11,7 @@ import ChameleonFramework
 import Firebase
 import FirebaseDatabase
 
-class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UIImagePickerControllerDelegate {
+class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //Outlets
 
@@ -129,12 +129,28 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
     }
     @IBAction func cameraAction(_ sender: Any) {
         
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.delegate = self
+        imagePickerController.sourceType = UIImagePickerControllerSourceType.photoLibrary
+        imagePickerController.allowsEditing = false
+        self.present(imagePickerController, animated: true, completion: nil)
        
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
+        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
+            
+            imageView.image = image
+            let databaseRef = FIRDatabase.database().reference()
+            databaseRef.child("User Posts").childByAutoId().setValue(choice)
+            
+        } else {
+            
+            displayAlert(title: "Oh Snap!", message: "Could Not Get Your Photo!")
+        }
         
+        self.dismiss(animated: true, completion: nil)
     }
     
     func infoFields() {
