@@ -72,57 +72,22 @@ class ProfileViewController: UIViewController, UIPickerViewDelegate, UIPickerVie
         
         let choice : [String : AnyObject] = [:]
         
-        if (pickedArray == 0) {
+        if (pickedArray == 0, 1, 2, 3, 4, 5) {
 
             databaseRef.child("User Posts").childByAutoId().setValue(choice)
             
         } else {
-            
-            if (pickedArray == 1) {
-        
-                databaseRef.child("User Posts").childByAutoId().setValue(choice)
-                
-            } else {
-                
-                if (pickedArray == 2) {
-   
-                    databaseRef.child("User Posts").childByAutoId().setValue(choice)
-                    
-                } else {
-                    
-                    if (pickedArray == 3) {
-
-                        databaseRef.child("User Posts").childByAutoId().setValue(choice)
-                        
-                    } else {
-                        
-                        if (pickedArray == 4) {
-            
-                            databaseRef.child("User Posts").childByAutoId().setValue(choice)
-                            
-                        } else {
-                            
-                            if (pickedArray == 5) {
-         
-                                databaseRef.child("User Posts").childByAutoId().setValue(choice)
-                                
-                            } else {
-                                
-                                if (pickedArray == 0) {
                                     
-                                    //Error If Location Isn't Picked
+        //Error If Location Isn't Picked
                                     
-                                    displayAlert(title: "Oh Snap!", message: "Pick Your Location!")
-                                }
-                            }
-                        }
-                    }
-                }
-            }
+        displayAlert(title: "Oh Snap!", message: "Pick Your Location!")
+            
         }
         
         infoFields()
+        
     }
+    
     @IBAction func cameraAction(_ sender: Any) {
         
         let imagePickerController = UIImagePickerController()
