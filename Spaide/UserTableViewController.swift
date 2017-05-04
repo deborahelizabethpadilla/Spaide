@@ -43,8 +43,6 @@ class UserTableViewController: UITableViewController {
         cell.firstNameLabel.text = userInfo[indexPath.row].firstName
         cell.locationLabel.text = userInfo[indexPath.row].city
         cell.limitationsLabel.text = userInfo[indexPath.row].limits
-        cell.profileView.image = userInfo[indexPath.row].profilePic
-        
         return cell
         
     }

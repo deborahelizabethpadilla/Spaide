@@ -35,7 +35,7 @@ class ProfileViewController: UIViewController {
         
      //Firebase
         
-     refUsers = FIRDatabase.database().reference().child("Users")
+     refUsers = FIRDatabase.database().reference().child("Profile")
 
     }
     
