@@ -101,7 +101,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 print("Internet Connection OK!")
             } else {
                 print("Internet Connection Failed!")
-                var alert = UIAlertView(title: "No Internet Connection!", message: "Make Sure Your Device Is Connected To The Internet!", delegate: nil, cancelButtonTitle: "OK")
+                let alert = UIAlertView(title: "No Internet Connection!", message: "Make Sure Your Device Is Connected To The Internet!", delegate: nil, cancelButtonTitle: "OK")
                 alert.show()
             }
             

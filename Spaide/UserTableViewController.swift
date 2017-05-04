@@ -49,7 +49,7 @@ class UserTableViewController: UITableViewController {
         
     }
     
-    func loadTableView() {
+    func loadTableView(success: success) {
         
         if success {
             
@@ -59,11 +59,11 @@ class UserTableViewController: UITableViewController {
                 
                 self.tableView.reloadData()
                 self.indicator.loadingView(false)
-                let filteredArray = userInfo.filter() {$0.city ==  "New York"}
-                let filtArray = userInfo.filter() {$0.city == "Los Angeles"}
-                let filtdArray = userInfo.filter() {$0.city == "Chicago"}
-                let fArray = userInfo.filter() {$0.city == "Houston"}
-                let fltdArray = userInfo.filter() {$0.city == "Philadelphia"}
+                let filteredArray = self.userInfo.filter() {$0.city ==  "New York"}
+                let filtArray = self.userInfo.filter() {$0.city == "Los Angeles"}
+                let filtdArray = self.userInfo.filter() {$0.city == "Chicago"}
+                let fArray = self.userInfo.filter() {$0.city == "Houston"}
+                let fltdArray = self.userInfo.filter() {$0.city == "Philadelphia"}
             }
             
         } else {
@@ -109,8 +109,8 @@ class UserTableViewController: UITableViewController {
         let label3 = cell?.viewWithTag(3) as! UILabel
         label3.text = userInfo[indexPath.row].limits
         
-        let profilePic = cell?.imageView as! UIImageView
-        profilePic.image = userInfo[indexPath.row].profilePhoto
+        let profilePic = cell?.imageView!
+        profilePic?.image = userInfo[indexPath.row].profilePhoto
         
         //Boder Cell Color
         
