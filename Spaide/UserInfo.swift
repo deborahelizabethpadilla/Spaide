@@ -13,5 +13,6 @@ class UserInfo: NSObject {
     var firstName: String?
     var city: String?
     var limits: String?
-    var profilePhoto: UIImage?
+    var profilePic: UIImage?
+
 }

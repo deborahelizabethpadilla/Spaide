@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */; };
 		500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04B71E71D0A10096B987 /* AppDelegate.swift */; };
 		500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04BD1E71D0A30096B987 /* Main.storyboard */; };
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		500C04B41E71D0A10096B987 /* Spaide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C04B71E71D0A10096B987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C04BE1E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				5081CA311EB7D4F3007929CB /* UserInfo.swift */,
 				5081CA2B1EB26469007929CB /* Connection.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
+				5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */,
 			);
 			name = Extras;
 			path = Spaide;
@@ -319,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
