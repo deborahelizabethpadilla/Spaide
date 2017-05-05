@@ -17,11 +17,15 @@ class UserTableViewController: UITableViewController {
     
     var refUsers: FIRDatabaseReference!
     var databaseRef = FIRDatabase.database().reference()
+    var refHandle: UInt!
     var userInfo = [UserInfo]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        refUsers = FIRDatabase.database().reference()
+        
+        getUserData()
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -35,17 +39,33 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         
-        let user = userInfo[indexPath.row]
+        cell.firstNameLabel.text = userInfo[indexPath.row].firstName
+        cell.locationLabel.text = userInfo[indexPath.row].city
+        cell.limitationsLabel.text = userInfo[indexPath.row].limits
         
-        cell.firstNameLabel.text = user.firstName
-        cell.limitationsLabel.text = user.limits
-        cell.locationLabel.text = user.city
+       return cell
+    
+    }
+    
+    func getUserData() {
         
-        cell.imageView?.image = UIImage(named: <#T##String#>)
-        
-        
-        
-        return cell
+        refHandle = refUsers.child("Profile").observe(.childAdded, with: { (snapshot) in
+            
+            if let dictionary = snapshot.value as? [String : AnyObject] {
+                
+                print(dictionary)
+                
+                let user = UserInfo()
+                
+                user.setValuesForKeys(dictionary)
+                self.userInfo.append(user)
+                
+                DispatchQueue.main.async {
+                    
+                    self.tableView.reloadData()
+                }
+            }
+        })
     }
 
 } //End Of Class

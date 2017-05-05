@@ -57,16 +57,24 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         view.addGestureRecognizer(tap)
         
-     //Firebase
+        //Firebase
         
-     refUsers = FIRDatabase.database().reference().child("Profile")
+        refUsers = FIRDatabase.database().reference().child("Profile")
         
-     //Button Colors & Size
+        //Button Colors & Size
         
-     saveButton.backgroundColor = .flatGreen
-     saveButton.layer.cornerRadius = 5
-     saveButton.layer.borderWidth = 1
-     saveButton.layer.borderColor = UIColor.flatGreen.cgColor
+        saveButton.backgroundColor = .flatGreen
+        saveButton.layer.cornerRadius = 5
+        saveButton.layer.borderWidth = 1
+        saveButton.layer.borderColor = UIColor.flatGreen.cgColor
+        
+        //Image View Designs
+        
+        imageView.layer.borderWidth = 4.0
+        imageView.layer.masksToBounds = false
+        imageView.layer.borderColor = UIColor.flatBlack.cgColor
+        imageView.layer.cornerRadius = imageView.frame.size.width / 2
+        imageView.clipsToBounds = true
 
     }
     
@@ -93,13 +101,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         let key = refUsers?.childByAutoId().key
         
-        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
+        let user = ["id": key!, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
         
         refUsers.child(key!).setValue(user)
         
     }
     
-    //Image Functions
+    //Image Picker Functions
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
