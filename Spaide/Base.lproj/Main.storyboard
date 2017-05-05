@@ -195,18 +195,18 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="52X-qo-US4">
                                 <rect key="frame" x="16" y="561" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.23018704349999999" green="0.77713233230000001" blue="0.31589496140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="30"/>
                                 <state key="normal" title="SAVE"/>
                                 <connections>
                                     <action selector="saveButton:" destination="iEE-iK-Chq" eventType="touchUpInside" id="5g6-dG-Peo"/>
-                                    <action selector="saveButtonAction:" destination="iEE-iK-Chq" eventType="touchUpInside" id="ulF-KC-xtc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-NL-TbE" userLabel="Camera Button">
                                 <rect key="frame" x="118" y="148" width="139" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
-                                    <action selector="cameraAction:" destination="iEE-iK-Chq" eventType="touchUpInside" id="Feg-p1-Rtb"/>
+                                    <action selector="pickPhotoAction:" destination="iEE-iK-Chq" eventType="touchUpInside" id="kcL-YO-Z6s"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City &amp; State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAy-AV-JOJ">
@@ -231,7 +231,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="avatar.png" id="cZv-Z2-9uJ"/>
                     <connections>
-                        <outlet property="citystate" destination="rAy-AV-JOJ" id="Chp-dV-rtJ"/>
                         <outlet property="citystateField" destination="rAy-AV-JOJ" id="6AM-ek-h0N"/>
                         <outlet property="firstNameField" destination="yve-gm-v3Y" id="qfX-XS-KQt"/>
                         <outlet property="imageView" destination="LJx-Vi-rbr" id="nIi-TD-g1m"/>
@@ -294,7 +293,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="74"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="74"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">

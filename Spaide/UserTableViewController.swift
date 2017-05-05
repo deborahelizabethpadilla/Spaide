@@ -16,22 +16,17 @@ class UserTableViewController: UITableViewController {
     //Variables
     
     var refUsers: FIRDatabaseReference!
+    var databaseRef = FIRDatabase.database().reference()
     var userInfo = [UserInfo]()
-    var indicator = Indicator()
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-      //Load Saved Info
-        
-      ref = FIRDatabase.database().reference()
-        
-      //Activity Indicator
-        
-      indicator.center = self.view.center
-      self.view.addSubview(indicator)
-        
+        return userInfo.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,16 +35,17 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         
-        cell.firstNameLabel.text = userInfo[indexPath.row].firstName
-        cell.locationLabel.text = userInfo[indexPath.row].city
-        cell.limitationsLabel.text = userInfo[indexPath.row].limits
+        let user = userInfo[indexPath.row]
+        
+        cell.firstNameLabel.text = user.firstName
+        cell.limitationsLabel.text = user.limits
+        cell.locationLabel.text = user.city
+        
+        cell.imageView?.image = UIImage(named: <#T##String#>)
+        
+        
+        
         return cell
-        
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return userInfo.count
     }
 
 } //End Of Class
