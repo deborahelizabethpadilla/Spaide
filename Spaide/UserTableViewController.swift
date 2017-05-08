@@ -11,6 +11,13 @@ import ChameleonFramework
 import Firebase
 import FirebaseDatabase
 
+struct postStruct {
+    
+    let firstName : String?
+    let city : String?
+    let limits : String?
+}
+
 class UserTableViewController: UITableViewController {
 
     //Variables
@@ -19,19 +26,32 @@ class UserTableViewController: UITableViewController {
     var databaseRef = FIRDatabase.database().reference()
     var refHandle: UInt!
     var userInfo = [UserInfo]()
-    var dictionary: [String:AnyObject]?
+    var posts = [postStruct]()
+    var dictionary = [[String:AnyObject]]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        refUsers = FIRDatabase.database().reference()
-        
-        getUserData()
+        databaseRef.child("Profile").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
+            
+            let snapshotValue = snapshot.value as? NSDictionary
+            
+            let firstName = snapshotValue?["firstName"] as! String
+            
+            let city = snapshotValue?["city"] as! String
+            
+            let limits = snapshotValue?["limitations"] as! String
+            
+            self.posts.insert(postStruct(firstName: firstName, city: city, limits: limits) , at: 0)
+            
+            self.tableView.reloadData()
+        })
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return userInfo.count
+        return posts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,33 +60,12 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         
-        cell.firstNameLabel.text = self.dictionary?["firstName"] as? String
-        cell.locationLabel.text = self.dictionary?["city"] as? String
-        cell.limitationsLabel.text = self.dictionary?["limits"] as? String
+        cell.firstNameLabel.text = posts[indexPath.row].firstName
+        cell.locationLabel.text = posts[indexPath.row].city
+        cell.limitationsLabel.text = posts[indexPath.row].limits
         
        return cell
     
-    }
-    
-    func getUserData() {
-        
-        refHandle = refUsers.child("Profile").observe(.childAdded, with: { (snapshot) in
-            
-            if let dictionary = snapshot.value as? [String : AnyObject] {
-                
-                print(dictionary)
-                
-                let user = UserInfo()
-                
-                user.setValuesForKeys(dictionary)
-                self.userInfo.append(user)
-                
-                DispatchQueue.main.async {
-                    
-                    self.tableView.reloadData()
-                }
-            }
-        })
     }
 
 } //End Of Class
