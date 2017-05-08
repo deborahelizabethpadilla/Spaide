@@ -19,6 +19,7 @@ class UserTableViewController: UITableViewController {
     var databaseRef = FIRDatabase.database().reference()
     var refHandle: UInt!
     var userInfo = [UserInfo]()
+    var dataForCell = [[String : AnyObject]]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,9 +40,20 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         
-        cell.firstNameLabel.text = userInfo[indexPath.row].firstName
-        cell.locationLabel.text = userInfo[indexPath.row].city
-        cell.limitationsLabel.text = userInfo[indexPath.row].limits
+        let userPostRef = self.databaseRef.child("Profile")
+        userPostRef.observe(.childAdded, with: { (snapshot) in
+            
+            if (snapshot.value as? NSDictionary) != nil {
+                
+                let myPost = UserInfo()
+                self.userInfo.insert(myPost, at:0)
+                
+                cell.firstNameLabel.text = self.userInfo[indexPath.row].firstName
+                cell.locationLabel.text = self.userInfo[indexPath.row].city
+                cell.limitationsLabel.text = self.userInfo[indexPath.row].limits
+            }
+            
+        })
         
        return cell
     

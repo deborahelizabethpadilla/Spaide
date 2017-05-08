@@ -16,6 +16,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     //Variables
     
     var refUsers: FIRDatabaseReference!
+    var dataForCell: [[String : AnyObject]]
 
     //Outlets
 
@@ -129,6 +130,16 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         //Cancel Picking Image
         
         dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier = "dataSegue" {
+            
+            let toViewController = segue.destination as! UserTableViewController
+            
+            toViewController.dataForCell = dataForCell
+        }
     }
   
 }
