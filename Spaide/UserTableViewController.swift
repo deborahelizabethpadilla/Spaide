@@ -19,7 +19,7 @@ class UserTableViewController: UITableViewController {
     var databaseRef = FIRDatabase.database().reference()
     var refHandle: UInt!
     var userInfo = [UserInfo]()
-    var dataForCell = [[String : AnyObject]]()
+    var infoData = [String: Any]()
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -16,7 +16,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     //Variables
     
     var refUsers: FIRDatabaseReference!
-    var dataForCell: [[String : AnyObject]]
 
     //Outlets
 
@@ -40,7 +39,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBAction func saveButton(_ sender: Any) {
         
         addUserData()
-        
+        self.performSegue(withIdentifier: "dataSegue", sender: userData)
     }
     
     override func viewDidLoad() {
@@ -134,13 +133,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if segue.identifier = "dataSegue" {
+        if (segue.identifier == "dataSegue") {
             
-            let toViewController = segue.destination as! UserTableViewController
-            
-            toViewController.dataForCell = dataForCell
+            let otherViewController = segue.destination as! UserTableViewController
+            let infoData = sender as! [String: Any]
+            otherViewController.infoData = infoData
         }
     }
-  
+    
 }
+
             
