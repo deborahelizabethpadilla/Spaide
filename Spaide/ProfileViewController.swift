@@ -16,6 +16,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     //Variables
     
     var refUsers: FIRDatabaseReference!
+    var infoDetails: [String:AnyObject]?
+    
 
     //Outlets
 
@@ -39,7 +41,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBAction func saveButton(_ sender: Any) {
         
         addUserData()
-    
+        self.performSegue(withIdentifier: "dataSegue", sender: self)
     }
     
     override func viewDidLoad() {
@@ -76,6 +78,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
 
+    }
+    
+    //Segue
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "dataSegue" {
+            
+            let controller = segue.destination as! UserTableViewController
+            controller.dictionary = self.infoDetails
+            
+        }
     }
     
     //Close Keyboard With Tap
@@ -131,15 +145,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         dismiss(animated: true, completion: nil)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-        if (segue.identifier == "dataSegue") {
-            let secondViewController = segue.destination as! UserTableViewController
-            let info = sender as! [String: Any]
-            secondViewController.infoData = info
-        }
-    }
-    
 }
 
-            
+
+

@@ -236,7 +236,7 @@
                         <outlet property="imageView" destination="LJx-Vi-rbr" id="nIi-TD-g1m"/>
                         <outlet property="limitationsField" destination="99v-Dh-C9Z" id="vt4-A3-BDw"/>
                         <outlet property="saveButton" destination="52X-qo-US4" id="zoF-6i-pZN"/>
-                        <segue destination="I5T-tC-9tt" kind="show" identifier="dataSegue" id="mHB-Cm-WY3"/>
+                        <segue destination="I5T-tC-9tt" kind="show" identifier="dataSegue" id="NeV-uV-COE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zf0-g3-Rwr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -396,7 +396,7 @@
         <image name="list.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="mHB-Cm-WY3"/>
+        <segue reference="NeV-uV-COE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

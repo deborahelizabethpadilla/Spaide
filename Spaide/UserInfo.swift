@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
 class UserInfo: NSObject {
     
     var firstName: String?
     var city: String?
     var limits: String?
-    
 
 }
