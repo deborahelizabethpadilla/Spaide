@@ -39,7 +39,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBAction func saveButton(_ sender: Any) {
         
         addUserData()
-        self.performSegue(withIdentifier: "dataSegue", sender: userData)
+    
     }
     
     override func viewDidLoad() {
@@ -134,10 +134,9 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if (segue.identifier == "dataSegue") {
-            
-            let otherViewController = segue.destination as! UserTableViewController
-            let infoData = sender as! [String: Any]
-            otherViewController.infoData = infoData
+            let secondViewController = segue.destination as! UserTableViewController
+            let info = sender as! [String: Any]
+            secondViewController.infoData = info
         }
     }
     
