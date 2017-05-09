@@ -26,7 +26,6 @@
 		5081CA251EB13307007929CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA241EB13307007929CB /* settings.png */; };
 		5081CA2C1EB26469007929CB /* Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Connection.swift */; };
 		5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2D1EB264A2007929CB /* Indicator.swift */; };
-		50889D921EC108A2006B1133 /* UsersInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50889D911EC108A2006B1133 /* UsersInfo.swift */; };
 		50B5B06A1E8A141B00681097 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 50B5B0691E8A141B00681097 /* CoreData.framework */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
@@ -57,7 +56,6 @@
 		5081CA241EB13307007929CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		5081CA2B1EB26469007929CB /* Connection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Connection.swift; sourceTree = "<group>"; };
 		5081CA2D1EB264A2007929CB /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
-		50889D911EC108A2006B1133 /* UsersInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersInfo.swift; sourceTree = "<group>"; };
 		50B5B0691E8A141B00681097 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		50BDEE491E80429700D77020 /* TextFieldEffects.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TextFieldEffects.framework; path = "Pods/../build/Release-iphoneos/TextFieldEffects/TextFieldEffects.framework"; sourceTree = "<group>"; };
 		50BDEE4B1E80429D00D77020 /* ChameleonFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ChameleonFramework.framework; path = "Pods/../build/Release-iphoneos/ChameleonFramework/ChameleonFramework.framework"; sourceTree = "<group>"; };
@@ -172,7 +170,6 @@
 		5081CA2A1EB2642F007929CB /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				50889D911EC108A2006B1133 /* UsersInfo.swift */,
 				5081CA2B1EB26469007929CB /* Connection.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
 				5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */,
@@ -324,7 +321,6 @@
 			files = (
 				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
-				50889D921EC108A2006B1133 /* UsersInfo.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
 				5081CA2C1EB26469007929CB /* Connection.swift in Sources */,
