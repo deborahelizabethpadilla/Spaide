@@ -11,47 +11,44 @@ import ChameleonFramework
 import Firebase
 import FirebaseDatabase
 
-struct postStruct {
-    
-    let firstName : String?
-    let city : String?
-    let limits : String?
-}
 
 class UserTableViewController: UITableViewController {
 
     //Variables
     
     var refUsers: FIRDatabaseReference!
-    var databaseRef = FIRDatabase.database().reference()
     var refHandle: UInt!
-    var userInfo = [UserInfo]()
-    var posts = [postStruct]()
-    var dictionary = [[String:AnyObject]]()
+    var userList = [UsersInfo]()
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        databaseRef.child("Profile").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
+        refUsers = FIRDatabase.database().reference()
+        
+        getData()
+    }
+    
+    func getData() {
+        
+        self.refUsers.observe(FIRDataEventType.childAdded) { (snapshot: FIRDataSnapshot) in
             
-            let snapshotValue = snapshot.value as? NSDictionary
+            let firstName = snapshot.value(forKey: "firstName") as! String
+            let city = snapshot.value(forKey: "city") as! String
+            let limits = snapshot.value(forKey: "limits") as! String
             
-            let firstName = snapshotValue?["firstName"] as! String
-            
-            let city = snapshotValue?["city"] as! String
-            
-            let limits = snapshotValue?["limitations"] as! String
-            
-            self.posts.insert(postStruct(firstName: firstName, city: city, limits: limits) , at: 0)
-            
-            self.tableView.reloadData()
-        })
+            print(firstName, city, limits)
+        }
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return posts.count
+        return userList.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -60,11 +57,11 @@ class UserTableViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
         
-        cell.firstNameLabel.text = posts[indexPath.row].firstName
-        cell.locationLabel.text = posts[indexPath.row].city
-        cell.limitationsLabel.text = posts[indexPath.row].limits
+        cell.firstNameLabel.text = userList[indexPath.row].firstName
+        cell.locationLabel.text = userList[indexPath.row].city
+        cell.limitationsLabel.text = userList[indexPath.row].limits
         
-       return cell
+        return cell
     
     }
 

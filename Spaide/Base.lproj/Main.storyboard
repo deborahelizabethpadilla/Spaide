@@ -297,32 +297,59 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
-                                            <rect key="frame" x="122" y="0.0" width="245" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
+                                            <rect key="frame" x="122" y="0.0" width="245" height="25"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="245" id="jeJ-xN-z50"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-yC-dpZ">
-                                            <rect key="frame" x="122" y="44" width="245" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-yC-dpZ">
+                                            <rect key="frame" x="122" y="45" width="245" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="245" id="OQJ-2Y-bi3"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
-                                            <rect key="frame" x="122" y="26" width="245" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
+                                            <rect key="frame" x="122" y="27" width="245" height="20"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="245" id="8Ru-SI-jWN"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
                                             <rect key="frame" x="8" y="0.0" width="78" height="69"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="78" id="7WP-LA-lL4"/>
+                                                <constraint firstAttribute="height" constant="69" id="aA6-gd-ZKS"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="2" id="4TY-3Y-sLR"/>
+                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="GRw-jx-gvx"/>
+                                        <constraint firstItem="Vpd-CQ-uqU" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="OOC-G1-fkW"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="JTq-yC-dpZ" secondAttribute="bottom" constant="0.5" id="R9I-zc-Ff9"/>
+                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="2" id="VHH-QO-7Zs"/>
+                                        <constraint firstItem="aaJ-fc-rVN" firstAttribute="top" secondItem="eJL-2o-Mas" secondAttribute="top" id="Z5Y-Av-jw4"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="aaI-Aw-w7D" secondAttribute="bottom" constant="18.5" id="ZFG-jL-4W3"/>
+                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="trailing" secondItem="eJL-2o-Mas" secondAttribute="trailingMargin" id="avr-Vq-429"/>
+                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="20" id="c5z-KC-tac"/>
+                                        <constraint firstItem="aaJ-fc-rVN" firstAttribute="leading" secondItem="eJL-2o-Mas" secondAttribute="leading" constant="8" id="e0l-y3-pcg"/>
+                                        <constraint firstItem="Vpd-CQ-uqU" firstAttribute="top" secondItem="eJL-2o-Mas" secondAttribute="top" id="q0Y-pm-LC2"/>
+                                        <constraint firstAttribute="bottom" secondItem="aaJ-fc-rVN" secondAttribute="bottom" constant="4.5" id="rS8-bS-5hL"/>
+                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="ueC-eM-jhC"/>
+                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="uh7-Sb-eTp"/>
+                                        <constraint firstAttribute="trailing" secondItem="Vpd-CQ-uqU" secondAttribute="trailing" constant="8" id="vTS-Pw-VJp"/>
+                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="trailing" secondItem="eJL-2o-Mas" secondAttribute="trailingMargin" id="yha-No-IU9"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="firstName" destination="Vpd-CQ-uqU" id="gf8-YJ-WRO"/>
