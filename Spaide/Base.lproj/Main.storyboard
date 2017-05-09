@@ -284,7 +284,7 @@
         <!--Users-->
         <scene sceneID="nJY-vg-ZSx">
             <objects>
-                <tableViewController id="I5T-tC-9tt" sceneMemberID="viewController">
+                <tableViewController id="I5T-tC-9tt" customClass="UserTableViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1v-uz-mPV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -352,7 +352,6 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="firstName" destination="Vpd-CQ-uqU" id="gf8-YJ-WRO"/>
                                     <outlet property="firstNameLabel" destination="Vpd-CQ-uqU" id="rBq-aq-Nw8"/>
                                     <outlet property="limitationsLabel" destination="JTq-yC-dpZ" id="VLZ-1L-XpI"/>
                                     <outlet property="locationLabel" destination="aaI-Aw-w7D" id="UHP-t6-x8D"/>

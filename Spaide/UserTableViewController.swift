@@ -24,7 +24,7 @@ class UserTableViewController: UITableViewController {
     
     var refUsers: FIRDatabaseReference!
     var refHandle: UInt!
-    var userInfo = [UserStruct]()
+    var userPosts = [UserStruct]()
     
 
     override func viewDidLoad() {
@@ -45,12 +45,12 @@ class UserTableViewController: UITableViewController {
             let limits = snapshotValue!["limits"] as? String
             snapshotValue = snapshot.value as? NSDictionary
             
-            self.userInfo.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userInfo.count)
+            self.userPosts.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userPosts.count)
             self.tableView.reloadData()
             
         })
         
-        print(userInfo)
+        print(userPosts)
         
     }
     
@@ -61,18 +61,18 @@ class UserTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return userInfo.count
+        return userPosts.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //Set Cell Contents
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as! CustomTableViewCell
         
-        cell.firstNameLabel.text = userInfo[indexPath.row].firstName
-        cell.locationLabel.text = userInfo[indexPath.row].city
-        cell.limitationsLabel.text = userInfo[indexPath.row].limits
+        cell.firstNameLabel.text = userPosts[indexPath.row].firstName
+        cell.locationLabel.text = userPosts[indexPath.row].city
+        cell.limitationsLabel.text = userPosts[indexPath.row].limits
         
         return cell
     

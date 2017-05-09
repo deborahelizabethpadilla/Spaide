@@ -16,7 +16,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     //Variables
     
     var refUsers: FIRDatabaseReference!
-    var userPosts = [[String: AnyObject]]()
     
     //Outlets
 
@@ -41,7 +40,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBAction func saveButton(_ sender: Any) {
         
         addUserData()
-        
+       
     }
     
     override func viewDidLoad() {
@@ -99,6 +98,8 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         return false
     }
     
+    //Add User Data
+    
 
     func addUserData() {
         
@@ -108,17 +109,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         refUsers.child(key!).setValue(user)
         
-    }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "dataSegue" {
-            
-            if let tableVC = segue.destination as? UserTableViewController {
-                
-                
-            }
-        }
     }
     
     //Image Picker Functions
@@ -145,4 +135,4 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         dismiss(animated: true, completion: nil)
     }
         
-}
+} // End Class
