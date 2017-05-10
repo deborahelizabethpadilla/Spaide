@@ -202,13 +202,6 @@
                                     <action selector="saveButton:" destination="iEE-iK-Chq" eventType="touchUpInside" id="5g6-dG-Peo"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DSN-NL-TbE" userLabel="Camera Button">
-                                <rect key="frame" x="118" y="148" width="139" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="pickPhotoAction:" destination="iEE-iK-Chq" eventType="touchUpInside" id="kcL-YO-Z6s"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="City &amp; State" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rAy-AV-JOJ">
                                 <rect key="frame" x="16" y="391" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -246,7 +239,7 @@
         <!--Settings-->
         <scene sceneID="uCT-JH-TGG">
             <objects>
-                <viewController id="GB7-LU-UIf" sceneMemberID="viewController">
+                <viewController id="GB7-LU-UIf" customClass="BannerViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="tMC-yL-30d"/>
                         <viewControllerLayoutGuide type="bottom" id="DYi-Ja-J8D"/>
@@ -254,9 +247,24 @@
                     <view key="view" contentMode="scaleToFill" id="ilo-ek-KDk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.23018704354763031" green="0.77713233232498169" blue="0.3158949613571167" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" id="JTF-1y-3qQ"/>
+                            <constraint firstItem="aE1-gf-kUa" firstAttribute="top" secondItem="tMC-yL-30d" secondAttribute="bottom" constant="538" id="NFW-Ii-Vgg"/>
+                            <constraint firstItem="aE1-gf-kUa" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leading" id="UNc-BC-LzS"/>
+                            <constraint firstItem="aE1-gf-kUa" firstAttribute="centerX" secondItem="ilo-ek-KDk" secondAttribute="centerX" id="l5I-2D-lAK"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
+                    <connections>
+                        <outlet property="bannerView" destination="aE1-gf-kUa" id="3uj-St-sGR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-ZR-mlN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -285,71 +293,44 @@
         <scene sceneID="nJY-vg-ZSx">
             <objects>
                 <tableViewController id="I5T-tC-9tt" customClass="UserTableViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="74" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1v-uz-mPV">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="103" sectionHeaderHeight="28" sectionFooterHeight="28" id="b1v-uz-mPV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="74" id="u3V-vU-jRa" customClass="CustomTableViewCell" customModule="Spaide" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="103" id="u3V-vU-jRa" customClass="CustomTableViewCell" customModule="Spaide" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="103"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="102.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
-                                            <rect key="frame" x="122" y="0.0" width="245" height="25"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="245" id="jeJ-xN-z50"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
+                                            <rect key="frame" x="122" y="0.0" width="245" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-yC-dpZ">
-                                            <rect key="frame" x="122" y="45" width="245" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="245" id="OQJ-2Y-bi3"/>
-                                            </constraints>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-yC-dpZ">
+                                            <rect key="frame" x="122" y="74" width="245" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
-                                            <rect key="frame" x="122" y="27" width="245" height="20"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="245" id="8Ru-SI-jWN"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
-                                            <rect key="frame" x="8" y="0.0" width="78" height="69"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="78" id="7WP-LA-lL4"/>
-                                                <constraint firstAttribute="height" constant="69" id="aA6-gd-ZKS"/>
-                                            </constraints>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
+                                            <rect key="frame" x="8" y="0.0" width="106" height="94"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
+                                            <rect key="frame" x="122" y="41" width="245" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <constraints>
-                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="2" id="4TY-3Y-sLR"/>
-                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="GRw-jx-gvx"/>
-                                        <constraint firstItem="Vpd-CQ-uqU" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="OOC-G1-fkW"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="JTq-yC-dpZ" secondAttribute="bottom" constant="0.5" id="R9I-zc-Ff9"/>
-                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="2" id="VHH-QO-7Zs"/>
-                                        <constraint firstItem="aaJ-fc-rVN" firstAttribute="top" secondItem="eJL-2o-Mas" secondAttribute="top" id="Z5Y-Av-jw4"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="aaI-Aw-w7D" secondAttribute="bottom" constant="18.5" id="ZFG-jL-4W3"/>
-                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="trailing" secondItem="eJL-2o-Mas" secondAttribute="trailingMargin" id="avr-Vq-429"/>
-                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="top" secondItem="Vpd-CQ-uqU" secondAttribute="bottom" constant="20" id="c5z-KC-tac"/>
-                                        <constraint firstItem="aaJ-fc-rVN" firstAttribute="leading" secondItem="eJL-2o-Mas" secondAttribute="leading" constant="8" id="e0l-y3-pcg"/>
-                                        <constraint firstItem="Vpd-CQ-uqU" firstAttribute="top" secondItem="eJL-2o-Mas" secondAttribute="top" id="q0Y-pm-LC2"/>
-                                        <constraint firstAttribute="bottom" secondItem="aaJ-fc-rVN" secondAttribute="bottom" constant="4.5" id="rS8-bS-5hL"/>
-                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="ueC-eM-jhC"/>
-                                        <constraint firstItem="JTq-yC-dpZ" firstAttribute="leading" secondItem="aaJ-fc-rVN" secondAttribute="trailing" constant="36" id="uh7-Sb-eTp"/>
-                                        <constraint firstAttribute="trailing" secondItem="Vpd-CQ-uqU" secondAttribute="trailing" constant="8" id="vTS-Pw-VJp"/>
-                                        <constraint firstItem="aaI-Aw-w7D" firstAttribute="trailing" secondItem="eJL-2o-Mas" secondAttribute="trailingMargin" id="yha-No-IU9"/>
-                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="firstNameLabel" destination="Vpd-CQ-uqU" id="rBq-aq-Nw8"/>

@@ -14,6 +14,8 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
+		5068C68B1EC25C260035492A /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5068C68A1EC25C260035492A /* disabled.png */; };
+		5068C68D1EC3831B0035492A /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* BannerViewController.swift */; };
 		5072DA651E9C01A000E0EA7C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA641E9C01A000E0EA7C /* Bolts.framework */; };
 		5072DA671E9C01AE00E0EA7C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */; };
 		5072DA691E9C01B400E0EA7C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */; };
@@ -44,6 +46,8 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5068C68A1EC25C260035492A /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
+		5068C68C1EC3831B0035492A /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
 		5072DA641E9C01A000E0EA7C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -147,6 +151,7 @@
 				5081CA1C1EB13015007929CB /* avatar.png */,
 				5081CA201EB13070007929CB /* list.png */,
 				5081CA221EB130BF007929CB /* home.png */,
+				5068C68A1EC25C260035492A /* disabled.png */,
 				5081CA241EB13307007929CB /* settings.png */,
 				50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */,
 				50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */,
@@ -162,6 +167,7 @@
 				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 				5081CA141EB11528007929CB /* UserTableViewController.swift */,
 				5081CA1A1EB11D01007929CB /* ProfileViewController.swift */,
+				5068C68C1EC3831B0035492A /* BannerViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -252,6 +258,7 @@
 			files = (
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
 				50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */,
+				5068C68B1EC25C260035492A /* disabled.png in Resources */,
 				50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */,
 				5081CA251EB13307007929CB /* settings.png in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
@@ -319,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5068C68D1EC3831B0035492A /* BannerViewController.swift in Sources */,
 				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,

@@ -74,6 +74,14 @@ class UserTableViewController: UITableViewController {
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
         
+        //Resize Image View
+        
+        cell.imageView?.image = UIImage(named: "disabled.png")
+        cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)! / 2
+        cell.imageView?.layer.borderColor = UIColor.flatBlack.cgColor
+        cell.imageView?.layer.borderWidth = 4.0
+        cell.imageView?.layer.masksToBounds = true
+        
         return cell
     
     }

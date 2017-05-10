@@ -26,16 +26,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBOutlet var citystateField: UITextField!
     
     //Actions
-    
-    @IBAction func pickPhotoAction(_ sender: Any) {
-        
-        let picker = UIImagePickerController()
-        picker.delegate = self
-        picker.sourceType = UIImagePickerControllerSourceType.photoLibrary
-        picker.allowsEditing = false
-        self.present(picker, animated: true, completion: nil)
-        
-    }
 
     @IBAction func saveButton(_ sender: Any) {
         
@@ -76,6 +66,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         imageView.layer.borderColor = UIColor.flatBlack.cgColor
         imageView.layer.cornerRadius = imageView.frame.size.width / 2
         imageView.clipsToBounds = true
+        imageView.image = UIImage(named: "disabled.png")
 
     }
     
@@ -109,30 +100,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         refUsers.child(key!).setValue(user)
         
-    }
-    
-    //Image Picker Functions
-    
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            
-            imageView.image = image
-            
-        } else {
-            
-            print("Error Getting Image")
-        }
-        
-        self.dismiss(animated: true, completion: nil)
-        
-    }
-    
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
-        //Cancel Picking Image
-        
-        dismiss(animated: true, completion: nil)
     }
         
 } // End Class

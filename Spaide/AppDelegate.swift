@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -19,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configure Firebase API
         
         FIRApp.configure()
+        
+        GADMobileAds.configure(withApplicationID: "pub-9793810674761024")
         
         return true
     }
