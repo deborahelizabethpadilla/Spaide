@@ -105,13 +105,6 @@
                                     <segue destination="qE3-7s-obc" kind="show" id="la0-TH-O5r"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="- OR -" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFy-2Z-zQX">
-                                <rect key="frame" x="162" y="519" width="50" height="33"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08I-Rn-phm">
                                 <rect key="frame" x="16" y="560" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -121,6 +114,14 @@
                                 </state>
                                 <connections>
                                     <action selector="registerButtonAction:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="HAI-ql-YAr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vhl-7g-KGN" customClass="FBSDKButton">
+                                <rect key="frame" x="16" y="506" width="343" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="facebookLogin:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="oOs-zE-7Wi"/>
                                 </connections>
                             </button>
                         </subviews>

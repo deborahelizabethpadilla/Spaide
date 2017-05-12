@@ -10,8 +10,14 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
+    
+    //Variables
+    
+    var dict : [String : AnyObject]!
     
     //Outlets
     
@@ -84,6 +90,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         login()
     }
+    
+    @IBAction func facebookLogin(_ sender: Any) {
+        
+        
+    }
+    
     
     //Create Login And Register Function
     
