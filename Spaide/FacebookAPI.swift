@@ -12,9 +12,18 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class FacebookAPI: LoginViewController {
+class FacebookAPI: LoginViewController, HomeViewController {
     
     //Functions
+    
+    func logoutUser() {
+        
+        try! FIRAuth.auth()!.signOut()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(vc, animated: false, completion: nil)
+        }
+    }
     
     func tapFacebookButton() {
         

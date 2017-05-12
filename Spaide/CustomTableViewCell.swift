@@ -21,12 +21,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var locationLabel: UILabel!
     @IBOutlet var limitationsLabel: UILabel!
     @IBOutlet var profileView: UIImageView!
-    @IBOutlet var recordMessage: UIButton!
-    
-    
-    @IBAction func recordMessageAction(_ sender: Any) {
-        
-        
-    }
 
 }

@@ -408,27 +408,8 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Users" image="list.png" id="rpV-GJ-OQu"/>
                     <navigationItem key="navigationItem" id="g6q-n8-ZNb"/>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="uJg-Ra-OKS" id="z3I-E3-QOv"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjU-up-bH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="vbF-Qz-TEv">
-                    <connections>
-                        <outlet property="delegate" destination="I5T-tC-9tt" id="Urs-cc-4DI"/>
-                        <outlet property="searchContentsController" destination="I5T-tC-9tt" id="2f9-kF-Dvf"/>
-                        <outlet property="searchResultsDataSource" destination="I5T-tC-9tt" id="JeU-Aj-dQH"/>
-                        <outlet property="searchResultsDelegate" destination="I5T-tC-9tt" id="Dom-CY-I0C"/>
-                    </connections>
-                </searchDisplayController>
-                <searchDisplayController id="uJg-Ra-OKS">
-                    <connections>
-                        <outlet property="delegate" destination="I5T-tC-9tt" id="cft-oU-TgA"/>
-                        <outlet property="searchContentsController" destination="I5T-tC-9tt" id="aku-eY-3an"/>
-                        <outlet property="searchResultsDataSource" destination="I5T-tC-9tt" id="uzx-gr-22f"/>
-                        <outlet property="searchResultsDelegate" destination="I5T-tC-9tt" id="MdP-Ix-vfd"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="281.10944527736132"/>
         </scene>

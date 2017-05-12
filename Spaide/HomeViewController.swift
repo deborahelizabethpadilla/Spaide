@@ -41,16 +41,7 @@ class HomeViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecord
     
     @IBAction func logoutAction(_ sender: Any) {
         
-        try! FIRAuth.auth()!.signOut()
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.present(vc, animated: false, completion: nil)
-        }
-    }
-    
-    @IBAction func playMessageAction(_ sender: Any) {
-        
-        
+        FacebookAPI.sharedInstance().logoutUser()
     }
     
     //Banner View Info

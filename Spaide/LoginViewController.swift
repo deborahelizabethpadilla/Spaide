@@ -96,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func facebookLogin(_ sender: Any) {
         
-        FacebookAPI.tapFacebookButton()
+        FacebookAPI.sharedInstance().tapFacebookButton()
     }
     
     
