@@ -13,5 +13,8 @@ use_frameworks!
   pod 'TextFieldEffects'
   pod 'ReachabilitySwift', '~> 3'
   pod 'Firebase/AdMob'
+  pod 'Bolts'
+  pod 'FBSDKCoreKit'
+  pod 'FBSDKLoginKit'
 
 end

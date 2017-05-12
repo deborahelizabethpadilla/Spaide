@@ -18,14 +18,15 @@ struct UserStruct {
     var limits: String?
 }
 
-class UserTableViewController: UITableViewController {
+class UserTableViewController: UITableViewController, UINavigationControllerDelegate, UISearchDisplayDelegate {
 
     //Variables
     
     var refUsers: FIRDatabaseReference!
     var refHandle: UInt!
     var userPosts = [UserStruct]()
-    
+    var filteredTableData = [String]()
+    var resultSearchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -73,14 +74,6 @@ class UserTableViewController: UITableViewController {
         cell.firstNameLabel.text = userPosts[indexPath.row].firstName
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
-        
-        //Resize Image View
-        
-        cell.imageView?.image = UIImage(named: "disabled.png")
-        cell.imageView?.layer.cornerRadius = (cell.imageView?.frame.size.width)! / 2
-        cell.imageView?.layer.borderColor = UIColor.flatBlack.cgColor
-        cell.imageView?.layer.borderWidth = 4.0
-        cell.imageView?.layer.masksToBounds = true
         
         return cell
     

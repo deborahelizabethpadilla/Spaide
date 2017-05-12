@@ -41,15 +41,15 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Button Colors & Size
         
-        loginButton.backgroundColor = .flatGreen
+        loginButton.backgroundColor = FlatBlack()
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.flatGreen.cgColor
+        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
         
-        registerButton.backgroundColor = .flatGreen
+        registerButton.backgroundColor = FlatBlack()
         registerButton.layer.cornerRadius = 5
         registerButton.layer.borderWidth = 1
-        registerButton.layer.borderColor = UIColor.flatGreen.cgColor
+        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
         
     }
     

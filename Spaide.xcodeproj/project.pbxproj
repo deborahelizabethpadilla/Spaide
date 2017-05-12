@@ -15,7 +15,7 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		5068C68B1EC25C260035492A /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5068C68A1EC25C260035492A /* disabled.png */; };
-		5068C68D1EC3831B0035492A /* BannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* BannerViewController.swift */; };
+		5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* HomeViewController.swift */; };
 		5072DA651E9C01A000E0EA7C /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA641E9C01A000E0EA7C /* Bolts.framework */; };
 		5072DA671E9C01AE00E0EA7C /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */; };
 		5072DA691E9C01B400E0EA7C /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */; };
@@ -33,6 +33,8 @@
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
+		50C306AB1EC513030081A1EC /* AudioAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* AudioAPI.swift */; };
+		50C306AD1EC519F10081A1EC /* AudioAPIAssist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AC1EC519F00081A1EC /* AudioAPIAssist.swift */; };
 		9DBA637D24D739BD3F47E34E /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8550F48AD1EE1094E254858E /* Pods_Spaide.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 /* End PBXBuildFile section */
 
@@ -47,7 +49,7 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5068C68A1EC25C260035492A /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
-		5068C68C1EC3831B0035492A /* BannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerViewController.swift; sourceTree = "<group>"; };
+		5068C68C1EC3831B0035492A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5072DA641E9C01A000E0EA7C /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		5072DA661E9C01AE00E0EA7C /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		5072DA681E9C01B400E0EA7C /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -70,6 +72,8 @@
 		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
+		50C306AA1EC513030081A1EC /* AudioAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAPI.swift; sourceTree = "<group>"; };
+		50C306AC1EC519F00081A1EC /* AudioAPIAssist.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioAPIAssist.swift; sourceTree = "<group>"; };
 		72C03FA731C4949AF2038341 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
 		8550F48AD1EE1094E254858E /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4088253042CCF4844C246B4 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,7 +171,8 @@
 				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 				5081CA141EB11528007929CB /* UserTableViewController.swift */,
 				5081CA1A1EB11D01007929CB /* ProfileViewController.swift */,
-				5068C68C1EC3831B0035492A /* BannerViewController.swift */,
+				5068C68C1EC3831B0035492A /* HomeViewController.swift */,
+				5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -178,7 +183,8 @@
 			children = (
 				5081CA2B1EB26469007929CB /* Connection.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
-				5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */,
+				50C306AA1EC513030081A1EC /* AudioAPI.swift */,
+				50C306AC1EC519F00081A1EC /* AudioAPIAssist.swift */,
 			);
 			name = Extras;
 			path = Spaide;
@@ -326,11 +332,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5068C68D1EC3831B0035492A /* BannerViewController.swift in Sources */,
+				5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */,
 				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
+				50C306AD1EC519F10081A1EC /* AudioAPIAssist.swift in Sources */,
+				50C306AB1EC513030081A1EC /* AudioAPI.swift in Sources */,
 				5081CA2C1EB26469007929CB /* Connection.swift in Sources */,
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,

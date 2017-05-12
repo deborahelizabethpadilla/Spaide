@@ -61,12 +61,12 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         //Image View Designs
         
-        imageView.layer.borderWidth = 4.0
-        imageView.layer.masksToBounds = false
-        imageView.layer.borderColor = UIColor.flatBlack.cgColor
-        imageView.layer.cornerRadius = imageView.frame.size.width / 2
-        imageView.clipsToBounds = true
         imageView.image = UIImage(named: "disabled.png")
+        
+        self.view.layoutIfNeeded()
+        
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
 
     }
     
@@ -99,6 +99,13 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         let user = ["id": key!, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
         
         refUsers.child(key!).setValue(user)
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+        imageView.layer.cornerRadius = imageView.frame.size.width/2
+        imageView.clipsToBounds = true
         
     }
         
