@@ -33,6 +33,7 @@ class FacebookAPI: LoginViewController {
             let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
             
             // Perform Login By Calling Firebase APIs
+            
             FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
                 if let error = error {
                     print("Login error: \(error.localizedDescription)")
@@ -44,7 +45,8 @@ class FacebookAPI: LoginViewController {
                     return
                 }
                 
-                // Present View Controller
+                // Present View Controller If Success
+                
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") {
                     UIApplication.shared.keyWindow?.rootViewController = viewController
                     self.dismiss(animated: true, completion: nil)
@@ -55,29 +57,5 @@ class FacebookAPI: LoginViewController {
         }
     }
 }
-    
-    func getFBUserData() {
-        
-        if((FBSDKAccessToken.current()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).start(completionHandler: { (connection, result, error) -> Void in
-                if (error == nil){
-                    
-                    //Everything Works!
-                    print(result!)
-                }
-            })
-        }
-    }
-    
-    //Shared Instance
-    
-    class func sharedInstance() -> FacebookAPI {
-        
-        struct Singleton {
-            
-            static var sharedInstance = FacebookAPI()
-        }
-        return Singleton.sharedInstance
-    }
-    
-}
+
+

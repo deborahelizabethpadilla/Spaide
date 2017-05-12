@@ -28,7 +28,10 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      
+        
+        //Alert Title
+        
+        self.title = ""
         
         //Close Keyboard With Return Key
         
@@ -93,7 +96,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func facebookLogin(_ sender: Any) {
         
-        
+        FacebookAPI.tapFacebookButton()
     }
     
     
