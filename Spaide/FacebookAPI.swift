@@ -6,64 +6,49 @@
 //  Copyright © 2017 Deborah. All rights reserved.
 //
 
-import Foundation
 import UIKit
-import FBSDKCoreKit
-import FBSDKLoginKit
 import Firebase
+import FBSDKLoginKit
+
 
 class FacebookAPI: LoginViewController {
     
     //Functions
     
-    func logoutUser() {
+    func logoutUser(controller: UIViewController) {
         
-        try! FIRAuth.auth()!.signOut()
-        if let storyboard = self.storyboard {
-            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.present(vc, animated: false, completion: nil)
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
         }
     }
     
-    func tapFacebookButton() {
+    //Login Function
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
         
-        let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
-            if let error = error {
-                print("Failed to login: \(error.localizedDescription)")
-                return
-            }
+        if (error != nil) {
             
-            guard let accessToken = FBSDKAccessToken.current() else {
-                print("Failed to get access token")
-                return
-            }
-            
-            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
-            
-            // Perform Login By Calling Firebase APIs
-            
-            FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
-                if let error = error {
-                    print("Login error: \(error.localizedDescription)")
-                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                    alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
-                    
-                    return
-                }
-                
-                // Present View Controller If Success
-                
-                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "tabBarController") {
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
-                    self.dismiss(animated: true, completion: nil)
-                }
-                
-            })
+            print(error.localizedDescription)
             
         }
+        
+        if let userToken = result.token {
+            
+            let token:FBSDKAccessToken = result.token
+            
+            print("Token = \(FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString))")
+            print("User ID = \(FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().userID))")
+            
+            self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+            
+        }
+        
+        loginButton.delegate = self as! FBSDKLoginButtonDelegate
+        loginButton.readPermissions = ["public_profile, email"]
+        
     }
     
     //Shared Instance
@@ -74,6 +59,5 @@ class FacebookAPI: LoginViewController {
         }
         return Singleton.sharedInstance
     }
-}
-
-
+    
+} //End Class

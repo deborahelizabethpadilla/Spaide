@@ -25,6 +25,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var registerButton: UIButton!
+    @IBOutlet var fbLoginButton: FBSDKLoginButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -93,12 +94,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         login()
     }
-    
-    @IBAction func facebookLogin(_ sender: Any) {
-        
-        FacebookAPI.sharedInstance().tapFacebookButton()
-    }
-    
     
     //Create Login And Register Function
     

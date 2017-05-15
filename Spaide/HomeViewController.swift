@@ -41,7 +41,7 @@ class HomeViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecord
     
     @IBAction func logoutAction(_ sender: Any) {
         
-        FacebookAPI.sharedInstance().logoutUser()
+        FacebookAPI.sharedInstance().logoutUser(controller: self)
     }
     
     //Banner View Info

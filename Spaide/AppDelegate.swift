@@ -25,7 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure Facebook API
         
+        FBSDKLoginButton.classForCoder()
+        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
+        //Configure Google API
         
         GADMobileAds.configure(withApplicationID: "pub-9793810674761024")
         
@@ -51,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //Configure Facebook API
         
         FBSDKAppEvents.activateApp()
-    
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
