@@ -46,9 +46,6 @@ class FacebookAPI: LoginViewController {
             
         }
         
-        loginButton.delegate = self as! FBSDKLoginButtonDelegate
-        loginButton.readPermissions = ["public_profile, email"]
-        
     }
     
     //Shared Instance

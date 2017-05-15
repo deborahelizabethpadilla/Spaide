@@ -10,10 +10,9 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseAuth
-import FBSDKCoreKit
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
     
     //Variables
     
@@ -60,6 +59,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         registerButton.layer.cornerRadius = 5
         registerButton.layer.borderWidth = 1
         registerButton.layer.borderColor = UIColor.flatBlack.cgColor
+        
+        //Facebook
+        
+        fbLoginButton.delegate = self
+        fbLoginButton.readPermissions = ["public_profile", "email"]
         
     }
     
