@@ -11,7 +11,7 @@ import Firebase
 import FBSDKLoginKit
 
 
-class FacebookAPI: LoginViewController {
+class FacebookAPI: LoginViewController, FBSDKLoginButtonDelegate {
     
     //Functions
     

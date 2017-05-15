@@ -62,7 +62,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Facebook
         
-        fbLoginButton.delegate = self as! FBSDKLoginButtonDelegate
         fbLoginButton.readPermissions = ["public_profile", "email"]
         
     }
