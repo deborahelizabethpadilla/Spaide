@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure Facebook API
         
-        FBSDKLoginButton.classForCoder()
+        FBSDKButton.classForCoder()
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
