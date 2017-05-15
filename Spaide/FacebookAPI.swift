@@ -12,7 +12,7 @@ import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
 
-class FacebookAPI: LoginViewController, HomeViewController {
+class FacebookAPI: LoginViewController {
     
     //Functions
     

@@ -7,15 +7,10 @@
 //
 
 import UIKit
-import AVFoundation
 
 class CustomTableViewCell: UITableViewCell {
     
-    //Variables
-    
-    var soundRecorder = AVAudioRecorder()
-    var fileName = "audioFile.m4a"
-
+    //Outets
     
     @IBOutlet var firstNameLabel: UILabel!
     @IBOutlet var locationLabel: UILabel!
