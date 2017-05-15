@@ -12,7 +12,7 @@ import Firebase
 import FirebaseAuth
 import FBSDKLoginKit
 
-class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButtonDelegate {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Variables
     
@@ -62,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
         
         //Facebook
         
-        fbLoginButton.delegate = self
+        fbLoginButton.delegate = self as! FBSDKLoginButtonDelegate
         fbLoginButton.readPermissions = ["public_profile", "email"]
         
     }
@@ -97,6 +97,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate, FBSDKLoginButt
     @IBAction func loginButton(_ sender: Any) {
         
         login()
+    }
+    
+    /**
+     Sent to the delegate when the button was used to logout.
+     - Parameter loginButton: The button that was clicked.
+     */
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        
+        let firebaseAuth = FIRAuth.auth()
+        do {
+            try firebaseAuth?.signOut()
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     
     //Create Login And Register Function
