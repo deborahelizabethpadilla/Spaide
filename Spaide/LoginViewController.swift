@@ -62,10 +62,23 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Facebook
         
+        if(FBSDKAccessToken.current() == nil) {
+            
+            print("User Not Logged In!")
+            
+        } else {
+            
+            print("User Logged In!")
+        }
+        
         fbLoginButton.readPermissions = ["public_profile", "email"]
         
     }
     
+    @IBAction func fbLoginButtonAction(_ sender: FBSDKLoginButton) {
+        
+        FacebookAPI.sharedInstance().facebookLogin()
+    }
     
     //Close Keyboard With Tap
     

@@ -11,7 +11,7 @@ import Firebase
 import FBSDKLoginKit
 
 
-class FacebookAPI: LoginViewController, FBSDKLoginButtonDelegate {
+class FacebookAPI: LoginViewController {
     
     //Functions
     
@@ -27,27 +27,48 @@ class FacebookAPI: LoginViewController, FBSDKLoginButtonDelegate {
     
     //Login Function
     
-    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+    func facebookLogin() {
         
-        if (error != nil) {
+        //Facebook API
+        
+        let fbLoginManager = FBSDKLoginManager()
+        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+            if let error = error {
+                print("Failed to login: \(error.localizedDescription)")
+                return
+            }
             
-            print(error.localizedDescription)
+            guard let accessToken = FBSDKAccessToken.current() else {
+                print("Failed to get access token")
+                return
+            }
+            
+            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            
+            // Perform Login By Calling Firebase APIs
+            
+            FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+                if let error = error {
+                    print("Login error: \(error.localizedDescription)")
+                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    alertController.addAction(okayAction)
+                    self.present(alertController, animated: true, completion: nil)
+                    
+                    return
+                }
+                
+                // Present Tab Controller
+                
+                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") {
+                    UIApplication.shared.keyWindow?.rootViewController = viewController
+                    self.dismiss(animated: true, completion: nil)
+                }
+                
+            })
             
         }
-        
-        if let userToken = result.token {
-            
-            let token:FBSDKAccessToken = result.token
-            
-            print("Token = \(FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString))")
-            print("User ID = \(FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().userID))")
-            
-            self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
-            
-        }
-        
     }
-    
     //Shared Instance
     
     class func sharedInstance() -> FacebookAPI {
