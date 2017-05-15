@@ -60,6 +60,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         registerButton.layer.borderWidth = 1
         registerButton.layer.borderColor = UIColor.flatBlack.cgColor
         
+        fbLoginButton.layer.cornerRadius = 5
+        fbLoginButton.layer.borderWidth = 1
+        
         //Facebook
         
         if(FBSDKAccessToken.current() == nil) {
@@ -70,8 +73,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
             print("User Logged In!")
         }
-        
-        fbLoginButton.readPermissions = ["public_profile", "email"]
         
     }
     
