@@ -79,7 +79,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-hA-N5N">
                                 <rect key="frame" x="16" y="415" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -101,7 +101,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08I-Rn-phm">
                                 <rect key="frame" x="16" y="560" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -109,21 +109,24 @@
                                     <action selector="registerButtonAction:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="HAI-ql-YAr"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="riw-5H-foD" customClass="FBSDKLoginButton">
-                                <rect key="frame" x="16" y="486" width="343" height="49"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qv1-uZ-GgS">
+                                <rect key="frame" x="16" y="492" width="343" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.17257410287857056" green="0.21834245324134827" blue="0.44677489995956421" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="25"/>
+                                <state key="normal" title="Login To Facebook">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
-                                    <action selector="fbLoginButtonAction:" destination="n6w-jq-4Dr" eventType="valueChanged" id="p4I-Lt-TXd"/>
-                                    <outlet property="delegate" destination="n6w-jq-4Dr" id="Rpi-dd-haY"/>
+                                    <action selector="fbLoginButtonAction:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="VSR-88-pJB"/>
                                 </connections>
-                            </view>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
-                        <outlet property="fbLoginButton" destination="riw-5H-foD" id="z9x-0L-ZAJ"/>
+                        <outlet property="fbLoginButton" destination="Qv1-uZ-GgS" id="cUw-v3-sUO"/>
                         <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
                         <outlet property="registerButton" destination="08I-Rn-phm" id="36g-MS-0Hx"/>
