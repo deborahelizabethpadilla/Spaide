@@ -25,13 +25,6 @@
 	<string>1975852042635878</string>
 	<key>FacebookDisplayName</key>
 	<string>Spaide</string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>fbapi</string>
-		<string>fb-messenger-api</string>
-		<string>fbauth2</string>
-		<string>fbshareextension</string>
-	</array>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Spaide Would Like To Access Your Photos</string>
 	<key>CFBundleDevelopmentRegion</key>
