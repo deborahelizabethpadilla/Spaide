@@ -15,7 +15,7 @@ import FBSDKLoginKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     //Variables
-    
+
     var dict : [String : AnyObject]!
     
     //Outlets
@@ -67,11 +67,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         if(FBSDKAccessToken.current() == nil) {
             
-            print("User Not Logged In!")
+            displayAlert(title: "Oh Snap!", message: "Something Went Wrong. Try Again!")
             
         } else {
             
-            print("User Logged In!")
+            FacebookAPI.sharedInstance().facebookLogin()
         }
         
     }

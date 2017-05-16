@@ -25,13 +25,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         //Configure Facebook API
         
-        FBSDKButton.classForCoder()
-        
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         //Configure Google API
         
         GADMobileAds.configure(withApplicationID: "pub-9793810674761024")
+        
+        return true
+    }
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        
+        let handled: Bool = FBSDKApplicationDelegate.sharedInstance().application(application, open: url, sourceApplication: sourceApplication, annotation: annotation)
         
         return true
     }

@@ -12,7 +12,7 @@ import FBSDKLoginKit
 
 
 class FacebookAPI: LoginViewController {
-    
+
     //Logout Function
     
     func logoutUser(controller: UIViewController) {
