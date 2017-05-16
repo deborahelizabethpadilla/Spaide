@@ -10,23 +10,12 @@ import UIKit
 import GoogleMobileAds
 import Firebase
 import FirebaseAuth
-import AVFoundation
 
-class HomeViewController: UIViewController, AVAudioPlayerDelegate, AVAudioRecorderDelegate {
-    
-    //Variables
-    
-    var soundPlayer = AVAudioPlayer()
-    var recordedAudioURL: NSURL!
-    var audioFile: AVAudioFile!
-    var audioEngine: AVAudioEngine!
-    var audioPlayerNode: AVAudioPlayerNode!
-    var stopTimer: Timer!
+class HomeViewController: UIViewController {
     
     //Outlets
     
     @IBOutlet var bannerView: GADBannerView!
-    @IBOutlet var playMessage: UIButton!
     
 
     override func viewDidLoad() {

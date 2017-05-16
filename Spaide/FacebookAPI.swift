@@ -17,11 +17,10 @@ class FacebookAPI: LoginViewController {
     
     func logoutUser(controller: UIViewController) {
         
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
+        try! FIRAuth.auth()!.signOut()
+        if let storyboard = self.storyboard {
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+            self.present(vc, animated: true, completion: nil)
         }
     }
     

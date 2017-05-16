@@ -112,20 +112,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         login()
     }
     
-    /**
-     Sent to the delegate when the button was used to logout.
-     - Parameter loginButton: The button that was clicked.
-     */
-    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
-        
-        let firebaseAuth = FIRAuth.auth()
-        do {
-            try firebaseAuth?.signOut()
-        } catch let signOutError as NSError {
-            print ("Error signing out: %@", signOutError)
-        }
-    }
-    
     //Create Login And Register Function
     
     func login() {
