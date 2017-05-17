@@ -10,8 +10,10 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
 import FBSDKCoreKit
 import FBSDKLoginKit
+import MessageUI
 
 struct UserStruct {
     
@@ -20,7 +22,7 @@ struct UserStruct {
     var limits: String?
 }
 
-class UserTableViewController: UITableViewController, UINavigationControllerDelegate {
+class UserTableViewController: UITableViewController, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
 
     //Variables
     
@@ -56,6 +58,52 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
     }
     
+    //Compose Email Message
+    
+    func configuredMailComposedViewController() -> MFMailComposeViewController {
+        
+        let mailComposerVC = MFMailComposeViewController()
+        mailComposerVC.mailComposeDelegate = self
+        mailComposerVC.setToRecipients([""])
+        mailComposerVC.setSubject("Hey! I saw you on Spaide. Looking to connect.")
+        mailComposerVC.setMessageBody("Hey there! I had a few questions and was hoping you could help.", isHTML: false)
+        
+        return mailComposerVC
+    }
+    
+    //Email Alert
+    
+    func emailAlert() {
+        
+        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Something Went Wrong. Try Again!", delegate: self, cancelButtonTitle: "OK")
+        
+        sendMailErrorAlert.show()
+    }
+    
+    //Mail Interface Functions
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        switch result {
+            
+        case .cancelled:
+            print("Mail Cancelled")
+            
+        case .saved:
+            print("Mail Saved")
+            
+        case .sent:
+            print("Mail Sent")
+            
+        default:
+            break
+        }
+        
+        //Close Mail Interface
+        
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func numberOfSections(in tableView: UITableView) -> Int {
         
         return 1
@@ -64,6 +112,18 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return userPosts.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let mailComposeViewController = configuredMailComposedViewController()
+        if MFMailComposeViewController.canSendMail() {
+            self.present(mailComposeViewController, animated: true, completion: nil)
+        } else {
+            
+            self.emailAlert()
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
