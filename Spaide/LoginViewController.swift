@@ -34,11 +34,52 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.title = ""
         
-        //Functions
+        //Button Colors & Size
         
-        appDesigns()
-        keyboardTap()
-        textFunctions()
+        loginButton.backgroundColor = FlatBlack()
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
+        
+        registerButton.backgroundColor = FlatBlack()
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
+        
+        fbLoginButton.layer.cornerRadius = 5
+        fbLoginButton.layer.borderWidth = 1
+        
+        //Set Background Color
+        
+        view.backgroundColor = FlatWhite()//Button Colors & Size
+        
+        loginButton.backgroundColor = FlatBlack()
+        loginButton.layer.cornerRadius = 5
+        loginButton.layer.borderWidth = 1
+        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
+        
+        registerButton.backgroundColor = FlatBlack()
+        registerButton.layer.cornerRadius = 5
+        registerButton.layer.borderWidth = 1
+        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
+        
+        fbLoginButton.layer.cornerRadius = 5
+        fbLoginButton.layer.borderWidth = 1
+        
+        //Set Background Color
+        
+        view.backgroundColor = FlatWhite()
+        
+        //Close Keyboard With Tap
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+        //Close Keyboard With Return Key
+        
+        self.emailField.delegate = self
+        self.passwordField.delegate = self
         
     }
     
@@ -174,50 +215,5 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             self.present(alert, animated: true, completion: nil)
             
         }
-    
-    //Button Designs
-    
-    func appDesigns() {
-        
-        //Button Colors & Size
-        
-        loginButton.backgroundColor = FlatBlack()
-        loginButton.layer.cornerRadius = 5
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
-        
-        registerButton.backgroundColor = FlatBlack()
-        registerButton.layer.cornerRadius = 5
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
-        
-        fbLoginButton.layer.cornerRadius = 5
-        fbLoginButton.layer.borderWidth = 1
-        
-        //Set Background Color
-        
-        view.backgroundColor = FlatWhite()
-        
-    }
-    
-    //Keyboard Tap
-    
-    func keyboardTap() {
-        
-        //Close Keyboard With Tap
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
-        
-        view.addGestureRecognizer(tap)
-        
-    }
-    
-    func textFunctions() {
-        
-        //Close Keyboard With Return Key
-        
-        self.emailField.delegate = self
-        self.passwordField.delegate = self
-    }
     
 }
