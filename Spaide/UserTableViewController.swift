@@ -10,6 +10,8 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseDatabase
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 struct UserStruct {
     
@@ -18,15 +20,13 @@ struct UserStruct {
     var limits: String?
 }
 
-class UserTableViewController: UITableViewController, UINavigationControllerDelegate, UISearchDisplayDelegate {
+class UserTableViewController: UITableViewController, UINavigationControllerDelegate {
 
     //Variables
     
     var refUsers: FIRDatabaseReference!
     var refHandle: UInt!
     var userPosts = [UserStruct]()
-    var filteredTableData = [String]()
-    var resultSearchController = UISearchController()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +53,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
         print(userPosts)
         
+        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -74,6 +75,24 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.firstNameLabel.text = userPosts[indexPath.row].firstName
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
+        
+        //Get FB Profile Picutre
+        
+        func getProfPic(fid: String) -> UIImage? {
+            if (fid != "") {
+                let imgURLString = "http://graph.facebook.com/" + fid + "/picture?type=large" //type=normal
+                let imgURL = NSURL(string: imgURLString)
+                let imageData = NSData(contentsOf: imgURL! as URL)
+                let image = UIImage(data: imageData! as Data)
+                var imageView = UIImageView()
+                imageView = cell.viewWithTag(1) as! UIImageView
+                imageView.image = image
+                
+                return image
+            }
+            return nil
+        }
+        
         
         return cell
     
