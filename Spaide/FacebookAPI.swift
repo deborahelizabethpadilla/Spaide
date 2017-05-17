@@ -26,7 +26,7 @@ class FacebookAPI: LoginViewController {
     
     func logoutUser(controller: UIViewController) {
         
-        try! FIRAuth.auth()!.signOut()
+        try! Auth.auth().signOut()
         if let storyboard = self.storyboard {
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
             self.present(vc, animated: true, completion: nil)
@@ -49,11 +49,11 @@ class FacebookAPI: LoginViewController {
                 return
             }
             
-            let credential = FIRFacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
             
             // Perform Login By Calling Firebase APIs
             
-            FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            Auth.auth().signIn(with: credential, completion: { (user, error) in
                 if let error = error {
                     print("Login error: \(error.localizedDescription)")
                     let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)

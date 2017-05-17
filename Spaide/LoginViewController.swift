@@ -141,7 +141,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
-            FIRAuth.auth()?.signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
+            Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
                 
                 if error == nil {
                     
@@ -182,7 +182,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
-            FIRAuth.auth()?.createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
                 
                 if error == nil {
                     

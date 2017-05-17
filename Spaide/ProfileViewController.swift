@@ -15,7 +15,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     //Variables
     
-    var refUsers: FIRDatabaseReference!
+    var refUsers: DatabaseReference!
     
     //Outlets
 
@@ -50,7 +50,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         //Firebase
         
-        refUsers = FIRDatabase.database().reference().child("Profile")
+        refUsers = Database.database().reference().child("Profile")
         
         //Button Colors & Size
         

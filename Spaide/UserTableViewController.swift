@@ -24,14 +24,14 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
 
     //Variables
     
-    var refUsers: FIRDatabaseReference!
+    var refUsers: DatabaseReference!
     var refHandle: UInt!
     var userPosts = [UserStruct]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let databaseReference = FIRDatabase.database().reference()
+        let databaseReference = Database.database().reference()
         
         databaseReference.child("Profile").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
             
