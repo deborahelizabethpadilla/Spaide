@@ -12,6 +12,15 @@ import FBSDKLoginKit
 
 
 class FacebookAPI: LoginViewController {
+    
+    //Shared Instance
+    
+    class func sharedInstance() -> FacebookAPI {
+        struct Singleton {
+            static var sharedInstance = FacebookAPI()
+        }
+        return Singleton.sharedInstance
+    }
 
     //Logout Function
     
@@ -65,15 +74,6 @@ class FacebookAPI: LoginViewController {
             })
             
         }
-    }
-    
-    //Shared Instance
-    
-    class func sharedInstance() -> FacebookAPI {
-        struct Singleton {
-            static var sharedInstance = FacebookAPI()
-        }
-        return Singleton.sharedInstance
     }
     
 } //End Class
