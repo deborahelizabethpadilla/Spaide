@@ -10,9 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
-        <array key="Decalotype-Regular.ttf">
-            <string>Decalotype-Regular</string>
-        </array>
         <array key="Decalotype-SemiBold.ttf">
             <string>Decalotype-SemiBold</string>
         </array>
@@ -324,7 +321,7 @@
                                                 <constraint firstAttribute="width" constant="245" id="4Sw-2e-vC4"/>
                                                 <constraint firstAttribute="height" constant="24" id="D5c-s5-gjC"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="20"/>
+                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -334,7 +331,7 @@
                                                 <constraint firstAttribute="height" constant="20" id="CEp-M4-VPP"/>
                                                 <constraint firstAttribute="width" constant="245" id="i0W-gR-La6"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -351,7 +348,7 @@
                                                 <constraint firstAttribute="width" constant="245" id="A4Z-pS-JBV"/>
                                                 <constraint firstAttribute="height" constant="20" id="AiA-6y-2y0"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Decalotype-Regular" family="Decalotype" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -363,7 +360,7 @@
                                                 <constraint firstAttribute="height" constant="30" id="vWT-8D-TeO"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                            <state key="normal" title="SEND VOICE MESSAGE">
+                                            <state key="normal" title="TAP TO SEND MESSAGE">
                                                 <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
