@@ -10,7 +10,7 @@ import UIKit
 import ChameleonFramework
 import Firebase
 import FirebaseAuth
-import FBSDKLoginKit
+import FacebookLogin
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
