@@ -8,8 +8,8 @@
 
 import UIKit
 import Firebase
-import FBSDKCoreKit
-import FBSDKLoginKit
+import FacebookCore
+import FacebookLogin
 
 class FacebookAPI: LoginViewController {
     
