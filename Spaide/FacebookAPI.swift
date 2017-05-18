@@ -37,16 +37,15 @@ class FacebookAPI: LoginViewController {
     
     func facebookLogin() {
         
-        let fbLoginManager = FBSDKLoginManager()
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
-            if let error = error {
-                print("Failed to login: \(error.localizedDescription)")
-                return
-            }
-            
-            guard let accessToken = FBSDKAccessToken.current() else {
-                print("Failed to get access token")
-                return
+        let loginManager = LoginManager()
+        loginManager.logIn([ .PublicProfile ], viewController: self) { loginResult in
+            switch loginResult {
+            case .Failed(let error):
+                print(error)
+            case .Cancelled:
+                print("User Cancelled Login.")
+            case .Success(let grantedPermissions, let declinedPermissions, let accessToken):
+                print("Logged in!")
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
