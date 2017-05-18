@@ -48,9 +48,10 @@ class FacebookAPI: LoginViewController {
             case .cancelled:
                 print("User Cancelled Login")
                 
-            case .success(grantedPermissions: Set<Permission>, declinedPermissions: Set<Permission>, token: AccessToken):
+            case .success(grantedPermissions: <#T##Set<Permission>#>, declinedPermissions: <#T##Set<Permission>#>, token: <#T##AccessToken#>):
                 
                 print("Logged In!")
+                
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
