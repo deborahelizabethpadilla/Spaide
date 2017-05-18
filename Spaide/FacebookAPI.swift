@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 
+
 class FacebookAPI: LoginViewController {
     
     //Shared Instance
