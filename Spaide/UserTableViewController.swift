@@ -11,8 +11,8 @@ import ChameleonFramework
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
-import FBSDKCoreKit
-import FBSDKLoginKit
+import FacebookCore
+import FacebookLogin
 import MessageUI
 
 struct UserStruct {
@@ -64,7 +64,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients([""])
+        mailComposerVC.setToRecipients([])
         mailComposerVC.setSubject("Hey! I saw you on Spaide. Looking to connect.")
         mailComposerVC.setMessageBody("Hey there! I had a few questions and was hoping you could help.", isHTML: false)
         
@@ -156,6 +156,22 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
         return cell
     
+    }
+    
+    func getFirebaseEmail() {
+        
+        let user = Auth.auth().currentUser
+        if let user = user {
+            
+            let uid = user.uid
+            let email = user.email
+            
+            return true
+            
+        } else {
+            
+            
+        }
     }
 
 } //End Of Class

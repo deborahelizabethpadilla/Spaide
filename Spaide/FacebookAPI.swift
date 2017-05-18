@@ -8,7 +8,8 @@
 
 import UIKit
 import Firebase
-
+import FacebookCore
+import FacebookLogin
 
 class FacebookAPI: LoginViewController {
     
@@ -37,17 +38,17 @@ class FacebookAPI: LoginViewController {
     func facebookLogin() {
         
         let loginManager = LoginManager()
-        loginManager.logIn([ .PublicProfile ], viewController: self) { loginResult in
+        loginManager.logIn([ .PublicProfile, .Email ], viewController: self) { loginResult in
             switch loginResult {
-            case .Failed(let error):
+            case .failed(let error):
                 print(error)
-            case .Cancelled:
+            case .cancelled:
                 print("User Cancelled Login.")
-            case .Success(let grantedPermissions, let declinedPermissions, let accessToken):
+            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
                 print("Logged in!")
             }
             
-            let credential = FacebookAuthProvider.credential(withAccessToken: accessToken.tokenString)
+            let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
             
             // Perform Login By Calling Firebase APIs
             
