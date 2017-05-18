@@ -38,19 +38,24 @@ class FacebookAPI: LoginViewController {
     func facebookLogin() {
         
         let loginManager = LoginManager()
-        loginManager.logIn([ .PublicProfile, .Email ], viewController: self) { loginResult in
+        loginManager.logIn([.publicProfile, .email], viewController: self) { (loginResult) in
+            
             switch loginResult {
+                
             case .failed(let error):
                 print(error)
+                
             case .cancelled:
-                print("User Cancelled Login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                print("Logged in!")
+                print("User Cancelled Login")
+                
+            case .success(grantedPermissions: Set<Permission>, declinedPermissions: Set<Permission>, token: AccessToken):
+                
+                print("Logged In!")
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
             
-            // Perform Login By Calling Firebase APIs
+            //Perform Login By Calling Firebase APIs
             
             Auth.auth().signIn(with: credential, completion: { (user, error) in
                 if let error = error {
@@ -63,7 +68,7 @@ class FacebookAPI: LoginViewController {
                     return
                 }
                 
-                // Present Tab Bar Controller
+                //Present Tab Bar Controller
                 
                 if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") {
                     UIApplication.shared.keyWindow?.rootViewController = viewController

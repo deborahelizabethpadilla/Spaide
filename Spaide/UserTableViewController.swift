@@ -114,7 +114,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         return userPosts.count
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let mailComposeViewController = configuredMailComposedViewController()
         if MFMailComposeViewController.canSendMail() {
@@ -156,22 +156,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
         return cell
     
-    }
-    
-    func getFirebaseEmail() {
-        
-        let user = Auth.auth().currentUser
-        if let user = user {
-            
-            let uid = user.uid
-            let email = user.email
-            
-            return true
-            
-        } else {
-            
-            
-        }
     }
 
 } //End Of Class
