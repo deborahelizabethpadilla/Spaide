@@ -136,23 +136,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
         
-        //Get FB Profile Picutre
-        
-        func getProfPic(fid: String) -> UIImage? {
-            if (fid != "") {
-                let imgURLString = "http://graph.facebook.com/" + fid + "/picture?type=large" //type=normal
-                let imgURL = NSURL(string: imgURLString)
-                let imageData = NSData(contentsOf: imgURL! as URL)
-                let image = UIImage(data: imageData! as Data)
-                var imageView = UIImageView()
-                imageView = cell.viewWithTag(1) as! UIImageView
-                imageView.image = image
-                
-                return image
-            }
-            return nil
-        }
-        
         
         return cell
     
