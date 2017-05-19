@@ -26,7 +26,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var fbLoginButton: UIButton!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -35,16 +34,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.title = ""
         
         //Button Colors & Size
-        
-        loginButton.backgroundColor = FlatBlack()
+   
         loginButton.layer.cornerRadius = 5
         loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
-        
-        registerButton.backgroundColor = FlatBlack()
+
         registerButton.layer.cornerRadius = 5
         registerButton.layer.borderWidth = 1
-        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
         
         fbLoginButton.layer.cornerRadius = 5
         fbLoginButton.layer.borderWidth = 1

@@ -48,7 +48,7 @@ class FacebookAPI: LoginViewController {
             case .cancelled:
                 print("User Cancelled Login")
                 
-            case .success(grantedPermissions: <#T##Set<Permission>#>, declinedPermissions: <#T##Set<Permission>#>, token: <#T##AccessToken#>):
+            case .success(grantedPermissions: _, declinedPermissions: _, token: _):
                 
                 print("Logged In!")
                 
