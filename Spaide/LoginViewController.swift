@@ -28,7 +28,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         //Alert Title
         
         self.title = ""
@@ -40,23 +40,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
 
         registerButton.layer.cornerRadius = 5
         registerButton.layer.borderWidth = 1
-        
-        fbLoginButton.layer.cornerRadius = 5
-        fbLoginButton.layer.borderWidth = 1
-        
-        //Set Background Color
-        
-        view.backgroundColor = FlatWhite()//Button Colors & Size
-        
-        loginButton.backgroundColor = FlatBlack()
-        loginButton.layer.cornerRadius = 5
-        loginButton.layer.borderWidth = 1
-        loginButton.layer.borderColor = UIColor.flatBlack.cgColor
-        
-        registerButton.backgroundColor = FlatBlack()
-        registerButton.layer.cornerRadius = 5
-        registerButton.layer.borderWidth = 1
-        registerButton.layer.borderColor = UIColor.flatBlack.cgColor
         
         fbLoginButton.layer.cornerRadius = 5
         fbLoginButton.layer.borderWidth = 1
@@ -79,8 +62,9 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func fbLoginButtonAction(_ sender: UIButton) {
-        
-        FacebookAPI.sharedInstance().facebookLogin()
+       
+        let FBAPI = FacebookAPI()
+        FBAPI.facebookLogin()
     }
     
     //Close Keyboard With Tap

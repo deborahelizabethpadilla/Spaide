@@ -125,7 +125,7 @@
                     </view>
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
-                        <outlet property="fbLoginButton" destination="Qv1-uZ-GgS" id="cUw-v3-sUO"/>
+                        <outlet property="fbLoginButton" destination="Qv1-uZ-GgS" id="hLC-69-J63"/>
                         <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
                         <outlet property="registerButton" destination="08I-Rn-phm" id="36g-MS-0Hx"/>
@@ -314,7 +314,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">

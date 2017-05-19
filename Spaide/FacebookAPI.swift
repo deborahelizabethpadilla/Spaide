@@ -12,15 +12,6 @@ import FacebookCore
 import FacebookLogin
 
 class FacebookAPI: LoginViewController {
-    
-    //Shared Instance
-    
-    class func sharedInstance() -> FacebookAPI {
-        struct Singleton {
-            static var sharedInstance = FacebookAPI()
-        }
-        return Singleton.sharedInstance
-    }
 
     //Logout Function
     
@@ -72,7 +63,7 @@ class FacebookAPI: LoginViewController {
                     //Present Tab Bar Controller
                     
                     let newVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
-                    self.present(newVC, animated: true, completion: nil)
+                    self.present(newVC!, animated: true, completion: nil)
                 }
             })
             
