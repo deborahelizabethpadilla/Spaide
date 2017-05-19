@@ -23,8 +23,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var loginButton: UIButton!
     @IBOutlet var registerButton: UIButton!
-    @IBOutlet var fbLoginButton: FBSDKLoginButton!
-    
+    @IBOutlet var fbLoginButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,10 +42,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         fbLoginButton.layer.cornerRadius = 5
         fbLoginButton.layer.borderWidth = 1
-        
-        //Set Background Color
-        
-        view.backgroundColor = FlatWhite()
         
         //Close Keyboard With Tap
         
