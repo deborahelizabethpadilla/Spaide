@@ -449,13 +449,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookLogin",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos/FacebookCore",
-					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
-					"$(PROJECT_DIR)/build/Release-iphoneos/Bolts",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -476,13 +469,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookCore",
-					"$(PROJECT_DIR)/build/Debug-iphoneos/FacebookLogin",
-					"$(PROJECT_DIR)/build/Debug-iphoneos",
-					"$(PROJECT_DIR)/build/Release-iphoneos/FacebookCore",
-					"$(PROJECT_DIR)/build/Release-iphoneos/ChameleonFramework",
-					"$(PROJECT_DIR)/build/Release-iphoneos/Bolts",
-					"$(PROJECT_DIR)/build/Release-iphoneos",
 				);
 				INFOPLIST_FILE = Spaide/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

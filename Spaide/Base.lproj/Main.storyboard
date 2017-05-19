@@ -126,14 +126,13 @@
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
                         <outlet property="fbLoginButton" destination="Qv1-uZ-GgS" id="5uL-dd-1Lm"/>
-                        <outlet property="loginButton" destination="XBs-hA-N5N" id="Y3h-FI-T83"/>
                         <outlet property="passwordField" destination="2I5-8f-kFR" id="qtQ-yY-rnB"/>
                         <outlet property="registerButton" destination="08I-Rn-phm" id="36g-MS-0Hx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-F8-MK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1519" y="-69"/>
+            <point key="canvasLocation" x="-1520" y="-223"/>
         </scene>
         <!--Profile-->
         <scene sceneID="P21-AP-vrT">
@@ -248,11 +247,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="560" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="eFY-DD-up4"/>
+                                    <constraint firstAttribute="height" constant="50" id="jn8-vu-Ebm"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
                                 <rect key="frame" x="16" y="28" width="84" height="36"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="84" id="eG1-9J-dme"/>
-                                    <constraint firstAttribute="height" constant="36" id="yIh-R2-dza"/>
+                                    <constraint firstAttribute="width" constant="84" id="QJg-d3-lFH"/>
+                                    <constraint firstAttribute="height" constant="36" id="fMW-hQ-5BW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="LOGOUT">
@@ -262,19 +269,25 @@
                                     <action selector="logoutAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="adl-xg-8s8"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE EMAIL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-yb-cCI">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE EMAIL" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uEQ-yb-cCI">
                                 <rect key="frame" x="16" y="101" width="343" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="4lN-rH-qn5"/>
+                                    <constraint firstAttribute="width" constant="343" id="J68-ep-VJV"/>
+                                </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-ND-E2T">
-                                <rect key="frame" x="27" y="172" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-ND-E2T">
+                                <rect key="frame" x="27" y="172" width="320" height="53"/>
                                 <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="8Ka-pg-Eoi"/>
+                                    <constraint firstAttribute="height" constant="53" id="sQT-ec-CBH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
                                 <state key="normal" title="UPDATE EMAIL">
                                     <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -282,11 +295,14 @@
                                     <action selector="updateAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="NSa-7F-qoX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-Fi-vUr">
-                                <rect key="frame" x="27" y="426" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-Fi-vUr">
+                                <rect key="frame" x="27" y="458" width="320" height="53"/>
                                 <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="2DZ-Db-vIG"/>
+                                    <constraint firstAttribute="height" constant="53" id="ZsV-ae-knT"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
                                 <state key="normal" title="DELETE ACCOUNT">
                                     <color key="titleColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -294,11 +310,25 @@
                                     <action selector="deleteAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="HAr-GE-Esf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-6E-9F3">
-                                <rect key="frame" x="27" y="328" width="320" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-3C-uxO">
+                                <rect key="frame" x="16" y="255" width="343" height="41"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="31m-eu-flR"/>
+                                    <constraint firstAttribute="width" constant="343" id="6w1-5z-Zsd"/>
+                                </constraints>
+                                <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-6E-9F3">
+                                <rect key="frame" x="27" y="344" width="320" height="53"/>
+                                <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="LDk-Xt-My1"/>
+                                    <constraint firstAttribute="height" constant="53" id="Opo-cu-GvR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="22"/>
                                 <state key="normal" title="UPDATE PASSWORD">
                                     <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -306,27 +336,28 @@
                                     <action selector="updatePasswordAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="nJd-ei-27R"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-3C-uxO">
-                                <rect key="frame" x="16" y="237" width="343" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="560" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qQK-m3-mof"/>
-                                    <constraint firstAttribute="width" constant="320" id="vAd-3g-b6W"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="aE1-gf-kUa" firstAttribute="centerX" secondItem="ilo-ek-KDk" secondAttribute="centerX" id="GT7-Vc-IKr"/>
-                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" constant="8" id="vTS-TA-NLh"/>
+                            <constraint firstItem="uEQ-yb-cCI" firstAttribute="trailing" secondItem="ilo-ek-KDk" secondAttribute="trailingMargin" id="09o-eJ-tyY"/>
+                            <constraint firstItem="68M-S6-PGP" firstAttribute="top" secondItem="tMC-yL-30d" secondAttribute="bottom" constant="8" id="0BL-gk-U2a"/>
+                            <constraint firstItem="UDX-6E-9F3" firstAttribute="top" secondItem="cdX-3C-uxO" secondAttribute="bottom" constant="48" id="AHP-CT-yWG"/>
+                            <constraint firstItem="68M-S6-PGP" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" id="DAp-Mx-CQ9"/>
+                            <constraint firstItem="cdX-3C-uxO" firstAttribute="top" secondItem="OCB-ND-E2T" secondAttribute="bottom" constant="30" id="E5W-UX-7ey"/>
+                            <constraint firstItem="ucD-Fi-vUr" firstAttribute="top" secondItem="UDX-6E-9F3" secondAttribute="bottom" constant="61" id="Fk9-5M-fhg"/>
+                            <constraint firstItem="ucD-Fi-vUr" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="G81-M9-7X1"/>
+                            <constraint firstItem="cdX-3C-uxO" firstAttribute="trailing" secondItem="ilo-ek-KDk" secondAttribute="trailingMargin" id="Gm5-jt-5mM"/>
+                            <constraint firstItem="UDX-6E-9F3" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="KvP-Hx-vY9"/>
+                            <constraint firstItem="aE1-gf-kUa" firstAttribute="centerX" secondItem="ilo-ek-KDk" secondAttribute="centerX" id="Me6-rx-1bp"/>
+                            <constraint firstItem="uEQ-yb-cCI" firstAttribute="top" secondItem="68M-S6-PGP" secondAttribute="bottom" constant="37" id="NG9-V4-fnr"/>
+                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" constant="8" id="QmF-RI-dfH"/>
+                            <constraint firstItem="cdX-3C-uxO" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" id="Ru8-La-fsc"/>
+                            <constraint firstItem="OCB-ND-E2T" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="UDw-q1-0cT"/>
+                            <constraint firstItem="OCB-ND-E2T" firstAttribute="top" secondItem="uEQ-yb-cCI" secondAttribute="bottom" constant="30" id="WRS-fD-B83"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="UDX-6E-9F3" secondAttribute="trailing" constant="12" id="iC4-pF-kuK"/>
+                            <constraint firstItem="uEQ-yb-cCI" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" id="pvB-Y0-Im9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OCB-ND-E2T" secondAttribute="trailing" constant="12" id="rhO-tH-ylQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ucD-Fi-vUr" secondAttribute="trailing" constant="12" id="xoL-CB-RvN"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
@@ -352,8 +383,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="GB7-LU-UIf" kind="relationship" relationship="viewControllers" id="q0a-ry-hTU"/>
-                        <segue destination="iEE-iK-Chq" kind="relationship" relationship="viewControllers" id="k3B-Yx-faW"/>
                         <segue destination="I5T-tC-9tt" kind="relationship" relationship="viewControllers" id="ZZJ-ct-iFt"/>
+                        <segue destination="iEE-iK-Chq" kind="relationship" relationship="viewControllers" id="k3B-Yx-faW"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t36-tz-Mc3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -513,7 +544,7 @@
         <image name="list.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NeV-uV-COE"/>
+        <segue reference="ZZJ-ct-iFt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

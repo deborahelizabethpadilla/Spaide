@@ -22,7 +22,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
-    @IBOutlet var loginButton: UIButton!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var fbLoginButton: UIButton!
     
@@ -32,17 +31,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Alert Title
         
         self.title = ""
-        
-        //Button Colors & Size
-   
-        loginButton.layer.cornerRadius = 5
-        loginButton.layer.borderWidth = 1
-
-        registerButton.layer.cornerRadius = 5
-        registerButton.layer.borderWidth = 1
-        
-        fbLoginButton.layer.cornerRadius = 5
-        fbLoginButton.layer.borderWidth = 1
         
         //Close Keyboard With Tap
         
