@@ -51,7 +51,6 @@ class FacebookAPI: LoginViewController {
             case .success(grantedPermissions: _, declinedPermissions: _, token: _):
                 
                 print("Logged In!")
-                
             }
             
             let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
@@ -59,26 +58,26 @@ class FacebookAPI: LoginViewController {
             //Perform Login By Calling Firebase APIs
             
             Auth.auth().signIn(with: credential, completion: { (user, error) in
+                
                 if let error = error {
-                    print("Login error: \(error.localizedDescription)")
-                    let alertController = UIAlertController(title: "Login Error", message: error.localizedDescription, preferredStyle: .alert)
-                    let okayAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                    print(error.localizedDescription)
+                    
+                    let alertController = UIAlertController(title: "Login Error!", message: "Try Again!", preferredStyle: .alert)
+                    let okayAction = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
                     self.present(alertController, animated: true, completion: nil)
                     
-                    return
+                } else {
+                    
+                    //Present Tab Bar Controller
+                    
+                    let newVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                    self.present(newVC, animated: true, completion: nil)
                 }
-                
-                //Present Tab Bar Controller
-                
-                if let viewController = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController") {
-                    UIApplication.shared.keyWindow?.rootViewController = viewController
-                    self.dismiss(animated: true, completion: nil)
-                }
-                
             })
             
         }
+        
     }
-    
+
 } //End Class
