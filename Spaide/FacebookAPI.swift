@@ -70,5 +70,14 @@ class FacebookAPI: LoginViewController {
         }
         
     }
+    
+    //Instance
+    
+    class func sharedInstance() -> FacebookAPI {
+        struct Singleton {
+            static var sharedInstance = FacebookAPI()
+        }
+        return Singleton.sharedInstance
+    }
 
 } //End Class

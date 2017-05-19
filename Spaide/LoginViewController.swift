@@ -63,8 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func fbLoginButtonAction(_ sender: UIButton) {
        
-        let FBAPI = FacebookAPI()
-        FBAPI.facebookLogin()
+        FacebookAPI.sharedInstance().facebookLogin()
     }
     
     //Close Keyboard With Tap
