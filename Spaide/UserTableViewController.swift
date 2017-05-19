@@ -26,7 +26,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
 
     //Variables
     
-    var refUsers: DatabaseReference!
     var refHandle: UInt!
     var userPosts = [UserStruct]()
 

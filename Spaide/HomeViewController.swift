@@ -9,15 +9,21 @@
 import UIKit
 import GoogleMobileAds
 import Firebase
+import FirebaseDatabase
 import FirebaseAuth
 
 class HomeViewController: UIViewController {
+    
+    //Firebase
+    
+    var refUsers = Database.database().reference().child("Profile")
     
     //Outlets
     
     @IBOutlet var bannerView: GADBannerView!
     
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,5 +50,7 @@ class HomeViewController: UIViewController {
         bannerView.load(GADRequest)
         
     }
+    
+    
 
 }
