@@ -51,13 +51,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         refUsers = Database.database().reference().child("Profile")
         
-        //Button Colors & Size
-        
-        saveButton.backgroundColor = .flatGreen
-        saveButton.layer.cornerRadius = 5
-        saveButton.layer.borderWidth = 1
-        saveButton.layer.borderColor = UIColor.flatGreen.cgColor
-        
         //Image View Designs
         
         imageView.image = UIImage(named: "disabled.png")

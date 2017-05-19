@@ -248,16 +248,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="510" width="320" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="AbR-Dr-kVf"/>
-                                    <constraint firstAttribute="width" constant="320" id="ISX-ny-SKv"/>
-                                    <constraint firstAttribute="height" constant="100" id="RsQ-HR-2I7"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="w5y-ft-Aha"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
                                 <rect key="frame" x="16" y="28" width="84" height="36"/>
                                 <constraints>
@@ -324,8 +314,20 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
+                                <rect key="frame" x="27" y="560" width="320" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="qQK-m3-mof"/>
+                                    <constraint firstAttribute="width" constant="320" id="vAd-3g-b6W"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="aE1-gf-kUa" firstAttribute="centerX" secondItem="ilo-ek-KDk" secondAttribute="centerX" id="GT7-Vc-IKr"/>
+                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" constant="8" id="vTS-TA-NLh"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
                     <connections>
@@ -371,7 +373,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">

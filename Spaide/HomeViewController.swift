@@ -12,13 +12,11 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class HomeViewController: UIViewController, UITextFieldDelegate {
+class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     
     //Firebase
     
-    var databaseRef: DatabaseReference! {
-        return Database.database().reference
-    }
+    var databaseRef = Database.database().reference
     
     //Outlets
     
@@ -56,11 +54,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
 
     func loadBanner() {
         
-        bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
-        self.view.addSubview(bannerView)
+        let request = GADRequest()
+        request.testDevices = [kGADSimulatorID]
+        bannerView.delegate = self
         bannerView.adUnitID = "pub-9793810674761024"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest)
+        bannerView.load(request)
         
     }
     
@@ -74,7 +72,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                     print(error.localizedDescription)
                 } else {
                     
-                    displayAlert(title: "Oh Snap!", message: "Could Not Change Email! Try Again!")
+                    self.displayAlert(title: "Oh Snap!", message: "Could Not Change Email! Try Again!")
                 }
             })
         }
@@ -90,7 +88,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                     print(error.localizedDescription)
                 } else {
                     
-                   displayAlert(title: "Oh Snap!", message: "Could Not Change Password! Try Again!")
+                   self.displayAlert(title: "Oh Snap!", message: "Could Not Change Password! Try Again!")
                 }
             })
         }
@@ -106,7 +104,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate {
                 print(error.localizedDescription)
             } else {
                 
-                displayAlert(title: "Success!", message: "We Are Sorry To See You Go! Your Account Is Deleted!")
+                self.displayAlert(title: "Success!", message: "We Are Sorry To See You Go! Your Account Is Deleted!")
             }
         })
     }

@@ -15,18 +15,5 @@ import Firebase
 class FacebookPhotoAPI {
     
     //Get FB Profile Picutre
-    
-    func getProfPic(user: String) -> UIImage? {
-        
-        if (fid != "") {
-            
-            var imgURLString = "http://graph.facebook.com/" + fid! + "/picture?type=large" //type=normal
-            var imgURL = NSURL(string: imgURLString)
-            var imageData = NSData(contentsOfURL: imgURL!)
-            var image = UIImage(data: imageData!)
-            return image
-        }
-        
-        return nil
-    }
+
 }

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FacebookCore
 import FacebookLogin
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
