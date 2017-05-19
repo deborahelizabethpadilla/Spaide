@@ -121,7 +121,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
@@ -210,7 +210,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="LJx-Vi-rbr" secondAttribute="trailing" constant="102" id="DDA-8g-fsm"/>
                             <constraint firstItem="LJx-Vi-rbr" firstAttribute="top" secondItem="ZK4-OE-Rg1" secondAttribute="bottom" constant="128" id="GMe-ri-rCc"/>
@@ -371,7 +371,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="164"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u3V-vU-jRa" id="eJL-2o-Mas">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="163.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="164"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
@@ -437,6 +437,7 @@
                                         <constraint firstItem="JTq-yC-dpZ" firstAttribute="top" secondItem="aaI-Aw-w7D" secondAttribute="bottom" constant="13" id="xSF-aP-64x"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="firstNameLabel" destination="Vpd-CQ-uqU" id="rBq-aq-Nw8"/>
                                     <outlet property="limitationsLabel" destination="JTq-yC-dpZ" id="VLZ-1L-XpI"/>
@@ -487,7 +488,7 @@
                                 </items>
                             </navigationBar>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="oFM-TQ-Sqe" secondAttribute="trailing" id="Fvf-Ox-49a"/>
                             <constraint firstItem="oFM-TQ-Sqe" firstAttribute="top" secondItem="VJX-WS-CTh" secondAttribute="bottom" constant="8" id="VRr-Iy-V3z"/>

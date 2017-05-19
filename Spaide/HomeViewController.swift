@@ -12,7 +12,7 @@ import Firebase
 import FirebaseDatabase
 import FirebaseAuth
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITextFieldDelegate {
     
     //Firebase
     
@@ -32,6 +32,17 @@ class HomeViewController: UIViewController {
         //Load Banner View
 
         loadBanner()
+        
+        //Close Keyboard With Tap
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        
+        view.addGestureRecognizer(tap)
+        
+        //Close Keyboard With Return Key
+        
+        self.changeEmail.delegate = self
+        self.changePassword.delegate = self
     }
     
     //Actions
@@ -63,8 +74,7 @@ class HomeViewController: UIViewController {
                     print(error.localizedDescription)
                 } else {
                     
-                    let alertView = UIAlertView(title: "Oh Snap!", message: "Could Not Change Email!", delegate: self, cancelButtonTitle: "OK")
-                    alertView.show()
+                    displayAlert(title: "Oh Snap!", message: "Could Not Change Email! Try Again!")
                 }
             })
         }
@@ -80,8 +90,7 @@ class HomeViewController: UIViewController {
                     print(error.localizedDescription)
                 } else {
                     
-                    let alertView = UIAlertView(title: "Oh Snap!", message: "Could Not Change Password!", delegate: self, cancelButtonTitle: "OK")
-                    alertView.show()
+                   displayAlert(title: "Oh Snap!", message: "Could Not Change Password! Try Again!")
                 }
             })
         }
@@ -97,9 +106,44 @@ class HomeViewController: UIViewController {
                 print(error.localizedDescription)
             } else {
                 
-                let alertView = UIAlertView(title: "Delete Account", message: "We Are Sorry You're Leaving! You Have Successfully Deleted Your Account!", delegate: self, cancelButtonTitle: "OK")
-                alertView.show()
+                displayAlert(title: "Success!", message: "We Are Sorry To See You Go! Your Account Is Deleted!")
             }
         })
     }
-}
+    
+    //Close Keyboard With Tap
+    
+    func dismissKeyboard() {
+        
+        //Close On Tap
+        
+        view.endEditing(true)
+    }
+    
+    //Close Keyboard With Return Key
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        //Close On Return
+        
+        self.view.endEditing(true)
+        return false
+    }
+    
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+
+    
+} // End Class
