@@ -248,16 +248,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
                                 <rect key="frame" x="27" y="510" width="320" height="100"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="AbR-Dr-kVf"/>
                                     <constraint firstAttribute="width" constant="320" id="ISX-ny-SKv"/>
                                     <constraint firstAttribute="height" constant="100" id="RsQ-HR-2I7"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="w5y-ft-Aha"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
                                 <rect key="frame" x="16" y="28" width="84" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="84" id="eG1-9J-dme"/>
+                                    <constraint firstAttribute="height" constant="36" id="yIh-R2-dza"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
@@ -274,45 +280,58 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-3C-uxO">
-                                <rect key="frame" x="16" y="210" width="343" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCB-ND-E2T">
-                                <rect key="frame" x="27" y="318" width="320" height="30"/>
+                                <rect key="frame" x="27" y="172" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
-                                <state key="normal" title="SAVE">
+                                <state key="normal" title="UPDATE EMAIL">
                                     <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="updateAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="NSa-7F-qoX"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ucD-Fi-vUr">
-                                <rect key="frame" x="27" y="430" width="320" height="30"/>
+                                <rect key="frame" x="27" y="426" width="320" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
                                 <state key="normal" title="DELETE ACCOUNT">
                                     <color key="titleColor" red="0.85043728351593018" green="0.21816034615039825" blue="0.15920260548591614" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="deleteAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="HAr-GE-Esf"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDX-6E-9F3">
+                                <rect key="frame" x="27" y="328" width="320" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <state key="normal" title="UPDATE PASSWORD">
+                                    <color key="titleColor" red="0.98624199629999998" green="0.77968657019999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="updatePasswordAction:" destination="GB7-LU-UIf" eventType="touchUpInside" id="nJd-ei-27R"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="CHANGE PASSWORD" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cdX-3C-uxO">
+                                <rect key="frame" x="16" y="237" width="343" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" constant="8" id="E6K-ED-CeA"/>
-                            <constraint firstItem="aE1-gf-kUa" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="TfO-kw-XJq"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="aE1-gf-kUa" secondAttribute="trailing" constant="12" id="aOs-tq-EdA"/>
-                            <constraint firstItem="68M-S6-PGP" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" id="e0f-qg-fAg"/>
-                            <constraint firstItem="68M-S6-PGP" firstAttribute="top" secondItem="tMC-yL-30d" secondAttribute="bottom" constant="8" id="oJN-Tx-fDp"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
                     <connections>
                         <outlet property="bannerView" destination="aE1-gf-kUa" id="3uj-St-sGR"/>
+                        <outlet property="changeEmail" destination="uEQ-yb-cCI" id="cW2-r5-Za6"/>
+                        <outlet property="changePassword" destination="cdX-3C-uxO" id="o4p-on-eDW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WXR-ZR-mlN" userLabel="First Responder" sceneMemberID="firstResponder"/>

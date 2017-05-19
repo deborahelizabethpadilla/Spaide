@@ -16,14 +16,16 @@ class HomeViewController: UIViewController {
     
     //Firebase
     
-    var refUsers = Database.database().reference().child("Profile")
+    var databaseRef: DatabaseReference! {
+        return Database.database().reference
+    }
     
     //Outlets
     
     @IBOutlet var bannerView: GADBannerView!
-    
-    
-    
+    @IBOutlet var changeEmail: UITextField!
+    @IBOutlet var changePassword: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -51,6 +53,53 @@ class HomeViewController: UIViewController {
         
     }
     
+    @IBAction func updateAction(_ sender: Any) {
+        
+        if let user = Auth.auth().currentUser {
+            
+            user.updateEmail(to: changeEmail.text!, completion: { (error) in
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    
+                    let alertView = UIAlertView(title: "Oh Snap!", message: "Could Not Change Email!", delegate: self, cancelButtonTitle: "OK")
+                    alertView.show()
+                }
+            })
+        }
+    }
+   
+    @IBAction func updatePasswordAction(_ sender: Any) {
+        
+        if let user = Auth.auth().currentUser {
+            
+            user.updatePassword(to: changePassword.text!, completion: { (error) in
+                
+                if let error = error {
+                    print(error.localizedDescription)
+                } else {
+                    
+                    let alertView = UIAlertView(title: "Oh Snap!", message: "Could Not Change Password!", delegate: self, cancelButtonTitle: "OK")
+                    alertView.show()
+                }
+            })
+        }
+        
+    }
     
-
+    @IBAction func deleteAction(_ sender: Any) {
+        
+        let user = Auth.auth().currentUser
+        user?.delete(completion: { (error) in
+            if let error = error {
+                
+                print(error.localizedDescription)
+            } else {
+                
+                let alertView = UIAlertView(title: "Delete Account", message: "We Are Sorry You're Leaving! You Have Successfully Deleted Your Account!", delegate: self, cancelButtonTitle: "OK")
+                alertView.show()
+            }
+        })
+    }
 }
