@@ -30,7 +30,7 @@
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
 		50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* FacebookAPI.swift */; };
-		50D1BD7B1ECE4EFD00705F1F /* FacebookAssistAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D1BD7A1ECE4EFD00705F1F /* FacebookAssistAPI.swift */; };
+		50D1BD7B1ECE4EFD00705F1F /* FacebookPhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +59,7 @@
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
 		50C306AA1EC513030081A1EC /* FacebookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
-		50D1BD7A1ECE4EFD00705F1F /* FacebookAssistAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAssistAPI.swift; sourceTree = "<group>"; };
+		50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPhotoAPI.swift; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -155,7 +155,7 @@
 				5081CA2B1EB26469007929CB /* Reachability.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
 				50C306AA1EC513030081A1EC /* FacebookAPI.swift */,
-				50D1BD7A1ECE4EFD00705F1F /* FacebookAssistAPI.swift */,
+				50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */,
 			);
 			name = Extras;
 			path = Spaide;
@@ -311,7 +311,7 @@
 				5081CA2C1EB26469007929CB /* Reachability.swift in Sources */,
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				50D1BD7B1ECE4EFD00705F1F /* FacebookAssistAPI.swift in Sources */,
+				50D1BD7B1ECE4EFD00705F1F /* FacebookPhotoAPI.swift in Sources */,
 				5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

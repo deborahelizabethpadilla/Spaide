@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import ChameleonFramework
 
 class TermsOfServiceController: UIViewController {
     
@@ -18,12 +17,6 @@ class TermsOfServiceController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Navigation Bar
         
-        navigationBar.backgroundColor = FlatGreenDark()
-        
-        //Background
-        
-        view.backgroundColor = FlatWhite()
     }
 }
