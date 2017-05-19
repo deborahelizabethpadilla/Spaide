@@ -14,10 +14,6 @@ import FirebaseAuth
 
 class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     
-    //Firebase
-    
-    var databaseRef = Database.database().reference
-    
     //Outlets
     
     @IBOutlet var bannerView: GADBannerView!
