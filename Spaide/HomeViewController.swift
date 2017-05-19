@@ -37,10 +37,12 @@ class HomeViewController: UIViewController {
 
     func loadBanner() {
         
-        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
+        bannerView = GADBannerView(adSize: kGADAdSizeLargeBanner)
+        self.view.addSubview(bannerView)
         bannerView.adUnitID = "pub-9793810674761024"
         bannerView.rootViewController = self
-        bannerView.load(GADRequest())
+        bannerView.load(GADRequest)
+        
     }
 
 }

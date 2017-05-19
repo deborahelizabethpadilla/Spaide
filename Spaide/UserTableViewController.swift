@@ -64,7 +64,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients([])
+        mailComposerVC.setToRecipients([(Auth.auth().currentUser?.email)!])
         mailComposerVC.setSubject("Hey! I saw you on Spaide. Looking to connect.")
         mailComposerVC.setMessageBody("Hey there! I had a few questions and was hoping you could help.", isHTML: false)
         
