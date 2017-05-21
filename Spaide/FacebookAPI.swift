@@ -6,30 +6,31 @@
 //  Copyright © 2017 Deborah. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import Firebase
 import FacebookCore
 import FacebookLogin
 
-class FacebookAPI: LoginViewController {
+class FacebookAPI {
 
     //Logout Function
     
     func logoutUser(controller: UIViewController) {
         
         try! Auth.auth().signOut()
-        if let storyboard = self.storyboard {
+        if let storyboard = controller.storyboard {
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-            self.present(vc, animated: true, completion: nil)
+            controller.present(vc, animated: true, completion: nil)
         }
     }
     
     //Login Function
     
-    func facebookLogin() {
+    func facebookLogin(controller: UIViewController) {
         
         let loginManager = LoginManager()
-        loginManager.logIn([.publicProfile, .email], viewController: self) { (loginResult) in
+        loginManager.logIn([.publicProfile, .email], viewController: controller) { (loginResult) in
             
             switch loginResult {
                 
@@ -56,14 +57,14 @@ class FacebookAPI: LoginViewController {
                     let alertController = UIAlertController(title: "Login Error!", message: "Try Again!", preferredStyle: .alert)
                     let okayAction = UIAlertAction(title: "Try Again!", style: .cancel, handler: nil)
                     alertController.addAction(okayAction)
-                    self.present(alertController, animated: true, completion: nil)
+                    controller.present(alertController, animated: true, completion: nil)
                     
                 } else {
                     
                     //Present Tab Bar Controller
                     
-                    let newVC = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
-                    self.present(newVC!, animated: true, completion: nil)
+                    let newVC = controller.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                    controller.present(newVC!, animated: true, completion: nil)
                 }
             })
             

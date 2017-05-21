@@ -2,18 +2,14 @@
 //  FacebookPhotoAPI.swift
 //  Spaide
 //
-//  Created by Deborah on 5/18/17.
+//  Created by Deborah on 5/19/17.
 //  Copyright © 2017 Deborah. All rights reserved.
 //
 
-import UIKit
 import Foundation
-import FacebookCore
-import FacebookLogin
-import Firebase
+import UIKit
 
 class FacebookPhotoAPI {
-    
-    //Get FB Profile Picutre
 
+ 
 }

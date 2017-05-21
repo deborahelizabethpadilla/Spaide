@@ -16,6 +16,7 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */; };
+		50127DEF1ECFBB1000EE49D9 /* FacebookPhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50127DEE1ECFBB1000EE49D9 /* FacebookPhotoAPI.swift */; };
 		5068C68B1EC25C260035492A /* disabled.png in Resources */ = {isa = PBXBuildFile; fileRef = 5068C68A1EC25C260035492A /* disabled.png */; };
 		5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* HomeViewController.swift */; };
 		5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA141EB11528007929CB /* UserTableViewController.swift */; };
@@ -31,7 +32,6 @@
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
 		50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* FacebookAPI.swift */; };
-		50D1BD7B1ECE4EFD00705F1F /* FacebookPhotoAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +46,7 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		50127DEE1ECFBB1000EE49D9 /* FacebookPhotoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPhotoAPI.swift; sourceTree = "<group>"; };
 		5068C68A1EC25C260035492A /* disabled.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = disabled.png; sourceTree = "<group>"; };
 		5068C68C1EC3831B0035492A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5081CA141EB11528007929CB /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +62,6 @@
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
 		50C306AA1EC513030081A1EC /* FacebookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
-		50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookPhotoAPI.swift; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -158,7 +158,7 @@
 				5081CA2B1EB26469007929CB /* Reachability.swift */,
 				5081CA2D1EB264A2007929CB /* Indicator.swift */,
 				50C306AA1EC513030081A1EC /* FacebookAPI.swift */,
-				50D1BD7A1ECE4EFD00705F1F /* FacebookPhotoAPI.swift */,
+				50127DEE1ECFBB1000EE49D9 /* FacebookPhotoAPI.swift */,
 			);
 			name = Extras;
 			path = Spaide;
@@ -308,6 +308,7 @@
 				5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */,
 				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
+				50127DEF1ECFBB1000EE49D9 /* FacebookPhotoAPI.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
 				50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */,
@@ -315,7 +316,6 @@
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 				50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */,
-				50D1BD7B1ECE4EFD00705F1F /* FacebookPhotoAPI.swift in Sources */,
 				5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

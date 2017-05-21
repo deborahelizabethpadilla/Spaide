@@ -25,6 +25,21 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var fbLoginButton: UIButton!
     
+    //Display Alert
+    
+    func displayAlert(title: String, message: String) {
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,7 +62,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func fbLoginButtonAction(_ sender: UIButton) {
        
-        FacebookAPI.sharedInstance().facebookLogin()
+        FacebookAPI.sharedInstance().facebookLogin(controller: self)
     }
     
     //Close Keyboard With Tap
@@ -159,23 +174,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                 }
             }
         }
-            
-            
-        }
         
-        //Display Alert
-        
-        func displayAlert(title: String, message: String) {
-            
-            let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                self.dismiss(animated: true, completion: nil)
-                
-            }))
-            
-            self.present(alert, animated: true, completion: nil)
-            
-        }
+    }
     
 } //End Class
