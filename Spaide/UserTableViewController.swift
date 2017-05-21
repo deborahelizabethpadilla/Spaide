@@ -138,5 +138,25 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         return cell
     
     }
+    
+    //Get Profile Picutre
+    
+    func getProfPic(fid: String) -> UIImage? {
+        if (fid != "") {
+            let imgURLString = "http://graph.facebook.com/" + fid + "/picture?type=large"
+            let imgURL = NSURL(string: imgURLString)
+            let imageData = NSData(contentsOf: imgURL! as URL)
+            let image = UIImage(data: imageData! as Data)
+            
+            return image
+            
+        } else {
+            
+            let image = UIImage(named: "")
+            
+            return image
+        }
+        
+    }
 
 } //End Of Class
