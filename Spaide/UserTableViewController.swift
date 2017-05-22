@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import FirebaseStorage
 import FacebookCore
 import FacebookLogin
 import MessageUI
@@ -48,6 +49,8 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             self.userPosts.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userPosts.count)
             self.tableView.reloadData()
+            
+            
             
         })
         
@@ -134,29 +137,66 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
         
+        if let user = Auth.auth().currentUser {
+            
+            //Get Facebook Profile Photo
+            
+            let photoURL = user.photoURL
+            
+            let data = try! Data(contentsOf: photoURL!)
+            cell.profileView.image = UIImage(data: data)
+            
+            let storage = Storage.storage()
+            
+            let storageRef = storage.reference(forURL: "gs://spaide-2cc40.appspot.com")
+            
+            var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!)
+            profilePic.start({ (connection, result, erorr) in
+                
+                if (error == nil) {
+                    
+                    //Save Photo To Firebase
+                    
+                    let dictionary = result as? NSDictionary
+                    let data = dictionary?.object(forKey: data)
+                    
+                    let urlPic = (data.object(forKey: "url")) as! String
+                    
+                    if let imageData = try! Data(contentsOf: URL(string:urlPic)!) {
+                        let profilePicRef = storageRef.child(user.uid+"/profile_pic.jpg")
+                        
+                        //Upload Picture
+                        
+                        let uploadTask = profilePicRef.putData(imageData, metadata: nil) {
+                            metadata, error in
+                            
+                            if (error == nil) {
+                                
+                                let downloadURL = metadata!.downloadURL
+                            } else {
+                                
+                                print("Error Downloading Image!")
+                            }
+                        }
+                    }
+                    
+                }
+            })
+            
+            
+        } else {
+            
+            //No User Is Signed In
+        }
         
         return cell
     
     }
     
-    //Get Profile Picutre
-    
-    func getProfPic(fid: String) -> UIImage? {
-        if (fid != "") {
-            let imgURLString = "http://graph.facebook.com/" + fid + "/picture?type=large"
-            let imgURL = NSURL(string: imgURLString)
-            let imageData = NSData(contentsOf: imgURL! as URL)
-            let image = UIImage(data: imageData! as Data)
-            
-            return image
-            
-        } else {
-            
-            let image = UIImage(named: "")
-            
-            return image
-        }
+    func getFacebookPicture() {
+        
         
     }
+    
 
 } //End Of Class
