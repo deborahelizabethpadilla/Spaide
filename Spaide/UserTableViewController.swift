@@ -143,12 +143,29 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             let photoURL = user.photoURL
             
-            let data = try! Data(contentsOf: photoURL!)
-            cell.profileView.image = UIImage(data: data)
-            
             let storage = Storage.storage()
             
             let storageRef = storage.reference(forURL: "gs://spaide-2cc40.appspot.com")
+            
+            // Create a reference to the file you want to download
+            let profilePicRef = storageRef.child("images/island.jpg")
+            
+            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
+            profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
+                if (error != nil) {
+                    
+                    print("Unable To Get Image!")
+                    
+                } else {
+                    
+                    if (data != nil) {
+                        
+                        cell.profileView.image = UIImage(data: data!)
+                    }
+                }
+            }
+            
+            if (cell.profileView.image == nil) {
             
             var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!)
             profilePic.start({ (connection, result, erorr) in
@@ -158,7 +175,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
                     //Save Photo To Firebase
                     
                     let dictionary = result as? NSDictionary
-                    let data = dictionary?.object(forKey: data)
+                    let data = dictionary?.object(forKey: "data")
                     
                     let urlPic = (data.object(forKey: "url")) as! String
                     
@@ -178,25 +195,26 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
                                 print("Error Downloading Image!")
                             }
                         }
+                        
+                        cell.profileView.image = UIImage(data: imageData)
                     }
                     
                 }
             })
+                
+        }
             
             
         } else {
             
-            //No User Is Signed In
+            //No User Is Signed In, Upload Default Picture
+            
+            cell.profileView.image = UIImage(named: "")
         }
         
         return cell
     
     }
-    
-    func getFacebookPicture() {
-        
-        
-    }
-    
+
 
 } //End Of Class
