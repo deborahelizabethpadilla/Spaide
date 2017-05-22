@@ -168,7 +168,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             if (cell.profileView.image == nil) {
             
             var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!)
-            profilePic.start({ (connection, result, erorr) in
+            profilePic.start({ (connection, result, error) in
                 
                 if (error == nil) {
                     

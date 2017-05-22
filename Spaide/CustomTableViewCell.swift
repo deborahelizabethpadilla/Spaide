@@ -17,15 +17,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var limitationsLabel: UILabel!
     @IBOutlet var profileView: UIImageView!
     
-    public func round() {
-
-    let width = bounds.width < bounds.height ? bounds.width : bounds.height
-    let mask = CAShapeLayer()
-    mask.path = UIBezierPath(ovalInRect: CGRectMake(bounds.midX - width / 2, bounds.midY - width / 2, width, width)).CGPath
-    self.layer.mask = mask
-    }
-    
-    override func layoutSubviews() {
-        profileView.round()
-    }
+   
 }
