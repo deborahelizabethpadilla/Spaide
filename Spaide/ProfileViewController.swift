@@ -51,14 +51,10 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
         refUsers = Database.database().reference().child("Profile")
         
-        //Image View Designs
+        //Save Button Design
         
-        imageView.image = UIImage(named: "disabled.png")
-        
-        self.view.layoutIfNeeded()
-        
-        imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.clipsToBounds = true
+        saveButton.layer.cornerRadius = 10
+        saveButton.clipsToBounds = true
 
     }
     
