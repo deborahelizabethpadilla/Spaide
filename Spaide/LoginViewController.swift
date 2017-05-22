@@ -24,6 +24,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var fbLoginButton: UIButton!
+    @IBOutlet var loginButton: UIButton!
     
     //Display Alert
     
@@ -57,6 +58,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         self.emailField.delegate = self
         self.passwordField.delegate = self
+        
+        //Button Designs
+        
+        loginButton.layer.cornerRadius = 10
+        loginButton.clipsToBounds = true
+        
+        fbLoginButton.layer.cornerRadius = 10
+        fbLoginButton.clipsToBounds = true
+        
+        registerButton.layer.cornerRadius = 10
+        registerButton.clipsToBounds = true
         
     }
     
