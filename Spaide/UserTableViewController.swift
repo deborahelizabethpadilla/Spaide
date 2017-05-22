@@ -209,7 +209,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             //No User Is Signed In, Upload Default Picture
             
-            cell.profileView.image = UIImage(named: "")
+            cell.profileView.image = UIImage(named: "spaidelogo.png")
         }
         
         return cell
