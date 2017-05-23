@@ -158,15 +158,17 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
                             if (error == nil) {
                                 
                                 let downloadURL = metadata!.downloadURL
+                                
                             } else {
                                 
-                                print("Error Downloading Image!")
+                                cell.profileView.image = UIImage(named: "spaidelogo.png")
                             }
                         })
                         
-                        cell.pr
-                        
                     }
+                    
+                    cell.profileView.image = UIImage(data: imageData)
+                    
                 }
             }
             
