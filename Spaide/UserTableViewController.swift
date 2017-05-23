@@ -51,7 +51,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             self.tableView.reloadData()
             
             
-            
         })
         
         print(userPosts)
@@ -137,55 +136,24 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
         
-        if let user = Auth.auth().currentUser {
+        let storage = Storage.storage()
+        let storageRef = storage.reference(forURL: "gs://spaide-2cc40.appspot.com")
+        
+        var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], accessToken: AccessToken.current, httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!, apiVersion: nil)
+        profilePic.startWithCompletionHandler( {(connection, result, error) in
             
-            //Get Facebook Profile Photo
-            
-            let photoURL = user.photoURL
-            
-            let storage = Storage.storage()
-            
-            let storageRef = storage.reference(forURL: "gs://spaide-2cc40.appspot.com")
-            
-            // Create a reference to the file you want to download
-            let profilePicRef = storageRef.child("images/island.jpg")
-            
-            // Download in memory with a maximum allowed size of 1MB (1 * 1024 * 1024 bytes)
-            profilePicRef.getData(maxSize: 1 * 1024 * 1024) { data, error in
-                if (error != nil) {
-                    
-                    print("Unable To Get Image!")
-                    
-                } else {
-                    
-                    if (data != nil) {
-                        
-                        cell.profileView.image = UIImage(data: data!)
-                    }
-                }
-            }
-            
-            if (cell.profileView.image == nil) {
-            
-            var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!)
-            profilePic.start({ (connection, result, error) in
+            if (error == nil) {
                 
-                if (error == nil) {
+                if let dictionary = result as? [String : Any],
+                let dataDic = dictionary["data"] as? [String : Any],
+                    let urlPic = dataDic["url"] as? String {
                     
-                    //Save Photo To Firebase
+                    //Access URL Pic Here
                     
-                    let dictionary = result as? NSDictionary
-                    let data = dictionary?.object(forKey: "data")
-                    
-                    let urlPic = (data.object(forKey: "url")) as! String
-                    
-                    if let imageData = try! Data(contentsOf: URL(string:urlPic)!) {
-                        let profilePicRef = storageRef.child(user.uid+"/profile_pic.jpg")
+                    if let imageData = NSData(contentsOf: URL(string: urlPic)!) as Data? {
                         
-                        //Upload Picture
-                        
-                        let uploadTask = profilePicRef.putData(imageData, metadata: nil) {
-                            metadata, error in
+                        let profilePicRef = storageRef.child("Facebook Image")
+                        let uploadTask = profilePicRef.putData(mageData, metadata: nil, completion: { (metadata, error) in
                             
                             if (error == nil) {
                                 
@@ -194,27 +162,18 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
                                 
                                 print("Error Downloading Image!")
                             }
-                        }
+                        })
                         
-                        cell.profileView.image = UIImage(data: imageData)
+                        cell.pr
+                        
                     }
-                    
                 }
-            })
-                
-        }
+            }
             
-            
-        } else {
-            
-            //No User Is Signed In, Upload Default Picture
-            
-            cell.profileView.image = UIImage(named: "spaidelogo.png")
-        }
-        
-        return cell
-    
-    }
+        })
 
+        return cell
+        
+    }
 
 } //End Of Class

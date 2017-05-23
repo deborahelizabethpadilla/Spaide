@@ -17,5 +17,5 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var limitationsLabel: UILabel!
     @IBOutlet var profileView: UIImageView!
     
-   
+    
 }
