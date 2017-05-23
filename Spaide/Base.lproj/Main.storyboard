@@ -61,10 +61,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Connect with others who can help." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Support or advocate for special needs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
                                 <rect key="frame" x="16" y="195" width="343" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-Om-stZ">
@@ -83,17 +83,6 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="f87-62-mQt"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="irc-m3-TjA">
-                                <rect key="frame" x="16" y="617" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="17"/>
-                                <state key="normal" title="By using the app, you agree to the terms of service">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="qE3-7s-obc" kind="show" id="la0-TH-O5r"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="08I-Rn-phm">
@@ -214,7 +203,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Share what you can offer whether it's advice, services, support, networking or friendship. Tap on user profile to contact." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G06-cy-q9A">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post your services, support or expertise to help others who have disabilities. Tap cell to contact." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G06-cy-q9A">
                                 <rect key="frame" x="16" y="64" width="343" height="123"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -437,7 +426,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
                                             <rect key="frame" x="8" y="14" width="106" height="94"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
@@ -472,7 +461,7 @@
                                         <constraint firstItem="Vpd-CQ-uqU" firstAttribute="trailing" secondItem="aaI-Aw-w7D" secondAttribute="trailing" id="ved-Ae-1GI"/>
                                     </constraints>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <outlet property="firstNameLabel" destination="Vpd-CQ-uqU" id="rBq-aq-Nw8"/>
                                     <outlet property="limitationsLabel" destination="JTq-yC-dpZ" id="VLZ-1L-XpI"/>
@@ -493,56 +482,10 @@
             </objects>
             <point key="canvasLocation" x="141.59999999999999" y="281.10944527736132"/>
         </scene>
-        <!--Terms Of Service Controller-->
-        <scene sceneID="lc4-W5-6fl">
-            <objects>
-                <viewController id="qE3-7s-obc" customClass="TermsOfServiceController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="VJX-WS-CTh"/>
-                        <viewControllerLayoutGuide type="bottom" id="iFe-Nk-Aiz"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="O8Y-xt-fUZ">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oFM-TQ-Sqe">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <color key="backgroundColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="UEA-RK-JoU"/>
-                                </constraints>
-                                <items>
-                                    <navigationItem title="Terms Of Service" id="WgD-m3-VHh">
-                                        <barButtonItem key="leftBarButtonItem" image="leftarrow.png" id="eYw-FV-h7G">
-                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <connections>
-                                                <segue destination="n6w-jq-4Dr" kind="show" id="H2t-BE-lZd"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                        </subviews>
-                        <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="oFM-TQ-Sqe" secondAttribute="trailing" id="Fvf-Ox-49a"/>
-                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="top" secondItem="VJX-WS-CTh" secondAttribute="bottom" constant="8" id="VRr-Iy-V3z"/>
-                            <constraint firstItem="oFM-TQ-Sqe" firstAttribute="leading" secondItem="O8Y-xt-fUZ" secondAttribute="leading" id="vag-Ja-w7a"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="navigationBar" destination="oFM-TQ-Sqe" id="AYn-dU-fQM"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KZC-OA-vJF" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1519" y="590"/>
-        </scene>
     </scenes>
     <resources>
         <image name="avatar.png" width="24" height="24"/>
         <image name="home.png" width="24" height="24"/>
-        <image name="leftarrow.png" width="24" height="24"/>
         <image name="list.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>

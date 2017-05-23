@@ -90,11 +90,14 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         
     }
     
-    override func viewDidLayoutSubviews() {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
-        imageView.layer.cornerRadius = imageView.frame.size.width/2
-        imageView.clipsToBounds = true
-        
+        let currentCharacterCount = limitationsField.text?.characters.count ?? 0
+        if (range.length + range.location > currentCharacterCount){
+            return false
+        }
+        let newLength = currentCharacterCount + string.characters.count - range.length
+        return newLength <= 45
     }
         
 } // End Class

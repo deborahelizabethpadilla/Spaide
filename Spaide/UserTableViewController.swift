@@ -135,45 +135,9 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.firstNameLabel.text = userPosts[indexPath.row].firstName
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
+        cell.profileView.image = UIImage(named: "wheelchairnewlogo.jpg")
         
-        let storage = Storage.storage()
-        let storageRef = storage.reference(forURL: "gs://spaide-2cc40.appspot.com")
-        
-        var profilePic = GraphRequest(graphPath: "me/picture", parameters: ["height": 300, "width": "300", "redirect": false], accessToken: AccessToken.current, httpMethod: GraphRequestHTTPMethod(rawValue: "GET")!, apiVersion: nil)
-        profilePic.startWithCompletionHandler( {(connection, result, error) in
-            
-            if (error == nil) {
-                
-                if let dictionary = result as? [String : Any],
-                let dataDic = dictionary["data"] as? [String : Any],
-                    let urlPic = dataDic["url"] as? String {
-                    
-                    //Access URL Pic Here
-                    
-                    if let imageData = NSData(contentsOf: URL(string: urlPic)!) as Data? {
-                        
-                        let profilePicRef = storageRef.child("Facebook Image")
-                        let uploadTask = profilePicRef.putData(mageData, metadata: nil, completion: { (metadata, error) in
-                            
-                            if (error == nil) {
-                                
-                                let downloadURL = metadata!.downloadURL
-                                
-                            } else {
-                                
-                                cell.profileView.image = UIImage(named: "spaidelogo.png")
-                            }
-                        })
-                        
-                    }
-                    
-                    cell.profileView.image = UIImage(data: imageData)
-                    
-                }
-            }
-            
-        })
-
+    
         return cell
         
     }

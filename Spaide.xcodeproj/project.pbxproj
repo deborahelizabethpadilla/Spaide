@@ -16,7 +16,6 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */; };
-		503A2F4E1ED29E9900FF07E3 /* spaidelogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 503A2F4D1ED29E9900FF07E3 /* spaidelogo.png */; };
 		5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* HomeViewController.swift */; };
 		5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA141EB11528007929CB /* UserTableViewController.swift */; };
 		5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA1A1EB11D01007929CB /* ProfileViewController.swift */; };
@@ -31,6 +30,7 @@
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
 		50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* FacebookAPI.swift */; };
+		50F51C101ED4D83600DDABCF /* wheelchairnewlogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,6 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		503A2F4D1ED29E9900FF07E3 /* spaidelogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spaidelogo.png; sourceTree = "<group>"; };
 		5068C68C1EC3831B0035492A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5081CA141EB11528007929CB /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
 		5081CA1A1EB11D01007929CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -60,6 +59,7 @@
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
 		50C306AA1EC513030081A1EC /* FacebookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
+		50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wheelchairnewlogo.jpg; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,7 +126,7 @@
 				5081CA1C1EB13015007929CB /* avatar.png */,
 				5081CA201EB13070007929CB /* list.png */,
 				5081CA221EB130BF007929CB /* home.png */,
-				503A2F4D1ED29E9900FF07E3 /* spaidelogo.png */,
+				50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */,
 				5081CA241EB13307007929CB /* settings.png */,
 				50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */,
 				50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */,
@@ -235,7 +235,7 @@
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
 				50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */,
 				50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */,
-				503A2F4E1ED29E9900FF07E3 /* spaidelogo.png in Resources */,
+				50F51C101ED4D83600DDABCF /* wheelchairnewlogo.jpg in Resources */,
 				5081CA251EB13307007929CB /* settings.png in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
 				5081CA231EB130BF007929CB /* home.png in Resources */,
