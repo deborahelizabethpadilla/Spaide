@@ -11,6 +11,7 @@ import GoogleMobileAds
 import Firebase
 import FirebaseDatabase
 import FirebaseAuth
+import SVProgressHUD
 
 class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     
@@ -22,6 +23,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Keyboard Notifications
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(Login.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(Login.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         //Load Banner View
 
@@ -62,6 +68,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     
     @IBAction func updateAction(_ sender: Any) {
         
+        SVProgressHUD.show(withStatus: "Updating Email...")
+        
         if let user = Auth.auth().currentUser {
             
             user.updateEmail(to: changeEmail.text!, completion: { (error) in
@@ -70,13 +78,17 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                     print(error.localizedDescription)
                 } else {
                     
-                    self.displayAlert(title: "Oh Snap!", message: "Could Not Change Email! Try Again!")
+                    SVProgressHUD.dismiss()
+                    
+                    self.displayAlert(title: "Success!", message: "Updated Email!")
                 }
             })
         }
     }
    
     @IBAction func updatePasswordAction(_ sender: Any) {
+        
+        SVProgressHUD.show(withStatus: "Updating Password...")
         
         if let user = Auth.auth().currentUser {
             
@@ -86,7 +98,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                     print(error.localizedDescription)
                 } else {
                     
-                   self.displayAlert(title: "Oh Snap!", message: "Could Not Change Password! Try Again!")
+                   SVProgressHUD.dismiss()
                 }
             })
         }
@@ -95,6 +107,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     
     @IBAction func deleteAction(_ sender: Any) {
         
+        SVProgressHUD.show(withStatus: "Deleting Account...")
+        
         let user = Auth.auth().currentUser
         user?.delete(completion: { (error) in
             if let error = error {
@@ -102,7 +116,9 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                 print(error.localizedDescription)
             } else {
                 
-                self.displayAlert(title: "Success!", message: "We Are Sorry To See You Go! Your Account Is Deleted!")
+                SVProgressHUD.dismiss()
+                
+                self.displayAlert(title: "Success!", message: "Your Account Is Deleted!")
             }
         })
     }
@@ -139,6 +155,22 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
         
         self.present(alert, animated: true, completion: nil)
         
+    }
+    
+    func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0{
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+    
+    func keyboardWillHide(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y != 0{
+                self.view.frame.origin.y += keyboardSize.height
+            }
+        }
     }
 
     

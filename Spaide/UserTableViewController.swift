@@ -14,6 +14,7 @@ import FirebaseStorage
 import FacebookCore
 import FacebookLogin
 import MessageUI
+import SVProgressHUD
 
 struct UserStruct {
     
@@ -29,17 +30,10 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     var refHandle: UInt!
     var userPosts = [UserStruct]()
     
-    //Outlets
-
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        activityIndicator.hidesWhenStopped = true;
-        activityIndicator.activityIndicatorViewStyle  = UIActivityIndicatorViewStyle.gray;
-        activityIndicator.center = view.center;
-        
+        SVProgressHUD.show(withStatus: "Posting Information...")
         
         let databaseReference = Database.database().reference()
         
@@ -61,6 +55,8 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
 
             
         })
+        
+        SVProgressHUD.dismiss()
         
         print(userPosts)
         

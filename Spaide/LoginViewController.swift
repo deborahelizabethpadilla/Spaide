@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FacebookCore
 import FacebookLogin
+import SVProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
@@ -130,9 +131,13 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
+            SVProgressHUD.show(withStatus: "Logging In...")
+            
             Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!) { (user, error) in
                 
                 if error == nil {
+                    
+                    SVProgressHUD.dismiss()
                     
                     //Print If Successfully Logged In
                     
@@ -140,7 +145,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     //Go To Tab Bar Controller If Successful
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
@@ -171,18 +176,22 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             
         } else {
             
+            SVProgressHUD.show(withStatus: "Creating User & Logging In...")
+            
             Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
                 
                 if error == nil {
                     
+                    SVProgressHUD.dismiss()
+                    
                     print("You Have Successfully Signed Up")
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
                    
-                    self.displayAlert(title: "Oh Snap!", message: "Try Again! Something Happened!")
+                    SVProgressHUD.showError(withStatus: "User Creation Failed!")
                 }
             }
         }

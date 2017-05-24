@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import SVProgressHUD
 
 class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -82,12 +83,24 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
 
     func addUserData() {
         
+        SVProgressHUD.show(withStatus: "Posting Information...")
+        
+        if success {
+            
+        SVProgressHUD.dismiss()
+        
         let key = refUsers?.childByAutoId().key
         
         let user = ["id": key!, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
         
         refUsers.child(key!).setValue(user)
-        
+            
+        } else {
+            
+            SVProgressHUD.showError(withStatus: "Network Error! Could Not Post Information!")
+        }
+    
+    
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

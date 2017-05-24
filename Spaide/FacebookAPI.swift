@@ -11,6 +11,7 @@ import UIKit
 import Firebase
 import FacebookCore
 import FacebookLogin
+import SVProgressHUD
 
 class FacebookAPI {
 
@@ -49,6 +50,8 @@ class FacebookAPI {
             
             //Perform Login By Calling Firebase APIs
             
+            SVProgressHUD.show(withStatus: "Logging In With Facebook...")
+            
             Auth.auth().signIn(with: credential, completion: { (user, error) in
                 
                 if let error = error {
@@ -61,9 +64,11 @@ class FacebookAPI {
                     
                 } else {
                     
+                    SVProgressHUD.dismiss()
+                    
                     //Present Tab Bar Controller
                     
-                    let newVC = controller.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
+                    let newVC = controller.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
                     controller.present(newVC!, animated: true, completion: nil)
                 }
             })
