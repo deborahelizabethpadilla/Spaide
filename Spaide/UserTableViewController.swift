@@ -28,9 +28,18 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     
     var refHandle: UInt!
     var userPosts = [UserStruct]()
+    
+    //Outlets
 
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityIndicator.hidesWhenStopped = true;
+        activityIndicator.activityIndicatorViewStyle  = UIActivityIndicatorViewStyle.gray;
+        activityIndicator.center = view.center;
+        
         
         let databaseReference = Database.database().reference()
         
@@ -49,12 +58,11 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             self.userPosts.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userPosts.count)
             self.tableView.reloadData()
-            
+
             
         })
         
         print(userPosts)
-        
         
     }
     

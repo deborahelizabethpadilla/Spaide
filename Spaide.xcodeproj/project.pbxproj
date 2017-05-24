@@ -24,7 +24,6 @@
 		5081CA231EB130BF007929CB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA221EB130BF007929CB /* home.png */; };
 		5081CA251EB13307007929CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA241EB13307007929CB /* settings.png */; };
 		5081CA2C1EB26469007929CB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Reachability.swift */; };
-		5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2D1EB264A2007929CB /* Indicator.swift */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
 		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
@@ -53,7 +52,6 @@
 		5081CA221EB130BF007929CB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
 		5081CA241EB13307007929CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
 		5081CA2B1EB26469007929CB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		5081CA2D1EB264A2007929CB /* Indicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Indicator.swift; sourceTree = "<group>"; };
 		50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Decalotype-Regular.ttf"; path = "../Decalotype-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
 		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
@@ -154,7 +152,6 @@
 			isa = PBXGroup;
 			children = (
 				5081CA2B1EB26469007929CB /* Reachability.swift */,
-				5081CA2D1EB264A2007929CB /* Indicator.swift */,
 				50C306AA1EC513030081A1EC /* FacebookAPI.swift */,
 			);
 			name = Extras;
@@ -312,7 +309,6 @@
 				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 				50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */,
-				5081CA2E1EB264A2007929CB /* Indicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
