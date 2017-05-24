@@ -255,14 +255,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aE1-gf-kUa" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="560" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="320" id="eFY-DD-up4"/>
-                                    <constraint firstAttribute="height" constant="50" id="jn8-vu-Ebm"/>
-                                </constraints>
-                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
                                 <rect key="frame" x="16" y="28" width="84" height="36"/>
                                 <constraints>
@@ -356,9 +348,7 @@
                             <constraint firstItem="ucD-Fi-vUr" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="G81-M9-7X1"/>
                             <constraint firstItem="cdX-3C-uxO" firstAttribute="trailing" secondItem="ilo-ek-KDk" secondAttribute="trailingMargin" id="Gm5-jt-5mM"/>
                             <constraint firstItem="UDX-6E-9F3" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="KvP-Hx-vY9"/>
-                            <constraint firstItem="aE1-gf-kUa" firstAttribute="centerX" secondItem="ilo-ek-KDk" secondAttribute="centerX" id="Me6-rx-1bp"/>
                             <constraint firstItem="uEQ-yb-cCI" firstAttribute="top" secondItem="68M-S6-PGP" secondAttribute="bottom" constant="37" id="NG9-V4-fnr"/>
-                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="aE1-gf-kUa" secondAttribute="bottom" constant="8" id="QmF-RI-dfH"/>
                             <constraint firstItem="cdX-3C-uxO" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" id="Ru8-La-fsc"/>
                             <constraint firstItem="OCB-ND-E2T" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leadingMargin" constant="11" id="UDw-q1-0cT"/>
                             <constraint firstItem="OCB-ND-E2T" firstAttribute="top" secondItem="uEQ-yb-cCI" secondAttribute="bottom" constant="30" id="WRS-fD-B83"/>
@@ -370,7 +360,6 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
                     <connections>
-                        <outlet property="bannerView" destination="aE1-gf-kUa" id="3uj-St-sGR"/>
                         <outlet property="changeEmail" destination="uEQ-yb-cCI" id="cW2-r5-Za6"/>
                         <outlet property="changePassword" destination="cdX-3C-uxO" id="o4p-on-eDW"/>
                     </connections>
@@ -489,7 +478,7 @@
         <image name="list.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NeV-uV-COE"/>
+        <segue reference="ZZJ-ct-iFt"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

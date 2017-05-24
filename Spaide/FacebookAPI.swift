@@ -68,7 +68,7 @@ class FacebookAPI {
                     
                     //Present Tab Bar Controller
                     
-                    let newVC = controller.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
+                    let newVC = controller.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                     controller.present(newVC!, animated: true, completion: nil)
                 }
             })

@@ -145,7 +145,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     //Go To Tab Bar Controller If Successful
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {
@@ -186,7 +186,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     print("You Have Successfully Signed Up")
                     
-                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TableViewController")
+                    let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabBarController")
                     self.present(vc!, animated: true, completion: nil)
                     
                 } else {

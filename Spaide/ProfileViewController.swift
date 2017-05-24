@@ -30,11 +30,15 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     @IBAction func saveButton(_ sender: Any) {
         
         addUserData()
-       
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Keyboard Notifications
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         
         //Close Keyboard With Return Key
         
@@ -83,23 +87,19 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
 
     func addUserData() {
         
-        SVProgressHUD.show(withStatus: "Posting Information...")
         
-        if success {
+        if let key = refUsers?.childByAutoId().key {
             
-        SVProgressHUD.dismiss()
+            SVProgressHUD.showSuccess(withStatus: "Success! Posted Information")
         
-        let key = refUsers?.childByAutoId().key
+        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
         
-        let user = ["id": key!, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
-        
-        refUsers.child(key!).setValue(user)
+        refUsers.child(key).setValue(user)
             
         } else {
             
-            SVProgressHUD.showError(withStatus: "Network Error! Could Not Post Information!")
+            SVProgressHUD.showError(withStatus: "Network Error! Posting Failed!")
         }
-    
     
     }
     
@@ -112,5 +112,24 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         let newLength = currentCharacterCount + string.characters.count - range.length
         return newLength <= 45
     }
-        
+
+//Keyboard Functions
+
+
+func keyboardWillShow(notification: NSNotification) {
+    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if self.view.frame.origin.y == 0{
+            self.view.frame.origin.y -= keyboardSize.height
+        }
+    }
+}
+
+func keyboardWillHide(notification: NSNotification) {
+    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+        if self.view.frame.origin.y != 0{
+            self.view.frame.origin.y += keyboardSize.height
+        }
+    }
+}
+
 } // End Class

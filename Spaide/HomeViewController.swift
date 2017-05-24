@@ -24,14 +24,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Keyboard Notifications
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(Login.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(Login.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        //Load Banner View
-
-        loadBanner()
+    
         
         //Close Keyboard With Tap
         
@@ -50,21 +43,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     @IBAction func logoutAction(_ sender: Any) {
         
         FacebookAPI.sharedInstance().logoutUser(controller: self)
-        dismiss(animated: true, completion: nil)
     
     }
     
-    //Banner View Info
 
-    func loadBanner() {
-        
-        let request = GADRequest()
-        request.testDevices = [kGADSimulatorID]
-        bannerView.delegate = self
-        bannerView.adUnitID = "pub-9793810674761024"
-        bannerView.load(request)
-        
-    }
     
     @IBAction func updateAction(_ sender: Any) {
         
@@ -155,22 +137,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
         
         self.present(alert, animated: true, completion: nil)
         
-    }
-    
-    func keyboardWillShow(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y == 0{
-                self.view.frame.origin.y -= keyboardSize.height
-            }
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            if self.view.frame.origin.y != 0{
-                self.view.frame.origin.y += keyboardSize.height
-            }
-        }
     }
 
     

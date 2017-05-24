@@ -33,8 +33,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        SVProgressHUD.show(withStatus: "Posting Information...")
-        
         let databaseReference = Database.database().reference()
         
         databaseReference.child("Profile").queryOrderedByKey().observe(.childAdded, with: { (snapshot) in
@@ -51,12 +49,13 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             snapshotValue = snapshot.value as? NSDictionary
             
             self.userPosts.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userPosts.count)
+            
+            SVProgressHUD.show(withStatus: "Posting Information...")
             self.tableView.reloadData()
 
             
         })
         
-        SVProgressHUD.dismiss()
         
         print(userPosts)
         
@@ -140,6 +139,8 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         cell.locationLabel.text = userPosts[indexPath.row].city
         cell.limitationsLabel.text = userPosts[indexPath.row].limits
         cell.profileView.image = UIImage(named: "wheelchairnewlogo.jpg")
+        
+        SVProgressHUD.dismiss()
         
     
         return cell
