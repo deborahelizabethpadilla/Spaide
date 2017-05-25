@@ -145,6 +145,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EmW-GM-DXd">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yve-gm-v3Y" customClass="HoshiTextField">
                                 <rect key="frame" x="16" y="240" width="343" height="30"/>
                                 <constraints>
@@ -225,10 +228,15 @@
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="EmW-GM-DXd" secondAttribute="bottom" id="6YI-07-f3U"/>
                             <constraint firstItem="yve-gm-v3Y" firstAttribute="top" secondItem="G06-cy-q9A" secondAttribute="bottom" constant="53" id="A0Y-80-O9i"/>
+                            <constraint firstItem="EmW-GM-DXd" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="-270" id="C56-o0-Chg"/>
+                            <constraint firstAttribute="trailing" secondItem="EmW-GM-DXd" secondAttribute="trailing" id="HW9-yt-726"/>
+                            <constraint firstItem="EmW-GM-DXd" firstAttribute="top" secondItem="zZX-S8-tym" secondAttribute="top" id="I3c-cd-prR"/>
                             <constraint firstItem="rAy-AV-JOJ" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="KSF-MW-vvs"/>
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="N72-4e-oro"/>
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="52X-qo-US4" secondAttribute="bottom" constant="8" id="NYg-RB-qEQ"/>
+                            <constraint firstItem="EmW-GM-DXd" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leading" id="Odz-qG-CDs"/>
                             <constraint firstItem="G06-cy-q9A" firstAttribute="trailing" secondItem="zZX-S8-tym" secondAttribute="trailingMargin" id="eVL-qd-mjQ"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="trailing" secondItem="zZX-S8-tym" secondAttribute="trailingMargin" id="goH-bA-Zwd"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="iND-ml-CA1"/>
@@ -487,7 +495,7 @@
         <image name="list.png" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ZZJ-ct-iFt"/>
+        <segue reference="NeV-uV-COE"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseDatabase
 import SVProgressHUD
 
+@available(iOS 10.0, *)
 class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //Variables
@@ -35,11 +36,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Keyboard Notifications
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
         //Close Keyboard With Return Key
         
         self.firstNameField.delegate = self
@@ -61,18 +57,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         saveButton.layer.cornerRadius = 10
         saveButton.clipsToBounds = true
 
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        unsubscribeToKeyboardNotifications()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        subscribeToKeyboardNotifications()
     }
     
     //Close Keyboard With Tap
@@ -124,39 +108,21 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         let newLength = currentCharacterCount + string.characters.count - range.length
         return newLength <= 45
     }
-
-//Keyboard Functions
-
-    func keyboardWillShow(_ notification:Notification) {
-        if limitationsField.isFirstResponder {
-            print("keyboardWillShow BT")
-            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
-        }
-        
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(0.3)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        view.frame = CGRect(x: CGFloat(view.frame.origin.x), y: CGFloat(view.frame.origin.y - 200.0), width: CGFloat(view.frame.size.width), height: CGFloat(view.frame.size.height))
+        UIView.commitAnimations()
     }
     
-    func subscribeToKeyboardNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func keyboardWillHide(_ notification:Notification) {
-        if limitationsField.isFirstResponder {
-            print("keyboardWillHide BT")
-            view.frame.origin.y = 0
-        }
-    }
-    
-    func unsubscribeToKeyboardNotifications() {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-    
-    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
-        
-        let userInfo = notification.userInfo
-        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
-        return keyboardSize.cgRectValue.height
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
+        UIView.beginAnimations(nil, context: nil)
+        UIView.setAnimationDuration(0.3)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        view.frame = CGRect(x: CGFloat(view.frame.origin.x), y: CGFloat(view.frame.origin.y + 200.0), width: CGFloat(view.frame.size.width), height: CGFloat(view.frame.size.height))
+        UIView.commitAnimations()
     }
 
 } // End Class

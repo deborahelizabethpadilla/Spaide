@@ -42,7 +42,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     
     @IBAction func logoutAction(_ sender: Any) {
         
-        FacebookAPI.sharedInstance().logoutUser(controller: self)
         dismiss(animated:true,completion:nil)
     }
     
