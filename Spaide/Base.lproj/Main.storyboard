@@ -27,8 +27,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fPD-uJ-D3r">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </stackView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-8f-kFR">
-                                <rect key="frame" x="16" y="340" width="343" height="44"/>
+                                <rect key="frame" x="16" y="340" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -45,7 +48,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzN-2E-3zT">
-                                <rect key="frame" x="16" y="288" width="343" height="44"/>
+                                <rect key="frame" x="16" y="288" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -111,6 +114,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xPE-fw-evQ" firstAttribute="top" secondItem="fPD-uJ-D3r" secondAttribute="bottom" id="JiW-3Q-2Xh"/>
+                            <constraint firstAttribute="trailing" secondItem="fPD-uJ-D3r" secondAttribute="trailing" id="LLi-MD-NFT"/>
+                            <constraint firstItem="fPD-uJ-D3r" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leading" id="NsE-jJ-4oT"/>
+                            <constraint firstItem="fPD-uJ-D3r" firstAttribute="top" secondItem="jJk-Bo-Nff" secondAttribute="top" id="lwg-bL-ePa"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
@@ -122,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-F8-MK2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1520" y="-223"/>
+            <point key="canvasLocation" x="-1520.8" y="-223.53823088455775"/>
         </scene>
         <!--Share-->
         <scene sceneID="P21-AP-vrT">

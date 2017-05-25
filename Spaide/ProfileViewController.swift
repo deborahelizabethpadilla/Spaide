@@ -63,6 +63,18 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
 
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        unsubscribeToKeyboardNotifications()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        subscribeToKeyboardNotifications()
+    }
+    
     //Close Keyboard With Tap
     
     func dismissKeyboard() {
@@ -115,21 +127,36 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
 
 //Keyboard Functions
 
-
-func keyboardWillShow(notification: NSNotification) {
-    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-        if self.view.frame.origin.y == 0{
-            self.view.frame.origin.y -= keyboardSize.height
+    func keyboardWillShow(_ notification:Notification) {
+        if limitationsField.isFirstResponder {
+            print("keyboardWillShow BT")
+            view.frame.origin.y = getKeyboardHeight(notification) * (-1)
+        }
+        
+    }
+    
+    func subscribeToKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillShow(_:)), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(ProfileViewController.keyboardWillHide(_:)), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+    }
+    
+    func keyboardWillHide(_ notification:Notification) {
+        if limitationsField.isFirstResponder {
+            print("keyboardWillHide BT")
+            view.frame.origin.y = 0
         }
     }
-}
-
-func keyboardWillHide(notification: NSNotification) {
-    if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-        if self.view.frame.origin.y != 0{
-            self.view.frame.origin.y += keyboardSize.height
-        }
+    
+    func unsubscribeToKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
-}
+    
+    func getKeyboardHeight(_ notification:Notification) -> CGFloat {
+        
+        let userInfo = notification.userInfo
+        let keyboardSize = userInfo![UIKeyboardFrameEndUserInfoKey] as! NSValue // of CGRect
+        return keyboardSize.cgRectValue.height
+    }
 
 } // End Class
