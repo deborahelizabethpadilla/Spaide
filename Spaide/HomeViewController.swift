@@ -60,7 +60,7 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                     
                     SVProgressHUD.dismiss()
                     
-                    SVProgressHUD.showError(withStatus: "Network Error! Update Failed!")
+                    self.displayAlert(title: "Network Error!", message: "Try Again!")
                     
                 } else {
                     
