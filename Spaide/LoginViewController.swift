@@ -152,6 +152,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     
                     //Let User Know There Is An Error
                     
+                    SVProgressHUD.dismiss()
+                    
                     let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     
                     let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)

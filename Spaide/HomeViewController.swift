@@ -43,10 +43,10 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     @IBAction func logoutAction(_ sender: Any) {
         
         FacebookAPI.sharedInstance().logoutUser(controller: self)
-    
+        dismiss(animated:true,completion:nil)
     }
     
-
+    //Update Email
     
     @IBAction func updateAction(_ sender: Any) {
         
@@ -58,6 +58,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                 
                 if let error = error {
                     print(error.localizedDescription)
+                    
+                    SVProgressHUD.dismiss()
+                    
+                    SVProgressHUD.showError(withStatus: "Network Error! Update Failed!")
+                    
                 } else {
                     
                     SVProgressHUD.dismiss()
@@ -67,6 +72,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
             })
         }
     }
+    
+    //Update Password
    
     @IBAction func updatePasswordAction(_ sender: Any) {
         
@@ -78,6 +85,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
                 
                 if let error = error {
                     print(error.localizedDescription)
+                    
+                    SVProgressHUD.dismiss()
+                    
+                    SVProgressHUD.showError(withStatus: "Network Error! Update Failed!")
+                    
                 } else {
                     
                    SVProgressHUD.dismiss()
@@ -86,6 +98,8 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
         }
         
     }
+    
+    //Delete Account
     
     @IBAction func deleteAction(_ sender: Any) {
         
@@ -96,6 +110,11 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
             if let error = error {
                 
                 print(error.localizedDescription)
+                
+                SVProgressHUD.dismiss()
+                
+                SVProgressHUD.showError(withStatus: "Network Error! Failed To Delete Account!")
+                
             } else {
                 
                 SVProgressHUD.dismiss()
