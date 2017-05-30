@@ -52,7 +52,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             SVProgressHUD.show(withStatus: "Posting Information...")
             self.tableView.reloadData()
-
+            
             
         })
         
@@ -64,23 +64,30 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     //Compose Email Message
     
     func configuredMailComposedViewController() -> MFMailComposeViewController {
-        
+    
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients([(Auth.auth().currentUser?.email)!])
+        mailComposerVC.setToRecipients(["spaideinfo@gmail.com"])
         mailComposerVC.setSubject("Hey! I saw you on Spaide. Looking to connect.")
         mailComposerVC.setMessageBody("Hey there! I had a few questions and was hoping you could help.", isHTML: false)
         
         return mailComposerVC
+        
     }
     
-    //Email Alert
-    
-    func emailAlert() {
+    //Display Alert
+
+    func emailAlert(title: String, message: String) {
         
-        let sendMailErrorAlert = UIAlertView(title: "Could Not Send Email", message: "Something Went Wrong. Try Again!", delegate: self, cancelButtonTitle: "OK")
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         
-        sendMailErrorAlert.show()
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
+            self.dismiss(animated: true, completion: nil)
+            
+        }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     //Mail Interface Functions
@@ -124,7 +131,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             self.present(mailComposeViewController, animated: true, completion: nil)
         } else {
             
-            self.emailAlert()
+            self.emailAlert(title: "Could Not Send Email!", message: "Try Again!")
         }
         
     }

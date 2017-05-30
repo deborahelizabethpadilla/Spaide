@@ -88,7 +88,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             
             SVProgressHUD.showSuccess(withStatus: "Success! Posted Information")
         
-        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
+        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String, "contactEmail": contactEmail.text! as String]
         
         refUsers.child(key).setValue(user)
             
@@ -124,5 +124,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         view.frame = CGRect(x: CGFloat(view.frame.origin.x), y: CGFloat(view.frame.origin.y + 200.0), width: CGFloat(view.frame.size.width), height: CGFloat(view.frame.size.height))
         UIView.commitAnimations()
     }
+    
+    
 
 } // End Class
