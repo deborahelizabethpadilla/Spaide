@@ -9,7 +9,6 @@ target 'Spaide' do
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'ChameleonFramework/Swift', :git => 'https://github.com/ViccAlexander/Chameleon.git'
   pod 'TextFieldEffects'
   pod 'ReachabilitySwift', '~> 3'
   pod 'Firebase/AdMob'

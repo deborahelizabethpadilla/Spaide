@@ -5,9 +5,6 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
-  - ChameleonFramework/Default (2.1.0)
-  - ChameleonFramework/Swift (2.1.0):
-    - ChameleonFramework/Default
   - FacebookCore (0.2.0):
     - Bolts (~> 1.8)
     - FBSDKCoreKit (~> 4.15)
@@ -71,7 +68,6 @@ PODS:
 
 DEPENDENCIES:
   - Bolts
-  - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - FacebookCore
   - FacebookLogin
   - Firebase/AdMob
@@ -84,22 +80,16 @@ DEPENDENCIES:
   - TextFieldEffects
 
 EXTERNAL SOURCES:
-  ChameleonFramework:
-    :git: https://github.com/ViccAlexander/Chameleon.git
   SVProgressHUD:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 CHECKOUT OPTIONS:
-  ChameleonFramework:
-    :commit: acc480fbe023c6e5fe40f68593f4a70a8c4c7ad5
-    :git: https://github.com/ViccAlexander/Chameleon.git
   SVProgressHUD:
     :commit: f0c3a432cb3805a1f1f50cb27a646d98605215ad
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
   FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
@@ -118,6 +108,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: 902f8bdef3790663b9e995a02b9ef892f25e21a3
+PODFILE CHECKSUM: bcfa622942927a8d252a57eb5163426cc6645393
 
 COCOAPODS: 1.2.1
