@@ -88,7 +88,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
             
             SVProgressHUD.showSuccess(withStatus: "Success! Posted Information")
         
-        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String, "contactEmail": contactEmail.text! as String]
+        let user = ["id": key, "firstName": firstNameField.text! as String, "limits": limitationsField.text! as String, "city": citystateField.text! as String]
         
         refUsers.child(key).setValue(user)
             

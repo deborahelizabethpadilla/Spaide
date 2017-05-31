@@ -24,22 +24,12 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>FBSDKShareKit.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>FacebookCore.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>FacebookLogin.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FacebookShare.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -82,22 +72,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>332F91393FB1DE033D370B4CEDDD5FCF</key>
+		<key>22C61D954ACE003B851C8137948AC4CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3CC625696DC4ADD28FE7F0F99B4D29E7</key>
+		<key>3E431943EF95362D58876DB23173C704</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>44CAD6CE523055ED339E87154473A254</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>582AB76B68353F7B63B14294A04A3C6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -122,12 +107,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A48DA4FC2A5753038A98AC135E455522</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>A7FEAA14E89971698ACA148F7F7202F2</key>
+		<key>C026472033E3D7C28601ACE15272D3D8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -137,12 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
+		<key>CAD28448081B5D441CB7F47E6E788F01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FB18D7F223AEB445AFD79D955E39B874</key>
+		<key>DDBCFDE490CDFDABF6F16A26F346932D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

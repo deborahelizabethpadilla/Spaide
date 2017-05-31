@@ -16,7 +16,6 @@ target 'Spaide' do
   pod 'Bolts'
   pod 'FacebookCore'
   pod 'FacebookLogin'
-  pod 'FacebookShare'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
 end

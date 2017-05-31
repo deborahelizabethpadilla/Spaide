@@ -16,16 +16,9 @@ PODS:
     - FacebookCore (~> 0.2)
     - FBSDKCoreKit (~> 4.15)
     - FBSDKLoginKit (~> 4.15)
-  - FacebookShare (0.2.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.2)
-    - FBSDKCoreKit (~> 4.15)
-    - FBSDKShareKit (~> 4.15)
-  - FBSDKCoreKit (4.22.1):
+  - FBSDKCoreKit (4.23.0):
     - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.22.1):
-    - FBSDKCoreKit
-  - FBSDKShareKit (4.22.1):
+  - FBSDKLoginKit (4.23.0):
     - FBSDKCoreKit
   - Firebase/AdMob (4.0.0):
     - Firebase/Core
@@ -71,17 +64,16 @@ PODS:
     - GoogleToolboxForMac/Defines (= 2.1.1)
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.1)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.1)
-  - GTMSessionFetcher/Core (1.1.9)
+  - GTMSessionFetcher/Core (1.1.10)
   - ReachabilitySwift (3)
   - SVProgressHUD (2.1.2)
-  - TextFieldEffects (1.3.2)
+  - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
   - Bolts
   - ChameleonFramework/Swift (from `https://github.com/ViccAlexander/Chameleon.git`)
   - FacebookCore
   - FacebookLogin
-  - FacebookShare
   - Firebase/AdMob
   - Firebase/Auth
   - Firebase/Core
@@ -110,10 +102,8 @@ SPEC CHECKSUMS:
   ChameleonFramework: d21a3cc247abfe5e37609a283a8238b03575cf64
   FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
   FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
-  FacebookShare: 8e9ee8ea06505e6a1d3d719b0cc63e840fb8aaeb
-  FBSDKCoreKit: 9c2daf0162214d6d2e21cf8208a9c6c2a2e42b9c
-  FBSDKLoginKit: 00cf28916b9f0169763a3d61985d745b579fe304
-  FBSDKShareKit: 1cbd0fdc2bb3277dd3522512855dcf1f4088f734
+  FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
+  FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Firebase: 284eea779b73fdff309791817da7c68bff8dd572
   FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -123,11 +113,11 @@ SPEC CHECKSUMS:
   FirebaseStorage: 8110a1ed2034c8fbfd83890d2acc9cdbbd99afec
   Google-Mobile-Ads-SDK: 168312cdc167fa22746d4ea8e839fc4825dd2966
   GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
-  GTMSessionFetcher: 5c046c76a1f859bc9c187e918f18e4fc7bb57b5e
+  GTMSessionFetcher: 30d874b96d0d76028f61fbd122801e3f030d47db
   ReachabilitySwift: f5b9bb30a0777fac8f09ce8b067e32faeb29bb64
   SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
-  TextFieldEffects: 9e5cce561ea39c75b86e9d3637601727a67e8b23
+  TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: b0a921f3230a79cc567626e03461d0b0521878a0
+PODFILE CHECKSUM: 902f8bdef3790663b9e995a02b9ef892f25e21a3
 
 COCOAPODS: 1.2.1

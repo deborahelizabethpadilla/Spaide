@@ -26,7 +26,6 @@
 		5081CA2C1EB26469007929CB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Reachability.swift */; };
 		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
 		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
-		50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */; };
 		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
 		50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* FacebookAPI.swift */; };
 		50F51C101ED4D83600DDABCF /* wheelchairnewlogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */; };
@@ -54,7 +53,6 @@
 		5081CA2B1EB26469007929CB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Decalotype-Regular.ttf"; path = "../Decalotype-Regular.ttf"; sourceTree = "<group>"; };
 		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
-		50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TermsOfServiceController.swift; sourceTree = "<group>"; };
 		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
 		50C306AA1EC513030081A1EC /* FacebookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
 		50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wheelchairnewlogo.jpg; sourceTree = "<group>"; };
@@ -137,7 +135,6 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				50BDEEBA1E81E6B400D77020 /* TermsOfServiceController.swift */,
 				5081CA141EB11528007929CB /* UserTableViewController.swift */,
 				5081CA1A1EB11D01007929CB /* ProfileViewController.swift */,
 				5068C68C1EC3831B0035492A /* HomeViewController.swift */,
@@ -301,7 +298,6 @@
 			files = (
 				5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */,
 				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
-				50BDEEBB1E81E6B400D77020 /* TermsOfServiceController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
 				50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */,
@@ -338,6 +334,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -392,6 +389,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
