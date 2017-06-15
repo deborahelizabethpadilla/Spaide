@@ -246,21 +246,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Post your suggestion. If there is a form of any abuse, tap on the cell to contact and request removal." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="G06-cy-q9A">
-                                <rect key="frame" x="16" y="64" width="343" height="123"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4a0-tW-d2S">
+                                <rect key="frame" x="67" y="28" width="240" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="123" id="YfK-N6-h2R"/>
-                                    <constraint firstAttribute="width" constant="343" id="rjN-Ef-rDP"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                <string key="text">Post your suggestion here. If there is any form of any abuse or misconduct under the suggestions tab, tap on the cell to contact and request removal. Include information about the suggestion in question.</string>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="EmW-GM-DXd" secondAttribute="bottom" id="6YI-07-f3U"/>
-                            <constraint firstItem="yve-gm-v3Y" firstAttribute="top" secondItem="G06-cy-q9A" secondAttribute="bottom" constant="53" id="A0Y-80-O9i"/>
                             <constraint firstItem="EmW-GM-DXd" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="-270" id="C56-o0-Chg"/>
                             <constraint firstAttribute="trailing" secondItem="EmW-GM-DXd" secondAttribute="trailing" id="HW9-yt-726"/>
                             <constraint firstItem="EmW-GM-DXd" firstAttribute="top" secondItem="zZX-S8-tym" secondAttribute="top" id="I3c-cd-prR"/>
@@ -268,14 +265,11 @@
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="N72-4e-oro"/>
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="52X-qo-US4" secondAttribute="bottom" constant="8" id="NYg-RB-qEQ"/>
                             <constraint firstItem="EmW-GM-DXd" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leading" id="Odz-qG-CDs"/>
-                            <constraint firstItem="G06-cy-q9A" firstAttribute="trailing" secondItem="zZX-S8-tym" secondAttribute="trailingMargin" id="eVL-qd-mjQ"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="trailing" secondItem="zZX-S8-tym" secondAttribute="trailingMargin" id="goH-bA-Zwd"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="iND-ml-CA1"/>
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="top" secondItem="rAy-AV-JOJ" secondAttribute="bottom" constant="89" id="mVn-pM-CJn"/>
                             <constraint firstItem="rAy-AV-JOJ" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="77" id="mjG-5J-bfe"/>
                             <constraint firstItem="yve-gm-v3Y" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="v7d-CX-oGi"/>
-                            <constraint firstItem="G06-cy-q9A" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="xbE-qI-XCp"/>
-                            <constraint firstItem="G06-cy-q9A" firstAttribute="top" secondItem="ZK4-OE-Rg1" secondAttribute="bottom" constant="44" id="zEL-zp-ggW"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Share" image="avatar.png" id="cZv-Z2-9uJ"/>
@@ -448,7 +442,7 @@
             </objects>
             <point key="canvasLocation" x="-810" y="-68"/>
         </scene>
-        <!--Users-->
+        <!--Suggestions-->
         <scene sceneID="nJY-vg-ZSx">
             <objects>
                 <tableViewController storyboardIdentifier="TableViewController" id="I5T-tC-9tt" customClass="UserTableViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
@@ -519,7 +513,7 @@
                             <outlet property="delegate" destination="I5T-tC-9tt" id="BeB-9N-Etx"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Users" image="list.png" id="rpV-GJ-OQu"/>
+                    <tabBarItem key="tabBarItem" title="Suggestions" image="list.png" id="rpV-GJ-OQu"/>
                     <navigationItem key="navigationItem" id="g6q-n8-ZNb"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjU-up-bH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
