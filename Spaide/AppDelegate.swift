@@ -8,7 +8,6 @@
 
 import UIKit
 import Firebase
-import GoogleMobileAds
 import FBSDKCoreKit
 
 @UIApplicationMain
@@ -22,10 +21,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FirebaseApp.configure()
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        //Configure Google API
-        
-        GADMobileAds.configure(withApplicationID: "pub-9793810674761024")
         
         return true
     }
