@@ -98,33 +98,5 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
         }
     
     }
-    
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
-        let currentCharacterCount = limitationsField.text?.characters.count ?? 0
-        if (range.length + range.location > currentCharacterCount){
-            return false
-        }
-        let newLength = currentCharacterCount + string.characters.count - range.length
-        return newLength <= 45
-    }
-    
-    func textFieldDidBeginEditing(_ textField: UITextField) {
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(0.3)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        view.frame = CGRect(x: CGFloat(view.frame.origin.x), y: CGFloat(view.frame.origin.y - 200.0), width: CGFloat(view.frame.size.width), height: CGFloat(view.frame.size.height))
-        UIView.commitAnimations()
-    }
-    
-    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextFieldDidEndEditingReason) {
-        UIView.beginAnimations(nil, context: nil)
-        UIView.setAnimationDuration(0.3)
-        UIView.setAnimationBeginsFromCurrentState(true)
-        view.frame = CGRect(x: CGFloat(view.frame.origin.x), y: CGFloat(view.frame.origin.y + 200.0), width: CGFloat(view.frame.size.width), height: CGFloat(view.frame.size.height))
-        UIView.commitAnimations()
-    }
-    
-    
 
 } // End Class
