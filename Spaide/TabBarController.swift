@@ -13,9 +13,9 @@ class TabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //Tab Bar Color
+        //Make Unselected Icons A Different Color
         
-        self.tabBar.barTintColor = UIColor.white
+        self.tabBar.unselectedItemTintColor = UIColor.yellow
     }
 
 }
