@@ -49,7 +49,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
             self.userPosts.insert(UserStruct(firstName: firstName, city: city, limits: limits), at: self.userPosts.count)
             
-            SVProgressHUD.show(withStatus: "Posting Information...")
+            SVProgressHUD.showSuccess(withStatus: "Posted!")
             self.tableView.reloadData()
             
             
