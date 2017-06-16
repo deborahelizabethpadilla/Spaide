@@ -239,9 +239,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUV-9B-Ox6">
+                                <rect key="frame" x="67" y="20" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Post here. If you happen to view a post that contains abuse, misconduct or offensive material, tap on the cell to request removal.</string>
+                                <fontDescription key="fontDescription" name="PingFangHK-Semibold" family="PingFang HK" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="0.90823972230000005" green="0.92638683320000004" blue="0.93171715740000005" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="yve-gm-v3Y" firstAttribute="top" secondItem="gUV-9B-Ox6" secondAttribute="bottom" constant="92" id="2gv-yc-ayq"/>
+                            <constraint firstItem="gUV-9B-Ox6" firstAttribute="top" secondItem="ZK4-OE-Rg1" secondAttribute="bottom" id="5AX-pc-mDX"/>
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="EmW-GM-DXd" secondAttribute="bottom" id="6YI-07-f3U"/>
                             <constraint firstItem="EmW-GM-DXd" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="-270" id="C56-o0-Chg"/>
                             <constraint firstAttribute="trailing" secondItem="EmW-GM-DXd" secondAttribute="trailing" id="HW9-yt-726"/>
@@ -250,12 +259,14 @@
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="N72-4e-oro"/>
                             <constraint firstItem="mLi-aw-DMx" firstAttribute="top" secondItem="52X-qo-US4" secondAttribute="bottom" constant="8" id="NYg-RB-qEQ"/>
                             <constraint firstItem="EmW-GM-DXd" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leading" id="Odz-qG-CDs"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="gUV-9B-Ox6" secondAttribute="trailing" constant="52" id="YcH-8d-szF"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="trailing" secondItem="zZX-S8-tym" secondAttribute="trailingMargin" id="goH-bA-Zwd"/>
                             <constraint firstItem="52X-qo-US4" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="iND-ml-CA1"/>
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="top" secondItem="rAy-AV-JOJ" secondAttribute="bottom" constant="89" id="mVn-pM-CJn"/>
                             <constraint firstItem="rAy-AV-JOJ" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="77" id="mjG-5J-bfe"/>
                             <constraint firstItem="rAy-AV-JOJ" firstAttribute="leading" secondItem="99v-Dh-C9Z" secondAttribute="leading" id="ucs-qP-2ho"/>
                             <constraint firstItem="yve-gm-v3Y" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="v7d-CX-oGi"/>
+                            <constraint firstItem="gUV-9B-Ox6" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" constant="51" id="xEX-Hl-Ab8"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Post" image="avatar.png" id="cZv-Z2-9uJ"/>
