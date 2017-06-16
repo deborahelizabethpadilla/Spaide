@@ -263,6 +263,7 @@
                             <constraint firstItem="52X-qo-US4" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="iND-ml-CA1"/>
                             <constraint firstItem="99v-Dh-C9Z" firstAttribute="top" secondItem="rAy-AV-JOJ" secondAttribute="bottom" constant="89" id="mVn-pM-CJn"/>
                             <constraint firstItem="rAy-AV-JOJ" firstAttribute="top" secondItem="yve-gm-v3Y" secondAttribute="bottom" constant="77" id="mjG-5J-bfe"/>
+                            <constraint firstItem="rAy-AV-JOJ" firstAttribute="leading" secondItem="99v-Dh-C9Z" secondAttribute="leading" id="ucs-qP-2ho"/>
                             <constraint firstItem="yve-gm-v3Y" firstAttribute="leading" secondItem="zZX-S8-tym" secondAttribute="leadingMargin" id="v7d-CX-oGi"/>
                         </constraints>
                     </view>
