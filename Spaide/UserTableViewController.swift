@@ -55,6 +55,8 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
             
         })
         
+        SVProgressHUD.dismiss()
+        
         
         print(userPosts)
         
