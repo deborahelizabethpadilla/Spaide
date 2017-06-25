@@ -17,14 +17,25 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     
     //Outlets
     
-    @IBOutlet var bannerView: GADBannerView!
+    @IBOutlet var changeEmailOutlet: UIButton!
+    @IBOutlet var changePasswordOutlet: UIButton!
+    @IBOutlet var deleteAccount: UIButton!
     @IBOutlet var changeEmail: UITextField!
     @IBOutlet var changePassword: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-    
+        //Button Designs
+        
+        changeEmailOutlet.layer.cornerRadius = 10
+        changeEmailOutlet.clipsToBounds = true
+        
+        changePassword.layer.cornerRadius = 10
+        changePassword.clipsToBounds = true
+        
+        deleteAccount.layer.cornerRadius = 10
+        deleteAccount.clipsToBounds = true
         
         //Close Keyboard With Tap
         
