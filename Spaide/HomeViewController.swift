@@ -26,17 +26,6 @@ class HomeViewController: UIViewController, UITextFieldDelegate, GADBannerViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Button Designs
-        
-        changeEmailOutlet.layer.cornerRadius = 10
-        changeEmailOutlet.clipsToBounds = true
-        
-        changePassword.layer.cornerRadius = 10
-        changePassword.clipsToBounds = true
-        
-        deleteAccount.layer.cornerRadius = 10
-        deleteAccount.clipsToBounds = true
-        
         //Close Keyboard With Tap
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))

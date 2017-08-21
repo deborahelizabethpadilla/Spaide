@@ -80,9 +80,7 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     //Add User Data
     
-
     func addUserData() {
-        
         
         if let key = refUsers?.childByAutoId().key {
             

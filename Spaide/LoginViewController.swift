@@ -62,14 +62,17 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         //Button Designs
         
-        loginButton.layer.cornerRadius = 10
-        loginButton.clipsToBounds = true
+        let myColor = UIColor(red: 0.91, green: 0.75, blue: 0.29, alpha: 1.0)
         
-        fbLoginButton.layer.cornerRadius = 10
-        fbLoginButton.clipsToBounds = true
-        
-        registerButton.layer.cornerRadius = 10
-        registerButton.clipsToBounds = true
+        emailField.layer.cornerRadius = 15.0
+        emailField.layer.borderWidth = 2.0
+        emailField.layer.borderColor = myColor.cgColor
+        passwordField.layer.cornerRadius = 15.0
+        passwordField.layer.borderWidth = 2.0
+        passwordField.layer.borderColor = myColor.cgColor
+        fbLoginButton.layer.cornerRadius = 15.0
+        fbLoginButton.layer.borderWidth = 2.0
+        fbLoginButton.layer.borderColor =
         
     }
     

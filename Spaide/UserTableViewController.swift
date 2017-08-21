@@ -66,13 +66,16 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     
     func configuredMailComposedViewController() -> MFMailComposeViewController {
     
-        let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self
-        mailComposerVC.setToRecipients(["spaideinfo@gmail.com"])
-        mailComposerVC.setSubject("Request Immediate Removal")
-        mailComposerVC.setMessageBody("Hello! I saw a form of unwanted content on Spaide and would like to request removal. Enter here the business, contact, or anything else relevant.", isHTML: false)
+        var emailTitle = "General Questions"
+        var messageBody = "Have a question? Need help? Tell us here..."
+        var toRecipents = ["info@thrilledapp.com"]
+        var mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: false)
+        mc.setToRecipients(toRecipents)
         
-        return mailComposerVC
+        self.presentViewController(mc, animated: true, completion: nil)
         
     }
     
