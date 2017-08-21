@@ -63,6 +63,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         //Button Designs
         
         let myColor = UIColor(red: 0.91, green: 0.75, blue: 0.29, alpha: 1.0)
+        let fbColor = UIColor(red: 0.21, green: 0.32, blue: 0.58, alpha: 1.0)
         
         emailField.layer.cornerRadius = 15.0
         emailField.layer.borderWidth = 2.0
@@ -72,7 +73,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordField.layer.borderColor = myColor.cgColor
         fbLoginButton.layer.cornerRadius = 15.0
         fbLoginButton.layer.borderWidth = 2.0
-        fbLoginButton.layer.borderColor =
+        fbLoginButton.layer.borderColor = fbColor.cgColor
         
     }
     
