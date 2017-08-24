@@ -240,10 +240,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="disabilityphoto" translatesAutoresizingMaskIntoConstraints="NO" id="X1x-ny-gvS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68M-S6-PGP">
-                                <rect key="frame" x="20" y="28" width="84" height="36"/>
+                                <rect key="frame" x="20" y="28" width="97" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="27"/>
                                 <state key="normal" title="LOGOUT">
                                     <color key="titleColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -305,6 +308,12 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="X1x-ny-gvS" firstAttribute="top" secondItem="ilo-ek-KDk" secondAttribute="top" id="1jE-OC-GlT"/>
+                            <constraint firstItem="DYi-Ja-J8D" firstAttribute="top" secondItem="X1x-ny-gvS" secondAttribute="bottom" id="LX6-aU-EOn"/>
+                            <constraint firstItem="X1x-ny-gvS" firstAttribute="leading" secondItem="ilo-ek-KDk" secondAttribute="leading" id="TMx-z5-WDE"/>
+                            <constraint firstAttribute="trailing" secondItem="X1x-ny-gvS" secondAttribute="trailing" id="sCv-tx-PDn"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Settings" image="home.png" id="hsQ-9m-mbi"/>
                     <connections>
@@ -435,6 +444,7 @@
     <resources>
         <image name="Wheelchairphoto" width="2784" height="1856"/>
         <image name="avatar.png" width="24" height="24"/>
+        <image name="disabilityphoto" width="6016" height="4016"/>
         <image name="home.png" width="24" height="24"/>
         <image name="list.png" width="24" height="24"/>
     </resources>
