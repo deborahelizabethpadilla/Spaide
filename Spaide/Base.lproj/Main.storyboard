@@ -359,6 +359,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="userCell" rowHeight="164" id="u3V-vU-jRa" customClass="CustomTableViewCell" customModule="Spaide" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="164"/>
@@ -369,23 +371,23 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTq-yC-dpZ">
                                             <rect key="frame" x="8" y="116" width="398" height="40"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
+                                            <color key="textColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
-                                            <rect key="frame" x="8" y="14" width="145" height="94"/>
+                                        <imageView userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aaJ-fc-rVN">
+                                            <rect key="frame" x="8" y="14" width="106" height="94"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aaI-Aw-w7D">
                                             <rect key="frame" x="122" y="71" width="284" height="20"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="15"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
+                                            <color key="textColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vpd-CQ-uqU">
                                             <rect key="frame" x="122" y="14" width="284" height="24"/>
-                                            <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="18"/>
-                                            <nil key="textColor"/>
+                                            <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="20"/>
+                                            <color key="textColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -427,7 +429,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wjU-up-bH3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="141.59999999999999" y="281.10944527736132"/>
+            <point key="canvasLocation" x="140.57971014492756" y="280.43478260869568"/>
         </scene>
     </scenes>
     <resources>

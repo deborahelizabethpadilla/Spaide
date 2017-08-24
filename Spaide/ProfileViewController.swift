@@ -20,7 +20,6 @@ class ProfileViewController: UIViewController, UITextFieldDelegate, UIImagePicke
     
     //Outlets
 
-    @IBOutlet var imageView: UIImageView!
     @IBOutlet var saveButton: UIButton!
     @IBOutlet var firstNameField: UITextField!
     @IBOutlet var limitationsField: UITextField!
