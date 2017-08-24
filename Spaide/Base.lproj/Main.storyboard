@@ -9,11 +9,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Decalotype-SemiBold.ttf">
-            <string>Decalotype-SemiBold</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--LoginViewController-->
         <scene sceneID="uvs-wA-WWT">
@@ -27,10 +22,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-8f-kFR">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gto-ko-gSz">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </stackView>
+                            <imageView userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Wheelchairphoto" translatesAutoresizingMaskIntoConstraints="NO" id="hGK-uZ-aUg">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="253" verticalCompressionResistancePriority="751" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2I5-8f-kFR">
                                 <rect key="frame" x="20" y="399" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" red="0.20784313725490194" green="0.32156862745098036" blue="0.58039215686274503" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
@@ -45,18 +45,6 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Find help or advocate for special needs." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5w7-mJ-QlY">
-                                <rect key="frame" x="20" y="195" width="374" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Get Started!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQP-Om-stZ">
-                                <rect key="frame" x="20" y="107" width="374" height="72"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Decalotype-SemiBold" family="Decalotype" pointSize="60"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="254" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XBs-hA-N5N">
                                 <rect key="frame" x="20" y="527" width="374" height="43"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -93,7 +81,7 @@
                                     <action selector="fbLoginButtonAction:" destination="n6w-jq-4Dr" eventType="touchUpInside" id="VSR-88-pJB"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzN-2E-3zT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tzN-2E-3zT">
                                 <rect key="frame" x="20" y="325" width="374" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
@@ -112,6 +100,16 @@
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="xPE-fw-evQ" firstAttribute="top" secondItem="gto-ko-gSz" secondAttribute="bottom" id="Esq-3B-Vu5"/>
+                            <constraint firstItem="gto-ko-gSz" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leading" id="HYb-kj-jDK"/>
+                            <constraint firstAttribute="trailing" secondItem="gto-ko-gSz" secondAttribute="trailing" id="MH4-cv-b6r"/>
+                            <constraint firstItem="xPE-fw-evQ" firstAttribute="top" secondItem="hGK-uZ-aUg" secondAttribute="bottom" id="ZIs-C7-ox6"/>
+                            <constraint firstAttribute="trailing" secondItem="hGK-uZ-aUg" secondAttribute="trailing" id="ezZ-q3-g88"/>
+                            <constraint firstItem="hGK-uZ-aUg" firstAttribute="leading" secondItem="jJk-Bo-Nff" secondAttribute="leading" id="oTg-7x-uH0"/>
+                            <constraint firstItem="hGK-uZ-aUg" firstAttribute="top" secondItem="jJk-Bo-Nff" secondAttribute="top" id="uLj-OG-6TC"/>
+                            <constraint firstItem="gto-ko-gSz" firstAttribute="top" secondItem="jJk-Bo-Nff" secondAttribute="top" id="wrp-Ug-Zgc"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="emailField" destination="tzN-2E-3zT" id="wkA-WA-Evx"/>
@@ -437,6 +435,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Wheelchairphoto" width="2784" height="1856"/>
         <image name="avatar.png" width="24" height="24"/>
         <image name="home.png" width="24" height="24"/>
         <image name="list.png" width="24" height="24"/>

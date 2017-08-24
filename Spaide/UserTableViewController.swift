@@ -62,22 +62,7 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
         
     }
     
-    //Compose Email Message
-    
-    func configuredMailComposedViewController() -> MFMailComposeViewController {
-    
-        var emailTitle = "General Questions"
-        var messageBody = "Have a question? Need help? Tell us here..."
-        var toRecipents = ["info@thrilledapp.com"]
-        var mc: MFMailComposeViewController = MFMailComposeViewController()
-        mc.mailComposeDelegate = self
-        mc.setSubject(emailTitle)
-        mc.setMessageBody(messageBody, isHTML: false)
-        mc.setToRecipients(toRecipents)
-        
-        self.presentViewController(mc, animated: true, completion: nil)
-        
-    }
+
     
     //Display Alert
 
@@ -126,18 +111,6 @@ class UserTableViewController: UITableViewController, UINavigationControllerDele
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         return userPosts.count
-    }
-    
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let mailComposeViewController = configuredMailComposedViewController()
-        if MFMailComposeViewController.canSendMail() {
-            self.present(mailComposeViewController, animated: true, completion: nil)
-        } else {
-            
-            self.emailAlert(title: "Could Not Send Email!", message: "Try Again!")
-        }
-        
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
