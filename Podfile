@@ -12,9 +12,6 @@ target 'Spaide' do
   pod 'TextFieldEffects'
   pod 'ReachabilitySwift', '~> 3'
   pod 'Firebase/AdMob'
-  pod 'Bolts'
-  pod 'FacebookCore'
-  pod 'FacebookLogin'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
 
 end

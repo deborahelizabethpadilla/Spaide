@@ -8,32 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		37C34C6F780A61446386E748 /* Pods_Spaide.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */; };
-		5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */; };
 		500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04B71E71D0A10096B987 /* AppDelegate.swift */; };
 		500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04BD1E71D0A30096B987 /* Main.storyboard */; };
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */; };
-		5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5068C68C1EC3831B0035492A /* HomeViewController.swift */; };
-		5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA141EB11528007929CB /* UserTableViewController.swift */; };
-		5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA1A1EB11D01007929CB /* ProfileViewController.swift */; };
-		5081CA1D1EB13016007929CB /* avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA1C1EB13015007929CB /* avatar.png */; };
-		5081CA211EB13070007929CB /* list.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA201EB13070007929CB /* list.png */; };
-		5081CA231EB130BF007929CB /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA221EB130BF007929CB /* home.png */; };
-		5081CA251EB13307007929CB /* settings.png in Resources */ = {isa = PBXBuildFile; fileRef = 5081CA241EB13307007929CB /* settings.png */; };
-		5081CA2C1EB26469007929CB /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5081CA2B1EB26469007929CB /* Reachability.swift */; };
-		50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */; };
-		50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */; };
-		50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 50BDEEBC1E822CA400D77020 /* leftarrow.png */; };
-		50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C306AA1EC513030081A1EC /* FacebookAPI.swift */; };
-		50F51C101ED4D83600DDABCF /* wheelchairnewlogo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4983F52EFE36ACF5146DCCB4 /* Pods-Spaide.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.debug.xcconfig"; sourceTree = "<group>"; };
-		5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		500C04B41E71D0A10096B987 /* Spaide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spaide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		500C04B71E71D0A10096B987 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		500C04BE1E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -42,20 +26,6 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
-		5068C68C1EC3831B0035492A /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		5081CA141EB11528007929CB /* UserTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewController.swift; sourceTree = "<group>"; };
-		5081CA1A1EB11D01007929CB /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		5081CA1C1EB13015007929CB /* avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar.png; sourceTree = "<group>"; };
-		5081CA201EB13070007929CB /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
-		5081CA221EB130BF007929CB /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home.png; sourceTree = "<group>"; };
-		5081CA241EB13307007929CB /* settings.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings.png; sourceTree = "<group>"; };
-		5081CA2B1EB26469007929CB /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Decalotype-Regular.ttf"; path = "../Decalotype-Regular.ttf"; sourceTree = "<group>"; };
-		50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Decalotype-SemiBold.ttf"; sourceTree = "<group>"; };
-		50BDEEBC1E822CA400D77020 /* leftarrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = leftarrow.png; sourceTree = "<group>"; };
-		50C306AA1EC513030081A1EC /* FacebookAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacebookAPI.swift; sourceTree = "<group>"; };
-		50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wheelchairnewlogo.jpg; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -86,7 +56,6 @@
 			children = (
 				500C04B61E71D0A10096B987 /* Spaide */,
 				500C04CE1E71D32F0096B987 /* Controllers */,
-				5081CA2A1EB2642F007929CB /* Extras */,
 				500C04CD1E71D3280096B987 /* Assets */,
 				500C04B51E71D0A10096B987 /* Products */,
 				429742166AC2CE2C14FCB672 /* Pods */,
@@ -118,14 +87,6 @@
 				500C04C01E71D0A30096B987 /* Assets.xcassets */,
 				500C04C51E71D0A30096B987 /* Info.plist */,
 				500C04EE1E7229930096B987 /* GoogleService-Info.plist */,
-				50BDEEBC1E822CA400D77020 /* leftarrow.png */,
-				5081CA1C1EB13015007929CB /* avatar.png */,
-				5081CA201EB13070007929CB /* list.png */,
-				5081CA221EB130BF007929CB /* home.png */,
-				50F51C0F1ED4D83600DDABCF /* wheelchairnewlogo.jpg */,
-				5081CA241EB13307007929CB /* settings.png */,
-				50BDEEB61E819F1300D77020 /* Decalotype-Regular.ttf */,
-				50BDEEB81E819F2D00D77020 /* Decalotype-SemiBold.ttf */,
 			);
 			name = Assets;
 			path = Spaide;
@@ -135,23 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				5081CA141EB11528007929CB /* UserTableViewController.swift */,
-				5081CA1A1EB11D01007929CB /* ProfileViewController.swift */,
-				5068C68C1EC3831B0035492A /* HomeViewController.swift */,
-				5008D8051EBBA2D5000C59F9 /* CustomTableViewCell.swift */,
-				50127DEC1ECFAEF000EE49D9 /* TabBarController.swift */,
 			);
 			name = Controllers;
-			path = Spaide;
-			sourceTree = "<group>";
-		};
-		5081CA2A1EB2642F007929CB /* Extras */ = {
-			isa = PBXGroup;
-			children = (
-				5081CA2B1EB26469007929CB /* Reachability.swift */,
-				50C306AA1EC513030081A1EC /* FacebookAPI.swift */,
-			);
-			name = Extras;
 			path = Spaide;
 			sourceTree = "<group>";
 		};
@@ -227,17 +173,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */,
-				50BDEEB71E819F1300D77020 /* Decalotype-Regular.ttf in Resources */,
-				50BDEEB91E819F2D00D77020 /* Decalotype-SemiBold.ttf in Resources */,
-				50F51C101ED4D83600DDABCF /* wheelchairnewlogo.jpg in Resources */,
-				5081CA251EB13307007929CB /* settings.png in Resources */,
 				500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */,
-				5081CA231EB130BF007929CB /* home.png in Resources */,
-				5081CA1D1EB13016007929CB /* avatar.png in Resources */,
 				500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */,
-				50BDEEBD1E822CA400D77020 /* leftarrow.png in Resources */,
 				500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */,
-				5081CA211EB13070007929CB /* list.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,13 +188,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Spaide-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3DBA3C6643BABFD5883E649F /* [CP] Copy Pods Resources */ = {
@@ -280,9 +221,20 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/ReachabilitySwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReachabilitySwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -296,15 +248,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5068C68D1EC3831B0035492A /* HomeViewController.swift in Sources */,
-				5008D8061EBBA2D5000C59F9 /* CustomTableViewCell.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
-				5081CA1B1EB11D01007929CB /* ProfileViewController.swift in Sources */,
-				50C306AB1EC513030081A1EC /* FacebookAPI.swift in Sources */,
-				5081CA2C1EB26469007929CB /* Reachability.swift in Sources */,
-				5081CA151EB11528007929CB /* UserTableViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				50127DED1ECFAEF100EE49D9 /* TabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

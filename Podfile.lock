@@ -1,22 +1,4 @@
 PODS:
-  - Bolts (1.8.4):
-    - Bolts/AppLinks (= 1.8.4)
-    - Bolts/Tasks (= 1.8.4)
-  - Bolts/AppLinks (1.8.4):
-    - Bolts/Tasks
-  - Bolts/Tasks (1.8.4)
-  - FacebookCore (0.2.0):
-    - Bolts (~> 1.8)
-    - FBSDKCoreKit (~> 4.15)
-  - FacebookLogin (0.2.0):
-    - Bolts (~> 1.8)
-    - FacebookCore (~> 0.2)
-    - FBSDKCoreKit (~> 4.15)
-    - FBSDKLoginKit (~> 4.15)
-  - FBSDKCoreKit (4.23.0):
-    - Bolts (~> 1.7)
-  - FBSDKLoginKit (4.23.0):
-    - FBSDKCoreKit
   - Firebase/AdMob (4.0.0):
     - Firebase/Core
     - Google-Mobile-Ads-SDK (= 7.20.0)
@@ -67,9 +49,6 @@ PODS:
   - TextFieldEffects (1.3.3)
 
 DEPENDENCIES:
-  - Bolts
-  - FacebookCore
-  - FacebookLogin
   - Firebase/AdMob
   - Firebase/Auth
   - Firebase/Core
@@ -89,11 +68,6 @@ CHECKOUT OPTIONS:
     :git: https://github.com/SVProgressHUD/SVProgressHUD.git
 
 SPEC CHECKSUMS:
-  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
-  FacebookCore: 2cb3f0fbff218e9d3119cec84bae983b232412de
-  FacebookLogin: c9d606504735780a9e3002465a615512e0a691a5
-  FBSDKCoreKit: d7829f5a69901cd7296105328e4c3c3fc7da6518
-  FBSDKLoginKit: 6b92bd65f319d669d2b0730e49db495ef1660566
   Firebase: 284eea779b73fdff309791817da7c68bff8dd572
   FirebaseAnalytics: 6f08e746f7d66f5452931bc2e822b5df9c66b64a
   FirebaseAuth: ebb6abcbabae00fc47446d690c19ce68d8484fde
@@ -108,6 +82,6 @@ SPEC CHECKSUMS:
   SVProgressHUD: d65371a8e4482380deddb9fe60e14e59ddb30eb3
   TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
 
-PODFILE CHECKSUM: bcfa622942927a8d252a57eb5163426cc6645393
+PODFILE CHECKSUM: 6b4757843f94ecc94dd9788b8a4bf3c705aa41c0
 
-COCOAPODS: 1.2.1
+COCOAPODS: 1.3.1
