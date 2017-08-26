@@ -9,9 +9,9 @@ target 'Spaide' do
   pod 'Firebase/Storage'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
-  pod 'TextFieldEffects'
   pod 'ReachabilitySwift', '~> 3'
   pod 'Firebase/AdMob'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
+  pod 'GeoFire', '~> 1.1'
 
 end
