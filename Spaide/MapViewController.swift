@@ -14,13 +14,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     //Variables
     
     var searchController:UISearchController!
-    var annotation:MKAnnotation!
-    var localSearchRequest:MKLocalSearchRequest!
-    var localSearch:MKLocalSearch!
-    var localSearchResponse:MKLocalSearchResponse!
-    var error:NSError!
-    var pointAnnotation:MKPointAnnotation!
-    var pinAnnotationView:MKPinAnnotationView!
+    let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func showSearchBar(_ sender: Any) {
@@ -29,6 +23,15 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         searchController.hidesNavigationBarDuringPresentation = false
         self.searchController.searchBar.delegate = self
         present(searchController, animated: true, completion: nil)
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.requestLocation()
+        
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTableViewController") as! LocationSearchTableViewController
+        searchController = UISearchController(searchResultsController: locationSearchTable)
+        searchController?.searchResultsUpdater = locationSearchTable
     }
     
     override func viewDidLoad() {
@@ -36,37 +39,25 @@ class MapViewController: UIViewController, UISearchBarDelegate {
 
         
     }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar){
-        //1
-        searchBar.resignFirstResponder()
-        dismiss(animated: true, completion: nil)
-        if self.mapView.annotations.count != 0{
-            annotation = self.mapView.annotations[0]
-            self.mapView.removeAnnotation(annotation)
-        }
-        //2
-        localSearchRequest = MKLocalSearchRequest()
-        localSearchRequest.naturalLanguageQuery = searchBar.text
-        localSearch = MKLocalSearch(request: localSearchRequest)
-        localSearch.start { (localSearchResponse, error) -> Void in
-            
-            if localSearchResponse == nil{
-                let alertController = UIAlertController(title: nil, message: "Place Not Found", preferredStyle: UIAlertControllerStyle.alert)
-                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alertController, animated: true, completion: nil)
-                return
-            }
-            //3
-            self.pointAnnotation = MKPointAnnotation()
-            self.pointAnnotation.title = searchBar.text
-            self.pointAnnotation.coordinate = CLLocationCoordinate2D(latitude: localSearchResponse!.boundingRegion.center.latitude, longitude:     localSearchResponse!.boundingRegion.center.longitude)
-            
-            
-            self.pinAnnotationView = MKPinAnnotationView(annotation: self.pointAnnotation, reuseIdentifier: nil)
-            self.mapView.centerCoordinate = self.pointAnnotation.coordinate
-            self.mapView.addAnnotation(self.pinAnnotationView.annotation!)
-        }
-    }
 
 } //End Class
+
+extension MapViewController : CLLocationManagerDelegate {
+    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
+    private func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    private func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error:: \(error)")
+    }
+}
