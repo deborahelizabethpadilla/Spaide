@@ -38,6 +38,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
+        //Passes Handle Of Map View To Table VC
+        locationSearchTable.mapView = mapView
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -46,7 +48,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
 
 } //End Class
 
-extension MapViewController : CLLocationManagerDelegate {
+extension MapViewController {
     func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
