@@ -14,6 +14,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     //Variables
     
     var searchController:UISearchController!
+    let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func showSearchBar(_ sender: Any) {
@@ -23,9 +24,20 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         present(searchController, animated: true, completion: nil)
     }
     
+    @IBAction func currentLocation(_ sender: Any) {
+        
+        mapView.showsUserLocation = true
+        mapView.setUserTrackingMode(.follow, animated: true)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
     }
 
