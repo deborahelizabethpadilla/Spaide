@@ -14,12 +14,13 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     //Variables
     
     var searchController:UISearchController!
-    let locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func showSearchBar(_ sender: Any) {
-        
-        
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.delegate = self
+        present(searchController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
