@@ -7,6 +7,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -74,16 +75,21 @@
                                     <color key="titleColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Spaide" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="LNL-mB-a7G">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Spaide" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNL-mB-a7G">
                                 <rect key="frame" x="87" y="121" width="240" height="94"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="lat-7s-qFu"/>
                                     <constraint firstAttribute="height" constant="94" id="sby-4I-gGg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="85"/>
+                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="80"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a00-vz-ocp">
+                                <rect key="frame" x="7" y="698" width="400" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="By using our service, you agree to the terms."/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -148,6 +154,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ejI-Z3-2xT">
+                        <leftBarButtonItems>
+                            <barButtonItem systemItem="add" id="Z95-I1-Dh3">
+                                <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem title="Settings" id="AOq-dr-JrY"/>
+                        </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" systemItem="search" id="PUQ-pe-OTr">
                             <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
