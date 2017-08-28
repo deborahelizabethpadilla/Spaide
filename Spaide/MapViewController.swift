@@ -24,13 +24,6 @@ class MapViewController: UIViewController, UISearchBarDelegate {
         present(searchController, animated: true, completion: nil)
     }
     
-    @IBAction func currentLocation(_ sender: Any) {
-        
-        mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.follow, animated: true)
-        
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

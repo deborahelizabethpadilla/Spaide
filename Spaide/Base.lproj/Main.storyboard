@@ -162,20 +162,12 @@
                                 <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
                             </barButtonItem>
                         </leftBarButtonItems>
-                        <rightBarButtonItems>
-                            <barButtonItem image="search" id="PUQ-pe-OTr">
-                                <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="showSearchBar:" destination="HCK-XT-bc3" id="PuE-B7-kmv"/>
-                                </connections>
-                            </barButtonItem>
-                            <barButtonItem image="placeholderlocation" id="HL3-eg-jtH">
-                                <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
-                                <connections>
-                                    <action selector="currentLocation:" destination="HCK-XT-bc3" id="oJQ-u8-iJh"/>
-                                </connections>
-                            </barButtonItem>
-                        </rightBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" image="search" id="PUQ-pe-OTr">
+                            <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showSearchBar:" destination="HCK-XT-bc3" id="PuE-B7-kmv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="R4n-0o-pE8" id="m4F-YQ-xbm"/>
@@ -495,7 +487,6 @@
     </scenes>
     <resources>
         <image name="newsettings" width="32" height="32"/>
-        <image name="placeholderlocation" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
         <image name="search" width="32" height="32"/>
     </resources>
