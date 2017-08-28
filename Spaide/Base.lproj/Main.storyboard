@@ -171,14 +171,7 @@
                             <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="fal-5g-SRC"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ejI-Z3-2xT">
-                        <barButtonItem key="rightBarButtonItem" title="Search" id="PUQ-pe-OTr">
-                            <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="showSearchBar:" destination="HCK-XT-bc3" id="PuE-B7-kmv"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ejI-Z3-2xT"/>
                     <connections>
                         <outlet property="mapView" destination="R4n-0o-pE8" id="m4F-YQ-xbm"/>
                         <outlet property="searchDisplayController" destination="ND9-Qh-J4P" id="xd7-Jx-upp"/>
@@ -195,6 +188,50 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="673.91304347826087" y="-224.18478260869566"/>
+        </scene>
+        <!--Location Search Table View Controller-->
+        <scene sceneID="B63-CL-bFZ">
+            <objects>
+                <tableViewController storyboardIdentifier="LocationSearchTableViewController" id="y2b-8f-45b" customClass="LocationSearchTableViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BZG-s2-0zn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" textLabel="GhS-EY-ekk" detailTextLabel="UTk-KK-6fv" style="IBUITableViewCellStyleSubtitle" id="o7S-IJ-N0j">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="o7S-IJ-N0j" id="JvG-Us-gbe">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="GhS-EY-ekk">
+                                            <rect key="frame" x="15" y="5" width="33.333333333333336" height="20.333333333333332"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UTk-KK-6fv">
+                                            <rect key="frame" x="14.999999999999996" y="25.333333333333332" width="43.666666666666664" height="14.333333333333334"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="y2b-8f-45b" id="xm8-Mm-vJU"/>
+                            <outlet property="delegate" destination="y2b-8f-45b" id="UUu-Jo-kts"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zqt-aK-AcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="672" y="424"/>
         </scene>
         <!--Settings-->
         <scene sceneID="t3b-jU-4lC">
@@ -343,7 +380,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gGQ-U2-MIy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find" image="search" id="7At-Ga-BN9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ip-By-jcp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5ip-By-jcp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
