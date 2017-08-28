@@ -17,6 +17,9 @@
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 		50EF69241F547030008D44E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69231F547030008D44E3 /* MapViewController.swift */; };
 		50EF69261F547D68008D44E3 /* LocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69251F547D68008D44E3 /* LocationSearchTableViewController.swift */; };
+		50EF692A1F5484DE008D44E3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */; };
+		50EF692C1F54856B008D44E3 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF692B1F54856B008D44E3 /* AddViewController.swift */; };
+		50EF692E1F54859D008D44E3 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF692D1F54859D008D44E3 /* ShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		50EF69231F547030008D44E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		50EF69251F547D68008D44E3 /* LocationSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTableViewController.swift; sourceTree = "<group>"; };
+		50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		50EF692B1F54856B008D44E3 /* AddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		50EF692D1F54859D008D44E3 /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +111,9 @@
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50EF69231F547030008D44E3 /* MapViewController.swift */,
 				50EF69251F547D68008D44E3 /* LocationSearchTableViewController.swift */,
+				50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */,
+				50EF692B1F54856B008D44E3 /* AddViewController.swift */,
+				50EF692D1F54859D008D44E3 /* ShowViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -259,6 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50EF69261F547D68008D44E3 /* LocationSearchTableViewController.swift in Sources */,
+				50EF692E1F54859D008D44E3 /* ShowViewController.swift in Sources */,
+				50EF692A1F5484DE008D44E3 /* SettingsTableViewController.swift in Sources */,
+				50EF692C1F54856B008D44E3 /* AddViewController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				50EF69241F547030008D44E3 /* MapViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
