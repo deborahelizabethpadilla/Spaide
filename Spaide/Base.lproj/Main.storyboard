@@ -9,6 +9,11 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Mywriting.ttf">
+            <string>Mywriting</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--LoginViewController-->
         <scene sceneID="uvs-wA-WWT">
@@ -69,6 +74,13 @@
                                     <color key="titleColor" red="0.98624199628829956" green="0.7796865701675415" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" text="Spaide" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qvQ-op-JVn">
+                                <rect key="frame" x="87" y="112" width="240" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="80"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -120,7 +132,7 @@
                                     <constraint firstAttribute="width" constant="414" id="jfy-qI-tne"/>
                                 </constraints>
                             </mapView>
-                            <searchBar contentMode="redraw" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DGs-bg-fwU">
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="DGs-bg-fwU">
                                 <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <connections>
@@ -134,6 +146,8 @@
                             <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="37Z-eR-osZ"/>
                             <constraint firstItem="R4n-0o-pE8" firstAttribute="centerX" secondItem="but-HF-qy9" secondAttribute="centerX" id="9Cw-1y-hJ7"/>
                             <constraint firstItem="mKW-he-fn7" firstAttribute="top" secondItem="R4n-0o-pE8" secondAttribute="bottom" id="PRY-qz-JQT"/>
+                            <constraint firstItem="DGs-bg-fwU" firstAttribute="leading" secondItem="R4n-0o-pE8" secondAttribute="leading" id="RrE-rj-pgl"/>
+                            <constraint firstItem="DGs-bg-fwU" firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="bbS-zg-H0q"/>
                             <constraint firstItem="R4n-0o-pE8" firstAttribute="top" secondItem="DGs-bg-fwU" secondAttribute="bottom" id="ocs-Dg-tR3"/>
                         </constraints>
                     </view>
@@ -160,7 +174,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Zb3-C4-6mQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ukG-Kg-bkh">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ukG-Kg-bkh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
