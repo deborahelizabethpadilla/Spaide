@@ -15,6 +15,7 @@
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
+		50EF69241F547030008D44E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69231F547030008D44E3 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
+		50EF69231F547030008D44E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -99,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
+				50EF69231F547030008D44E3 /* MapViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -253,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
+				50EF69241F547030008D44E3 /* MapViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
