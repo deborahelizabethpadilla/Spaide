@@ -14,7 +14,7 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     //Variables
     
     var searchController:UISearchController!
-    let locationManager = CLLocationManager()
+    var locationManager = CLLocationManager()
 
     @IBOutlet weak var mapView: MKMapView!
     @IBAction func showSearchBar(_ sender: Any) {
@@ -33,7 +33,33 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //Map Delegate & Location Accuracy
+        mapView.delegate = self as? MKMapViewDelegate
+        mapView.showsUserLocation = true
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.delegate = self as? CLLocationManagerDelegate
+        
+        //Check Location Services
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager = CLLocationManager()
+            locationManager.delegate = self as? CLLocationManagerDelegate
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.requestAlwaysAuthorization()
+            locationManager.requestWhenInUseAuthorization()
+        }
+        locationManager.requestWhenInUseAuthorization()
+        if CLLocationManager.locationServicesEnabled() {
+            locationManager.startUpdatingLocation()
+        }
+        //Zoom Users Location
+        let noLocation = CLLocationCoordinate2D()
+        let viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 200, 200)
+        mapView.setRegion(viewRegion, animated: false)
+        
+        DispatchQueue.main.async {
+            self.locationManager.startUpdatingLocation()
+        }
         
     }
     
