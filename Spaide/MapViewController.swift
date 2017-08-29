@@ -48,6 +48,8 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
 
 } //End Class
 
+//Extensions for Map VC
+
 extension MapViewController {
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
