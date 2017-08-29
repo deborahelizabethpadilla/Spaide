@@ -20,7 +20,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     @IBAction func searchCurrentLocation(_ sender: Any) {
         //Show User Location, Zoom & Track
         mapView.showsUserLocation = true
-        MKCoordinateSpanMake(0.05, 0.05)
         mapView.setUserTrackingMode(.follow, animated: true)
     }
 
@@ -37,7 +36,7 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
         resultSearchController?.searchResultsUpdater = locationSearchTable
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
-        searchBar.placeholder = "Search For Places"
+        searchBar.placeholder = "Find Ability Friendly Places"
         navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
