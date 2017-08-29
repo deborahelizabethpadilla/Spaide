@@ -128,10 +128,10 @@
             </objects>
             <point key="canvasLocation" x="-1521.7391304347827" y="-224.18478260869566"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="igw-ae-g2V">
             <objects>
-                <tabBarController storyboardIdentifier="HomeView" id="2Gn-at-tpI" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="HomeView" id="2Gn-at-tpI" customClass="TabBarViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="b8H-jg-Uhi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
