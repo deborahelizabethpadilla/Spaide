@@ -16,7 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        //Configure Firebase And FB API
+        //Configure Tab Color
+        
+        UITabBar.appearance().tintColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+        
+        //Configure Firebase
         
         FirebaseApp.configure()
         

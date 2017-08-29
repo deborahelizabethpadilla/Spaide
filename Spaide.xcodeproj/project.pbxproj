@@ -14,7 +14,6 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		50C067411F55E6150041B609 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C067401F55E6150041B609 /* TabBarViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 		50EF69241F547030008D44E3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69231F547030008D44E3 /* MapViewController.swift */; };
 		50EF69261F547D68008D44E3 /* LocationSearchTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69251F547D68008D44E3 /* LocationSearchTable.swift */; };
@@ -33,7 +32,6 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		50C067401F55E6150041B609 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		50EF69231F547030008D44E3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		50EF69251F547D68008D44E3 /* LocationSearchTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationSearchTable.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 				50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */,
 				50EF692B1F54856B008D44E3 /* AddViewController.swift */,
 				50EF692D1F54859D008D44E3 /* ShowViewController.swift */,
-				50C067401F55E6150041B609 /* TabBarViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -270,7 +267,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				50C067411F55E6150041B609 /* TabBarViewController.swift in Sources */,
 				50EF69261F547D68008D44E3 /* LocationSearchTable.swift in Sources */,
 				50EF692E1F54859D008D44E3 /* ShowViewController.swift in Sources */,
 				50EF692A1F5484DE008D44E3 /* SettingsTableViewController.swift in Sources */,
