@@ -12,17 +12,27 @@ import FirebaseAuth
 import SVProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
-    //Outlets
     
+    //Outlets
     @IBOutlet var emailField: UITextField!
     @IBOutlet var passwordField: UITextField!
     @IBOutlet var registerButton: UIButton!
     @IBOutlet var loginButton: UIButton!
-
+    //Actions
     @IBAction func signinAction(_ sender: Any) {
         
         login()
     }
+    
+    @IBAction func termsButton(_ sender: Any) {
+        let url = URL(string: "http://www.spaideapp.com")!
+        if #available(iOS 10.0, *) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()

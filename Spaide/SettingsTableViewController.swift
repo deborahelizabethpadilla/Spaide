@@ -30,7 +30,7 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     }
     
     @IBAction func signOut(_ sender: Any) {
-        
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func deleteAccount(_ sender: Any) {
