@@ -155,25 +155,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-0o-pE8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-0o-pE8">
+                                <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="414" id="LyT-I1-EZW"/>
-                                    <constraint firstAttribute="height" constant="672" id="bA4-kn-f8g"/>
+                                    <constraint firstAttribute="height" constant="623" id="Nr5-WJ-gE3"/>
+                                    <constraint firstAttribute="width" constant="414" id="jjF-5m-7E1"/>
                                 </constraints>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="R4n-0o-pE8" firstAttribute="leading" secondItem="but-HF-qy9" secondAttribute="leading" id="1wh-Gp-m6i"/>
-                            <constraint firstItem="R4n-0o-pE8" firstAttribute="top" secondItem="Icr-AH-lgf" secondAttribute="bottom" id="UHg-w5-TPg"/>
-                            <constraint firstItem="mKW-he-fn7" firstAttribute="top" secondItem="R4n-0o-pE8" secondAttribute="bottom" id="ZfH-bK-hj5"/>
-                            <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="fal-5g-SRC"/>
+                            <constraint firstItem="mKW-he-fn7" firstAttribute="top" secondItem="R4n-0o-pE8" secondAttribute="bottom" id="FGe-m0-hFp"/>
+                            <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="Oet-vP-Ghr"/>
+                            <constraint firstItem="R4n-0o-pE8" firstAttribute="top" secondItem="Icr-AH-lgf" secondAttribute="bottom" id="cYp-en-9gE"/>
+                            <constraint firstItem="R4n-0o-pE8" firstAttribute="leading" secondItem="but-HF-qy9" secondAttribute="leading" id="uHo-Cr-nVj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ejI-Z3-2xT"/>
+                    <navigationItem key="navigationItem" id="ejI-Z3-2xT">
+                        <barButtonItem key="rightBarButtonItem" image="search" id="KFX-i0-kmM">
+                            <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="mapView" destination="R4n-0o-pE8" id="m4F-YQ-xbm"/>
+                        <outlet property="mapView" destination="R4n-0o-pE8" id="m8z-g8-ko9"/>
                         <outlet property="searchDisplayController" destination="ND9-Qh-J4P" id="xd7-Jx-upp"/>
                     </connections>
                 </viewController>
@@ -187,12 +191,12 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="673.91304347826087" y="-224.18478260869566"/>
+            <point key="canvasLocation" x="672.46376811594212" y="-224.18478260869566"/>
         </scene>
-        <!--Location Search Table View Controller-->
+        <!--Location Search Table-->
         <scene sceneID="B63-CL-bFZ">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTableViewController" id="y2b-8f-45b" customClass="LocationSearchTableViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTableViewController" id="y2b-8f-45b" customClass="LocationSearchTable" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BZG-s2-0zn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
