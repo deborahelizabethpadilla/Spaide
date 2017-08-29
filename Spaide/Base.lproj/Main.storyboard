@@ -172,7 +172,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ejI-Z3-2xT">
-                        <barButtonItem key="rightBarButtonItem" image="search" id="KFX-i0-kmM">
+                        <barButtonItem key="leftBarButtonItem" image="search" id="T0E-cV-lDU">
+                            <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="current" id="KFX-i0-kmM">
                             <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
                         </barButtonItem>
                     </navigationItem>
@@ -399,6 +402,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="current" width="32" height="32"/>
         <image name="newsettings" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
         <image name="search" width="32" height="32"/>

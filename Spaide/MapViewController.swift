@@ -11,39 +11,14 @@ import MapKit
 
 class MapViewController: UIViewController {
     
-    var locationManager = CLLocationManager()
-    
     @IBOutlet var mapView: MKMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        mapView.delegate = self as? MKMapViewDelegate
+        //Show User Location & Track
         mapView.showsUserLocation = true
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.delegate = self as? CLLocationManagerDelegate
-        
-        //Check Location Services
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager = CLLocationManager()
-            locationManager.delegate = self as? CLLocationManagerDelegate
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.requestAlwaysAuthorization()
-            locationManager.requestWhenInUseAuthorization()
-        }
-        locationManager.requestWhenInUseAuthorization()
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        }
-        //Zoom User location
-        let noLocation = CLLocationCoordinate2D()
-        let viewRegion = MKCoordinateRegionMakeWithDistance(noLocation, 200, 200)
-        mapView.setRegion(viewRegion, animated: false)
-        
-        DispatchQueue.main.async {
-            self.locationManager.startUpdatingLocation()
-        }
-        
+        mapView.setUserTrackingMode(.follow, animated: true)
     }
+    
 
 } //End Class
