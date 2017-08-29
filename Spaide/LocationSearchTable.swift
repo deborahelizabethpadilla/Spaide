@@ -9,40 +9,10 @@
 import UIKit
 import MapKit
 
-class LocationSearchTable: UITableViewController, UISearchResultsUpdating {
+class LocationSearchTable: UITableViewController {
     
-    //Variables
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil
-    
-    func updateSearchResults(for searchController: UISearchController) {
-        //Search Results
-        guard let mapView = mapView,
-            let searchBarText = searchController.searchBar.text else { return }
-        let request = MKLocalSearchRequest()
-        request.naturalLanguageQuery = searchBarText
-        request.region = mapView.region
-        let search = MKLocalSearch(request: request)
-        search.start { response, _ in
-            guard let response = response else {
-                return
-            }
-            self.matchingItems = response.mapItems
-            self.tableView.reloadData()
-        }
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return matchingItems.count
-    }
-    
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
-        let selectedItem = matchingItems[indexPath.row].placemark
-        cell.textLabel?.text = selectedItem.name
-        cell.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
-        return cell
-        }
     
     func parseAddress(selectedItem:MKPlacemark) -> String {
         // put a space between "4" and "Melrose Place"
@@ -67,5 +37,37 @@ class LocationSearchTable: UITableViewController, UISearchResultsUpdating {
         )
         return addressLine
     }
-    
 } //End Class
+
+extension LocationSearchTable : UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let mapView = mapView,
+            let searchBarText = searchController.searchBar.text else { return }
+        let request = MKLocalSearchRequest()
+        request.naturalLanguageQuery = searchBarText
+        request.region = mapView.region
+        let search = MKLocalSearch(request: request)
+        search.start { response, _ in
+            guard let response = response else {
+                return
+            }
+            self.matchingItems = response.mapItems
+            self.tableView.reloadData()
+        }
+    }
+        
+}
+
+extension LocationSearchTable {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return matchingItems.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell")!
+        let selectedItem = matchingItems[indexPath.row].placemark
+        cell.textLabel?.text = selectedItem.name
+        cell.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
+        return cell
+    }
+}

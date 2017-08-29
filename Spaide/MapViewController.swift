@@ -43,9 +43,8 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         //Dismiss Nav Bar & Show Design
         searchBar.resignFirstResponder()
+        searchBar.placeholder = "Search Places"
         dismiss(animated: true, completion: nil)
-        searchBar.backgroundColor = UIColor.black
-        searchBar.placeholder = "Find Places"
         
     }
     

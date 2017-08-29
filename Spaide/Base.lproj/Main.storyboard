@@ -393,7 +393,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gGQ-U2-MIy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Find" image="search" id="7At-Ga-BN9"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="5ip-By-jcp">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ip-By-jcp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
