@@ -183,14 +183,7 @@
                             <constraint firstItem="R4n-0o-pE8" firstAttribute="leading" secondItem="but-HF-qy9" secondAttribute="leading" id="uHo-Cr-nVj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="ejI-Z3-2xT">
-                        <barButtonItem key="rightBarButtonItem" image="current" id="KFX-i0-kmM">
-                            <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="searchCurrentLocation:" destination="HCK-XT-bc3" id="3I5-lE-8sC"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="ejI-Z3-2xT"/>
                     <connections>
                         <outlet property="mapView" destination="R4n-0o-pE8" id="m8z-g8-ko9"/>
                         <outlet property="searchDisplayController" destination="ND9-Qh-J4P" id="xd7-Jx-upp"/>
@@ -458,7 +451,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="current" width="32" height="32"/>
         <image name="newsettings" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
         <image name="search" width="32" height="32"/>

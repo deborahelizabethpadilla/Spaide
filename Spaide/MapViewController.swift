@@ -17,12 +17,6 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
     var resultSearchController:UISearchController? = nil
     
     @IBOutlet var mapView: MKMapView!
-    @IBAction func searchCurrentLocation(_ sender: Any) {
-        //Show User Location, Zoom & Track
-        mapView.showsUserLocation = true
-        mapView.setUserTrackingMode(.follow, animated: true)
-    }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
