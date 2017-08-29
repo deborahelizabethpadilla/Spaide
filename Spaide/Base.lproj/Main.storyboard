@@ -174,9 +174,15 @@
                     <navigationItem key="navigationItem" id="ejI-Z3-2xT">
                         <barButtonItem key="leftBarButtonItem" image="search" id="T0E-cV-lDU">
                             <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="showSearchBar:" destination="HCK-XT-bc3" id="EAX-jI-1Oq"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" image="current" id="KFX-i0-kmM">
                             <color key="tintColor" red="0.111818932" green="0.11183650050000001" blue="0.1118125319" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="searchCurrentLocation:" destination="HCK-XT-bc3" id="3I5-lE-8sC"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>

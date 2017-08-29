@@ -9,15 +9,28 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController, UISearchBarDelegate {
+    
+    //Variables
+    var searchController:UISearchController!
     
     @IBOutlet var mapView: MKMapView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    @IBAction func searchCurrentLocation(_ sender: Any) {
         //Show User Location & Track
         mapView.showsUserLocation = true
         mapView.setUserTrackingMode(.follow, animated: true)
+    }
+    @IBAction func showSearchBar(_ sender: Any) {
+        //Present Search Bar
+        searchController = UISearchController(searchResultsController: nil)
+        searchController.hidesNavigationBarDuringPresentation = false
+        self.searchController.searchBar.delegate = self
+        present(searchController, animated: true, completion: nil)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
     }
     
 
