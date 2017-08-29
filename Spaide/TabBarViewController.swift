@@ -17,6 +17,8 @@ class TabBarViewController: UITabBarController {
         topBorder.frame = CGRect(x: 0, y: 0, width: view.frame.size.width, height: 0.5)
         topBorder.backgroundColor = UIColor.black as! CGColor
         tabBar.layer.addSublayer(topBorder)
+        //Tab Bar Color
+        self.tabBarController?.tabBar.tintColor = UIColor.black
     }
 
 } //End Class
