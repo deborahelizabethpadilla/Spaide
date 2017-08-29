@@ -205,7 +205,7 @@
         <!--Location Search Table-->
         <scene sceneID="B63-CL-bFZ">
             <objects>
-                <tableViewController storyboardIdentifier="LocationSearchTableViewController" id="y2b-8f-45b" customClass="LocationSearchTable" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LocationSearchTable" id="y2b-8f-45b" customClass="LocationSearchTable" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BZG-s2-0zn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

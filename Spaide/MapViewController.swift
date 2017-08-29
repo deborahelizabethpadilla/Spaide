@@ -9,10 +9,12 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, UISearchBarDelegate {
+class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     
     //Variables
     var searchController:UISearchController!
+    var locationManager = CLLocationManager()
+    var resultSearchController:UISearchController? = nil
     
     @IBOutlet var mapView: MKMapView!
     @IBAction func searchCurrentLocation(_ sender: Any) {
@@ -30,7 +32,35 @@ class MapViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //Send Results To Table VC
+        let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable as UISearchResultsUpdating
+        locationSearchTable.mapView = mapView
         
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //Dismiss Nav Bar & Show Design
+        searchBar.resignFirstResponder()
+        dismiss(animated: true, completion: nil)
+        searchBar.backgroundColor = UIColor.black
+        searchBar.placeholder = "Find Places"
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+            //Zoom Location
+            if let location = locations.first {
+                let span = MKCoordinateSpanMake(0.05, 0.05)
+                let region = MKCoordinateRegion(center: location.coordinate, span: span)
+                mapView.setRegion(region, animated: true)
+            }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        //Failed To Find Location
+        print("error:: \(error)")
     }
     
 
