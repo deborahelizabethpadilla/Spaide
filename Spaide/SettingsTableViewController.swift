@@ -11,8 +11,9 @@ import Firebase
 import FirebaseAuth
 import FirebaseDatabase
 import SVProgressHUD
+import MessageUI
 
-class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
+class SettingsTableViewController: UITableViewController, UITextFieldDelegate, MFMailComposeViewControllerDelegate {
     //Outlets
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -27,6 +28,38 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate {
     
     @IBAction func contactAction(_ sender: Any) {
         
+        let emailTitle = "General Questions"
+        let messageBody = "Have a question? Need help? Tell us here..."
+        let toRecipents = ["spaideapp@gmail.com"]
+        let mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: false)
+        mc.setToRecipients(toRecipents)
+        
+        self.present(mc, animated: true, completion: nil)
+    }
+    
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        
+        switch result {
+            
+        case .cancelled:
+            print("Mail Cancelled")
+            
+        case .saved:
+            print("Mail Saved")
+            
+        case .sent:
+            print("Mail Sent")
+            
+        default:
+            break
+        }
+        
+        //Close Mail Interface
+        
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func signOut(_ sender: Any) {
