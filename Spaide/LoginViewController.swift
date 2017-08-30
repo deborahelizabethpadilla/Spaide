@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 import SVProgressHUD
 
 class LoginViewController: UIViewController, UITextFieldDelegate {
@@ -62,32 +63,20 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.passwordField.delegate = self
         
     }
-    
+            
     func login() {
         
-        if self.emailField.text == "" || self.passwordField.text == "" {
-            
-            //Show Error
-            
-            SVProgressHUD.showError(withStatus: "Please Enter Your Info!")
-            
-        } else {
-            
-            //Sign in
-            
-            SVProgressHUD.setStatus("Signing In")
-            
-            Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
-                if error == nil {
-                    
-                    SVProgressHUD.dismiss()
-                    
+        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
+            if let user = Auth.auth().currentUser {
+                if !user.isEmailVerified {
+                    //Failed Message
+                    SVProgressHUD.show(withStatus: "Something Went Wrong! Try Again!")
+                } else {
                     //Go To Controller
-                    
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
                     self.present(vc!, animated: true, completion: nil)
                 }
-            })
+            }
         }
     }
     
@@ -109,5 +98,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         self.view.endEditing(true)
         return false
     }
+    
     
 } //End Class
