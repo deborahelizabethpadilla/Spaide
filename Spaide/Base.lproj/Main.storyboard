@@ -162,18 +162,14 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-0o-pE8">
                                 <rect key="frame" x="0.0" y="64" width="414" height="623"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="623" id="Nr5-WJ-gE3"/>
-                                    <constraint firstAttribute="width" constant="414" id="jjF-5m-7E1"/>
-                                </constraints>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="mKW-he-fn7" firstAttribute="top" secondItem="R4n-0o-pE8" secondAttribute="bottom" id="FGe-m0-hFp"/>
-                            <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="Oet-vP-Ghr"/>
-                            <constraint firstItem="R4n-0o-pE8" firstAttribute="top" secondItem="Icr-AH-lgf" secondAttribute="bottom" id="cYp-en-9gE"/>
-                            <constraint firstItem="R4n-0o-pE8" firstAttribute="leading" secondItem="but-HF-qy9" secondAttribute="leading" id="uHo-Cr-nVj"/>
+                            <constraint firstItem="mKW-he-fn7" firstAttribute="top" secondItem="R4n-0o-pE8" secondAttribute="bottom" id="Q5s-fU-3Sb"/>
+                            <constraint firstItem="R4n-0o-pE8" firstAttribute="leading" secondItem="but-HF-qy9" secondAttribute="leading" id="dpc-Xd-GBG"/>
+                            <constraint firstItem="R4n-0o-pE8" firstAttribute="top" secondItem="Icr-AH-lgf" secondAttribute="bottom" id="hGp-il-2fI"/>
+                            <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="nJA-5O-3a4"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ejI-Z3-2xT"/>
