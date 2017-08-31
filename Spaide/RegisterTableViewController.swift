@@ -32,13 +32,16 @@ class RegisterTableViewController: UITableViewController {
     
     func register() {
         Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
-                if !(user?.isEmailVerified)! {
+                if let user = Auth.auth().currentUser {
+                    if !user.isEmailVerified {
                     //Failed
                     SVProgressHUD.show(withStatus: "That Email Is Taken!")
                 } else {
                     //Go To Controller
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
                     self.present(vc!, animated: true, completion: nil)
+                        
+                    }
             }
         }
     }
