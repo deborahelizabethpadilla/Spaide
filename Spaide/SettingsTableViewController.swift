@@ -83,6 +83,8 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, M
         
         view.addGestureRecognizer(tap)
         
+        tableView.allowsSelection = false
+        
     }
     
     //Functions

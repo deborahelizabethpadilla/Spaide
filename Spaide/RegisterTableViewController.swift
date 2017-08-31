@@ -28,6 +28,7 @@ class RegisterTableViewController: UITableViewController {
         //Button Designs
         registerButton.layer.cornerRadius = 15.0
         backButton.layer.cornerRadius = 15.0
+        tableView.allowsSelection = false
     }
     
     func register() {

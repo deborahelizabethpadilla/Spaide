@@ -48,9 +48,6 @@ class LoginViewController: UITableViewController, UITextFieldDelegate {
         passwordField.layer.borderWidth = 2.0
         passwordField.layer.borderColor = myColor.cgColor
         
-        loginButton.layer.cornerRadius = 15.0
-        registerButton.layer.cornerRadius = 15.0
-        
         //Close Keyboard With Tap
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
