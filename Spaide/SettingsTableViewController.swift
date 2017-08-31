@@ -71,19 +71,23 @@ class SettingsTableViewController: UITableViewController, UITextFieldDelegate, M
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         //Close Keyboard With Return Key
-        
         self.emailField.delegate = self
         self.passwordField.delegate = self
-        
         //Close Keyboard With Tap
-        
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(SettingsTableViewController.dismissKeyboard))
         
         view.addGestureRecognizer(tap)
-        
         tableView.allowsSelection = false
+        //Text Designs
+        
+        let myColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0)
+        emailField.layer.cornerRadius = 15.0
+        emailField.layer.borderWidth = 2.0
+        emailField.layer.borderColor = myColor.cgColor
+        passwordField.layer.cornerRadius = 15.0
+        passwordField.layer.borderWidth = 2.0
+        passwordField.layer.borderColor = myColor.cgColor
         
     }
     

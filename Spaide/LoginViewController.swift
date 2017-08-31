@@ -37,7 +37,7 @@ class LoginViewController: UITableViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Button Designs
+        //Text Designs
         
         let myColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0)
         
@@ -61,19 +61,32 @@ class LoginViewController: UITableViewController, UITextFieldDelegate {
         
     }
             
+    
     func login() {
         
-        Auth.auth().signIn(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
-            if let user = Auth.auth().currentUser {
-                if !user.isEmailVerified {
-                    //Failed Message
-                    SVProgressHUD.show(withStatus: "Something Went Wrong! Try Again!")
-                } else {
+        if self.emailField.text == "" || self.passwordField.text == "" {
+            
+            //Show Error
+            
+            SVProgressHUD.showError(withStatus: "Please Enter Your Info!")
+            
+        } else {
+            
+            //Sign in
+            
+            SVProgressHUD.setStatus("Signing In")
+            
+            Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
+                if error == nil {
+                    
+                    SVProgressHUD.dismiss()
+                    
                     //Go To Controller
+                    
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
                     self.present(vc!, animated: true, completion: nil)
                 }
-            }
+            })
         }
     }
     

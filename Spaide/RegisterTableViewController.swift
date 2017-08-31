@@ -29,21 +29,40 @@ class RegisterTableViewController: UITableViewController {
         registerButton.layer.cornerRadius = 15.0
         backButton.layer.cornerRadius = 15.0
         tableView.allowsSelection = false
+        
+        //Text Designs
+        
+        let myColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0)
+        
+        emailField.layer.cornerRadius = 15.0
+        emailField.layer.borderWidth = 2.0
+        emailField.layer.borderColor = myColor.cgColor
+        passwordField.layer.cornerRadius = 15.0
+        passwordField.layer.borderWidth = 2.0
+        passwordField.layer.borderColor = myColor.cgColor
     }
-    
     func register() {
-        Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!) { (user, error) in
-                if let user = Auth.auth().currentUser {
-                    if !user.isEmailVerified {
-                    //Failed
-                    SVProgressHUD.show(withStatus: "That Email Is Taken!")
-                } else {
-                    //Go To Controller
+        
+        //Error
+        
+        if emailField.text == "" || passwordField.text == "" {
+            
+            SVProgressHUD.showError(withStatus: "Please Enter Your Info!")
+            
+        } else {
+            
+            //Login
+            
+            SVProgressHUD.show(withStatus: "Creating User")
+            Auth.auth().createUser(withEmail: emailField.text!, password: passwordField.text!, completion: { (user, error) in
+                if error == nil {
+                    
+                    SVProgressHUD.dismiss()
+                    
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
                     self.present(vc!, animated: true, completion: nil)
-                        
-                    }
-            }
+                }
+            })
         }
     }
 
