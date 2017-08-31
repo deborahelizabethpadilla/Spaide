@@ -50,6 +50,7 @@ class LocationSearchTable: UITableViewController {
 } //End Class
 
 extension LocationSearchTable : UISearchResultsUpdating {
+    //Load Data
     
     func updateSearchResults(for searchController: UISearchController) {
         guard let mapView = mapView,
@@ -73,6 +74,7 @@ extension LocationSearchTable : UISearchResultsUpdating {
 }
 
 extension LocationSearchTable {
+    //Show Results in Table VC
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return matchingItems.count
@@ -88,5 +90,13 @@ extension LocationSearchTable {
     
 }
 
+extension LocationSearchTable {
+    //Select Location & Show On Map
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+    
+}
 
 
