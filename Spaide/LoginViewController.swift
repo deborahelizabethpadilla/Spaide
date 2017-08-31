@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseDatabase
 import SVProgressHUD
 
-class LoginViewController: UIViewController, UITextFieldDelegate {
+class LoginViewController: UITableViewController, UITextFieldDelegate {
     
     //Outlets
     @IBOutlet var emailField: UITextField!
