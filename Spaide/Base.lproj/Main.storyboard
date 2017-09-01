@@ -319,6 +319,7 @@
                         <outlet property="emailField" destination="sW1-qp-ugi" id="mcS-3N-TJV"/>
                         <outlet property="loginButton" destination="BE2-KA-WVo" id="QrW-rq-Ode"/>
                         <outlet property="passwordField" destination="eCi-7c-tEM" id="mZR-fz-bAY"/>
+                        <outlet property="registerButton" destination="Feq-G8-jGK" id="0jG-oh-hOO"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5d7-19-XSq" userLabel="First Responder" sceneMemberID="firstResponder"/>

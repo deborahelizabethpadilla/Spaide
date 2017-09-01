@@ -12,9 +12,8 @@ import MapKit
 class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     
     //Variables
-    var searchController:UISearchController!
-    var locationManager = CLLocationManager()
     var resultSearchController:UISearchController? = nil
+    let locationManager = CLLocationManager()
     
     @IBOutlet var mapView: MKMapView!
     
@@ -42,25 +41,24 @@ class MapViewController: UIViewController, UISearchBarDelegate, CLLocationManage
 
 } //End Class
 
-//Extensions for Map VC
+//Extension Map VC
 
 extension MapViewController {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else { return }
-        let span = MKCoordinateSpanMake(0.05, 0.05)
-        let region = MKCoordinateRegion(center: location.coordinate, span: span)
-        mapView.setRegion(region, animated: true)
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
     }
     
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
         print("error:: \(error)")
     }
-    
 }
