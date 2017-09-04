@@ -143,7 +143,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="omx-bF-uoY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2433.3333333333335" y="-183.42391304347828"/>
+            <point key="canvasLocation" x="-2520" y="-14"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="nAB-fz-rck">
@@ -317,7 +317,7 @@
                     </tableView>
                     <connections>
                         <outlet property="emailField" destination="sW1-qp-ugi" id="mcS-3N-TJV"/>
-                        <outlet property="loginButton" destination="BE2-KA-WVo" id="QrW-rq-Ode"/>
+                        <outlet property="loginButton" destination="BE2-KA-WVo" id="CBK-dN-fqY"/>
                         <outlet property="passwordField" destination="eCi-7c-tEM" id="mZR-fz-bAY"/>
                         <outlet property="registerButton" destination="Feq-G8-jGK" id="0jG-oh-hOO"/>
                     </connections>
@@ -329,36 +329,44 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="igw-ae-g2V">
             <objects>
-                <tabBarController storyboardIdentifier="HomeView" id="2Gn-at-tpI" customClass="TabBarViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="2Gn-at-tpI" customClass="TabBarViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="b8H-jg-Uhi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="selectedImageTintColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
-                        <segue destination="gGQ-U2-MIy" kind="relationship" relationship="viewControllers" id="w8v-TQ-tke"/>
                         <segue destination="ILC-lP-Kzg" kind="relationship" relationship="viewControllers" id="Jso-Pz-RVD"/>
                         <segue destination="aGk-2Y-ace" kind="relationship" relationship="viewControllers" id="Q6W-0s-RyP"/>
+                        <segue destination="HCK-XT-bc3" kind="relationship" relationship="viewControllers" id="0V5-5U-jSK"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kt-YG-iRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-887" y="-224"/>
         </scene>
-        <!--Map View Controller-->
+        <!--Find-->
         <scene sceneID="QfY-2a-F7c">
             <objects>
-                <viewController id="HCK-XT-bc3" customClass="MapViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeView" id="HCK-XT-bc3" customClass="MapViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Icr-AH-lgf"/>
                         <viewControllerLayoutGuide type="bottom" id="mKW-he-fn7"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="but-HF-qy9">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R4n-0o-pE8">
-                                <rect key="frame" x="0.0" y="64" width="320" height="623"/>
+                                <rect key="frame" x="0.0" y="20" width="414" height="667"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -369,6 +377,7 @@
                             <constraint firstAttribute="trailing" secondItem="R4n-0o-pE8" secondAttribute="trailing" id="nJA-5O-3a4"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Find" image="placeholderlocation" id="jjs-I7-8Yv"/>
                     <navigationItem key="navigationItem" id="ejI-Z3-2xT"/>
                     <connections>
                         <outlet property="mapView" destination="R4n-0o-pE8" id="m8z-g8-ko9"/>
@@ -385,7 +394,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="672.46376811594212" y="-224.18478260869566"/>
+            <point key="canvasLocation" x="-121.73913043478262" y="-224.18478260869566"/>
         </scene>
         <!--Location Search Table-->
         <scene sceneID="B63-CL-bFZ">
@@ -429,7 +438,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zqt-aK-AcI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="672" y="424"/>
+            <point key="canvasLocation" x="-122" y="435"/>
         </scene>
         <!--Settings-->
         <scene sceneID="t3b-jU-4lC">
@@ -694,32 +703,11 @@
             </objects>
             <point key="canvasLocation" x="-888" y="424"/>
         </scene>
-        <!--Find-->
-        <scene sceneID="84d-oS-IDL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gGQ-U2-MIy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Find" image="search" id="7At-Ga-BN9"/>
-                    <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="736"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5ip-By-jcp">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="HCK-XT-bc3" kind="relationship" relationship="rootViewController" id="DrA-n1-L1s"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gpN-Ph-nxp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-233.33333333333334" y="-224.18478260869566"/>
-        </scene>
     </scenes>
     <resources>
         <image name="newsettings" width="32" height="32"/>
+        <image name="placeholderlocation" width="32" height="32"/>
         <image name="plus" width="32" height="32"/>
-        <image name="search" width="32" height="32"/>
     </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>

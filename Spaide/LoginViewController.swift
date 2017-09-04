@@ -61,32 +61,25 @@ class LoginViewController: UITableViewController, UITextFieldDelegate {
         
     }
             
-    
     func login() {
         
         if self.emailField.text == "" || self.passwordField.text == "" {
             
             //Show Error
-            
-            SVProgressHUD.showError(withStatus: "Please Enter Your Info!")
+            SVProgressHUD.showError(withStatus: "Oh No! Something Happened!")
             
         } else {
-            
-            //Sign in
-            
+            //Sign In
             SVProgressHUD.setStatus("Signing In")
-            
             Auth.auth().signIn(withEmail: self.emailField.text!, password: self.passwordField.text!, completion: { (user, error) in
                 if error == nil {
-                    
                     SVProgressHUD.dismiss()
-                    
                     //Go To Controller
-                    
                     let vc = self.storyboard?.instantiateViewController(withIdentifier: "HomeView")
                     self.present(vc!, animated: true, completion: nil)
                 }
             })
+            
         }
     }
     

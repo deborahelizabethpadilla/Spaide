@@ -110,8 +110,8 @@
 		500C04CE1E71D32F0096B987 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50EF69231F547030008D44E3 /* MapViewController.swift */,
+				500C04D01E71D4400096B987 /* LoginViewController.swift */,
 				50EF69251F547D68008D44E3 /* LocationSearchTable.swift */,
 				50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */,
 				50EF692B1F54856B008D44E3 /* AddViewController.swift */,

@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 class LocationSearchTable : UITableViewController {
-    //Variables
+    var handleMapSearchDelegate:HandleMapSearch? = nil
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil
     
@@ -39,9 +39,8 @@ class LocationSearchTable : UITableViewController {
     }
 }
 
-extension LocationSearchTable : UISearchResultsUpdating {
-    @available(iOS 8.0, *)
-    func updateSearchResults(for searchController: UISearchController) {
+extension LocationSearchTable {
+    func updateSearchResultsForSearchController(searchController: UISearchController) {
         guard let mapView = mapView,
             let searchBarText = searchController.searchBar.text else { return }
         let request = MKLocalSearchRequest()
@@ -69,5 +68,13 @@ extension LocationSearchTable {
         cell.textLabel?.text = selectedItem.name
         cell.detailTextLabel?.text = parseAddress(selectedItem: selectedItem)
         return cell
+    }
+}
+
+extension LocationSearchTable {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let selectedItem = matchingItems[indexPath.row].placemark
+        handleMapSearchDelegate?.dropPinZoomIn(placemark: selectedItem)
+        dismiss(animated: true, completion: nil)
     }
 }
