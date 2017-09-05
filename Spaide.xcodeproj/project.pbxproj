@@ -16,10 +16,7 @@
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
 		50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C067421F579D2F0041B609 /* RegisterTableViewController.swift */; };
 		50C1DEC71F5E092000A20E54 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1DEC61F5E092000A20E54 /* SearchTableViewController.swift */; };
-		50C1DEC91F5E0AB600A20E54 /* AddTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C1DEC81F5E0AB600A20E54 /* AddTableViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
-		50EF692A1F5484DE008D44E3 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */; };
-		50EF692E1F54859D008D44E3 /* ShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50EF692D1F54859D008D44E3 /* ShowViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,10 +31,7 @@
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		50C067421F579D2F0041B609 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		50C1DEC61F5E092000A20E54 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		50C1DEC81F5E0AB600A20E54 /* AddTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTableViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
-		50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
-		50EF692D1F54859D008D44E3 /* ShowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowViewController.swift; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -109,11 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				50EF69291F5484DE008D44E3 /* SettingsTableViewController.swift */,
-				50EF692D1F54859D008D44E3 /* ShowViewController.swift */,
 				50C067421F579D2F0041B609 /* RegisterTableViewController.swift */,
 				50C1DEC61F5E092000A20E54 /* SearchTableViewController.swift */,
-				50C1DEC81F5E0AB600A20E54 /* AddTableViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -241,8 +232,8 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Spaide/Pods-Spaide-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GeoFire/GeoFire.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -250,8 +241,8 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GeoFire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -270,9 +261,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */,
-				50C1DEC91F5E0AB600A20E54 /* AddTableViewController.swift in Sources */,
-				50EF692E1F54859D008D44E3 /* ShowViewController.swift in Sources */,
-				50EF692A1F5484DE008D44E3 /* SettingsTableViewController.swift in Sources */,
 				50C1DEC71F5E092000A20E54 /* SearchTableViewController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,

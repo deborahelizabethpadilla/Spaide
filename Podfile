@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '10.0'
+# platform :ios, '10.3'
 
 target 'Spaide' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -10,6 +10,6 @@ target 'Spaide' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-  pod 'Cosmos', '~> 11.0'
+  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 
 end
