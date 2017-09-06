@@ -355,7 +355,7 @@
         <!--Item-->
         <scene sceneID="mfy-9z-OcY">
             <objects>
-                <viewController id="EYL-th-6V3" sceneMemberID="viewController">
+                <viewController id="EYL-th-6V3" customClass="MapViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="m0b-8c-Z8I"/>
                         <viewControllerLayoutGuide type="bottom" id="B16-kc-8VL"/>
@@ -365,13 +365,30 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-pj-4V7">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="643"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cHK-a3-fW2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem id="Wd2-TE-jcx">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="add" id="Y15-nW-Ldk">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="addLocation:" destination="EYL-th-6V3" id="FZR-Kf-BcG"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="uY4-Jk-LZu"/>
+                    <connections>
+                        <outlet property="mapView" destination="9cG-pj-4V7" id="EaG-bf-XiN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHX-Kq-lPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
