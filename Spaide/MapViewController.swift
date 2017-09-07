@@ -13,11 +13,9 @@ import Firebase
 import FirebaseDatabase
 import GeoFire
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
     
     //Variables
-    var ref:DatabaseReference!
-    var geoFire:GeoFire!
     let locationManager = CLLocationManager()
     var currentPins:[Pin] = []
     
@@ -71,7 +69,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    //Add Pin
+    //Add Pin To Map
     
     func addAnnotationToMap(fromPoint: CGPoint) {
         
@@ -111,17 +109,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         
-        if !editMode {
-            
-            performSegue(withIdentifier: "PinPhotos", sender: view.annotation?.coordinate)
-            
-            mapView.deselectAnnotation(view.annotation, animated: false)
-            
-        } else {
-            
-            removeCoreData(of: view.annotation!)
-            
-            mapView.removeAnnotation(view.annotation!)
+        if segue.identifier == "ViewInfo" {
+            let destination = segue.destination as! AddViewController
         }
     }
     
@@ -131,7 +120,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         
         if segue.identifier == "PinPhotos" {
             
-            let destination = segue.destination as! PhotosViewController
+            let destination = segue.destination as! AddViewController
             let coord = sender as! CLLocationCoordinate2D
             destination.coordinateSelected = coord
             
@@ -147,6 +136,16 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
+    //Gesture Recognizer
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        
+        gestureBegin = true
+        return true
+    }
+    
+    //View Did Load
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -161,7 +160,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             
             currentPins = savedPins!
             
-            //Add Annotation To Map
+            //Add & Show Annotation To Map
             
             for pin in currentPins {
                 
