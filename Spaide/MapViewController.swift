@@ -18,13 +18,24 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     //Variables
     let locationManager = CLLocationManager()
     var currentPins:[Pin] = []
+    var gestureBegin: Bool = false
     
-    //Outlets & Actions
+    //Outlets
     @IBOutlet weak var mapView: MKMapView!
-    @IBAction func addLocation(_ sender: Any) {
-        //Present VC To Add Info
+    
+    //Actions
+    
+    @IBAction func responseLongTapAction(_ sender: Any) {
         
+        if gestureBegin {
+            
+            let gestureRecognizer = sender as! UILongPressGestureRecognizer
+            let gestureTouchLocation = gestureRecognizer.location(in: mapView)
+            addAnnotationToMap(fromPoint: gestureTouchLocation)
+            gestureBegin = false
+        }
     }
+
     
     //Core Data
     
@@ -105,35 +116,11 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    //Map View Function
+    //Select Annotation
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        
-        if segue.identifier == "ViewInfo" {
-            let destination = segue.destination as! AddViewController
-        }
-    }
-    
-    //Segue
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        if segue.identifier == "PinPhotos" {
-            
-            let destination = segue.destination as! AddViewController
-            let coord = sender as! CLLocationCoordinate2D
-            destination.coordinateSelected = coord
-            
-            for pin in currentPins {
-                
-                if pin.latitude == coord.latitude && pin.longitude == coord.longitude {
-                    
-                    destination.coreDataPin = pin
-                    break
-                }
-            }
-            
-        }
+        let addViewController = storyboard?.instantiateViewController(withIdentifier: "AddVC") as! AddViewController
+        self.present(addViewController, animated: true, completion: nil)
     }
     
     //Gesture Recognizer
@@ -152,7 +139,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         //Track Mode
         mapView.userTrackingMode = MKUserTrackingMode.follow
         
-        //Pins
+        //Load Pins
         
         let savedPins = preloadSavedPin()
         
@@ -170,17 +157,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
             }
         }
 
-    }
-    
-    //Display Alert
-    
-    func displayAlert(title: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        
-        self.present(alert, animated: true, completion: nil)
     }
 
 } //End Class
