@@ -109,14 +109,6 @@ The HUD can be dismissed using:
 + (void)dismissWithDelay:(NSTimeInterval)delay;
 ```
 
-If you'd like to stack HUDs, you can balance out every show call using:
-
-```objective-c
-+ (void)popActivity;
-```
-
-The HUD will get dismissed once the `popActivity` calls will match the number of show calls.
-
 Or show a confirmation glyph before before getting dismissed a little bit later. The display time depends on `minimumDismissTimeInterval` and the length of the given string.
 
 ```objective-c
@@ -151,6 +143,7 @@ Or show a confirmation glyph before before getting dismissed a little bit later.
 + (void)setSuccessImage:(UIImage*)image;                            // default is bundled success image from Freepik
 + (void)setErrorImage:(UIImage*)image;                              // default is bundled error image from Freepik
 + (void)setViewForExtension:(UIView*)view;                          // default is nil, only used if #define SV_APP_EXTENSIONS is set
++ (void)setGraceTimeInterval:(NSTimeInterval)interval;              // default is 0 seconds
 + (void)setMinimumDismissTimeInterval:(NSTimeInterval)interval;     // default is 5.0 seconds
 + (void)setMaximumDismissTimeInterval:(NSTimeInterval)interval;     // default is CGFLOAT_MAX
 + (void)setFadeInAnimationDuration:(NSTimeInterval)duration;        // default is 0.15 seconds

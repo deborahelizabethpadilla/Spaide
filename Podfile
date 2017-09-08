@@ -10,6 +10,5 @@ target 'Spaide' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'SVProgressHUD', :git => 'https://github.com/SVProgressHUD/SVProgressHUD.git'
-  pod 'GeoFire', :git => 'https://github.com/firebase/geofire-objc.git'
 
 end

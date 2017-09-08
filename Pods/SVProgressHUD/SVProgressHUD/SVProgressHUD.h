@@ -24,16 +24,16 @@ extern NSString * _Nonnull const SVProgressHUDDidAppearNotification;
 extern NSString * _Nonnull const SVProgressHUDStatusUserInfoKey;
 
 typedef NS_ENUM(NSInteger, SVProgressHUDStyle) {
-    SVProgressHUDStyleLight,        // default style, white HUD with black text, HUD background will be blurred on iOS 8 and above
-    SVProgressHUDStyleDark,         // black HUD and white text, HUD background will be blurred on iOS 8 and above
+    SVProgressHUDStyleLight,        // default style, white HUD with black text, HUD background will be blurred
+    SVProgressHUDStyleDark,         // black HUD and white text, HUD background will be blurred
     SVProgressHUDStyleCustom        // uses the fore- and background color properties
 };
 
 typedef NS_ENUM(NSUInteger, SVProgressHUDMaskType) {
     SVProgressHUDMaskTypeNone = 1,  // default mask type, allow user interactions while HUD is displayed
     SVProgressHUDMaskTypeClear,     // don't allow user interactions with background objects
-    SVProgressHUDMaskTypeBlack,     // don't allow user interactions with background objects and dim the UI in the back of the HUD, as on iOS 7 and above
-    SVProgressHUDMaskTypeGradient,  // don't allow user interactions with background objects and dim the UI with a a-la UIAlertView background gradient, as on iOS 6
+    SVProgressHUDMaskTypeBlack,     // don't allow user interactions with background objects and dim the UI in the back of the HUD (as seen in iOS 7 and above)
+    SVProgressHUDMaskTypeGradient,  // don't allow user interactions with background objects and dim the UI with a a-la UIAlertView background gradient (as seen in iOS 6)
     SVProgressHUDMaskTypeCustom     // don't allow user interactions with background objects and dim the UI in the back of the HUD with a custom color
 };
 
@@ -67,6 +67,7 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 @property (strong, nonatomic, nonnull) UIImage *successImage UI_APPEARANCE_SELECTOR;        // default is the bundled success image provided by Freepik
 @property (strong, nonatomic, nonnull) UIImage *errorImage UI_APPEARANCE_SELECTOR;          // default is the bundled error image provided by Freepik
 @property (strong, nonatomic, nonnull) UIView *viewForExtension UI_APPEARANCE_SELECTOR;     // default is nil, only used if #define SV_APP_EXTENSIONS is set
+@property (assign, nonatomic) NSTimeInterval graceTimeInterval;                             // default is 0 seconds
 @property (assign, nonatomic) NSTimeInterval minimumDismissTimeInterval;                    // default is 5.0 seconds
 @property (assign, nonatomic) NSTimeInterval maximumDismissTimeInterval;                    // default is CGFLOAT_MAX
 
@@ -99,6 +100,7 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (void)setSuccessImage:(nonnull UIImage*)image;                    // default is the bundled success image provided by Freepik
 + (void)setErrorImage:(nonnull UIImage*)image;                      // default is the bundled error image provided by Freepik
 + (void)setViewForExtension:(nonnull UIView*)view;                  // default is nil, only used if #define SV_APP_EXTENSIONS is set
++ (void)setGraceTimeInterval:(NSTimeInterval)interval;              // default is 0 seconds
 + (void)setMinimumDismissTimeInterval:(NSTimeInterval)interval;     // default is 5.0 seconds
 + (void)setMaximumDismissTimeInterval:(NSTimeInterval)interval;     // default is infinite
 + (void)setFadeInAnimationDuration:(NSTimeInterval)duration;        // default is 0.15 seconds
@@ -135,7 +137,6 @@ typedef void (^SVProgressHUDDismissCompletion)(void);
 + (void)setOffsetFromCenter:(UIOffset)offset;
 + (void)resetOffsetFromCenter;
 
-+ (void)popActivity; // decrease activity count, if activity count == 0 the HUD is dismissed
 + (void)dismiss;
 + (void)dismissWithCompletion:(nullable SVProgressHUDDismissCompletion)completion;
 + (void)dismissWithDelay:(NSTimeInterval)delay;
