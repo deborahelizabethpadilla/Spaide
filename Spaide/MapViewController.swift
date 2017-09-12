@@ -11,31 +11,71 @@ import MapKit
 import CoreData
 import Firebase
 import FirebaseDatabase
-import GeoFire
 
-class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate, UIGestureRecognizerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDelegate {
     
     //Variables
-    let locationManager = CLLocationManager()
-    var currentPins:[Pin] = []
     var gestureBegin: Bool = false
+    var currentPins:[Pin] = []
     
     //Outlets
+    
     @IBOutlet weak var mapView: MKMapView!
     
-    //Actions
+    //Action
     
-    @IBAction func responseLongTapAction(_ sender: Any) {
+    @IBAction func responseLongTap(_ sender: UILongPressGestureRecognizer) {
         
         if gestureBegin {
-            
-            let gestureRecognizer = sender as! UILongPressGestureRecognizer
+            let gestureRecognizer = sender 
             let gestureTouchLocation = gestureRecognizer.location(in: mapView)
             addAnnotationToMap(fromPoint: gestureTouchLocation)
             gestureBegin = false
         }
     }
-
+    
+    //Gesture Recognizer
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        gestureBegin = true
+        return true
+    }
+    
+    //Add Pin
+    
+    func addAnnotationToMap(fromPoint: CGPoint) {
+        
+        let coordToAdd = mapView.convert(fromPoint, toCoordinateFrom: mapView)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = coordToAdd
+        addCoreData(of: annotation)
+        mapView.addAnnotation(annotation)
+        
+    }
+    
+    func addAnnotationToMap(fromCoord: CLLocationCoordinate2D) {
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = fromCoord
+        mapView.addAnnotation(annotation)
+    }
+    
+    //Add Core Data
+    
+    func addCoreData(of: MKAnnotation) {
+        
+        do {
+            
+            let coord = of.coordinate
+            let pin = Pin(latitude: coord.latitude, longitude: coord.longitude, context: getCoreDataStack().context)
+            try getCoreDataStack().saveContext()
+            currentPins.append(pin)
+            
+        } catch {
+            
+            print("Add Core Data Failed")
+        }
+    }
     
     //Core Data
     
@@ -80,83 +120,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         }
     }
     
-    //Add Pin To Map
-    
-    func addAnnotationToMap(fromPoint: CGPoint) {
-        
-        let coordToAdd = mapView.convert(fromPoint, toCoordinateFrom: mapView)
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = coordToAdd
-        addCoreData(of: annotation)
-        mapView.addAnnotation(annotation)
-        
-    }
-    
-    func addAnnotationToMap(fromCoord: CLLocationCoordinate2D) {
-        
-        let annotation = MKPointAnnotation()
-        annotation.coordinate = fromCoord
-        mapView.addAnnotation(annotation)
-    }
-    
-    //Add Core Data
-    
-    func addCoreData(of: MKAnnotation) {
-        
-        do {
-            
-            let coord = of.coordinate
-            let pin = Pin(latitude: coord.latitude, longitude: coord.longitude, context: getCoreDataStack().context)
-            try getCoreDataStack().saveContext()
-            currentPins.append(pin)
-            
-        } catch {
-            
-            print("Add Core Data Failed")
-        }
-    }
-    
-    //Select Annotation
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        let addViewController = storyboard?.instantiateViewController(withIdentifier: "AddVC") as! AddViewController
-        self.present(addViewController, animated: true, completion: nil)
-    }
-    
-    //Gesture Recognizer
-    
-    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
-        
-        gestureBegin = true
-        return true
-    }
-    
-    //View Did Load
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Track Mode
-        mapView.userTrackingMode = MKUserTrackingMode.follow
-        
-        //Load Pins
+        //Add Annotation
         
         let savedPins = preloadSavedPin()
-        
         if savedPins != nil {
-            
             currentPins = savedPins!
             
-            //Add & Show Annotation To Map
-            
             for pin in currentPins {
-                
                 let coord = CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)
                 addAnnotationToMap(fromCoord: coord)
-                
             }
         }
-
+        
     }
-
-} //End Class
+    
+} // End Class
