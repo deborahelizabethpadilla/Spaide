@@ -106,6 +106,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         
         //Add Annotation To Map
         
+        let savedPins = preloadSavedPin()
+        
+        if savedPins != nil {
+            currentPins = savedPins
+            for pin in currentPins {
+                let coord = CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)
+                addAnnotation(fromCoord: coord)
+            }
+        }
     }
     
 } // End Class
