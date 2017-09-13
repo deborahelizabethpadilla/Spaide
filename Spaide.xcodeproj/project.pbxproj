@@ -19,7 +19,6 @@
 		5090635B1F60780F001260C3 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090635A1F60780F001260C3 /* Pin.swift */; };
 		5090635D1F60781F001260C3 /* PinProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090635C1F60781F001260C3 /* PinProperties.swift */; };
 		50981FFF1F68C3F100311831 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50981FFE1F68C3F100311831 /* TabBarViewController.swift */; };
-		509820011F68D03F00311831 /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509820001F68D03E00311831 /* InsertViewController.swift */; };
 		50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C067421F579D2F0041B609 /* RegisterTableViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		5090635A1F60780F001260C3 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
 		5090635C1F60781F001260C3 /* PinProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinProperties.swift; sourceTree = "<group>"; };
 		50981FFE1F68C3F100311831 /* TabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
-		509820001F68D03E00311831 /* InsertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		50C067421F579D2F0041B609 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 				50C067421F579D2F0041B609 /* RegisterTableViewController.swift */,
 				5090634F1F5F3D6D001260C3 /* MapViewController.swift */,
 				50981FFE1F68C3F100311831 /* TabBarViewController.swift */,
-				509820001F68D03E00311831 /* InsertViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -276,7 +273,6 @@
 				50981FFF1F68C3F100311831 /* TabBarViewController.swift in Sources */,
 				50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */,
 				509063591F6071C3001260C3 /* Spaide.xcdatamodeld in Sources */,
-				509820011F68D03F00311831 /* InsertViewController.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
 				5090635B1F60780F001260C3 /* Pin.swift in Sources */,
 				5090635D1F60781F001260C3 /* PinProperties.swift in Sources */,

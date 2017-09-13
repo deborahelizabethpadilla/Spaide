@@ -20,14 +20,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
     //Outlets
     
     @IBOutlet weak var mapView: MKMapView!
-    @IBOutlet weak var addPin: UIButton!
-    
-    //Actions
-    
-    @IBAction func addPinButton(_ sender: Any) {
-        
-    }
-    
+    @IBOutlet weak var addLabel: UILabel!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +39,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         
         let myColor = UIColor(red: 0.00, green: 0.00, blue: 0.00, alpha: 1.0)
         
-        addPin.layer.cornerRadius = 15.0
-        addPin.layer.borderWidth = 2.0
-        addPin.layer.borderColor = myColor.cgColor
+        addLabel.layer.cornerRadius = 15.0
+        addLabel.layer.borderWidth = 2.0
+        addLabel.layer.borderColor = myColor.cgColor
 
     }
     
