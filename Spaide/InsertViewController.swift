@@ -10,7 +10,9 @@ import UIKit
 
 class InsertViewController: UIViewController {
 
+    @IBOutlet weak var addButton: UIButton!
     @IBOutlet weak var addressText: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,16 @@ class InsertViewController: UIViewController {
         addressText.layer.cornerRadius = 15.0
         addressText.layer.borderWidth = 4.0
         addressText.layer.borderColor = myColor.cgColor
+        
+        //Text Field Design
+        
+        addButton.layer.cornerRadius = 15.0
+        addButton.layer.borderWidth = 4.0
+        addButton.layer.borderColor = myColor.cgColor
+        
+        cancelButton.layer.cornerRadius = 15.0
+        cancelButton.layer.borderWidth = 4.0
+        cancelButton.layer.borderColor = myColor.cgColor
     }
 
 } // End Class
