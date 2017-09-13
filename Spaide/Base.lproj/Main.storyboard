@@ -334,7 +334,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="tintColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.98431372549019602" green="0.87450980392156863" blue="0.2196078431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" red="0.98611134290000002" green="0.87455254790000003" blue="0.21987852450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <userDefinedRuntimeAttributes>
@@ -345,13 +345,43 @@
                     </tabBar>
                     <connections>
                         <segue destination="EYL-th-6V3" kind="relationship" relationship="viewControllers" id="rb6-JJ-eAG"/>
+                        <segue destination="g3g-a3-8l7" kind="relationship" relationship="viewControllers" id="XnU-uo-gQE"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Kt-YG-iRJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-887" y="-224"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
+        <scene sceneID="mh1-t1-T81">
+            <objects>
+                <tableViewController id="g3g-a3-8l7" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="5A4-on-6r4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Iaj-Fo-fex">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Iaj-Fo-fex" id="pLH-F3-GwL">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g3g-a3-8l7" id="VJF-7x-1Yc"/>
+                            <outlet property="delegate" destination="g3g-a3-8l7" id="Fbe-PT-KN3"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Settings" image="house" id="nyi-1f-7yQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zde-9N-wxN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-888" y="437"/>
+        </scene>
+        <!--Find-->
         <scene sceneID="mfy-9z-OcY">
             <objects>
                 <viewController id="EYL-th-6V3" customClass="MapViewController" customModule="Spaide" customModuleProvider="target" sceneMemberID="viewController">
@@ -367,27 +397,23 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="yu4-mR-k0B" appends="YES" id="OeW-CA-OhK"/>
-                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="uY4-Jk-LZu"/>
+                    <tabBarItem key="tabBarItem" title="Find" image="wheelchair" id="uY4-Jk-LZu"/>
                     <connections>
                         <outlet property="mapView" destination="9cG-pj-4V7" id="ZAq-4c-Wc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHX-Kq-lPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="yu4-mR-k0B">
-                    <connections>
-                        <action selector="responseLongTap:" destination="EYL-th-6V3" id="gKH-A1-6Qw"/>
-                    </connections>
-                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-234.78260869565219" y="-230.70652173913047"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" width="32" height="32"/>
+        <image name="wheelchair" width="24" height="24"/>
+    </resources>
     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
 </document>
