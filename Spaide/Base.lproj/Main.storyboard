@@ -420,25 +420,24 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="687"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="27T-3Z-s5m" appends="YES" id="eBl-wz-ALP"/>
+                                </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hold down to add pin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CcL-vG-1rU">
-                                <rect key="frame" x="20" y="28" width="374" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="25"/>
-                                <color key="textColor" red="0.98431372549999996" green="0.87450980389999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Find" image="wheelchair" id="uY4-Jk-LZu"/>
                     <connections>
-                        <outlet property="addLabel" destination="CcL-vG-1rU" id="GQQ-Ei-3Ue"/>
                         <outlet property="mapView" destination="9cG-pj-4V7" id="ZAq-4c-Wc0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VHX-Kq-lPt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="27T-3Z-s5m">
+                    <connections>
+                        <action selector="responseLongTapAction:" destination="EYL-th-6V3" id="NYo-Zp-U6c"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-234.78260869565219" y="-230.70652173913047"/>
         </scene>
