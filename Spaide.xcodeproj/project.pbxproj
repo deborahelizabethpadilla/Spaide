@@ -14,11 +14,11 @@
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
 		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
+		504F37C71F69C1B90022B8C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */; };
+		504F37CA1F69C56B0022B8C9 /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */; };
+		504F37CB1F69C56B0022B8C9 /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */; };
 		509063501F5F3D6D001260C3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090634F1F5F3D6D001260C3 /* MapViewController.swift */; };
 		509063591F6071C3001260C3 /* Spaide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 509063571F6071C3001260C3 /* Spaide.xcdatamodeld */; };
-		5090635B1F60780F001260C3 /* Pin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090635A1F60780F001260C3 /* Pin.swift */; };
-		5090635D1F60781F001260C3 /* PinProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090635C1F60781F001260C3 /* PinProperties.swift */; };
-		509820031F68E3AD00311831 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 509820021F68E3AD00311831 /* CoreDataStack.swift */; };
 		50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C067421F579D2F0041B609 /* RegisterTableViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 /* End PBXBuildFile section */
@@ -33,11 +33,11 @@
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
+		504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		5090634F1F5F3D6D001260C3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		509063581F6071C3001260C3 /* Spaide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spaide.xcdatamodel; sourceTree = "<group>"; };
-		5090635A1F60780F001260C3 /* Pin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pin.swift; sourceTree = "<group>"; };
-		5090635C1F60781F001260C3 /* PinProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PinProperties.swift; sourceTree = "<group>"; };
-		509820021F68E3AD00311831 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		50C067421F579D2F0041B609 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,9 +90,9 @@
 			children = (
 				500C04B71E71D0A10096B987 /* AppDelegate.swift */,
 				509063571F6071C3001260C3 /* Spaide.xcdatamodeld */,
-				5090635A1F60780F001260C3 /* Pin.swift */,
-				5090635C1F60781F001260C3 /* PinProperties.swift */,
-				509820021F68E3AD00311831 /* CoreDataStack.swift */,
+				504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */,
+				504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */,
+				504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */,
 			);
 			path = Spaide;
 			sourceTree = "<group>";
@@ -270,14 +270,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				504F37CA1F69C56B0022B8C9 /* Pin+CoreDataClass.swift in Sources */,
 				50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */,
 				509063591F6071C3001260C3 /* Spaide.xcdatamodeld in Sources */,
+				504F37CB1F69C56B0022B8C9 /* Pin+CoreDataProperties.swift in Sources */,
 				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
-				5090635B1F60780F001260C3 /* Pin.swift in Sources */,
-				5090635D1F60781F001260C3 /* PinProperties.swift in Sources */,
 				509063501F5F3D6D001260C3 /* MapViewController.swift in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				509820031F68E3AD00311831 /* CoreDataStack.swift in Sources */,
+				504F37C71F69C1B90022B8C9 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
