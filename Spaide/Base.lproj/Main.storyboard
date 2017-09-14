@@ -421,6 +421,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
+                                    <outlet property="delegate" destination="EYL-th-6V3" id="aqx-cM-Ggz"/>
                                     <outletCollection property="gestureRecognizers" destination="27T-3Z-s5m" appends="YES" id="eBl-wz-ALP"/>
                                 </connections>
                             </mapView>
