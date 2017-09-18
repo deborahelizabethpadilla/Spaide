@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  Spaide
 //
-//  Created by Deborah on 9/5/17.
+//  Created by Deborah on 9/18/17.
 //  Copyright © 2017 Deborah. All rights reserved.
 //
 
@@ -10,85 +10,184 @@ import UIKit
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDelegate {
     
-    //Variables
+    //Outelts.
+
+    @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var deletePins: UILabel!
     
-    var locationManager = CLLocationManager()
-    var currentPins = [Pin]()
+    //Variables.
+    
     var gestureBegin: Bool = false
+    var editMode: Bool = false
+    var currentPins:[Pin] = []
     
-    var sharedContext: NSManagedObjectContext {
-        return CoreDataStack.sharedInstance().managedObjectContext
+    //Core Data.
+    
+    func getCoreDataStack() -> CoreDataStack {
+        
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        return delegate.stack
     }
     
-    //Fetch All Pins
+    //Fetch Requests.
     
-    func fetchAllPins() -> [Pin] {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
+    func getFetchResultsController() -> NSFetchedResultsController<NSFetchRequestResult> {
+        
+        let stack = getCoreDataStack()
+        let fr = NSFetchRequest<NSFetchRequestResult>(entityName: "Pin")
+        fr.sortDescriptors = []
+        
+        return NSFetchedResultsController(fetchRequest: fr, managedObjectContext: stack.context, sectionNameKeyPath: nil, cacheName: nil)
+    }
+    
+    //Load Saved Pin.
+    
+    func preloadSavedPin() -> [Pin]? {
+        
         do {
-            return try sharedContext.fetch(fetchRequest) as! [Pin]
+            
+            var pinArray:[Pin] = []
+            let fetchedResultsController = getFetchResultsController()
+            try fetchedResultsController.performFetch()
+            let pinCount = try fetchedResultsController.managedObjectContext.count(for: fetchedResultsController.fetchRequest)
+            
+            for index in 0..<pinCount {
+                pinArray.append(fetchedResultsController.object(at: IndexPath(row: index, section: 0)) as! Pin)
+            }
+            
+            return pinArray
         } catch {
-            print("Error In Fetch!")
-            return [Pin]()
+            return nil
         }
     }
     
-    //Outlets
+    //View DL.
     
-    @IBOutlet weak var mapView: MKMapView!
-    
-    //Core Dat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let longPressRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(MapViewController.longPressGesture(longPress:)))
-        longPressRecognizer.minimumPressDuration = 1.5
-        mapView.addGestureRecognizer(longPressRecognizer)
+        //Nav Bar.
         
-        self.mapView.delegate = self
+        setBarButtonRight()
         
-        addSavedPinsToMap()
+        //Label Design.
         
-    }
-    
-    //Add Saved Pin To Map
-    
-    func addSavedPinsToMap() {
-        currentPins = fetchAllPins()
-        print("Pins Count in Core Data Is \(currentPins.count)")
+        deletePins.layer.cornerRadius = 15
         
-        for currentPin in currentPins {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = currentPin.coordinate
-            mapView.addAnnotation(annotation)
+        //Load Pins.
+
+        let savedPins = preloadSavedPin()
+        
+        if savedPins != nil {
+            
+            currentPins = savedPins!
+            
+            //Add Annotation To Map
+            
+            for pin in currentPins {
+                
+                let coord = CLLocationCoordinate2D(latitude: pin.latitude, longitude: pin.longitude)
+                addAnnotationToMap(fromCoord: coord)
+                
+            }
         }
     }
     
-    //Long Press Gesture Recognizer
+    //Bar Button Item.
     
-    func longPressGesture(longPress: UIGestureRecognizer) {
-        //Take Point
-        let touchPoint = longPress.location(in: self.mapView)
+    func setBarButtonRight() {
         
-        //Convert Point To Coordinate From View
-        let touchMapCoordinate = mapView.convert(touchPoint, toCoordinateFrom: mapView)
+        self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    //Gesture Recognizer.
+    
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
         
-        //Init Annotation
+        gestureBegin = true
+        return true
+    }
+    
+    //Actions.
+    
+    @IBAction func responseLongTap(_ sender: Any) {
+        
+        if gestureBegin {
+            
+            let gestureRecognizer = sender as! UILongPressGestureRecognizer
+            let gestureTouchLocation = gestureRecognizer.location(in: mapView)
+            addAnnotationToMap(fromPoint: gestureTouchLocation)
+            gestureBegin = false
+        }
+    }
+    
+    //Add Pin.
+    
+    func addAnnotationToMap(fromPoint: CGPoint) {
+        
+        let coordToAdd = mapView.convert(fromPoint, toCoordinateFrom: mapView)
         let annotation = MKPointAnnotation()
-        annotation.coordinate = touchMapCoordinate
-        
-        //Init New Pin
-        let newPin = Pin(latitude: annotation.coordinate.latitude, longitude: annotation.coordinate.longitude, context: sharedContext)
-        
-        //Save To Core Data
-        CoreDataStack.sharedInstance().saveContext()
-        
-        //Adding New Pin To Pins Array
-        currentPins.append(newPin)
-        
-        //Add New Pin To Map
+        annotation.coordinate = coordToAdd
+        addCoreData(of: annotation)
         mapView.addAnnotation(annotation)
     }
     
+    func addAnnotationToMap(fromCoord: CLLocationCoordinate2D) {
+        
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = fromCoord
+        mapView.addAnnotation(annotation)
+    }
+    
+    //Add Core Data.
+    
+    func addCoreData(of: MKAnnotation) {
+        
+        do {
+            
+            let coord = of.coordinate
+            let pin = Pin(latitude: coord.latitude, longitude: coord.longitude, context: getCoreDataStack().context)
+            try getCoreDataStack().saveContext()
+            currentPins.append(pin)
+        } catch {
+            
+            print("Add Core Data Failed!")
+        }
+    }
+    
+    //Delete Core Data.
+    
+    func removeCoreData(of: MKAnnotation) {
+        
+        let coord = of.coordinate
+        
+        for pin in currentPins {
+            
+            if pin.latitude == coord.latitude && pin.longitude == coord.longitude {
+                
+                do {
+                    
+                    getCoreDataStack().context.delete(pin)
+                    try getCoreDataStack().saveContext()
+                    
+                } catch {
+                    
+                    print("Remove Core Data Failed!")
+                }
+                break
+            }
+        }
+    }
+    
+    //Edit.
+    
+    override func setEditing(_ editing: Bool, animated: Bool) {
+        
+        super.setEditing(editing, animated: animated)
+        deletePins.isHidden = !editing
+        editMode = editing
+    }
+
 } // End Class

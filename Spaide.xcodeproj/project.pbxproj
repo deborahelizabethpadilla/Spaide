@@ -12,14 +12,12 @@
 		500C04BF1E71D0A30096B987 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04BD1E71D0A30096B987 /* Main.storyboard */; };
 		500C04C11E71D0A30096B987 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C01E71D0A30096B987 /* Assets.xcassets */; };
 		500C04C41E71D0A30096B987 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 500C04C21E71D0A30096B987 /* LaunchScreen.storyboard */; };
-		500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 500C04D01E71D4400096B987 /* LoginViewController.swift */; };
 		500C04EF1E7229930096B987 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 500C04EE1E7229930096B987 /* GoogleService-Info.plist */; };
-		504F37C71F69C1B90022B8C9 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */; };
-		504F37CA1F69C56B0022B8C9 /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */; };
-		504F37CB1F69C56B0022B8C9 /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */; };
-		509063501F5F3D6D001260C3 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5090634F1F5F3D6D001260C3 /* MapViewController.swift */; };
-		509063591F6071C3001260C3 /* Spaide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 509063571F6071C3001260C3 /* Spaide.xcdatamodeld */; };
-		50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50C067421F579D2F0041B609 /* RegisterTableViewController.swift */; };
+		5072DA0E1F6F843500E45D24 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA0D1F6F843500E45D24 /* MapViewController.swift */; };
+		5072DA101F70595B00E45D24 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA0F1F70595B00E45D24 /* CoreDataStack.swift */; };
+		5072DA131F70670100E45D24 /* Spaide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA111F70670100E45D24 /* Spaide.xcdatamodeld */; };
+		5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */; };
+		5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 /* End PBXBuildFile section */
 
@@ -31,14 +29,12 @@
 		500C04C01E71D0A30096B987 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		500C04C31E71D0A30096B987 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		500C04C51E71D0A30096B987 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		500C04D01E71D4400096B987 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		500C04EE1E7229930096B987 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
-		504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
-		504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5090634F1F5F3D6D001260C3 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		509063581F6071C3001260C3 /* Spaide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spaide.xcdatamodel; sourceTree = "<group>"; };
-		50C067421F579D2F0041B609 /* RegisterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterTableViewController.swift; sourceTree = "<group>"; };
+		5072DA0D1F6F843500E45D24 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		5072DA0F1F70595B00E45D24 /* CoreDataStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5072DA121F70670100E45D24 /* Spaide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spaide.xcdatamodel; sourceTree = "<group>"; };
+		5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataClass.swift"; path = "../Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
+		5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataProperties.swift"; path = "../Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,10 +85,10 @@
 			isa = PBXGroup;
 			children = (
 				500C04B71E71D0A10096B987 /* AppDelegate.swift */,
-				509063571F6071C3001260C3 /* Spaide.xcdatamodeld */,
-				504F37C81F69C56B0022B8C9 /* Pin+CoreDataClass.swift */,
-				504F37C91F69C56B0022B8C9 /* Pin+CoreDataProperties.swift */,
-				504F37C61F69C1B90022B8C9 /* CoreDataStack.swift */,
+				5072DA0F1F70595B00E45D24 /* CoreDataStack.swift */,
+				5072DA111F70670100E45D24 /* Spaide.xcdatamodeld */,
+				5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */,
+				5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */,
 			);
 			path = Spaide;
 			sourceTree = "<group>";
@@ -114,9 +110,7 @@
 		500C04CE1E71D32F0096B987 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				500C04D01E71D4400096B987 /* LoginViewController.swift */,
-				50C067421F579D2F0041B609 /* RegisterTableViewController.swift */,
-				5090634F1F5F3D6D001260C3 /* MapViewController.swift */,
+				5072DA0D1F6F843500E45D24 /* MapViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -270,14 +264,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				504F37CA1F69C56B0022B8C9 /* Pin+CoreDataClass.swift in Sources */,
-				50C067431F579D2F0041B609 /* RegisterTableViewController.swift in Sources */,
-				509063591F6071C3001260C3 /* Spaide.xcdatamodeld in Sources */,
-				504F37CB1F69C56B0022B8C9 /* Pin+CoreDataProperties.swift in Sources */,
-				500C04D11E71D4400096B987 /* LoginViewController.swift in Sources */,
-				509063501F5F3D6D001260C3 /* MapViewController.swift in Sources */,
+				5072DA0E1F6F843500E45D24 /* MapViewController.swift in Sources */,
+				5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */,
+				5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */,
+				5072DA131F70670100E45D24 /* Spaide.xcdatamodeld in Sources */,
 				500C04B81E71D0A10096B987 /* AppDelegate.swift in Sources */,
-				504F37C71F69C1B90022B8C9 /* CoreDataStack.swift in Sources */,
+				5072DA101F70595B00E45D24 /* CoreDataStack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -470,12 +462,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		509063571F6071C3001260C3 /* Spaide.xcdatamodeld */ = {
+		5072DA111F70670100E45D24 /* Spaide.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				509063581F6071C3001260C3 /* Spaide.xcdatamodel */,
+				5072DA121F70670100E45D24 /* Spaide.xcdatamodel */,
 			);
-			currentVersion = 509063581F6071C3001260C3 /* Spaide.xcdatamodel */;
+			currentVersion = 5072DA121F70670100E45D24 /* Spaide.xcdatamodel */;
 			path = Spaide.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
