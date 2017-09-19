@@ -110,6 +110,26 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         return true
     }
     
+    //Map View Function.
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        
+        if !editMode {
+            
+            //Go To Pin Segue.
+            
+            performSegue(withIdentifier: "PinSegue", sender: false)
+            mapView.deselectAnnotation(view.annotation, animated: false)
+            
+        } else {
+            
+            //Remove Annotation.
+            
+            removeCoreData(of: view.annotation!)
+            mapView.removeAnnotation(view.annotation!)
+        }
+    }
+    
     //Actions.
     
     @IBAction func responseLongTap(_ sender: Any) {

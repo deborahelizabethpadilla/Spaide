@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -35,9 +36,8 @@
                                     <outletCollection property="gestureRecognizers" destination="gzD-0E-8gm" appends="YES" id="vuC-uf-ocA"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
-                                <rect key="frame" x="20" y="663" width="374" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
+                                <rect key="frame" x="20" y="686.66666666666652" width="374" height="29.333333333333371"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="25"/>
                                 <color key="textColor" red="0.98431372549999996" green="0.87450980389999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,8 +49,12 @@
                             <constraint firstItem="kpm-dF-1Vj" firstAttribute="top" secondItem="ycU-mE-Dfs" secondAttribute="top" id="3hX-qz-Qwd"/>
                             <constraint firstItem="kpm-dF-1Vj" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leading" id="3nN-qF-Kh5"/>
                             <constraint firstItem="KPd-r9-uDN" firstAttribute="top" secondItem="kpm-dF-1Vj" secondAttribute="bottom" id="8bW-YQ-ejO"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leadingMargin" id="AS3-j6-cFS"/>
                             <constraint firstAttribute="trailing" secondItem="kpm-dF-1Vj" secondAttribute="trailing" id="EGa-KQ-ViF"/>
                             <constraint firstItem="kpm-dF-1Vj" firstAttribute="centerX" secondItem="ycU-mE-Dfs" secondAttribute="centerX" id="UQ0-2X-yTh"/>
+                            <constraint firstItem="KPd-r9-uDN" firstAttribute="top" secondItem="F2T-u2-7yi" secondAttribute="bottom" constant="20" id="WXb-zC-968"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="h7d-GS-bSG"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="centerX" secondItem="ycU-mE-Dfs" secondAttribute="centerX" id="oJi-NE-nbm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Qe-S7-G33"/>
@@ -63,6 +67,7 @@
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="gzD-0E-8gm">
                     <connections>
                         <action selector="responseLongTap:" destination="8L9-d9-e4I" id="os2-i4-Iik"/>
+                        <outlet property="delegate" destination="8L9-d9-e4I" id="chh-ol-DAv"/>
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
@@ -73,8 +78,6 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PO8-UV-RwQ" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="414" height="736"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="19y-bQ-fdI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
