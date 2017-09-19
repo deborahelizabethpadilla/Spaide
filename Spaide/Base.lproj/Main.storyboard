@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -26,32 +27,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-dF-1Vj">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kpm-dF-1Vj">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outlet property="delegate" destination="8L9-d9-e4I" id="4bI-bD-njg"/>
                                     <outletCollection property="gestureRecognizers" destination="gzD-0E-8gm" appends="YES" id="FpT-QW-NMZ"/>
                                 </connections>
                             </mapView>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
-                                <rect key="frame" x="105.33333333333331" y="679" width="204" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
+                                <rect key="frame" x="237" y="72" width="157" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="157" id="2z9-ar-LzP"/>
+                                    <constraint firstAttribute="height" constant="37" id="JWv-L2-H2C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="20"/>
                                 <color key="textColor" red="0.98431372549999996" green="0.87450980389999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="kpm-dF-1Vj" firstAttribute="top" secondItem="ycU-mE-Dfs" secondAttribute="top" id="3hX-qz-Qwd"/>
-                            <constraint firstItem="kpm-dF-1Vj" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leading" id="3nN-qF-Kh5"/>
-                            <constraint firstItem="KPd-r9-uDN" firstAttribute="top" secondItem="kpm-dF-1Vj" secondAttribute="bottom" id="8bW-YQ-ejO"/>
-                            <constraint firstAttribute="bottom" secondItem="F2T-u2-7yi" secondAttribute="bottom" constant="20" symbolic="YES" id="99Z-mq-wys"/>
-                            <constraint firstAttribute="trailing" secondItem="kpm-dF-1Vj" secondAttribute="trailing" id="EGa-KQ-ViF"/>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="centerX" secondItem="ycU-mE-Dfs" secondAttribute="centerX" id="GsG-Rz-pxO"/>
-                            <constraint firstItem="kpm-dF-1Vj" firstAttribute="centerX" secondItem="ycU-mE-Dfs" secondAttribute="centerX" id="UQ0-2X-yTh"/>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="top" secondItem="n32-Q0-UcI" secondAttribute="bottom" constant="615" id="bF5-QW-eb1"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="top" secondItem="n32-Q0-UcI" secondAttribute="bottom" constant="8" id="Me6-rq-N3C"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="lNH-5S-Vzs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Qe-S7-G33"/>
