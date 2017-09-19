@@ -12,8 +12,9 @@ import CoreData
 
 class SegueViewController: UIViewController {
     
-    //Outlets.
-    
-    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
 
 } // End Class.

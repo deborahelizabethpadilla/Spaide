@@ -126,10 +126,9 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         
         if !editMode {
             
-            //Go To Pin Segue.
+            //Go To Segue VC.
             
             performSegue(withIdentifier: "PinSegue", sender: view.annotation?.coordinate)
-            
             mapView.deselectAnnotation(view.annotation, animated: false)
             
         } else {
