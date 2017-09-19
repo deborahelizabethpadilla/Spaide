@@ -81,11 +81,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         
         setBarButtonRight()
         
-        //Label Design.
-        
-        deletePins.layer.cornerRadius = 25
-        deletePins.clipsToBounds = true
-        
         //Load Pins.
 
         let savedPins = preloadSavedPin()
@@ -128,8 +123,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
             
             //Go To Segue VC.
             
-            performSegue(withIdentifier: "PinSegue", sender: view.annotation?.coordinate)
-            mapView.deselectAnnotation(view.annotation, animated: false)
+            print("Nothing Right Now!")
             
         } else {
             
@@ -224,7 +218,6 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         if annotationView == nil {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifer)
             annotationView?.annotation = annotation
-            
             
         }
         

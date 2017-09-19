@@ -12,9 +12,18 @@ import CoreData
 
 class SegueViewController: UIViewController {
     
+    //Variables.
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Add To Map.
+        
+        
     }
+    
+    
 
 } // End Class.
