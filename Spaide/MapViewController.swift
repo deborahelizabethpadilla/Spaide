@@ -8,9 +8,10 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 import CoreData
 
-class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognizerDelegate, CLLocationManagerDelegate {
     
     //Outelts.
 
@@ -22,6 +23,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
     var gestureBegin: Bool = false
     var editMode: Bool = false
     var currentPins:[Pin] = []
+    let locationManager = CLLocationManager()
     
     //Core Data.
     
@@ -68,13 +70,21 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Current Location Info.
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         //Nav Bar.
         
         setBarButtonRight()
         
         //Label Design.
         
-        deletePins.layer.cornerRadius = 15
+        deletePins.layer.cornerRadius = 25
+        deletePins.clipsToBounds = true
         
         //Load Pins.
 
@@ -118,7 +128,8 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
             
             //Go To Pin Segue.
             
-            performSegue(withIdentifier: "PinSegue", sender: false)
+            performSegue(withIdentifier: "PinSegue", sender: view.annotation?.coordinate)
+            
             mapView.deselectAnnotation(view.annotation, animated: false)
             
         } else {
@@ -199,6 +210,45 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
                 break
             }
         }
+    }
+    
+    //Custom Annotation.
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if !(annotation is MKPointAnnotation) {
+            return nil
+        }
+        
+        let annotationIdentifer = "AnnotationIdentifier"
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: annotationIdentifer)
+        
+        if annotationView == nil {
+            annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: annotationIdentifer)
+            annotationView?.annotation = annotation
+            
+            
+        }
+        
+        let pinImage = UIImage(named: "wheelchair")
+        annotationView?.image = pinImage
+        
+        return annotationView
+    }
+    
+    //User Location Map View.
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location = locations[0]
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let myLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(myLocation, span)
+        mapView.setRegion(region, animated: true)
+        
+        print(location.altitude)
+        print(location.speed)
+        
+        self.mapView.showsUserLocation = true
     }
     
     //Edit.

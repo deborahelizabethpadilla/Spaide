@@ -18,6 +18,7 @@
 		5072DA131F70670100E45D24 /* Spaide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA111F70670100E45D24 /* Spaide.xcdatamodeld */; };
 		5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */; };
 		5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */; };
+		5072DA251F70D1C700E45D24 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA241F70D1C600E45D24 /* SegueViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		5072DA121F70670100E45D24 /* Spaide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spaide.xcdatamodel; sourceTree = "<group>"; };
 		5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataClass.swift"; path = "../Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataProperties.swift"; path = "../Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		5072DA241F70D1C600E45D24 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 		587312B239788DB1BB58DEF6 /* Pods-Spaide.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Spaide.release.xcconfig"; path = "Pods/Target Support Files/Pods-Spaide/Pods-Spaide.release.xcconfig"; sourceTree = "<group>"; };
 		BC434A81DA8E4E86A76DF67F /* Pods_Spaide.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Spaide.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -111,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				5072DA0D1F6F843500E45D24 /* MapViewController.swift */,
+				5072DA241F70D1C600E45D24 /* SegueViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
@@ -264,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5072DA251F70D1C700E45D24 /* SegueViewController.swift in Sources */,
 				5072DA0E1F6F843500E45D24 /* MapViewController.swift in Sources */,
 				5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */,
 				5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */,
