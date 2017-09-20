@@ -17,7 +17,6 @@
 		5072DA131F70670100E45D24 /* Spaide.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA111F70670100E45D24 /* Spaide.xcdatamodeld */; };
 		5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */; };
 		5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */; };
-		5072DA251F70D1C700E45D24 /* SegueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5072DA241F70D1C600E45D24 /* SegueViewController.swift */; };
 		50EF69221F546DC7008D44E3 /* Mywriting.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50EF69211F546DC7008D44E3 /* Mywriting.ttf */; };
 /* End PBXBuildFile section */
 
@@ -34,7 +33,6 @@
 		5072DA121F70670100E45D24 /* Spaide.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Spaide.xcdatamodel; sourceTree = "<group>"; };
 		5072DA201F7068FD00E45D24 /* Pin+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataClass.swift"; path = "../Pin+CoreDataClass.swift"; sourceTree = "<group>"; };
 		5072DA211F7068FD00E45D24 /* Pin+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Pin+CoreDataProperties.swift"; path = "../Pin+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		5072DA241F70D1C600E45D24 /* SegueViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueViewController.swift; sourceTree = "<group>"; };
 		50EF69211F546DC7008D44E3 /* Mywriting.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Mywriting.ttf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +54,6 @@
 				500C04CE1E71D32F0096B987 /* Controllers */,
 				500C04CD1E71D3280096B987 /* Assets */,
 				500C04B51E71D0A10096B987 /* Products */,
-				C6B8F209EDB2A4E4A383F901 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -98,17 +95,9 @@
 			isa = PBXGroup;
 			children = (
 				5072DA0D1F6F843500E45D24 /* MapViewController.swift */,
-				5072DA241F70D1C600E45D24 /* SegueViewController.swift */,
 			);
 			name = Controllers;
 			path = Spaide;
-			sourceTree = "<group>";
-		};
-		C6B8F209EDB2A4E4A383F901 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,12 +107,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 500C04C81E71D0A30096B987 /* Build configuration list for PBXNativeTarget "Spaide" */;
 			buildPhases = (
-				263EBF1BE3E82504A406633A /* [CP] Check Pods Manifest.lock */,
 				500C04B01E71D0A10096B987 /* Sources */,
 				500C04B11E71D0A10096B987 /* Frameworks */,
 				500C04B21E71D0A10096B987 /* Resources */,
-				6F57AC53BC71508E51B31EE6 /* [CP] Embed Pods Frameworks */,
-				3DBA3C6643BABFD5883E649F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -185,63 +171,11 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		263EBF1BE3E82504A406633A /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Spaide-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		3DBA3C6643BABFD5883E649F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-			showEnvVarsInLog = 0;
-		};
-		6F57AC53BC71508E51B31EE6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		500C04B01E71D0A10096B987 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5072DA251F70D1C700E45D24 /* SegueViewController.swift in Sources */,
 				5072DA0E1F6F843500E45D24 /* MapViewController.swift in Sources */,
 				5072DA231F7068FD00E45D24 /* Pin+CoreDataProperties.swift in Sources */,
 				5072DA221F7068FD00E45D24 /* Pin+CoreDataClass.swift in Sources */,
