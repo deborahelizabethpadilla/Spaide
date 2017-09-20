@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PO8-UV-RwQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PO8-UV-RwQ">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -37,11 +37,10 @@
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
-                                <rect key="frame" x="237" y="72" width="157" height="37"/>
+                                <rect key="frame" x="237" y="72" width="157" height="45"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="157" id="2z9-ar-LzP"/>
-                                    <constraint firstAttribute="height" constant="37" id="JWv-L2-H2C"/>
+                                    <constraint firstAttribute="height" constant="45" id="FgO-Af-V21"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="20"/>
                                 <color key="textColor" red="0.98431372549999996" green="0.87450980389999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,8 +49,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="top" secondItem="n32-Q0-UcI" secondAttribute="bottom" constant="8" id="Me6-rq-N3C"/>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="lNH-5S-Vzs"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="top" secondItem="n32-Q0-UcI" secondAttribute="bottom" constant="8" id="5d0-Sz-ML3"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leadingMargin" constant="217" id="MkD-wK-jic"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="qA8-GI-oLC"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Qe-S7-G33"/>
@@ -76,7 +76,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PO8-UV-RwQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="19y-bQ-fdI">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
