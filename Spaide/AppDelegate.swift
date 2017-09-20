@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 import CoreData
 
 @UIApplicationMain
@@ -17,10 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let stack = CoreDataStack(modelName: "Spaide")!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        //Configure Firebase
-        
-        FirebaseApp.configure()
         
         return true
     }
