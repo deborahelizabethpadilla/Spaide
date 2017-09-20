@@ -37,10 +37,10 @@
                                 </connections>
                             </mapView>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap Pin To Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F2T-u2-7yi">
-                                <rect key="frame" x="237" y="72" width="157" height="45"/>
+                                <rect key="frame" x="20" y="673" width="374" height="43"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="FgO-Af-V21"/>
+                                    <constraint firstAttribute="height" constant="43" id="bov-K2-J73"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Mywriting" family="Mywriting" pointSize="20"/>
                                 <color key="textColor" red="0.98431372549999996" green="0.87450980389999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -49,9 +49,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="top" secondItem="n32-Q0-UcI" secondAttribute="bottom" constant="8" id="5d0-Sz-ML3"/>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leadingMargin" constant="217" id="MkD-wK-jic"/>
-                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="qA8-GI-oLC"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="trailing" secondItem="ycU-mE-Dfs" secondAttribute="trailingMargin" id="Plu-fS-ylH"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="centerX" secondItem="ycU-mE-Dfs" secondAttribute="centerX" id="lb9-hL-zFt"/>
+                            <constraint firstItem="F2T-u2-7yi" firstAttribute="leading" secondItem="ycU-mE-Dfs" secondAttribute="leadingMargin" id="nKa-LN-e95"/>
+                            <constraint firstItem="KPd-r9-uDN" firstAttribute="top" secondItem="F2T-u2-7yi" secondAttribute="bottom" constant="20" id="wWR-Xd-s2d"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="6Qe-S7-G33"/>
