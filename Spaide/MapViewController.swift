@@ -224,7 +224,27 @@ class MapViewController: UIViewController, MKMapViewDelegate, UIGestureRecognize
         let pinImage = UIImage(named: "wheelchair")
         annotationView?.image = pinImage
         
+        //Callout Button For Directions.
+        
+        annotationView!.rightCalloutAccessoryView = UIButton.init(type: .detailDisclosure)
+        
         return annotationView
+    }
+    
+    //Button & Direction Function.
+    
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        
+        let selectAnnotation = view.annotation
+        print("Annotation '\(String(describing: selectAnnotation?.title!))' has been selected!")
+        
+        let currentLocMapItem = MKMapItem.forCurrentLocation()
+        let selectedPlacemark = MKPlacemark(coordinate: (selectAnnotation?.coordinate)!, addressDictionary: nil)
+        let selectedMapItem = MKMapItem(placemark: selectedPlacemark)
+        
+        let mapItems = [selectedMapItem, currentLocMapItem]
+        let launchOptions = [MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving]
+        MKMapItem.openMaps(with: mapItems, launchOptions: launchOptions)
     }
     
     //User Location Map View.
